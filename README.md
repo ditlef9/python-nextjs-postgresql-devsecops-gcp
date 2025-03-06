@@ -45,12 +45,12 @@ Select your operating system:
 ## 🎯 4 Projects Included
 | App                                                   | Language                | Runs on       | GCP Services                | Description                                                |
 |-------------------------------------------------------|-------------------------|---------------|-----------------------------|------------------------------------------------------------|
-| [📝 User Feedback Form](user-feedback-form)           | Next.js                 | Run           | Buckets                     | Collects and stores user feedback securely.                |
-| [🔄 What Version?](what-version)                      | Python                  | Run Functions | PostgreSQL, Email, Secrets, | Fetches API data and posts updates to Slack.               |
-| [📝 News Backend and Frontend](news)                  | Python (Flask), Next.js | Run           | PostgreSQL                  | Backend API with user authentication and Next.js frontend. |
-| [📄 Report PDF-generation](report-pdf-generation)     | Python                  | Run           | PostgreSQL                  | Generates PDF reports from a database.                     |
-| [📊 Report Excel-generation](report-excel-generation) | Python                  | Run           | Buckets                     | Generates Excel reports from stored data.                  |
-| [🗒️ Uptime App](uptime-app)                          | Next.js                 | Run           | PostgreSQL,  Schedulerer    | Tracks and manages other applications uptime.              |
+| 📝 [User Feedback Form](user-feedback-form)           | Next.js                 | Run           | Buckets                     | Collects and stores user feedback securely.                |
+| 🔄 [What Version?](what-version)                      | Python                  | Run Functions | PostgreSQL, Email, Secrets, | Fetches API data and posts updates to Slack.               |
+| 📝 [News Backend and Frontend](news)                  | Python (Flask), Next.js | Run           | PostgreSQL                  | Backend API with user authentication and Next.js frontend. |
+| 📄 [Report PDF-generation](report-pdf-generation)     | Python                  | Run           | PostgreSQL                  | Generates PDF reports from a database.                     |
+| 📊 [Report Excel-generation](report-excel-generation) | Python                  | Run           | Buckets                     | Generates Excel reports from stored data.                  |
+| 🗒️ [Uptime App](uptime-app)                          | Next.js                 | Run           | PostgreSQL,  Schedulerer    | Tracks and manages other applications uptime.              |
 
 
 --- 
