@@ -1,7 +1,7 @@
-# ![Windows](_docs/windows-48x48.png)  Section 1 · Lesson 6 · Setup Development Environment - Windows 
+# ![Windows](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/windows-48x48.png)  Section 1 · Lesson 6 · Setup Development Environment - Windows 
 
-(🏠 Home)[../]
-(⬅ Setup Development Environment (Software installation guide)](../#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
+![🏠 Home](../)
+![⬅ Setup Development Environment (Software installation guide)](../#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
 
 This guide will show you how to download and install software needed for the course
 `Python and Next.js on Google Cloud Platform with Projects from Real Industry Video`.
@@ -12,7 +12,7 @@ This guide will show you how to download and install software needed for the cou
 
 Git is a version control system to manage your code and collaborate with others.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://git-scm.com/downloads](https://git-scm.com/downloads)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 
 ---
@@ -21,7 +21,7 @@ Git is a version control system to manage your code and collaborate with others.
 
 Python is a popular programming language for backend development and automation.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.python.org/downloads](https://www.python.org/downloads/)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.python.org/downloads](https://www.python.org/downloads/)
 
 
 ---
@@ -31,7 +31,7 @@ Python is a popular programming language for backend development and automation.
 
 Node.js is a JavaScript runtime used for building server-side applications.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://nodejs.org/en/download](https://nodejs.org/en/download)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
 ---
 
@@ -39,7 +39,7 @@ Node.js is a JavaScript runtime used for building server-side applications.
 
 VSCode is a lightweight, powerful code editor for various programming languages.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
 
 
 ---
@@ -49,7 +49,7 @@ VSCode is a lightweight, powerful code editor for various programming languages.
 
 PyCharm is an IDE specifically designed for Python development.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.jetbrains.com/pycharm/download](https://www.jetbrains.com/pycharm/download)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.jetbrains.com/pycharm/download](https://www.jetbrains.com/pycharm/download)
 
 
 ---
@@ -58,7 +58,7 @@ PyCharm is an IDE specifically designed for Python development.
 
 PostgreSQL is an open-source relational database system.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.postgresql.org/download](https://www.postgresql.org/download)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.postgresql.org/download](https://www.postgresql.org/download)
 
 
 ---
@@ -67,7 +67,7 @@ PostgreSQL is an open-source relational database system.
 
 Google Cloud CLI is a command-line tool for managing Google Cloud resources.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install)
 
 ---
 
@@ -76,4 +76,4 @@ Google Cloud CLI is a command-line tool for managing Google Cloud resources.
 
 Docker Desktop allows you to create and manage containers for your development environment.
 
-![Download](../_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
+![Download](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)

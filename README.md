@@ -27,9 +27,9 @@ git clone https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp.git
 
 Select your operating system:
 
-![Windows](_docs/windows-24x24.png) [Windows Environment](setup-development-environment/windows-environment)
-![Mac](_docs/mac-24x24.png) [Mac Environment](setup-development-environment/windows-environment)
-![Ubuntu](_docs/ubuntu-24x24.png) [ubuntu Environment](setup-development-environment/windows-environment)
+![Windows](_docs/windows-24x24.png) [Windows Environment](setup-development-environment/windows-environment)<br>
+![Mac](_docs/mac-24x24.png) [Mac Environment](setup-development-environment/windows-environment)<br>
+![Ubuntu](_docs/ubuntu-24x24.png) [ubuntu Environment](setup-development-environment/windows-environment)<br>
 
 ---
 
