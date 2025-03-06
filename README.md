@@ -4,17 +4,16 @@ This repository contains projects and resources for mastering the
 Udemy Course `Python, Next.js, PostgreSQL and DevSecOps on Google Cloud Platform with Projects from Real Industry`.
 
 Table of contents:
-1. [🏠 Getting Started](#1-getting-started)
-2. [🛠️ Setup Development Environment (Software installation guide)](#2-setup-development-environment-software-installation-guide)
-3. [📌 Technologies Covered](#3-technologies-covered)
-4. [🎯 Projects Included](#4-projects-included)
-5. [📜 License](#5-license)
+1. [🏠 Getting Started](#-1-getting-started)
+2. [🛠️ Setup Development Environment (Software installation guide)](#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
+3. [📌 Technologies Covered](#-3-technologies-covered)
+4. [🎯 Projects Included](#-4-projects-included)
+5. [📜 License](#-5-license)
 
 ---
 
 ## 🏠 1 Getting Started
 
-1. 
 ![Download](_docs/download_24dp_2854C5_FILL0_wght400_GRAD0_opsz24.png) [Download ZIP](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/archive/refs/heads/main.zip) of the course material
 or use Git and clone the material:
 ```bash
@@ -26,6 +25,11 @@ git clone https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp.git
 
 ## 🛠️ 2 Setup Development Environment (Software installation guide)
 
+Select your operating system:
+
+![Windows](_docs/windows-24x24.png) [Windows Environment](setup-development-environment/windows-environment)
+![Mac](_docs/mac-24x24.png) [Mac Environment](setup-development-environment/windows-environment)
+![Ubuntu](_docs/ubuntu-24x24.png) [ubuntu Environment](setup-development-environment/windows-environment)
 
 ---
 
