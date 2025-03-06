@@ -10,7 +10,7 @@ Table of contents:
 4. [🎯 Projects Included](#4-projects-included)
 5. [📜 License](#5-license)
 
-
+---
 
 ## 🏠 1 Getting Started
 
