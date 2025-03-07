@@ -1,8 +1,8 @@
 # ![Ubuntu](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/ubuntu-32x23.png)  Section 1 · Lesson 7 · Setup Development Environment - Ubuntu 
 
-![🏠 Home](../../)
+[🏠 Home](../../)
 &nbsp; &nbsp;
-![⬅ Setup Development Environment (Software installation guide)](../../#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
+[⬅ Setup Development Environment (Software installation guide)](../../#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
 
 This guide will show you how to download and install software needed for the course
 `Python and Next.js on Google Cloud Platform with Projects from Real Industry Video`.
