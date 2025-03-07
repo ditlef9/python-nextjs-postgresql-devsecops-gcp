@@ -58,8 +58,12 @@ npm -v  # Verify npm installation
 
 VSCode is a lightweight, powerful code editor for various programming languages. We will use it to develop Next.js applications.
 
+**Installation Steps with Ubuntu App Center:**
 
-**Installation Steps:**
+App Center > Search for `code` > Install
+
+
+**Installation Steps with command line:**
 ```bash
 sudo apt update
 sudo apt install wget gpg -y
@@ -78,8 +82,13 @@ code --version  # Verify installation
 
 PyCharm is an IDE specifically designed for Python development.
 
+**Installation Steps with Ubuntu App Center:**
 
-**Installation Steps:**
+App Center > Search for `pycharm` > Install
+
+
+**Installation Steps with command line:**
+
 
 ```bash
 sudo snap install pycharm-community --classic
@@ -95,7 +104,11 @@ PostgreSQL is an open-source relational database system. The course will use the
 * Port: 5432
 
 
-**Installation Steps:**
+**Installation Steps with Ubuntu App Center:**
+
+App Center > Search for `postgresql` > Install
+
+**Installation Steps with command line:**
 ```bash
 sudo apt update
 sudo apt install postgresql postgresql-contrib -y
@@ -151,9 +164,11 @@ Desktop Mode: Run pgAdmin from the application menu
 
 Google Cloud CLI is a command-line tool for managing Google Cloud resources.
 
+**Installation Steps with Ubuntu App Center:**
 
-**Installation Steps:**
+App Center > Search for `google-cloud-cli` > Install
 
+**Installation Steps with command line:**
 
 ```
 sudo apt update
@@ -162,7 +177,7 @@ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-
 tar -xvzf google-cloud-cli-*.tar.gz
 ./google-cloud-sdk/install.sh
 ./google-cloud-sdk/bin/gcloud init  # Configure Google Cloud SDK
-```
+d```
 
 
 ---
@@ -175,8 +190,12 @@ Docker Desktop allows you to create and manage containers for your development e
 Installation of Docker Desktop is optional but recommend for debugging purposes.
 
 
+**Installation Steps with Ubuntu App Center:**
 
-**Installation Steps:**
+App Center > Search for `docker` > Install
+
+
+**Installation Steps with command line:**
 
 Run the following commands in the terminal:
 
