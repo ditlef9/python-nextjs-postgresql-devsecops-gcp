@@ -13,7 +13,7 @@ This guide will show you how to download and install software needed for the cou
 Git is a version control system to manage your code and collaborate with others.
 
 
-## 1 Git on Ubuntu:**
+## 1 Git on Ubuntu
 
 ```bash
 sudo apt update
@@ -38,7 +38,7 @@ pip3 --version  # Verify pip installation
 
 ---
 
-## 3 Node.js
+## 3 Node.js on Ubuntu
 
 Node.js is a JavaScript runtime used for building server-side applications.
 
@@ -54,7 +54,7 @@ npm -v  # Verify npm installation
 
 ---
 
-## 4 VSCode
+## 4 VSCode on Ubuntu
 
 VSCode is a lightweight, powerful code editor for various programming languages. We will use it to develop Next.js applications.
 
@@ -77,7 +77,7 @@ code --version  # Verify installation
 
 ---
 
-## 5 PyCharm
+## 5 PyCharm on Ubuntu
 
 
 PyCharm is an IDE specifically designed for Python development.
@@ -96,7 +96,7 @@ sudo snap install pycharm-community --classic
 
 ---
 
-## 6 PostgreSQL
+## 6 PostgreSQL on Ubuntu
 
 PostgreSQL is an open-source relational database system. The course will use the following password and port:
 
@@ -160,7 +160,7 @@ Desktop Mode: Run pgAdmin from the application menu
 
 ---
 
-## 7 Google Cloud CLI
+## 7 Google Cloud CLI on Ubuntu
 
 Google Cloud CLI is a command-line tool for managing Google Cloud resources.
 
@@ -183,7 +183,7 @@ d
 
 ---
 
-## 8 Docker Desktop
+## 8 Docker on Ubuntu
 
 
 Docker Desktop allows you to create and manage containers for your development environment.
