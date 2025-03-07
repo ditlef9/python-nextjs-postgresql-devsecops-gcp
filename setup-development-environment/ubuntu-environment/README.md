@@ -8,11 +8,6 @@ This guide will show you how to download and install software needed for the cou
 `Python and Next.js on Google Cloud Platform with Projects from Real Industry Video`.
 
 
-## 1 Git
-
-Git is a version control system to manage your code and collaborate with others.
-
-
 ## 1 Git on Ubuntu
 
 ```bash
