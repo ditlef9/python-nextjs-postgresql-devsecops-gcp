@@ -1,4 +1,4 @@
-# ![Ubuntu](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/ubuntu-32x23.png)  Section 1 · Lesson 7 · Setup Development Environment - Ubuntu 
+# ![Ubuntu](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/_docs/ubuntu-32x32.png)  Section 1 · Lesson 7 · Setup Development Environment - Ubuntu 
 
 [🏠 Home](../../)
 &nbsp; &nbsp;
