@@ -177,7 +177,8 @@ curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-
 tar -xvzf google-cloud-cli-*.tar.gz
 ./google-cloud-sdk/install.sh
 ./google-cloud-sdk/bin/gcloud init  # Configure Google Cloud SDK
-d```
+d
+```
 
 
 ---
