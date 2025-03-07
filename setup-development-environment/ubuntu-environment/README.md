@@ -113,41 +113,35 @@ sudo systemctl enable postgresql
 
 Set password for **Postgres** user:
 ```bash
-sudo -u postgres psql
-ALTER USER postgres PASSWORD 'root';
-\q  # Exit PostgreSQL
+sudo -u postgres psql template1
+ALTER USER postgres with encrypted password 'root';
+\q
 ```
 
-Find `local all postgres peer` and replace `peer` with `md5`. Save the file and restart PostgreSQL:
-```bash
-sudo systemctl restart postgresql
-```
-
-How to Install pgAdmin on Ubuntu
 
 ### After installing PostgreSQL, follow these steps to install pgAdmin:
 
-**1. Add the pgAdmin Repository*'
 
-Run the following commands:
+**1 Install pgAdmin from App Center**
 
-```bash
-sudo apt update
-sudo apt install curl ca-certificates gnupg -y
-curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/pgadmin-keyring.gpg
-sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/pgadmin-keyring.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
-```
+Open App Center and serach for `pgAdmin`. Install it.
 
-**2. Install pgAdmin**
+**2 Connect to Database from pgAdmin**
 
-For the desktop mode (GUI version), install:
-```bash
-sudo apt install pgadmin4 -y
-```
+pgAdmin > [Right click on Servers] > Register: Server..
 
-**3. Launch pgAdmin**
+General:
+    * Name: `localhost`
 
-Desktop Mode: Run pgAdmin from the application menu
+Connection:
+    * Host name/address: `127.0.0.1`
+    * Port: `5432`
+    * Username: `postgres`
+    * Password: `root`
+    * Save password: `[v]`
+
+Click [Save]
+
 
 ---
 
