@@ -7,6 +7,7 @@
 This guide will show you how to download and install software needed for the course
 `Python and Next.js on Google Cloud Platform with Projects from Real Industry Video`.
 
+---
 
 ## 1 Git on Ubuntu
 
