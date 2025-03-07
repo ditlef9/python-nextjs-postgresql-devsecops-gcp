@@ -99,11 +99,7 @@ PostgreSQL is an open-source relational database system. The course will use the
 * Port: 5432
 
 
-**Installation Steps with Ubuntu App Center:**
-
-App Center > Search for `postgresql` > Install
-
-**Installation Steps with command line:**
+**Installation Steps with command line (reccomended):**
 ```bash
 sudo apt update
 sudo apt install postgresql postgresql-contrib -y
@@ -162,6 +158,13 @@ Google Cloud CLI is a command-line tool for managing Google Cloud resources.
 **Installation Steps with Ubuntu App Center:**
 
 App Center > Search for `google-cloud-cli` > Install
+
+After installing you need to Initialize it:
+
+```bash
+gcloud -v # Check installation
+gcloud init # Initialize (login to Google Cloud)
+```
 
 **Installation Steps with command line:**
 
