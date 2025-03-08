@@ -119,15 +119,15 @@ Open App Center and serach for `pgAdmin`. Install it.
 
 pgAdmin > [Right click on Servers] > Register: Server..
 
-General:
-    * Name: `localhost`
+General:<br>
+* Name: `localhost`
 
-Connection:
-    * Host name/address: `127.0.0.1`
-    * Port: `5432`
-    * Username: `postgres`
-    * Password: `root`
-    * Save password: `[v]`
+Connection:<br>
+* Host name/address: `127.0.0.1`<br>
+* Port: `5432`<br>
+* Username: `postgres`<br>
+* Password: `root`<br>
+* Save password: `[v]`<br>
 
 Click [Save]
 
