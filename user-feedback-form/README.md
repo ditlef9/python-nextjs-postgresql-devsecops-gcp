@@ -7,11 +7,11 @@
 The user feedback form is a Next.js application that runs on Google Cloud Run.
 It allows users to give their feedback and the results are stored in Google Cloud Bucket.
 
-| Category      | Details   |          
-|---------------|-----------|
-| Tech          | Next.js   |
-| Runs on       | Cloud Run |
-| GCP Serviuces | Buckets   |
+| Category     | Details   |          
+|--------------|-----------|
+| Tech         | Next.js   |
+| Runs on      | Cloud Run |
+| GCP Services | Buckets   |
 
 
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
@@ -27,7 +27,7 @@ Table of contents:
 
 ## 🚀 1 Getting Started with User Feedback Form
 
-1. Create new application
+**1. Create new application**
 
 Open CMD/Terminal and write:
 
@@ -47,14 +47,14 @@ npx create-next-app@latest
 * Would you like to customize the import alias (`@/*` by default)?: **No**
 
 
-2. Open project in VSCode
+**2. Open project in VSCode**
 
 You may want to edit the workbench label format:<br>
 File > Preferences > Settings > <br>
 ```"workbench.editor.labelFormat": "short"```
 
 
-3. Start the application
+**3. Start the application**
 
 ```
 npm install
@@ -71,11 +71,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🖥️ 3 Running the Finished User Feedback Form Locally
 
-1. Clone the repository
+**1. Clone the repository**
 
-2. Open the directory `user-feedback-form` in VSCode
+**2. Open the directory `user-feedback-form` in VSCode**
 
-3. Start the application
+**3. Start the application**
 
 ```
 npm install
