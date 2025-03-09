@@ -65,7 +65,13 @@ if __name__ == '__main__':
     main(request)
 ```
 
-**5. Run application**
+**5. Install requirements**
+
+PyCharm > Terminal:
+
+`pip install -r requirements.txt`
+
+**6. Run application**
 In PyCharm go to main.py and click `Run`
 
 
@@ -83,14 +89,21 @@ In PyCharm go to main.py and click `Run`
 
 **2. Open the directory `what-version` in PyCharm**
 
-**3. Start the application**
+
+**3. Install requirements**
+
+PyCharm > Terminal:
+
+`pip install -r requirements.txt`
+
+**4. Start the application**
 In PyCharm go to main.py and click `Run`
 
 
 
 ---
 
-## ☁️ 4 Running the Finished Getting Started with What Version on Google Cloud Run Functions
+## ☁️ 4 Running the Finished What Version on Google Cloud Run Functions
 
 ### 1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
@@ -111,7 +124,7 @@ Permissions/Assign Roles:
 Buckets > [Create]
 
 Get started:
-* Name: **user-feedback-form-bucket**
+* Name: **what-version-bucket**
 * Labels: owner: YOUR_NAME
 
 Location type:
@@ -129,31 +142,12 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 3. Deploy on Cloud Run
+### 3. Deploy on Cloud Run Functions
 
-Cloud Run > Deploy Container > Service
-
-* Type: Github
-
-Configure:
-* Service name: user-feedback-form-diagram.drawio
-* Region: europe-north1 (Finland)
-* Authentication: Allow unauthenticated invocations
-* Billing: Request based
-
-Service Scaling
-* Auto-scaling: Checked
-* Minimum number of instances: 0
-
-Containers > Resources:
-* Memory: 128 GB
-
-Containers > Revision scaling:
-* Minimum number of instances: 0
-* Maximum number of instances: 1
-
-Containers > Security:
-* Service account: Cloud Scheduler Service Account for Cloud Run and Functions
+```commandline
+gcloud auth login
+gcloud functions deploy what-version --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev --memory=512MB
+```
 
 
 
