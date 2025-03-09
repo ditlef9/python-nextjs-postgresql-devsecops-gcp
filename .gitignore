@@ -1,6 +1,7 @@
 # Repository files
 img.png
 img_1.png
+*.bkp
 
 # Python directories and files
 __pycache__/

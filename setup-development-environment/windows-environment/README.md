@@ -1,4 +1,4 @@
-# ![Windows](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/windows-32x23.png)  Section 1 · Lesson 6 · Setup Development Environment - Windows 
+# ![Windows](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/icons/windows-32x23.png)  Section 1 · Lesson 6 · Setup Development Environment - Windows 
 
 [🏠 Home](../../)
 &nbsp; &nbsp;

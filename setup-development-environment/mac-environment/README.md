@@ -1,4 +1,4 @@
-# ![Mac](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/mac-32x23.png)  Section 1 · Lesson 8 · Setup Development Environment - Mac 
+# ![Mac](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/icons/mac-32x23.png)  Section 1 · Lesson 8 · Setup Development Environment - Mac 
 
 [🏠 Home](../../)
 &nbsp; &nbsp;
