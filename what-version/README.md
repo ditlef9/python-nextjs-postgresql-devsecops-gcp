@@ -53,7 +53,9 @@ import functions_framework
 @functions_framework.http
 def main(request: flask.wrappers.Request):
     """HTTP Cloud Function"""
-    log_headline: str = f"main()·"
+    log_headline: str = f"main()"
+    print(f"{log_headline} · Init")
+
 
 if __name__ == '__main__':
     print("what-version local run")
