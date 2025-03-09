@@ -1,30 +1,36 @@
-# 🔄 User Feedback Form 
+# 📝 News Backend and Frontend
 
 [🏠 Home](../)
 &nbsp; &nbsp;
 [⬅ 🎯 Projects Included](../#-4-projects-included)
 
-Fetches API data and posts updates to Slack.
+Backend API with user authentication and Next.js frontend.
 
-| Category     | Details                               |          
-|--------------|---------------------------------------|
-| Tech         | Python                                |
-| Runs on      | Cloud Run Functions                   |
-| GCP Services | Buckets, Email, Secrets and Scheduler |
+| Category     | Details                 |          
+|--------------|-------------------------|
+| Tech         | Python (Flask), Next.js |
+| Runs on      | Cloud Run               |
+| GCP Services | PostgreSQL              |
 
 
-# ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
+# ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with What Version](#-1-getting-started-with-user-feedback-form)
+1. [🚀 Getting Started with News Backend and Frontend](#-1-getting-started-with-user-feedback-form)
 2. [📦 Python Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-4. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-5. [📜 License](#-5-license)
+3. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
+4. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
+5. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+6. [📜 License](#-5-license)
 
 ---
 
-## 🚀 1 Getting Started with What Version
+## 🚀 1 Getting Started with News Backend and Frontend
+
+
+
+### 1.1 Backend
+
 
 **1. Create new application in Github**
 
@@ -75,37 +81,49 @@ PyCharm > Terminal:
 In PyCharm go to main.py and click `Run`
 
 
----
-
-## 📦 2 Python Utils and Functions
-
+### 1.2 Frontend
 
 
 ---
 
-## 🖥️ 3 Running the Finished What Version Locally
+## 📦🐍 2 Python Utils and Functions
+
+
+---
+
+## 📦🌐 3 Next.js Utils and Functions
+
+
+
+---
+
+## 🖥️ 4 Running the Finished News Backend and Frontend Locally
 
 **1. Clone the repository**
 
-**2. Open the directory `what-version` in PyCharm**
+### 4.1 Backend
+
+**1. Open the directory `news-backend` in PyCharm**
 
 
-**3. Install requirements**
+**2. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**4. Start the application**<br>
+**3. Start the application**<br>
 In PyCharm go to main.py and click `Run`
 
+
+### 4.2 Frontend
 
 
 ---
 
-## ☁️ 4 Running the Finished What Version on Google Cloud Run Functions
+## ☁️ 5 Running the Finished News Backend and Frontend on Google Cloud Run
 
-### 1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 5.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -117,7 +135,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 2. Create bucket
+### 5.2. Database
 
 **Create Bucket:**
 
@@ -133,18 +151,16 @@ Location type:
 [Create]
 
 
-### 3. Deploy on Cloud Run Functions
+### 5.3. Deploy News Backend on Google Cloud Run
 
-```commandline
-gcloud auth login
-gcloud functions deploy what-version --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev --memory=512MB
-```
+### 5.4. Deploy News Frontend on Google Cloud Run
+
 
 
 
 ---
 
-## 📜 5 License
+## 📜 6 License
 
 
 This project is licensed under the
