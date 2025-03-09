@@ -1,4 +1,4 @@
-# 📝 User Feedback Form 
+# 🔄 User Feedback Form 
 
 [🏠 Home](../)
 &nbsp; &nbsp;
@@ -6,11 +6,11 @@
 
 Fetches API data and posts updates to Slack.
 
-| Category     | Details                                  |          
-|--------------|------------------------------------------|
-| Tech         | Python                                   |
-| Runs on      | Cloud Run Functions                      |
-| GCP Services | PostgreSQL, Email, Secrets and Scheduler |
+| Category     | Details                               |          
+|--------------|---------------------------------------|
+| Tech         | Python                                |
+| Runs on      | Cloud Run Functions                   |
+| GCP Services | Buckets, Email, Secrets and Scheduler |
 
 
 # ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
@@ -26,38 +26,41 @@ Table of contents:
 
 ## 🚀 1 Getting Started with What Version
 
-**1. Create new application**
+**1. Create new application in Github**
 
-Open CMD/Terminal and write:
+**2. Open application in PyCharm**
 
-```
-mkdir next
-cd next
-npx create-next-app@latest
-```
+Pycharm > File > Close Project<br><br>
 
-* What is your project name: **user-feedback-form**
-* Would you like to use TypeScript: **Yes**
-* Would you like to use ESLint: **Yes**
-* Would you like to use Tailwind CSS: **No**
-* Would you like yor code inside a `src/` directory: **No**
-* Would you like to use App Router? (recommended): **Yes**
-* Would you like to use Turbopack for `next dev`?: **No**
-* Would you like to customize the import alias (`@/*` by default)?: **No**
+Pycharm > Get from VCS<br><br>
 
 
-**2. Open project in VSCode**
-
-You may want to edit the workbench label format:<br>
-File > Preferences > Settings > <br>
-```"workbench.editor.labelFormat": "short"```
-
-
-**3. Start the application**
+**3. Add requirements.txt**
 
 ```
-npm install
-npm run dev
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
+google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+```
+
+**4. Create main.py**
+
+```python
+
+
+import flask
+import functions_framework
+
+@functions_framework.http
+def main(request: flask.wrappers.Request):
+    """HTTP Cloud Function"""
+    log_headline: str = f"main()·"
+
+if __name__ == '__main__':
+    print("what-version local run")
+
+    app = flask.Flask(__name__)  # Create a Flask app instance
+    request = flask.request
+    main(request)
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.

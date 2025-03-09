@@ -27,7 +27,11 @@ Table of contents:
 
 ## 🚀 1 Getting Started with User Feedback Form
 
-**1. Create new application**
+**1. Create new repository in Github**
+
+
+
+**2. Create new application**
 
 Open CMD/Terminal and write:
 
@@ -47,14 +51,16 @@ npx create-next-app@latest
 * Would you like to customize the import alias (`@/*` by default)?: **No**
 
 
-**2. Open project in VSCode**
+**3. Open project in VSCode**
 
 You may want to edit the workbench label format:<br>
 File > Preferences > Settings > <br>
 ```"workbench.editor.labelFormat": "short"```
 
+**4. Initialize files to Github**
 
-**3. Start the application**
+
+**5. Start the application**
 
 ```
 npm install
