@@ -102,7 +102,32 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 2. Deploy on Cloud Run
+### 2. Create bucket
+
+**Create Bucket:**
+
+Buckets > [Create]
+
+Get started:
+* Name: **user-feedback-form-bucket**
+* Labels: owner: YOUR_NAME
+
+Location type:
+* Region - europe-north1
+
+[Create]
+
+**Change the Lifecycle:**
+
+Lifecycle > Add a rule
+
+Action:
+* Delete object
+
+Select object conditions:
+* Age 365 days
+
+### 3. Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
