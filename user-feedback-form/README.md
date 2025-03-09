@@ -1,6 +1,6 @@
 # 📝 User Feedback Form 
 
-[🏠 Home](../../)
+[🏠 Home](../)
 &nbsp; &nbsp;
 [⬅ 🎯 Projects Included](../#-4-projects-included)
 
