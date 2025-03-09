@@ -1,4 +1,4 @@
-# ![Ubuntu](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/ubuntu-32x23.png) User Feedback Form 
+# 📝 User Feedback Form 
 
 [🏠 Home](../../)
 &nbsp; &nbsp;
@@ -7,21 +7,21 @@
 The user feedback form is a Next.js application that runs on Google Cloud Run.
 It allows users to give their feedback and the results are stored in Google Cloud Bucket.
 
-| Category      | Details |          
-|---------------|---------|
-| Tech          | Next.js |
-| Runs on       | Run     |
-| GCP Serviuces | Buckets |
+| Category      | Details   |          
+|---------------|-----------|
+| Tech          | Next.js   |
+| Runs on       | Cloud Run |
+| GCP Serviuces | Buckets   |
 
 
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with User Feedback Form](#-1-getting-started)
-2. [📦 Next.js Utils and Functions](#-1-getting-started)
-3. [🖥️ Running the Finished User Feedback Form Locally](#-1-getting-started)
-4. [☁️ Running the Finished User Feedback Form on Google Cloud Run](#-1-getting-started)
-5. [📜 License](#-4-license)
+1. [🚀 Getting Started with User Feedback Form](#-1-getting-started-with-user-feedback-form)
+2. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
+3. [🖥️ Running the Finished User Feedback Form Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
+4. [☁️ Running the Finished User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+5. [📜 License](#-5-license)
 
 ---
 
