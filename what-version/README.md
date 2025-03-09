@@ -65,28 +65,26 @@ if __name__ == '__main__':
     main(request)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+**5. Run application**
+In PyCharm go to main.py and click `Run`
+
 
 ---
 
 ## 📦 2 Python Utils and Functions
 
+
+
 ---
 
-## 🖥️ 3 Running the Finished Getting Started with What Version Locally
+## 🖥️ 3 Running the Finished What Version Locally
 
 **1. Clone the repository**
 
-**2. Open the directory `user-feedback-form` in VSCode**
+**2. Open the directory `what-version` in PyCharm**
 
 **3. Start the application**
-
-```
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+In PyCharm go to main.py and click `Run`
 
 
 
