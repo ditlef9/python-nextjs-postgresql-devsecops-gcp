@@ -16,12 +16,12 @@ Backend API with user authentication and Next.js frontend.
 # ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with News Backend and Frontend](#-1-getting-started-with-user-feedback-form)
-2. [📦 Python Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
-4. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-5. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-6. [📜 License](#-5-license)
+1. [🚀 Getting Started with News Backend and Frontend](#-1-getting-started-with-news-backend-and-frontendm)
+2. [📦 Python Utils and Functions](#-2-python-utils-and-functions)
+3. [📦 Next.js Utils and Functions](#-3-nextjs-utils-and-functions)
+4. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-4-running-the-finished-news-backend-and-frontend-locally)
+5. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-5-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+6. [📜 License](#-6-license)
 
 ---
 

@@ -96,7 +96,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## ☁️ 4 Running the Finished User Feedback Form on Google Cloud Run
 
-### 1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 4.1 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -108,7 +108,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 2. Create bucket
+### 4.2 Create bucket
 
 **Create Bucket:**
 
@@ -133,7 +133,7 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 3. Deploy on Cloud Run
+### 4.3 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
