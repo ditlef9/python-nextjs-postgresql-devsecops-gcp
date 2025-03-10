@@ -16,10 +16,10 @@ Generates Excel reports from stored data.
 # ![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with Report PDF-generation](#-1-getting-started-with-user-feedback-form)
-2. [📦 Python Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-4. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+1. [🚀 Getting Started with Report PDF-generation](#-1-getting-started-with-report-pdf-generation)
+2. [📦 Python Utils and Functions](#-2-python-utils-and-functions)
+3. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
+4. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
 5. [📜 License](#-5-license)
 
 ---
