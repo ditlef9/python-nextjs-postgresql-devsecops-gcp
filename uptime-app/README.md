@@ -13,11 +13,10 @@ Tracks and manages other applications uptime.
 | GCP Services | PostgreSQL, Email, Secrets and Scheduler |
 
 
-Manage Service:<br>
+
 # ![Uptime App - Manage Service Diagram](_docs/uptime-diagram-manage-service.drawio.png) 
 
 
-Check if Service is Online:<br>
 # ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
 Table of contents:
