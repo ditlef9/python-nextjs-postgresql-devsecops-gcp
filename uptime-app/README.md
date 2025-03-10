@@ -13,7 +13,8 @@ Tracks and manages other applications uptime.
 | GCP Services | PostgreSQL, Email, Secrets and Scheduler |
 
 
-# ![Uptime App-generation Diagram](_docs/uptime-diagram.drawio.png) 
+# ![Uptime App - Manage Service Diagram](_docs/uptime-diagram-manage-service.drawio.png) 
+# ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
 Table of contents:
 1. [🚀 Getting Started with Uptime App-generation](#-1-getting-started-with-uptime-app)
