@@ -6,11 +6,11 @@
 
 Generates Excel reports from stored data.
 
-| Category     | Details        |          
-|--------------|----------------|
-| Tech         | Python (Flask) |
-| Runs on      | Cloud Run      |
-| GCP Services | Buckets        |
+| Category     | Details          |          
+|--------------|------------------|
+| Tech         | Python (Flask)   |
+| Runs on      | Cloud Run        |
+| GCP Services | Secrets, Buckets |
 
 
 # ![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
