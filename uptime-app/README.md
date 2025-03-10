@@ -4,22 +4,22 @@
 &nbsp; &nbsp;
 [⬅ 🎯 Projects Included](../#-4-projects-included)
 
-Generates Excel reports from stored data.
+Tracks and manages other applications uptime.
 
-| Category     | Details        |          
-|--------------|----------------|
-| Tech         | Python (Flask) |
-| Runs on      | Cloud Run      |
-| GCP Services | Buckets        |
+| Category     | Details                                  |          
+|--------------|------------------------------------------|
+| Tech         | Next.js                                  |
+| Runs on      | Cloud Run                                |
+| GCP Services | PostgreSQL, Email, Secrets and Scheduler |
 
 
-# ![Uptime App-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
+# ![Uptime App-generation Diagram](_docs/uptime-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with Uptime App-generation](#-1-getting-started-with-user-feedback-form)
-2. [📦 Python Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-4. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+1. [🚀 Getting Started with Uptime App-generation](#-1-getting-started-with-uptime-app)
+2. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
+3. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-3-running-the-finished-uptime-app-locally)
+4. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-uptime-app-on-google-cloud-run)
 5. [📜 License](#-5-license)
 
 ---
