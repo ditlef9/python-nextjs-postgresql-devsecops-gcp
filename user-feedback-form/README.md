@@ -29,7 +29,7 @@ Table of contents:
 
 **1. Create new repository in Github**
 
-
+https://github.com/new
 
 **2. Create new application**
 
@@ -59,6 +59,17 @@ File > Preferences > Settings > <br>
 
 **4. Initialize files to Github**
 
+File > Terminal:
+
+```
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPOSITORY_NAME.git
+git push -u origin main
+```
 
 **5. Start the application**
 
