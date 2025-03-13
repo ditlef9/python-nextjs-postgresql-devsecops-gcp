@@ -107,7 +107,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## ☁️ 4 Running the Finished User Feedback Form on Google Cloud Run
 
-### 4.1 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 4.1 Create a Google Cloud Console Project (one time setup)
+
+https://console.cloud.google.com/ > https://console.cloud.google.com/projectcreate
+
+* Name: applications-dev
+
+
+### 4.2 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -119,7 +126,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 4.2 Create bucket
+### 4.3 Create bucket
 
 **Create Bucket:**
 
@@ -144,7 +151,29 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 4.3 Deploy on Cloud Run
+### 4.4 Make sure that the application has a Docker file
+
+Create a file `Dockerfile` in the project with the following contents:
+
+```
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
+
+### 4.5 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
