@@ -180,7 +180,7 @@ Cloud Run > Deploy Container > Service
 * Type: Github
 
 Configure:
-* Service name: user-feedback-form-diagram.drawio
+* Service name: user-feedback-form
 * Region: europe-north1 (Finland)
 * Authentication: Allow unauthenticated invocations
 * Billing: Request based
