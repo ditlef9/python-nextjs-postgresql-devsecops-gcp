@@ -21,7 +21,8 @@ Table of contents:
 2. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
 3. [🖥️ Running the Finished User Feedback Form Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
 4. [☁️ Running the Finished User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-5. [📜 License](#-5-license)
+5. [🛡️ Add Application to Snyk](#-5-license)
+6. [📜 License](#-5-license)
 
 ---
 
@@ -199,11 +200,14 @@ Containers > Revision scaling:
 Containers > Security:
 * Service account: Cloud Scheduler Service Account for Cloud Run and Functions
 
+---
+
+## 🛡️ 5 Add Application to Snyk
 
 
 ---
 
-## 📜 5 License
+## 📜 6 License
 
 
 This project is licensed under the
