@@ -93,7 +93,7 @@ https://console.cloud.google.com/ > https://console.cloud.google.com/projectcrea
 * Name: applications-dev
 
 
-### 2.2 Create service account `Cloud Run, Cloud Run Functions and Scheduler Service Account` (one time setup)
+### 2.2 Create service account to lunch applications (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
