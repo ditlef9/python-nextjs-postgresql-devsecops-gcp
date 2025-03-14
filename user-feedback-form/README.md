@@ -169,7 +169,7 @@ Service Scaling
 * Minimum number of instances: 0
 
 Containers > Resources:
-* Memory: 128 GB
+* Memory: 128 MB
 
 Containers > Revision scaling:
 * Minimum number of instances: 0
