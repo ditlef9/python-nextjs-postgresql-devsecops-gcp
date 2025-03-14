@@ -93,12 +93,12 @@ https://console.cloud.google.com/ > https://console.cloud.google.com/projectcrea
 * Name: applications-dev
 
 
-### 2.2 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 2.2 Create service account `Cloud Run, Cloud Functions and Scheduler Service Account` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
-* Name: **Cloud Scheduler Service Account for Cloud Run and Functions**
-* Description: **This is used for Google Cloud Scheduler. It can read secrets and invoke functions**
+* Name: **Cloud Run, Cloud Run Functions and Scheduler Service Account**
+* Description: **This is used for Cloud Run, Cloud Run Functions and Scheduler Service. It can read secrets and invoke functions**
 
 Permissions/Assign Roles:
 * Cloud Scheduler Service Agent
