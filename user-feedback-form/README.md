@@ -156,7 +156,8 @@ CMD ["npm", "start"]
 
 https://sendgrid.com/en-us > [Start for free]
 
-Create a API key. We are going to pass it as a environment variable as 
+Create an 
+[API key](https://app.sendgrid.com/settings/api_keys). We are going to pass it as an environment variable as 
 `SENDGRID_API_KEY`
 
 We are going to use this later in order to send emails whenever there is a 
@@ -191,6 +192,10 @@ Containers > Security:
 ---
 
 ## 📦 3 Next.js Utils and Functions
+
+Send email: 
+[https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
+
 
 ---
 
