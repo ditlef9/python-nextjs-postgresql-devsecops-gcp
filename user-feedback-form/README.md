@@ -18,10 +18,10 @@ It allows users to give their feedback and the results are stored in Google Clou
 
 Table of contents:
 1. [🚀 Getting Started with User Feedback Form](#-1-getting-started-with-user-feedback-form)
-2. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Finished User Feedback Form Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-4. [☁️ Running the Finished User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-5. [🛡️ Add Application to Snyk](#-5-license)
+2. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-2-running-user-feedback-form-on-google-cloud-run)
+3. [📦 Next.js Utils and Functions](#-3-nextjs-utils-and-functions)
+3. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-4-running-user-feedback-form-locally)
+5. [🛡️ Add Application to Snyk](#%EF%B8%8F-5-add-application-to-snyk)
 6. [📜 License](#-5-license)
 
 ---
@@ -83,39 +83,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
-## 📦 2 Next.js Utils and Functions
 
----
+## ☁️ 2 Running the Finished User Feedback Form on Google Cloud Run
 
-## 🖥️ 3 Running the Finished User Feedback Form Locally
-
-**1. Clone the repository**
-
-**2. Open the directory `user-feedback-form` in VSCode**
-
-**3. Start the application**
-
-```
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
-
-
-
----
-
-## ☁️ 4 Running the Finished User Feedback Form on Google Cloud Run
-
-### 4.1 Create a Google Cloud Console Project (one time setup)
+### 2.1 Create a Google Cloud Console Project (one time setup)
 
 https://console.cloud.google.com/ > https://console.cloud.google.com/projectcreate
 
 * Name: applications-dev
 
 
-### 4.2 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 2.2 Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -127,7 +105,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 4.3 Create bucket
+### 2.3 Create bucket
 
 **Create Bucket:**
 
@@ -152,7 +130,7 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 4.4 Make sure that the application has a Docker file
+### 2.4 Make sure that the application has a Docker file
 
 Create a file `Dockerfile` in the project with the following contents:
 
@@ -174,7 +152,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 4.5 Deploy on Cloud Run
+### 2.5 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
@@ -201,6 +179,30 @@ Containers > Security:
 * Service account: Cloud Scheduler Service Account for Cloud Run and Functions
 
 ---
+
+## 📦 3 Next.js Utils and Functions
+
+---
+
+## 🖥️ 4 Running the Finished User Feedback Form Locally
+
+**1. Clone the repository**
+
+**2. Open the directory `user-feedback-form` in VSCode**
+
+**3. Start the application**
+
+```
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
+
+
+---
+
 
 ## 🛡️ 5 Add Application to Snyk
 
