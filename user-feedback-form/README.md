@@ -156,7 +156,7 @@ CMD ["npm", "start"]
 
 Cloud Run > Deploy Container > Service
 
-* Type: Github
+* Github - Continuously deploy from a repository (source or function)
 
 Configure:
 * Service name: user-feedback-form
