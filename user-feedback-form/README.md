@@ -84,7 +84,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## ☁️ 2 Running the Finished User Feedback Form on Google Cloud Run
+## ☁️ 2 Running User Feedback Form on Google Cloud Run
 
 ### 2.1 Create a Google Cloud Console Project (one time setup)
 
