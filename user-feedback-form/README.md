@@ -176,7 +176,7 @@ Containers > Revision scaling:
 * Maximum number of instances: 1
 
 Containers > Security:
-* Service account: Cloud Scheduler Service Account for Cloud Run and Functions
+* Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 
 ---
 
