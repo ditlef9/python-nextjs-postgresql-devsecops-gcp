@@ -152,7 +152,17 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 2.5 Deploy on Cloud Run
+### 2.5 Create a Twillio Sendgrid Account
+
+https://sendgrid.com/en-us > [Start for free]
+
+Create a API key. We are going to pass it as a environment variable as 
+`SENDGRID_API_KEY`
+
+We are going to use this later in order to send emails whenever there is a 
+new submitting to the user feedback form. 
+
+### 2.6 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
