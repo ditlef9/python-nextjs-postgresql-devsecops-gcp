@@ -17,7 +17,7 @@ It allows users to give their feedback and the results are stored in Google Clou
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
 Table of contents:
-1. [✨ Lessons Overview](#-1-getting-started-with-user-feedback-form)
+1. [✨ Lessons Overview](#-1-lessons-overview)
 2. [🚀 Getting Started with User Feedback Form](#-2-getting-started-with-user-feedback-form)
 3. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-3-running-user-feedback-form-on-google-cloud-run)
 4. [📦 Next.js Utils and Functions](#-4-nextjs-utils-and-functions)
@@ -29,22 +29,22 @@ Table of contents:
 
 ## ✨ 1 Lessons Overview
 
-1. Introduction
+1. **Introduction**
 
-2. Creating app - Create a new application locally and push it to Github.
+2. **Creating app** - Create a new application locally and push it to Github.
 
-3. Setup GCP Infrastructure - Setup a GCP project, service account, bucket and the Cloud Run application.
+3. **Setup GCP Infrastructure** - Setup a GCP project, service account, bucket and the Cloud Run application.
 
-4. DevSecOps Integration - Integrate Github repository with Snyk
+4. **DevSecOps Integration** - Integrate Github repository with Snyk
 
-5. Creating the Form and Styling it - First create the form, then add CSS, then we will add const for the form, feedback, 
+5. **Creating the Form and Styling it** - First create the form, then add CSS, then we will add const for the form, feedback, 
    handle form input change and submit
 
-6. Bucket Integration - We will build the api that handles form submit which has a bucket integration
+6. **Bucket Integration** - We will build the api that handles form submit which has a bucket integration
 
-7. Email Integration - Add email notification when someone sends the form
+7. **Email Integration** - Add email notification when someone sends the form
 
-8. Congratulations and Learning Tip
+8. **Congratulations and Learning Tip**
 
 ---
 
