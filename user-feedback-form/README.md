@@ -53,7 +53,7 @@ By the end of this module, you will:<br>
 
 4. **DevSecOps Integration** - Integrate Github repository with Snyk
 
-5. **Creating the Form ** - First create the form, then we will add const for the form, feedback, 
+5. **Creating the Form** - First create the form, then we will add const for the form, feedback, 
    handle form input change and submit
 
 6. **Styling the form** - Add CSS to the form
