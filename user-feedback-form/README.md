@@ -62,9 +62,11 @@ By the end of this module, you will:<br>
 
 8. **Email Integration** - Add email notification when someone sends the form
 
-9. **Congratulations and Learning Tip**
+9. **Security Command Center** - Demo for securing our Google Cloud Enviroment
 
-10. **Quiz**
+10. **Congratulations and Learning Tip**
+
+11. **Quiz**
 
 ---
 
