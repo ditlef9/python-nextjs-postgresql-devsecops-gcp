@@ -21,10 +21,13 @@ Table of contents:
 2. [✨ Lessons Overview](#-2-lessons-overview)
 3. [🚀 Getting Started with User Feedback Form](#-3-getting-started-with-user-feedback-form)
 4. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
-5. [📦 Next.js Utils and Functions](#-5-nextjs-utils-and-functions)
-6. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-6-running-user-feedback-form-locally)
-7. [🛡️ Add Application to Snyk](#%EF%B8%8F-7-add-application-to-snyk)
-8. [📜 License](#-8-license)
+5. [🛡️ Add Application to Snyk](#%EF%B8%8F-7-add-application-to-snyk)
+6. [🪣  Implementing Bucket]()
+7. [✉️ Implementing Email]()
+8. [🔐 Security Command Center]()
+9. [📦 Next.js Utils and Functions](#-5-nextjs-utils-and-functions)
+10. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-6-running-user-feedback-form-locally)
+11. [📜 License](#-8-license)
 
 ---
 
@@ -246,6 +249,8 @@ Containers > Security:
 Send email: 
 [https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
 
+
+## 6. 🪣  Implementing Bucket
 
 ---
 
