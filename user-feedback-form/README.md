@@ -57,7 +57,7 @@ Setup a GCP project, service account, bucket and the Cloud Run application.<br>
 
 4. **DevSecOps Integration** <br>
 Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?<br>
-5. 📌 Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
+📌 Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
 
 5. **Creating the Form**<br>
 First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
