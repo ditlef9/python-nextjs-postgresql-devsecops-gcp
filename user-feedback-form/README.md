@@ -51,11 +51,11 @@ By the end of this module, you will:<br>
 Create a new application locally and push it to Github.<br>
 📌 Activity: Follow a checklist to create and push your application to GitHub. Afterward, note any challenges and how you solved them.<br>
 
-3. **Setup GCP Infrastructure** 
+3. **Setup GCP Infrastructure** <br>
 Setup a GCP project, service account, bucket and the Cloud Run application.<br>
 📌 Activity: Draw a simple diagram showing how these components interact.
 
-4. **DevSecOps Integration** <vr
+4. **DevSecOps Integration** <br>
 Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?<br>
 5. 📌 Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
 
