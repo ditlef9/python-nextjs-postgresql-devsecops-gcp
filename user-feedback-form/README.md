@@ -246,15 +246,50 @@ Containers > Security:
 
 ## 🛡️ 5 Add Application to Snyk
 
+
+Go to [Snyk](https://snyk.io) and import the Githu repo.
+
 ---
 
 
 ## 🪣 6 Implementing Bucket
 
+1. Create an API endpoint (/app/api/api-submit-form/route.ts): This will be the main entry point that processes the form submission.
+
+2. Create separate utility functions for uploading to Google Cloud (and sending the email later).
+
+Folder structure:
+<pre>
+/app
+  /api
+    /api-submit-form
+      route.ts      // Main API endpoint
+  /utils
+    uploadToGoogleBucket.ts  // Utility function for uploading to Google Cloud
+    sendEmail.ts             // Utility function for sending an email
+</pre>
+
+3. Start by adding dependency to Google Cloud Storage:
+
+```commandline
+npm install @google-cloud/storage
+```
+
+4. Implement app/utils/uploadToGoogleBucket.ts
+
+5. Implement app/api/api-submit-form/route.ts
+
 
 ---
 
 ## ✉️ 7 Implementing Email
+
+```commandline
+npm install nodemailer
+npm i --save-dev @types/nodemailer
+
+
+```
 
 ---
 
