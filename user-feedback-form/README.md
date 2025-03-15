@@ -64,7 +64,7 @@ By the end of this module, you will:<br>
 
 9. **Security Command Center** - Demo for securing our Google Cloud Enviroment
 
-10. **Congratulations and Learning Tip**
+10. **Congratulations and Learning Tip** - Reflection activity with spam bots and using latest
 
 11. **Quiz**
 
