@@ -244,17 +244,30 @@ Containers > Security:
 
 ---
 
-## 📦 5 Next.js Utils and Functions
-
-Send email: 
-[https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
-
-
-## 6. 🪣  Implementing Bucket
+## 🛡️ 5 Add Application to Snyk
 
 ---
 
-## 🖥️ 6 Running the Finished User Feedback Form Locally
+
+## 🪣 6 Implementing Bucket
+
+
+---
+
+## ✉️ 7 Implementing Email
+
+---
+
+## 🔐 8 Security Command Center
+
+
+---
+
+## 📦 9 Next.js Utils and Functions
+
+---
+
+## 🖥️ 10 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -271,15 +284,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 
----
-
-
-## 🛡️ 7 Add Application to Snyk
-
 
 ---
 
-## 📜 8 License
+## 📜 11 License
 
 
 This project is licensed under the
