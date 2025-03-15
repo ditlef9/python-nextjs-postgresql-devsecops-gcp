@@ -64,7 +64,7 @@ By the end of this module, you will:<br>
 
 5. **Creating the Form**<br>
 - First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
-- Activity: Implement email validation for the form. Why is input validation important for security?
+- Activity: Implement Company (optional) field. 
 
 6. **Styling the form**<br>
 - Add CSS to the form.<br>
