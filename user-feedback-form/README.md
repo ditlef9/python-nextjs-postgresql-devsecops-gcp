@@ -31,13 +31,13 @@ Table of contents:
 ## 📖 1 Learning objectives
 
 By the end of this module, you will:<br>
-- Understand how to create a Next.js application from scratch.
-- Learn to deploy a Next.js app on Google Cloud Run as a Docker container.
-- Set up Google Cloud infrastructure including buckets and service accounts.
-- Integrate DevSecOps tools like Snyk for security.
-- Build a user feedback form with form handling, validation, and storage.
-- Implement email notifications for submitted feedback.
-- Run the application locally and troubleshoot common issues.
+- Understand how to **create a Next.js application** from scratch.
+- Learn to **deploy** a Next.js app on **Google Cloud Run** as a Docker container.
+- Set up **Google Cloud infrastructure** including buckets and service accounts.
+- Integrate **DevSecOps** tools like **Snyk** for security.
+- Build a user feedback form with **form handling, validation, and storage**.
+- Implement **email notifications** for submitted feedback.
+- Run the application locally and **troubleshoot common issues**.
 
 ---
 
