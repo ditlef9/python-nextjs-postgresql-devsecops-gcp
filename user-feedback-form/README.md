@@ -17,14 +17,14 @@ It allows users to give their feedback and the results are stored in Google Clou
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
 Table of contents:
-1. [📖 Learning objectives](#-1-lessons-overview)
-2. [✨ Lessons Overview](#-1-lessons-overview)
-3. [🚀 Getting Started with User Feedback Form](#-2-getting-started-with-user-feedback-form)
-4. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-3-running-user-feedback-form-on-google-cloud-run)
-5. [📦 Next.js Utils and Functions](#-4-nextjs-utils-and-functions)
-6. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-5-running-user-feedback-form-locally)
-7. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
-8. [📜 License](#-7-license)
+1. [📖 Learning objectives](#-1-learning-objectives)
+2. [✨ Lessons Overview](#-2-lessons-overview)
+3. [🚀 Getting Started with User Feedback Form](#-3-getting-started-with-user-feedback-form)
+4. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+5. [📦 Next.js Utils and Functions](#-5-nextjs-utils-and-functions)
+6. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-6-running-user-feedback-form-locally)
+7. [🛡️ Add Application to Snyk](#%EF%B8%8F-7-add-application-to-snyk)
+8. [📜 License](#-8-license)
 
 ---
 
