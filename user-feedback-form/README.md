@@ -279,17 +279,47 @@ npm install @google-cloud/storage
 
 5. Implement app/api/api-submit-form/route.ts
 
+6. When running locally remember to authenticate with
+`gcloud auth application-default login`
 
 ---
 
 ## ✉️ 7 Implementing Email
 
+1. Install Depedencies
+
 ```commandline
 npm install nodemailer
 npm i --save-dev @types/nodemailer
-
-
+npm install dotenv
 ```
+
+2. Implement app/utils/sendEmail.ts
+
+3. Implement app/api/api-submit-form/route.ts
+
+
+4. Create an app password
+
+* Enable Two-Factor Authentication (2FA):
+- If you haven’t already enabled 2-Step Verification on your Google account, you’ll need to do so. 
+- Go to your Google Account and enable 2-Step Verification.
+
+* Generate the App Password:
+- Once 2FA is enabled, go to the App Passwords page on Google.
+- Select "Mail" as the app and "Other (Custom name)" for the device, and enter a custom name like "NodeMailer".
+- Click Generate.
+- Google will generate a 16-character password that will look something like this: abcd efgh ijkl mnop.
+
+* Use the App Password in Your Code:
+- In your .env file, replace the SMTP_PASS value with the App Password you just generated.
+
+5. Create a environment file
+
+Create a file `.env.development`.<br>
+Copy the file contents of `.env.local` and change all variables with <b>CHANGE-ME</b>.<br>
+
+6. Add the environment variables to Google Cloud Run
 
 ---
 
