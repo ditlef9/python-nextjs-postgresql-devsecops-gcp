@@ -1,0 +1,75 @@
+/* - Body -------------------------------------------------------------------------------------- */
+body {
+  color: #000;
+  background: #f7f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*- Link ---------------------------------------------------------------------------------------- */
+a {
+  color: #232eac;
+  text-decoration: none;
+}
+a:hover {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+/*- Headlines ------------------------------------------------------------------------------------ */
+h1{
+  font: bold 25px Arial, Helvetica, sans-serif;
+  color: #af0081;
+  padding: 0px 0px 12px 0px;
+}
+
+/*- Paragraphs ------------------------------------------------------------------------------------ */
+p{
+  padding: 0px 0px 0px 0px;
+  margin: 12px 0px 12px 0px;
+}
+
+/*- Feedback boxes -------------------------------------------------------------------------------- */
+.success, .error{
+  border: 1px solid;
+  margin: 10px 0;
+  padding: 5px 10px 5px 10px;
+  text-align: left;
+}
+.success{
+  color: #4f8a10;
+  background-color: #dff2bf;
+}
+.error{
+  color: #d8000c;
+  background-color: #ffbaba;
+}
+
+/*- Star rating ---------------------------------------------------------------------------------- */
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: lightgray; /* Default color */
+}
+
+.star.filled {
+  color: gold; /* Color when filled */
+}
+
+/*- Main ------------------------------------------------------------------------------------------ */
+main{
+  width: 600px;
+  margin: 0px auto;
+  border: #e6e6e6 1px solid;
+  border-radius: 10px 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+}

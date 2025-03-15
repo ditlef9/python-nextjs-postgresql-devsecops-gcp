@@ -306,7 +306,7 @@ npm install dotenv
   - Go to your Google Account and enable 2-Step Verification.
 
 * Generate the App Password:
-  - Once 2FA is enabled, go to the App Passwords page on Google.
+  - Once 2FA is enabled, go to the [App Passwords](https://myaccount.google.com/apppasswords) page on Google.
   - Select "Mail" as the app and "Other (Custom name)" for the device, and enter a custom name like "NodeMailer".
   - Click Generate.
   - Google will generate a 16-character password that will look something like this: abcd efgh ijkl mnop.
@@ -317,7 +317,7 @@ npm install dotenv
 5. Create a environment file
 
 Create a file `.env.development`.<br>
-Copy the file contents of `.env.local` and change all variables with <b>CHANGE-ME</b>.<br>
+Copy the file contents of `.env.example` and change all variables.<br>
 
 6. Add the environment variables to Google Cloud Run
 
