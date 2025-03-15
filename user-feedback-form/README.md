@@ -17,17 +17,33 @@ It allows users to give their feedback and the results are stored in Google Clou
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
 Table of contents:
-1. [✨ Lessons Overview](#-1-lessons-overview)
-2. [🚀 Getting Started with User Feedback Form](#-2-getting-started-with-user-feedback-form)
-3. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-3-running-user-feedback-form-on-google-cloud-run)
-4. [📦 Next.js Utils and Functions](#-4-nextjs-utils-and-functions)
-5. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-5-running-user-feedback-form-locally)
-6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
-7. [📜 License](#-7-license)
+1. [📖 Learning objectives](#-1-lessons-overview)
+2. [✨ Lessons Overview](#-1-lessons-overview)
+3. [🚀 Getting Started with User Feedback Form](#-2-getting-started-with-user-feedback-form)
+4. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-3-running-user-feedback-form-on-google-cloud-run)
+5. [📦 Next.js Utils and Functions](#-4-nextjs-utils-and-functions)
+6. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-5-running-user-feedback-form-locally)
+7. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
+8. [📜 License](#-7-license)
 
 ---
 
-## ✨ 1 Lessons Overview
+## 📖 1 Learning objectives
+
+By the end of this module, you will:<br>
+- Understand how to create a Next.js application from scratch.
+- Learn to deploy a Next.js app on Google Cloud Run as a Docker container.
+- Set up Google Cloud infrastructure including buckets and service accounts.
+- Integrate DevSecOps tools like Snyk for security.
+- Build a user feedback form with form handling, validation, and storage.
+- Implement email notifications for submitted feedback.
+- Run the application locally and troubleshoot common issues.
+
+---
+
+## ✨ 2 Lessons Overview
+
+
 
 1. **Introduction**
 
@@ -37,19 +53,23 @@ Table of contents:
 
 4. **DevSecOps Integration** - Integrate Github repository with Snyk
 
-5. **Creating the Form and Styling it** - First create the form, then add CSS, then we will add const for the form, feedback, 
+5. **Creating the Form ** - First create the form, then we will add const for the form, feedback, 
    handle form input change and submit
 
-6. **Bucket Integration** - We will build the api that handles form submit which has a bucket integration
+6. **Styling the form** - Add CSS to the form
 
-7. **Email Integration** - Add email notification when someone sends the form
+7. **Bucket Integration** - We will build the api that handles form submit which has a bucket integration
 
-8. **Congratulations and Learning Tip**
+8. **Email Integration** - Add email notification when someone sends the form
+
+9. **Congratulations and Learning Tip**
+
+10. **Quiz**
 
 ---
 
 
-## 🚀 2 Getting Started with User Feedback Form
+## 🚀 3 Getting Started with User Feedback Form
 
 **1. Create new repository in Github**
 
@@ -107,16 +127,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## ☁️ 3 Running User Feedback Form on Google Cloud Run
+## ☁️ 4 Running User Feedback Form on Google Cloud Run
 
-### 3.1 Create a Google Cloud Console Project (one time setup)
+### 4.1 Create a Google Cloud Console Project (one time setup)
 
 https://console.cloud.google.com/ > https://console.cloud.google.com/projectcreate
 
 * Name: applications-dev
 
 
-### 3.2 Create service account to lunch applications (one time setup)
+### 4.2 Create service account to lunch applications (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -128,7 +148,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 3.3 Create bucket
+### 4.3 Create bucket
 
 **Create Bucket:**
 
@@ -153,7 +173,7 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 3.4 Make sure that the application has a Docker file
+### 4.4 Make sure that the application has a Docker file
 
 Create a file `Dockerfile` in the project with the following contents:
 
@@ -175,7 +195,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 3.5 Deploy on Cloud Run
+### 4.5 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
@@ -203,7 +223,7 @@ Containers > Security:
 
 ---
 
-## 📦 4 Next.js Utils and Functions
+## 📦 5 Next.js Utils and Functions
 
 Send email: 
 [https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
@@ -211,7 +231,7 @@ Send email:
 
 ---
 
-## 🖥️ 5 Running the Finished User Feedback Form Locally
+## 🖥️ 6 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -231,12 +251,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## 🛡️ 6 Add Application to Snyk
+## 🛡️ 7 Add Application to Snyk
 
 
 ---
 
-## 📜 7 License
+## 📜 8 License
 
 
 This project is licensed under the
