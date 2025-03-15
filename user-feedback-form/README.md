@@ -56,7 +56,7 @@ By the end of this module, you will:<br>
 - Activity: Draw a simple diagram showing how these components interact.
 
 4. **DevSecOps Integration** <br>
-- Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?<br>
+- Integrate Github repository with Snyk.<br>
 - Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
 
 5. **Creating the Form**<br>
