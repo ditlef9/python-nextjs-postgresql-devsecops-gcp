@@ -51,20 +51,20 @@ By the end of this module, you will:<br>
 
 3. **Setup GCP Infrastructure** - Setup a GCP project, service account, bucket and the Cloud Run application.
 
-4. **DevSecOps Integration** - Integrate Github repository with Snyk
+4. **DevSecOps Integration** - Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?
 
 5. **Creating the Form** - First create the form, then we will add const for the form, feedback, 
-   handle form input change and submit
+   handle form input change and submit. Can you add validation for the email address?
 
-6. **Styling the form** - Add CSS to the form
+6. **Styling the form** - Add CSS to the form. Can you add icons to the feedback boxes?
 
-7. **Bucket Integration** - We will build the api that handles form submit which has a bucket integration
+7. **Bucket Integration** - We will build the api that handles form submit which has a bucket integration.
 
-8. **Email Integration** - Add email notification when someone sends the form
+8. **Email Integration** - Add email notification when someone sends the form.
 
-9. **Security Command Center** - Demo for securing our Google Cloud Enviroment
+9. **Security Command Center** - Demo for securing our Google Cloud Environment.
 
-10. **Congratulations and Learning Tip** - Reflection activity with spam bots and using latest
+10. **Congratulations and Learning Tip** - Reflection activity with spam bots and using latest.
 
 11. **Quiz**
 
