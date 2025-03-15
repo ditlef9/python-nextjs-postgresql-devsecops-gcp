@@ -17,16 +17,39 @@ It allows users to give their feedback and the results are stored in Google Clou
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with User Feedback Form](#-1-getting-started-with-user-feedback-form)
-2. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-2-running-user-feedback-form-on-google-cloud-run)
-3. [📦 Next.js Utils and Functions](#-3-nextjs-utils-and-functions)
-3. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-4-running-user-feedback-form-locally)
-5. [🛡️ Add Application to Snyk](#%EF%B8%8F-5-add-application-to-snyk)
-6. [📜 License](#-5-license)
+1. [✨ Lessons Overview](#-1-getting-started-with-user-feedback-form)
+2. [🚀 Getting Started with User Feedback Form](#-2-getting-started-with-user-feedback-form)
+3. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-3-running-user-feedback-form-on-google-cloud-run)
+4. [📦 Next.js Utils and Functions](#-4-nextjs-utils-and-functions)
+5. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-5-running-user-feedback-form-locally)
+6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
+7. [📜 License](#-7-license)
 
 ---
 
-## 🚀 1 Getting Started with User Feedback Form
+## ✨ 1 Lessons Overview
+
+1. Introduction
+
+2. Creating app - Create a new application locally and push it to Github.
+
+3. Setup GCP Infrastructure - Setup a GCP project, service account, bucket and the Cloud Run application.
+
+4. DevSecOps Integration - Integrate Github repository with Snyk
+
+5. Creating the Form and Styling it - First create the form, then add CSS, then we will add const for the form, feedback, 
+   handle form input change and submit
+
+6. Bucket Integration - We will build the api that handles form submit which has a bucket integration
+
+7. Email Integration - Add email notification when someone sends the form
+
+8. Congratulations and Learning Tip
+
+---
+
+
+## 🚀 2 Getting Started with User Feedback Form
 
 **1. Create new repository in Github**
 
@@ -84,16 +107,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## ☁️ 2 Running User Feedback Form on Google Cloud Run
+## ☁️ 3 Running User Feedback Form on Google Cloud Run
 
-### 2.1 Create a Google Cloud Console Project (one time setup)
+### 3.1 Create a Google Cloud Console Project (one time setup)
 
 https://console.cloud.google.com/ > https://console.cloud.google.com/projectcreate
 
 * Name: applications-dev
 
 
-### 2.2 Create service account to lunch applications (one time setup)
+### 3.2 Create service account to lunch applications (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -105,7 +128,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 2.3 Create bucket
+### 3.3 Create bucket
 
 **Create Bucket:**
 
@@ -130,7 +153,7 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 2.4 Make sure that the application has a Docker file
+### 3.4 Make sure that the application has a Docker file
 
 Create a file `Dockerfile` in the project with the following contents:
 
@@ -152,7 +175,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 2.5 Deploy on Cloud Run
+### 3.5 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
@@ -180,7 +203,7 @@ Containers > Security:
 
 ---
 
-## 📦 3 Next.js Utils and Functions
+## 📦 4 Next.js Utils and Functions
 
 Send email: 
 [https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail](https://github.com/sendgrid/sendgrid-nodejs/tree/main/packages/mail)
@@ -188,7 +211,7 @@ Send email:
 
 ---
 
-## 🖥️ 4 Running the Finished User Feedback Form Locally
+## 🖥️ 5 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -208,12 +231,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## 🛡️ 5 Add Application to Snyk
+## 🛡️ 6 Add Application to Snyk
 
 
 ---
 
-## 📜 6 License
+## 📜 7 License
 
 
 This project is licensed under the
