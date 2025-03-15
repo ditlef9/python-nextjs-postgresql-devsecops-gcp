@@ -48,39 +48,39 @@ By the end of this module, you will:<br>
 1. **Introduction**
 
 2. **Creating app**<br>
-Create a new application locally and push it to Github.<br>
-📌 Activity: Follow a checklist to create and push your application to GitHub. Afterward, note any challenges and how you solved them.<br>
+- Create a new application locally and push it to Github.<br>
+- Activity: Follow a checklist to create and push your application to GitHub. Afterward, note any challenges and how you solved them.<br>
 
 3. **Setup GCP Infrastructure** <br>
-Setup a GCP project, service account, bucket and the Cloud Run application.<br>
-📌 Activity: Draw a simple diagram showing how these components interact.
+- Setup a GCP project, service account, bucket and the Cloud Run application.<br>
+- Activity: Draw a simple diagram showing how these components interact.
 
 4. **DevSecOps Integration** <br>
-Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?<br>
-📌 Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
+- Integrate Github repository with Snyk. What is the benefits and drawbacks of using 'latest'?<br>
+- Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
 
 5. **Creating the Form**<br>
-First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
-📌 Activity: Implement email validation for the form. Why is input validation important for security?
+- First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
+- Activity: Implement email validation for the form. Why is input validation important for security?
 
 6. **Styling the form**<br>
-Add CSS to the form.<br>
-📌 Activity: Add icons to feedback boxes and reflect on how they improve user experience.
+- Add CSS to the form.<br>
+- Activity: Add icons to feedback boxes and reflect on how they improve user experience.
 
 7. **Bucket Integration**<br>
-Build the API that handles form submission with bucket integration.<br>
-📌 Reflection: What are some security risks when integrating with cloud storage, and how can they be mitigated?
+- Build the API that handles form submission with bucket integration.<br>
+- Reflection: What are some security risks when integrating with cloud storage, and how can they be mitigated?
 
 8. **Email Integration**<br>
-Add email notification when someone submits the form.<br>
-📌 Activity: Implement email notifications and consider how to prevent spam abuse.
+- Add email notification when someone submits the form.<br>
+- Activity: Implement email notifications and consider how to prevent spam abuse.
 
 9. **Security Command Center**<br>
-Demo securing our Google Cloud Environment.<br>
-📌 Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
+- Demo securing our Google Cloud Environment.<br>
+- Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
 
 10. **Congratulations and Learning Tip**<br>
-📌 Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
+-  Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
 
 11. **Quiz**
 
