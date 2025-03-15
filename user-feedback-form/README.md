@@ -49,7 +49,7 @@ By the end of this module, you will:<br>
 
 2. **Creating app**<br>
 - Create a new application locally and push it to Github.<br>
-- Activity: Follow a checklist to create and push your application to GitHub. Afterward, note any challenges and how you solved them.<br>
+- Activity: Record a short summary (bullet points or voice memo) explaining the steps you followed to set up and push the app. What was the most challenging part?<br>
 
 3. **Setup GCP Infrastructure** <br>
 - Setup a GCP project, service account, bucket and the Cloud Run application.<br>
