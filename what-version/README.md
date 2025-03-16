@@ -50,7 +50,7 @@ Table of contents:
 
 3. **Configure Google Cloud Infrastructure** <br>
 - Setup a GCP project, service account, bucket and the Cloud Run Functions application.<br>
-- Activity/Reflection: TODO
+- Activity/Reflection: What is the difference between Cloud Run and Cloud Run Functions?
 
 4. **Configure CI/CD with Github Actions**<br>
 - Create a service account, a Pool and Github Actions file
