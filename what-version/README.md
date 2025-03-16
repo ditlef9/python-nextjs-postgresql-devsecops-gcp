@@ -80,8 +80,11 @@ Table of contents:
 
 **What Version Diagram**<br>
 This diagram shows the structure and flow of the What Version, outlining its components and how user data is processed.<br>
-# ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
+![What Version Diagram](_docs/what-version-diagram.drawio.png) 
 
+**Email With New Versions**<br>
+If there are any new versions they will be emailed to the recipients<br>
+![Email with new versions](_docs/screenshots/email_with_new_versions.png) 
 
 
 ---
@@ -102,6 +105,7 @@ Pycharm > Get from VCS<br><br>
 ```
 functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations
+google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
 flask                       # Added by YOUR_NAME. To run the application locally
 beautifulsoup4              # Added by YOUR_NAME. Library that makes it easy to scrape information from web pages
 ```
@@ -271,7 +275,7 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 * Name: what-version-scheduler
 * Region: europe-west1 (Belgium)
 * Descriptions: Triggers the What Version function to check if there are any new versions.
-* Frequency: 0 9 1 * *
+* Frequency: 0 9 1 */3 *
 * Timezone: Central European Standard Time (CET)
 
 **Configure the execution**<br>
@@ -291,13 +295,40 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 ## 💻 8 Implementing Check for New Versions
 
 
+1. Implement applications_list.json
+
+2. Implement get_version_list.py
+
+3. Implement get_version_github.py 
+
+4. Implement loop in main
 
 
 ---
 
 ## ✉️ 9 Implementing Email Message if There Are New Version
 
+1. Create a secret `what-version-services`:
 
+Google Cloud > Secret manager > New
+
+* Name: **what-version-services**
+* Secret value: ```{
+"gmail_sender_email": "YOU@gmail.com",
+"gmail_app_password": "APP_PASSWORD",
+"recipient_email_addresses":   "YOU@gmail.com"
+}```
+* Location(s): **europe-north1**
+* Labels: 
+  * owner: YOUR_NAME
+  * app: what-version
+
+2. Implement send_gmail_app_pass.py
+
+3. Implement send_email.py <br>
+Change the project ID.
+
+4. On new version send email
 
 
 ---

@@ -1,0 +1,20 @@
+[
+      {
+          "name": "Python",
+          "website_url": "https://www.python.org",
+          "version_url": "https://www.python.org/ftp/python",
+          "version_check_function": "get_version_list.py"
+      },
+      {
+          "name": "Node.js",
+          "website_url": "https://nodejs.org/en",
+          "version_url": "https://nodejs.org/download/release",
+          "version_check_function": "get_version_list.py"
+      },
+      {
+          "name": "Git",
+          "website_url": "https://git-scm.com",
+          "version_url": "https://github.com/git-for-windows/git/releases",
+          "version_check_function": "get_version_github.py"
+      }
+  ]

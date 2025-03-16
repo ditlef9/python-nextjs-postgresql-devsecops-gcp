@@ -1,0 +1,5 @@
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
+google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations
+google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
+flask                       # Added by YOUR_NAME. To run the application locally
+beautifulsoup4              # Added by YOUR_NAME. Library that makes it easy to scrape information from web pages
