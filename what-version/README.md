@@ -100,8 +100,10 @@ Pycharm > Get from VCS<br><br>
 **3. Add requirements.txt**
 
 ```
-functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
-google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
+google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations
+flask                       # Added by YOUR_NAME. To run the application locally
+beautifulsoup4              # Added by YOUR_NAME. Library that makes it easy to scrape information from web pages
 ```
 
 **4. Create main.py**
