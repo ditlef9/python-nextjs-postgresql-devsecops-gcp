@@ -19,16 +19,16 @@ It allows users to give their feedback and the results are stored in Google Clou
 Table of contents:
 1. [📖 Learning objectives](#-1-learning-objectives)
 2. [✨ Lessons Overview](#-2-lessons-overview)
-3. [📸 Screenshots from User Feedback Form](#-3-Screenshots from)
-4. [🚀 Getting Started with User Feedback Form](#-3-getting-started-with-user-feedback-form)
-5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
-6. [🛡️ Add Application to Snyk](#%EF%B8%8F-5-add-application-to-snyk)
-7. [🪣  Implementing Bucket](#-6-implementing-bucket)
-8. [✉️ Implementing Email](#%EF%B8%8F-7-implementing-email)
-9. [🔐 Security Command Center](#-8-security-command-center)
-10. [📦 Next.js Utils and Functions](#-9-nextjs-utils-and-functions)
-11. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-10-running-user-feedback-form-locally)
-12. [📜 License](#-11-license)
+3. [📸 Screenshots from User Feedback Form](#-3-screenshots-from-user-feedback-form)
+4. [🚀 Getting Started with User Feedback Form](#-4-getting-started-with-user-feedback-form)
+5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-5-running-user-feedback-form-on-google-cloud-run)
+6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
+7. [🪣  Implementing Bucket](#-7-implementing-bucket)
+8. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
+9. [🔐 Security Command Center](#-9-security-command-center)
+10. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
+11. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
+12. [📜 License](#-12-license)
 
 ---
 
