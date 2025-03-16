@@ -16,6 +16,16 @@ It allows users to give their feedback and the results are stored in Google Clou
 
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
+
+# ![User Feedback Form Filled in](_docs/screenshots/user-feedback-form-filled-in.png) 
+
+
+# ![User Feedback Form Send email to Gmail](_docs/screenshots/gmail.png) 
+
+
+# ![All submissions are stored in Google Bucket](_docs/screenshots/bucket-overview.png) 
+
+
 Table of contents:
 1. [📖 Learning objectives](#-1-learning-objectives)
 2. [✨ Lessons Overview](#-2-lessons-overview)
@@ -325,12 +335,28 @@ Copy the file contents of `.env.example` and change all variables.<br>
 
 ## 🔐 8 Security Command Center
 
+Google Cloud's **Security Command Center** (SCC) helps detect threats and vulnerabilities in your cloud setup.
+
+Key Features:
+- Identifies security risks and misconfigurations.
+- Monitors threats in real time.
+- Provides security best practice recommendations.
+
+Setup:
+- Enable SCC in Google Cloud Console.
+- Review security findings for risks.
+- Take action on security alerts to protect resources.
 
 ---
 
 ## 📦 9 Next.js Utils and Functions
 
 
+[sendEmail](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/sendEmail.ts)
+Handles email notifications for feedback submissions using Nodemailer.
+
+[uploadToGoogleBucket](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/uploadToGoogleBucket.ts)
+Uploads feedback to Google Cloud Storage, ensuring secure data handling.
 
 ---
 
