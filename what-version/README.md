@@ -64,7 +64,7 @@ Table of contents:
 - Program the check for new versions
 - Activity/Reflection: What other services do you use?
 
-7. **💻 Implementing Email Message if There Are New Version**<br>
+7. **Implementing Email Message if There Are New Version**<br>
 - If there are any new versions we want an email
 - Activity/Reflection: Is there a better way than email?
 
@@ -241,17 +241,17 @@ $WORKLOAD_IDENTITY_POOL="gh-pool"
 $WORKLOAD_IDENTITY_PROVIDER="gh-provider"
 ```
 
-3.2 Set project ID
+3.2 Set project ID<br>
 ```gcloud config set project $PROJECT_ID```
 
-3.3 Get ID:
+3.3 Get ID:<br>
 ```gcloud iam workload-identity-pools describe $WORKLOAD_IDENTITY_POOL --location="global" --format="value(name)"```
 
 --> projects/XXXX/locations/global/workloadIdentityPools/gh-pool
 
 ```$WORKLOAD_IDENTITY_POOL_ID="projects/XXXX/locations/global/workloadIdentityPools/gh-pool"```
 
-3.4 Connect repository:
+3.4 Connect repository:<br>
 ```gcloud iam service-accounts add-iam-policy-binding $SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com --role="roles/iam.workloadIdentityUser" --member="principalSet://iam.googleapis.com/${WORKLOAD_IDENTITY_POOL_ID}/attribute.repository/${GITHUB_REPO}"```
 
 
