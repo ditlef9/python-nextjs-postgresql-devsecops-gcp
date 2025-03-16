@@ -32,7 +32,11 @@ Table of contents:
 
 ## 📖 1 Learning Objectives for What Version
 
-TODO
+* Create a **Python application** with **Google Cloud Run Functions**.
+* Set up **Google Cloud services** like **Buckets**, **Email**, **Secrets** and **Scheduler**.
+* Automate deployment using **GitHub Actions** (CI/CD - Continuous Integration and Continuous Deployment/Delivery).
+* Use **Google Cloud Scheduler** to run tasks periodically.
+* Send **email notifications** for new versions.
 
 ---
 
@@ -40,17 +44,17 @@ TODO
 
 1. **Introduction**
 
-2. **Create Flask application**<br>
+2. **Create Python application**<br>
 - Create a new application locally and push it to Github.<br>
 - Activity: Import the project into Snyk. Are there any errors?
 
 3. **Configure Google Cloud Infrastructure** <br>
-- Setup a GCP project, service account, bucket and the Cloud Run Functions Flask application.<br>
+- Setup a GCP project, service account, bucket and the Cloud Run Functions application.<br>
 - Activity/Reflection: TODO
 
 4. **Configure CI/CD with Github Actions**<br>
 - Create a service account, a Pool and Github Actions file
-- Activity/Reflection: TODO
+- Activity/Reflection: How does CI/CD benefit your project? 
 
 5. **Setup a scheduler**<br>
 - Create a new Google Cloud Scheduler that checks for new versions every month
@@ -58,15 +62,15 @@ TODO
 
 6. **Implementing Check for New Versions**<br>
 - Program the check for new versions
-- Activity/Reflection: 
+- Activity/Reflection: What other services do you use?
 
 7. **💻 Implementing Email Message if There Are New Version**<br>
 - If there are any new versions we want an email
-- Activity/Reflection: 
+- Activity/Reflection: Is there a better way than email?
 
 8. **Congratulations and Learning Tip**<br>
-- 
--  Reflection:
+- Learning tip: As you work through each step, don’t wait until the end to test your application. 
+- Reflection: What Did You Learn?
 
 9. **Quiz**
 
@@ -82,7 +86,7 @@ This diagram shows the structure and flow of the What Version, outlining its com
 
 ---
 
-## 🚀 4 Getting Started with What Version
+## 🚀 4 Create Python Application for What Version
 
 **1. Create new application in Github**
 
@@ -135,13 +139,34 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 📦 2 Python Utils and Functions
+## ☁️ 5 Configure Google Cloud Infrastructure
+
+
+---
+
+## ⚡ 6 Configure CI/CD with Github Actions
+
+
+---
+
+
+## 🕒 7 Setup a Google Cloud Scheduler
+
+---
+
+## 💻 8 Implementing Check for New Versions
+
+
+---
+
+## ✉️ 9 Implementing Email Message if There Are New Version
+
 
 
 
 ---
 
-## 🖥️ 3 Running the Finished What Version Locally
+## 🖥️ 10 Running the Finished What Version Locally
 
 **1. Clone the repository**
 
@@ -161,7 +186,7 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 4 Running the Finished What Version on Google Cloud Run Functions
+## ☁️ 11 Running the Finished What Version on Google Cloud Run Functions
 
 ### 1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
@@ -202,7 +227,7 @@ gcloud functions deploy what-version --gen2 --runtime=python312 --region=europe-
 
 ---
 
-## 📜 5 License
+## 📜 12 License
 
 
 This project is licensed under the
