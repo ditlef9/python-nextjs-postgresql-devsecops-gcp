@@ -16,7 +16,7 @@ It allows users to give their feedback and the results are stored in Google Clou
 Table of contents:
 1. [📖 Learning objectives](#-1-learning-objectives)
 2. [✨ Lessons Overview](#-2-lessons-overview)
-3. [📸 Screenshots from User Feedback Form](#-3-screenshots-from-user-feedback-form)
+3. [📸 Diagram and Screenshots from User Feedback Form](#-3-diagram-and-screenshots-from-user-feedback-form)
 4. [🚀 Getting Started with User Feedback Form](#-4-getting-started-with-user-feedback-form)
 5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-5-running-user-feedback-form-on-google-cloud-run)
 6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
@@ -87,20 +87,28 @@ By the end of this module, you will:<br>
 
 ---
 
-## 📸 3 Screenshots from User Feedback Form
+## 📸 3 Diagram and Screenshots from User Feedback Form
 
-
+**User Feedback Form Diagram**<br>
+This diagram shows the structure and flow of the User Feedback Form, outlining its components and how user data is processed.<br>
 # ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
 
-
+**User Feedback Form Filled In**<br>
+This screenshot displays the User Feedback Form with filled-in data, showing how users input their responses before submitting.<br>
 # ![User Feedback Form Filled in](_docs/screenshots/user-feedback-form-filled-in.png) 
 
 
+**User Feedback Form Send Email to Gmail**<br>
+After submission, the form sends an email with the user's feedback to a specified Gmail account for review.<br>
 # ![User Feedback Form Send email to Gmail](_docs/screenshots/gmail.png) 
 
 
+**All Submissions Are Stored in Google Bucket**<br>
+All user submissions are stored in a Google Cloud Storage Bucket, ensuring secure and organized storage.<br>
 # ![All submissions are stored in Google Bucket](_docs/screenshots/bucket-overview.png) 
 
+**Google Bucket Single**<br>
+This shows an individual submission stored in the Google Cloud Bucket, displaying the feedback data for easy retrieval.<br>
 # ![Google Bucket Single](_docs/screenshots/bucket-view-single.png) 
 
 ---
