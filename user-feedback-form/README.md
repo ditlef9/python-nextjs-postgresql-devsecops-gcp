@@ -13,9 +13,6 @@ It allows users to give their feedback and the results are stored in Google Clou
 | Runs on      | Cloud Run |
 | GCP Services | Buckets   |
 
-
-
-
 Table of contents:
 1. [📖 Learning objectives](#-1-learning-objectives)
 2. [✨ Lessons Overview](#-2-lessons-overview)
@@ -103,6 +100,8 @@ By the end of this module, you will:<br>
 
 
 # ![All submissions are stored in Google Bucket](_docs/screenshots/bucket-overview.png) 
+
+# ![Google Bucket Single](_docs/screenshots/bucket-view-single.png) 
 
 ---
 
