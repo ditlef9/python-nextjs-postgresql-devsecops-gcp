@@ -13,20 +13,20 @@ Fetches API data and posts updates to Slack.
 | GCP Services | Buckets, Email, Secrets and Scheduler |
 
 
-# ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
 
 Table of contents:
 1. [📖 Learning Objectives for What Version](#-1-learning-objectives)
 2. [✨ Lessons Overview for What Version](#-2-lessons-overview)
-3. [🚀 Create Flask Application for What Version](#-1-getting-started-with-user-feedback-form)
-4. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
-5. [⚡ Configure CI/CD with Github Actions](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
-6. [🕒 Setup a Google Cloud Scheduler](#Setup a scheduler)
-7. [💻 Implementing Check for New Versions](#%EF%B8%8F-7-implementing-email)
-8. [✉️ Implementing Email Message if There Are New Version](#%EF%B8%8F-7-implementing-email)
-9. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-10. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-11. [📜 License](#-5-license)
+3. [📸 Diagram and Screenshots from What Version](#)
+4. [🚀 Create Python Application for What Version](#-1-getting-started-with-user-feedback-form)
+5. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+6. [⚡ Configure CI/CD with Github Actions](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+7. [🕒 Setup a Google Cloud Scheduler](#Setup a scheduler)
+8. [💻 Implementing Check for New Versions](#%EF%B8%8F-7-implementing-email)
+9. [✉️ Implementing Email Message if There Are New Version](#%EF%B8%8F-7-implementing-email)
+10. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
+11. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+12. [📜 License](#-5-license)
 
 ---
 
@@ -70,10 +70,19 @@ TODO
 
 9. **Quiz**
 
+---
+
+## 📸 3 Diagram and Screenshots from What Version
+
+**What Version Diagram**<br>
+This diagram shows the structure and flow of the What Version, outlining its components and how user data is processed.<br>
+# ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
+
+
 
 ---
 
-## 🚀 1 Getting Started with What Version
+## 🚀 4 Getting Started with What Version
 
 **1. Create new application in Github**
 
