@@ -14,30 +14,21 @@ It allows users to give their feedback and the results are stored in Google Clou
 | GCP Services | Buckets   |
 
 
-# ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
-
-
-# ![User Feedback Form Filled in](_docs/screenshots/user-feedback-form-filled-in.png) 
-
-
-# ![User Feedback Form Send email to Gmail](_docs/screenshots/gmail.png) 
-
-
-# ![All submissions are stored in Google Bucket](_docs/screenshots/bucket-overview.png) 
 
 
 Table of contents:
 1. [📖 Learning objectives](#-1-learning-objectives)
 2. [✨ Lessons Overview](#-2-lessons-overview)
-3. [🚀 Getting Started with User Feedback Form](#-3-getting-started-with-user-feedback-form)
-4. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
-5. [🛡️ Add Application to Snyk](#%EF%B8%8F-5-add-application-to-snyk)
-6. [🪣  Implementing Bucket](#-6-implementing-bucket)
-7. [✉️ Implementing Email](#%EF%B8%8F-7-implementing-email)
-8. [🔐 Security Command Center](#-8-security-command-center)
-9. [📦 Next.js Utils and Functions](#-9-nextjs-utils-and-functions)
-10. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-10-running-user-feedback-form-locally)
-11. [📜 License](#-11-license)
+3. [📸 Screenshots from User Feedback Form](#-3-Screenshots from)
+4. [🚀 Getting Started with User Feedback Form](#-3-getting-started-with-user-feedback-form)
+5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+6. [🛡️ Add Application to Snyk](#%EF%B8%8F-5-add-application-to-snyk)
+7. [🪣  Implementing Bucket](#-6-implementing-bucket)
+8. [✉️ Implementing Email](#%EF%B8%8F-7-implementing-email)
+9. [🔐 Security Command Center](#-8-security-command-center)
+10. [📦 Next.js Utils and Functions](#-9-nextjs-utils-and-functions)
+11. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-10-running-user-feedback-form-locally)
+12. [📜 License](#-11-license)
 
 ---
 
@@ -99,8 +90,23 @@ By the end of this module, you will:<br>
 
 ---
 
+## 📸 3 Screenshots from User Feedback Form
 
-## 🚀 3 Getting Started with User Feedback Form
+
+# ![User Feedback Form Diagram](_docs/user-feedback-form-diagram.drawio.png) 
+
+
+# ![User Feedback Form Filled in](_docs/screenshots/user-feedback-form-filled-in.png) 
+
+
+# ![User Feedback Form Send email to Gmail](_docs/screenshots/gmail.png) 
+
+
+# ![All submissions are stored in Google Bucket](_docs/screenshots/bucket-overview.png) 
+
+---
+
+## 🚀 4 Getting Started with User Feedback Form
 
 **1. Create new repository in Github**
 
@@ -158,16 +164,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ---
 
 
-## ☁️ 4 Running User Feedback Form on Google Cloud Run
+## ☁️ 5 Running User Feedback Form on Google Cloud Run
 
-### 4.1 Create a Google Cloud Console Project (one time setup)
+### 5.1 Create a Google Cloud Console Project (one time setup)
 
 https://console.cloud.google.com/ > https://console.cloud.google.com/projectcreate
 
 * Name: applications-dev
 
 
-### 4.2 Create service account to lunch applications (one time setup)
+### 5.2 Create service account to lunch applications (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -179,7 +185,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 4.3 Create bucket
+### 5.3 Create bucket
 
 **Create Bucket:**
 
@@ -204,7 +210,7 @@ Action:
 Select object conditions:
 * Age 365 days
 
-### 4.4 Make sure that the application has a Docker file
+### 5.4 Make sure that the application has a Docker file
 
 Create a file `Dockerfile` in the project with the following contents:
 
@@ -226,7 +232,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 4.5 Deploy on Cloud Run
+### 5.5 Deploy on Cloud Run
 
 Cloud Run > Deploy Container > Service
 
@@ -254,7 +260,7 @@ Containers > Security:
 
 ---
 
-## 🛡️ 5 Add Application to Snyk
+## 🛡️ 6 Add Application to Snyk
 
 
 Go to [Snyk](https://snyk.io) and import the Githu repo.
@@ -262,7 +268,7 @@ Go to [Snyk](https://snyk.io) and import the Githu repo.
 ---
 
 
-## 🪣 6 Implementing Bucket
+## 🪣 7 Implementing Bucket
 
 1. Create an API endpoint (/app/api/api-submit-form/route.ts): This will be the main entry point that processes the form submission.
 
@@ -294,7 +300,7 @@ npm install @google-cloud/storage
 
 ---
 
-## ✉️ 7 Implementing Email
+## ✉️ 8 Implementing Email
 
 1. Install Depedencies
 
@@ -333,7 +339,7 @@ Copy the file contents of `.env.example` and change all variables.<br>
 
 ---
 
-## 🔐 8 Security Command Center
+## 🔐 9 Security Command Center
 
 Google Cloud's **Security Command Center** (SCC) helps detect threats and vulnerabilities in your cloud setup.
 
@@ -349,7 +355,7 @@ Setup:
 
 ---
 
-## 📦 9 Next.js Utils and Functions
+## 📦 10 Next.js Utils and Functions
 
 
 [sendEmail](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/sendEmail.ts)
@@ -360,7 +366,7 @@ Uploads feedback to Google Cloud Storage, ensuring secure data handling.
 
 ---
 
-## 🖥️ 10 Running the Finished User Feedback Form Locally
+## 🖥️ 11 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -380,7 +386,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
-## 📜 11 License
+## 📜 12 License
 
 
 This project is licensed under the
