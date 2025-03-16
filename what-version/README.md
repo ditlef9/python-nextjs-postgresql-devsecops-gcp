@@ -6,11 +6,11 @@
 
 Fetches API data and posts updates to Slack.
 
-| Category     | Details                      |          
-|--------------|------------------------------|
-| Tech         | Python                       |
-| Runs on      | Cloud Run Functions          |
-| GCP Services | Buckets, Scheduler and Email |
+| Category     | Details                               |          
+|--------------|---------------------------------------|
+| Tech         | Python                                |
+| Runs on      | Cloud Run Functions                   |
+| GCP Services | Buckets, Secrets, Scheduler and Email |
 
 
 
@@ -261,9 +261,34 @@ $WORKLOAD_IDENTITY_PROVIDER="gh-provider"
 
 ## 🕒 7 Setup a Google Cloud Scheduler
 
+
+
+https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
+
+**Define the schedule**<br>
+* Name: what-version-scheduler
+* Region: europe-west1 (Belgium)
+* Descriptions: Triggers the What Version function every week to check if there are any new versions.
+* Frequency: 0 9 * * MON
+* Timezone: Central European Standard Time (CET)
+
+**Configure the execution**<br>
+* Target Type: HTTP
+* URL: URL_TO_FUNCTION
+* HTTP method: GET
+* Auth header: Add OAuth Token
+* Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
+* Scope: URL_TO_FUNCTION
+
+[Create]
+
+
+
 ---
 
 ## 💻 8 Implementing Check for New Versions
+
+
 
 
 ---
