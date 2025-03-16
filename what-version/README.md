@@ -270,8 +270,8 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 **Define the schedule**<br>
 * Name: what-version-scheduler
 * Region: europe-west1 (Belgium)
-* Descriptions: Triggers the What Version function every week to check if there are any new versions.
-* Frequency: 0 9 * * MON
+* Descriptions: Triggers the What Version function to check if there are any new versions.
+* Frequency: 0 9 1 * *
 * Timezone: Central European Standard Time (CET)
 
 **Configure the execution**<br>
