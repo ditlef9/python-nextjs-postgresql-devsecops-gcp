@@ -16,11 +16,60 @@ Fetches API data and posts updates to Slack.
 # ![What Version Diagram](_docs/what-version-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with What Version](#-1-getting-started-with-user-feedback-form)
-2. [📦 Python Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
-4. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
-5. [📜 License](#-5-license)
+1. [📖 Learning Objectives for What Version](#-1-learning-objectives)
+2. [✨ Lessons Overview for What Version](#-2-lessons-overview)
+3. [🚀 Create Flask Application for What Version](#-1-getting-started-with-user-feedback-form)
+4. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+5. [⚡ Configure CI/CD with Github Actions](#%EF%B8%8F-4-running-user-feedback-form-on-google-cloud-run)
+6. [🕒 Setup a Google Cloud Scheduler](#Setup a scheduler)
+7. [💻 Implementing Check for New Versions](#%EF%B8%8F-7-implementing-email)
+8. [✉️ Implementing Email Message if There Are New Version](#%EF%B8%8F-7-implementing-email)
+9. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-3-running-the-finished-user-feedback-form-locally)
+10. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-4-running-the-finished-user-feedback-form-on-google-cloud-run)
+11. [📜 License](#-5-license)
+
+---
+
+## 📖 1 Learning Objectives for What Version
+
+TODO
+
+---
+
+## ✨ 2 Lessons Overview for What Version
+
+1. **Introduction**
+
+2. **Create Flask application**<br>
+- Create a new application locally and push it to Github.<br>
+- Activity: Import the project into Snyk. Are there any errors?
+
+3. **Configure Google Cloud Infrastructure** <br>
+- Setup a GCP project, service account, bucket and the Cloud Run Functions Flask application.<br>
+- Activity/Reflection: TODO
+
+4. **Configure CI/CD with Github Actions**<br>
+- Create a service account, a Pool and Github Actions file
+- Activity/Reflection: TODO
+
+5. **Setup a scheduler**<br>
+- Create a new Google Cloud Scheduler that checks for new versions every month
+- Reflection: How often should the scheduler run?
+
+6. **Implementing Check for New Versions**<br>
+- Program the check for new versions
+- Activity/Reflection: 
+
+7. **💻 Implementing Email Message if There Are New Version**<br>
+- If there are any new versions we want an email
+- Activity/Reflection: 
+
+8. **Congratulations and Learning Tip**<br>
+- 
+-  Reflection:
+
+9. **Quiz**
+
 
 ---
 

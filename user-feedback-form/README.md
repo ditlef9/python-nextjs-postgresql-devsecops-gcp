@@ -330,6 +330,8 @@ Copy the file contents of `.env.example` and change all variables.<br>
 
 ## 📦 9 Next.js Utils and Functions
 
+
+
 ---
 
 ## 🖥️ 10 Running the Finished User Feedback Form Locally
