@@ -1,4 +1,4 @@
-# 🔄 User Feedback Form 
+# 🔄 What Version
 
 [🏠 Home](../)
 &nbsp; &nbsp;
@@ -6,11 +6,11 @@
 
 Fetches API data and posts updates to Slack.
 
-| Category     | Details                               |          
-|--------------|---------------------------------------|
-| Tech         | Python                                |
-| Runs on      | Cloud Run Functions                   |
-| GCP Services | Buckets, Email, Secrets and Scheduler |
+| Category     | Details                      |          
+|--------------|------------------------------|
+| Tech         | Python                       |
+| Runs on      | Cloud Run Functions          |
+| GCP Services | Buckets, Scheduler and Email |
 
 
 
@@ -20,7 +20,7 @@ Table of contents:
 3. [📸 Diagram and Screenshots from What Version](#-3-diagram-and-screenshots-from-what-version)
 4. [🚀 Create Python Application for What Version](#-4-create-python-application-for-what-version)
 5. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-5-configure-google-cloud-infrastructure)
-6. [⚡ Configure CI/CD with Github Actions](#-6-configure-cicd-with-github-actions)
+6. [⚡ Configure CI/CD with GitHub Actions](#-6-configure-cicd-with-github-actions)
 7. [🕒 Setup a Google Cloud Scheduler](#-7-setup-a-google-cloud-scheduler)
 8. [💻 Implementing Check for New Versions](#-8-implementing-check-for-new-versions)
 9. [✉️ Implementing Email Message if There Are New Version](#%EF%B8%8F-9-implementing-email-message-if-there-are-new-version)
@@ -142,9 +142,118 @@ In PyCharm go to main.py and click `Run`
 ## ☁️ 5 Configure Google Cloud Infrastructure
 
 
+1. Create bucket<br>
+https://console.cloud.google.com > Buckets > [Create]<br>
+
+* Name: what-version-bucket
+* Labels: owner: YOUR_NAME
+
+Location type:
+* Region - europe-north1
+
+[Create]
+
+
 ---
 
-## ⚡ 6 Configure CI/CD with Github Actions
+## ⚡ 6 Configure CI/CD with GitHub Actions
+
+1. Create IAM Service account for Github Actions Auth
+
+IAM > Service accounts > + Create Service Account
+
+* Name: **GitHub Actions Auth**
+* Description: **Logs into GCP from Google Cloud**
+
+Permissions/Assign Roles:
+* Service Account User
+
+2. Create .github workflow
+
+Create a new file:<br>
+`.github/workflows/google_functions_deployment.yaml`
+
+```commandline
+# Service accounts are located here:
+# https://console.cloud.google.com/iam-admin/serviceaccounts
+#
+# There are two service accounts:
+# - Name: Github Actions Auth
+#   ID: github-actions-auth@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com
+#   Description: Logs into GCP from Google Cloud
+#   Permissions: Service Account User
+#
+# - Name: Cloud Scheduler Service Agent
+#   ID: cloud-run-cloud-run-functions@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com
+#   Description: Cloud Run, Cloud Run Functions and Scheduler Service Account
+#   Permissions: This is used for Cloud Run, Cloud Run Functions and Scheduler Service. It can read secrets and invoke Run and Functions.
+
+
+name: CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - id: "auth"
+        name: "Authenticate to Google Cloud"
+        uses: "google-github-actions/auth@v1"
+        with:
+          workload_identity_provider: "projects/GOOGLE_CLOUD_PROJECT_ID/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider"
+          service_account: "github-actions-auth@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com"
+      - id: "deploy"
+        uses: "google-github-actions/deploy-cloud-functions@v1"
+        with:
+          name: "limacharlie-surveillance"
+          runtime: "python312"
+          region: "europe-north1"
+          entry_point: "main"
+          timeout: 540
+          service_account_email: cloud-run-cloud-run-functions@appspot.gserviceaccount.com
+          ingress_settings: ALLOW_ALL
+          max_instances: 1
+```
+
+3. Make connection between your repo and Google Cloud Functions
+
+3.1 Open Powershell and write in the following:
+
+```
+$GITHUB_REPO="GITHUB_USER:NAME/GITHUB_REPO_NAME"
+$PROJECT_ID="GOOGLE_CLOUD_PROJECT_ID"
+$SERVICE_ACCOUNT="github-actions-auth"
+$WORKLOAD_IDENTITY_POOL="gh-pool"
+$WORKLOAD_IDENTITY_PROVIDER="gh-provider"
+```
+
+3.2 Set project ID
+```gcloud config set project $PROJECT_ID```
+
+3.3 Get ID:
+```gcloud iam workload-identity-pools describe $WORKLOAD_IDENTITY_POOL --location="global" --format="value(name)"```
+
+--> projects/XXXX/locations/global/workloadIdentityPools/gh-pool
+
+```$WORKLOAD_IDENTITY_POOL_ID="projects/XXXX/locations/global/workloadIdentityPools/gh-pool"```
+
+3.4 Connect repository:
+```gcloud iam service-accounts add-iam-policy-binding $SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com --role="roles/iam.workloadIdentityUser" --member="principalSet://iam.googleapis.com/${WORKLOAD_IDENTITY_POOL_ID}/attribute.repository/${GITHUB_REPO}"```
+
 
 
 ---

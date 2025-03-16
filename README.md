@@ -46,8 +46,8 @@ Select your operating system:
 | App                                                   | Language                | Runs on             | GCP Services                              | Description                                                |
 |-------------------------------------------------------|-------------------------|---------------------|-------------------------------------------|------------------------------------------------------------|
 | 📝 [User Feedback Form](user-feedback-form)           | Next.js                 | Cloud Run           | Buckets                                   | Collects and stores user feedback securely.                |
-| 🔄 [What Version?](what-version)                      | Python                  | Cloud Run Functions | Buckets, Email, Secrets and Scheduler     | Fetches API data and posts updates to Slack.               |
-| 📝 [News Backend and Frontend](news)                  | Python (Flask), Next.js | Cloud Run           | PostgreSQL                                | Backend API with user authentication and Next.js frontend. |
+| 🔄 [What Version?](what-version)                      | Python                  | Cloud Run Functions | Buckets, Scheduler and Email              | Fetches API data and posts updates to Slack.               |
+| 📝 [News Backend and Frontend](news)                  | Python (Flask), Next.js | Cloud Run           | PostgreSQL and Secrets                    | Backend API with user authentication and Next.js frontend. |
 | 📄 [Report PDF-generation](report-pdf-generation)     | Python                  | Cloud Run           | Buckets                                   | Generates PDF reports from a flat database of JSON files.  |
 | 📊 [Report Excel-generation](report-excel-generation) | Python                  | Cloud Run           | Secrets, Buckets                          | Generates Excel reports from an API.                       |
 | 🗒️ [Uptime App](uptime-app)                          | Next.js                 | Cloud Run           | PostgreSQL, Email, Secrets and  Scheduler | Tracks and manages other applications uptime.              |
