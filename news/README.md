@@ -132,22 +132,202 @@ Pycharm > Get from VCS<br><br>
 
 **3. Create certificates**
 
+Windows:
+```
+# Create the directories
+mkdir src
+mkdir src\certificates
 
-**4. Add requirements.txt**
+# Change to the certificates directory
+cd src\certificates
+
+# Generate the SSL certificate using OpenSSL
+openssl req -x509 -newkey rsa:4096 -keyout localhost_key.pem -out localhost_cert.pem -sha256 -days 365 -nodes -subj "/C=NO/ST=Oslo/L=Oslo/O=My Company/CN=example.com/emailAddress=admin@example.com"
+
 
 ```
-functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
-google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+
+Ubuntu:
+```
+mkdir src
+mkdir src/certificates
+cd src/certificates
+openssl req -x509 -newkey rsa:4096 -keyout localhost_key.pem -out localhost_cert.pem -sha256 -days 365 -nodes -subj "/C=NO/ST=Oslo/L=Oslo/O=My Company/CN=example.com/emailAddress=admin@example.com"
 ```
 
-**5. Create main.py**
+**4. Add Dockerfile**<br>
+
+```
+# Specify Python
+FROM python:latest
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Open port
+EXPOSE 8080
+
+# Add Python script
+RUN mkdir /app
+WORKDIR /app
+COPY . .
+
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Set Pythons path
+ENV PYTHONPATH /app
+
+# Run script
+CMD [ "python", "./src/main.py" ]
+
+```
+
+**5. Create a index.html file**<br>
+
+`src/static/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>It works</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+    /*- Body -------------------------------------------------------------------------- */
+    html, body, div, span, object, iframe, img {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        background:transparent;
+    }
+    html,body {
+        margin:0;
+        padding:0;
+    }
+    body {
+        background: #f8f8f8;
+        color: #000;
+        font: normal 16px Helvetica, Arial, sans-serif, 'Open Sans';
+    }
+    /*- Headlines ----------------------------------------------------------------------- */
+    h1{
+        color: #272727;
+        font: bold 21px Helvetica, Arial, sans-serif, 'Open Sans';
+
+    }
+    /*- Paragraph ----------------------------------------------------------------------- */
+    p{
+        color: #000000;
+        font: normal 16px Helvetica, Arial, sans-serif, 'Open Sans';
+    }
+    /*- Main -------------------------------------------------------------------------- */
+    main {
+        background: #ffffff;
+        border-radius: 25px;
+        padding: 20px;
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 500px;
+    }
+    @media screen and (max-width: 52.375em) {
+        main{
+            width: 90%;
+        }
+    }
+    </style>
+</head>
+<body>
+
+
+<main>
+    <h1>It works</h1>
+    <p>Welcome to the application</p>
+</main>
+
+</body>
+</html>
+```
+
+**6. Create a favicon.ico file**<br>
+
+Download favicon and add it to the `static` directory:
+
+[favicon.ico](_docs/favicon.ico)
+
+**7. Add requirements.txt**
+
+```
+flask                     # Added by YOUR_NAME. Added by YOUR_NAME.A lightweight WSGI web application framework.
+flask-cors                # Added by YOUR_NAME. CORS (Cross-Origin Resource Sharing) support for Flask.
+pg8000                    # Added by YOUR_NAME. A Pure Python database driver for PostgreSQL.
+google-cloud-secret-manager # Added by YOUR_NAME. Google Cloud Secret Manager client library for Python.
+sqlalchemy                # Added by YOUR_NAME. SQLAlchemy ORM and database toolkit for Python.
+
+```
+
+**8. Create src/main.py**
 
 ```python
+import os
+
+from flask import Flask, send_from_directory
+from flask_cors import CORS
+from pathlib import Path
+
+# - Flask App -------------------------------------------------------------------
+app = Flask(__name__)
+
+# - Set up CORS to allow only the frontend domain in production -----------------
+frontend_url = "https://my-frontend-service.a.run.app"
+cors = CORS(app, resources={r"/*": {"origins": frontend_url}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
+# - General ----------------------------------------------------------------
+@app.route('/', methods=['GET'])
+def __index():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'index.html', mimetype='text/html')
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon') # noqa
+
+
+
+# - Main start ----------------------------------------------------------------
+if __name__ == "__main__":
+
+    # Developing or production?
+    home = str(Path.home())
+    home_array = home.split("\\")
+    if home_array[0] in ["C:" "/Users/YOUR_MAC_OR_UBUNTU_USERNAME"]:
+        # Run Database Migrations
+        # db.run_migrations()
+
+        # Developing mode
+        print("main()·Flask API running in Developing Mode")
+
+        # Start app
+        app.run(debug=True, host="0.0.0.0",
+                port=8080,
+                ssl_context=('src/certificates/localhost_cert.pem',
+                             'src/certificates/localhost_key.pem'))
+
+    else:
+        # Production mode
+        print("main()·Flask API running in Production Mode")
+
+        # Start app
+        app.run(debug=False, host="0.0.0.0", port=8080)
 ```
 
-**6. Install requirements**
+**9. Install requirements**
 
 PyCharm > Terminal:
 
@@ -155,7 +335,7 @@ PyCharm > Terminal:
 
 
 
-**6. Run application**<br>
+**10. Run application**<br>
 In PyCharm go to main.py and click `Run`
 
 
