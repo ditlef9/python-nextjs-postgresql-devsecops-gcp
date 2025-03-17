@@ -130,47 +130,34 @@ Pycharm > File > Close Project<br><br>
 Pycharm > Get from VCS<br><br>
 
 
-**3. Add requirements.txt**
+**3. Create certificates**
+
+
+**4. Add requirements.txt**
 
 ```
 functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
 ```
 
-**4. Create main.py**
+**5. Create main.py**
 
 ```python
 
 
-import flask
-import functions_framework
-
-@functions_framework.http
-def main(request: flask.wrappers.Request):
-    """HTTP Cloud Function"""
-    log_headline: str = f"main()"
-    print(f"{log_headline} · Init")
-
-
-if __name__ == '__main__':
-    print("versions-tracker local run")
-
-    app = flask.Flask(__name__)  # Create a Flask app instance
-    request = flask.request
-    main(request)
 ```
 
-**5. Install requirements**
+**6. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
+
+
 **6. Run application**<br>
 In PyCharm go to main.py and click `Run`
 
-
-### 1.2 Frontend
 
 
 ---
