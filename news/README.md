@@ -305,9 +305,6 @@ PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**10. Add Procfile**<br>
-`web: gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app`
-
 **10. Run application**<br>
 In PyCharm go to main.py and click `Run`
 
