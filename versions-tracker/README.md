@@ -1,4 +1,4 @@
-# 🔄 What Version
+# 🔄 Versions Tracker
 
 [🏠 Home](../)
 &nbsp; &nbsp;
@@ -15,22 +15,22 @@ Fetches API data and posts updates to Slack.
 
 
 Table of contents:
-1. [📖 Learning Objectives for What Version](#-1-learning-objectives-for-what-version)
-2. [✨ Lessons Overview for What Version](#-2-lessons-overview-for-what-version)
-3. [📸 Diagram and Screenshots from What Version](#-3-diagram-and-screenshots-from-what-version)
-4. [🚀 Create Python Application for What Version](#-4-create-python-application-for-what-version)
+1. [📖 Learning Objectives for Versions Tracker](#-1-learning-objectives-for-versions-tracker)
+2. [✨ Lessons Overview for Versions Tracker](#-2-lessons-overview-for-versions-tracker)
+3. [📸 Diagram and Screenshots from Versions Tracker](#-3-diagram-and-screenshots-from-versions-tracker)
+4. [🚀 Create Python Application for Versions Tracker](#-4-create-python-application-for-versions-tracker)
 5. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-5-configure-google-cloud-infrastructure)
 6. [⚡ Configure CI/CD with GitHub Actions](#-6-configure-cicd-with-github-actions)
 7. [🕒 Setup a Google Cloud Scheduler](#-7-setup-a-google-cloud-scheduler)
 8. [💻 Implementing Check for New Versions](#-8-implementing-check-for-new-versions)
 9. [✉️ Implementing Email Message if There Are New Version](#%EF%B8%8F-9-implementing-email-message-if-there-are-new-version)
-10. [🖥️ Running the Finished What Version Locally](#%EF%B8%8F-10-running-the-finished-what-version-locally)
-11. [☁️ Running the Finished What Version on Google Cloud Run Functions](#%EF%B8%8F-11-running-the-finished-what-version-on-google-cloud-run-functions)
+10. [🖥️ Running the Finished Version Tracker Locally](#%EF%B8%8F-10-running-the-finished-versions-tracker-locally)
+11. [☁️ Running the Finished Version Tracker on Google Cloud Run Functions](#%EF%B8%8F-11-running-the-finished-versions-tracker-on-google-cloud-run-functions)
 12. [📜 License](#-12-license)
 
 ---
 
-## 📖 1 Learning Objectives for What Version
+## 📖 1 Learning Objectives for Version Tracker
 
 * Create a **Python application** with **Google Cloud Run Functions**.
 * Set up **Google Cloud services** like **Buckets**, **Email**, **Secrets** and **Scheduler**.
@@ -40,7 +40,7 @@ Table of contents:
 
 ---
 
-## ✨ 2 Lessons Overview for What Version
+## ✨ 2 Lessons Overview for Version Trackern
 
 1. **Introduction**
 
@@ -76,11 +76,11 @@ Table of contents:
 
 ---
 
-## 📸 3 Diagram and Screenshots from What Version
+## 📸 3 Diagram and Screenshots from Version Tracker
 
-**What Version Diagram**<br>
-This diagram shows the structure and flow of the What Version, outlining its components and how user data is processed.<br>
-![What Version Diagram](_docs/what-version-diagram.drawio.png) 
+**Version Tracker Diagram**<br>
+This diagram shows the structure and flow of the Version Tracker, outlining its components and how user data is processed.<br>
+![Version Tracker Diagram](_docs/versions-tracker-diagram.drawio.png) 
 
 **Email With New Versions**<br>
 If there are any new versions they will be emailed to the recipients<br>
@@ -89,7 +89,7 @@ If there are any new versions they will be emailed to the recipients<br>
 
 ---
 
-## 🚀 4 Create Python Application for What Version
+## 🚀 4 Create Python Application for Version Tracker
 
 **1. Create new application in Github**
 
@@ -126,7 +126,7 @@ def main(request: flask.wrappers.Request):
 
 
 if __name__ == '__main__':
-    print("what-version local run")
+    print("versions-tracker local run")
 
     app = flask.Flask(__name__)  # Create a Flask app instance
     request = flask.request
@@ -151,7 +151,7 @@ In PyCharm go to main.py and click `Run`
 1. Create bucket<br>
 https://console.cloud.google.com > Buckets > [Create]<br>
 
-* Name: what-version-bucket
+* Name: versions-tracker-bucket
 * Labels: owner: YOUR_NAME
 
 Location type:
@@ -272,9 +272,9 @@ $WORKLOAD_IDENTITY_PROVIDER="gh-provider"
 https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 
 **Define the schedule**<br>
-* Name: what-version-scheduler
+* Name: versions-tracker-scheduler
 * Region: europe-west1 (Belgium)
-* Descriptions: Triggers the What Version function to check if there are any new versions.
+* Descriptions: Triggers the Version Tracker function to check if there are any new versions.
 * Frequency: 0 9 1 */3 *
 * Timezone: Central European Standard Time (CET)
 
@@ -308,11 +308,11 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 
 ## ✉️ 9 Implementing Email Message if There Are New Version
 
-1. Create a secret `what-version-services`:
+1. Create a secret `versions-tracker-services`:
 
 Google Cloud > Secret manager > New
 
-* Name: **what-version-services**
+* Name: **versions-tracker-services**
 * Secret value: ```{
 "gmail_sender_email": "YOU@gmail.com",
 "gmail_app_password": "APP_PASSWORD",
@@ -321,7 +321,7 @@ Google Cloud > Secret manager > New
 * Location(s): **europe-north1**
 * Labels: 
   * owner: YOUR_NAME
-  * app: what-version
+  * app: versions-tracker
 
 2. Implement send_gmail_app_pass.py
 
@@ -333,11 +333,11 @@ Change the project ID.
 
 ---
 
-## 🖥️ 10 Running the Finished What Version Locally
+## 🖥️ 10 Running the Finished Version Tracker Locally
 
 **1. Clone the repository**
 
-**2. Open the directory `what-version` in PyCharm**
+**2. Open the directory `versions-tracker` in PyCharm**
 
 
 **3. Install requirements**
@@ -353,7 +353,7 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 11 Running the Finished What Version on Google Cloud Run Functions
+## ☁️ 11 Running the Finished Versions Tracker on Google Cloud Run Functions
 
 ### 1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
@@ -374,7 +374,7 @@ Permissions/Assign Roles:
 Buckets > [Create]
 
 Get started:
-* Name: **what-version-bucket**
+* Name: **versions-tracker-bucket**
 * Labels: owner: YOUR_NAME
 
 Location type:
@@ -387,7 +387,7 @@ Location type:
 
 ```commandline
 gcloud auth login
-gcloud functions deploy what-version --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev --memory=512MB
+gcloud functions deploy versions-tracker --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev --memory=512MB
 ```
 
 

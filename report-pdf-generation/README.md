@@ -61,7 +61,7 @@ def main(request: flask.wrappers.Request):
 
 
 if __name__ == '__main__':
-    print("what-version local run")
+    print("versions-tracker local run")
 
     app = flask.Flask(__name__)  # Create a Flask app instance
     request = flask.request

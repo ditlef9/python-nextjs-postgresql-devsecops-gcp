@@ -27,7 +27,7 @@ def main(request: flask.wrappers.Request):
 
     # Get versions stored in bucket
     client = storage.Client()
-    bucket = client.get_bucket(bucket_or_name="what-version-bucket")
+    bucket = client.get_bucket(bucket_or_name="versions-tracker-bucket")
     stored_bucket_data_list = google_bucket_load_json(bucket=bucket, bucket_path="bucket_versions.json")
 
 
@@ -88,7 +88,7 @@ def main(request: flask.wrappers.Request):
 
 
 if __name__ == '__main__':
-    print("what-version local run")
+    print("versions-tracker local run")
     print(f"Remember to login with: gcloud auth application-default login")
 
     app = flask.Flask(__name__)  # Create a Flask app instance
