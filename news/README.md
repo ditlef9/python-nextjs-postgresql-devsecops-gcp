@@ -433,7 +433,7 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
 {
     "DB_CONNECTION_TYPE": "unix_socket",
     "DB_HOST": "127.0.0.1",
-    "DB_USER": "news-postgres-prod",
+    "DB_USER": "postgres",
     "DB_PASS": "YOUR_SQL_PASSWORD",
     "DB_NAME": "postgres",
     "DB_PORT": "5432",
@@ -449,6 +449,10 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
 
 ### 6.4 Deploy backend
 Cloud Run > Deploy Container > Service
+
+Build Configuration:
+* Build type: Python via Google Cloud's build packs
+
 
 Configure:
 * Service name: news-backend
@@ -477,6 +481,9 @@ Containers > Security:
 ### 6.5 Deploy frontend
 
 Cloud Run > Deploy Container > Service
+
+Build Configuration:
+* Build type: Dockerfile
 
 Configure:
 * Service name: news-frontend
@@ -510,25 +517,37 @@ pgAdmin > Servers > PostgreSQL X > Databases > [Right click] > Create: Database
 
 ## 7.2 Connect to production database
 
+**Add your network**<br>
+Google Cloud Console > SQL > Connections > Networking > Authorised networks > [Add a network]
+
+* Name: YOUR_NAME, YOUR_ADDRESS, YOUR_ISP (Example John Doe, 4567 Oak Avenue, Los Angeles, CA 90012, Spectrum Internet)
+* Value: IP from https://whatismyipaddress.com/
+
+
+
 **Download Certificates:**<br>
 
-Google Cloud Console > SQL > news-prod > Connections > Security
+Google Cloud Console > SQL > news-prod > Connections > Security<br>
 
-* Scroll down and click `Create client certificate`
-* Name: YOUR_NAME
+SSL Mode<br>
+* Allow only SSL connections<br>
+
+Manage client certificates
+* Create Client Certificate
+  * Client Certificate Name: YOUR_NAME - YOUR_COMPUTER_NAME (Example John Doe, Lenovo Ideapad Slim 3)
 * Download the 3 generated files (client-key.pem, client-cert.pem and server-ca.pem)
 * Save files to the pgadmin folder
-  * Folder in unix systems: $HOME/.pgadmin 
-    * `chmod 600 $HOME/.pgadmin/*.pem`
-  * Folder in Windows: C:\Program Files\PostgreSQL\X\pgAdmin 4
+  * Folder in unix systems: $HOME/.pgadmin/DB_NAME
+    * `chmod 600 $HOME/.pgadmin/DB_NAME/*.pem`
+  * Folder in Windows: C:\Program Files\PostgreSQL\DB_NAME
 
 
 **Connect:**<br>
 
-* pgAdmin > Servers > [Right click] > Registrer: Server
+* pgAdmin > Servers > [Right click] > Register: Server
 * Name: Retrieve from Google Cloud Console
 * Port: 5432
-* Username: news-prod
+* Username: postgres
 * PARAMETERS
   * Add 3 new parameters and link them to the respective files:
     - Client certificate key > client-key.pem
@@ -547,7 +566,6 @@ Google Cloud Console > SQL > news-prod > Connections > Security
 * Edit config.
 
 ### Create Migrations
-* Create directory `src/migrations/users`
 * Create `src/migrations/users/users_index_001.sql`:
 ```sql
 -- Users Index ------------------------------------------------
