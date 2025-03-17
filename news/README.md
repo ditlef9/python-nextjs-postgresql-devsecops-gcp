@@ -16,8 +16,8 @@ Backend API with user authentication and Next.js frontend.
 # ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 Table of contents:
-1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-versions-tracker)
-2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-versions-tracker)
+1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-news-backend-and-frontend)
+2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-news-backend-and-frontend)
 3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-versions-tracker)
 4. [🐍 Creating Python Backend](#-1-getting-started-with-news-backend-and-frontendm)
 5. [⚛️ Creating Next.js Frontend](#-1-getting-started-with-news-backend-and-frontendm)
@@ -51,6 +51,59 @@ Table of contents:
 
 1. **Introduction**
 
+2. *Creating Python Backend**<br>
+- Setting up a Flask-based backend and structuring the project.
+- Activity/Reflection: What challenges did you face while setting up the backend?
+
+
+3. *Creating Next.js Frontend**<br>
+- Setting up a Next.js project and creating the UI components.
+- Activity/Reflection: How does the frontend connect with the backend?
+
+
+4. *Setting up Google Cloud Infrastructure for New backend and Frontend**<br>
+- Configuring Cloud Run, PostgreSQL, and Secret Manager.
+- Activity/Reflection: What are the key advantages of deploying on Google Cloud?
+
+5. *Connecting to database**<br>
+- Establishing a secure connection between your computer and and PostgreSQL.
+- Activity/Reflection: Why is database security important in production?
+
+
+6. **Python DBAdapter**<br>
+- Establishing a secure connection between Flask and PostgreSQL.
+- Activity/Reflection: How can database abstraction improve maintainability?
+
+
+7. **Register**<br>
+- Implementing user registration with validation and password hashing.
+- Activity/Reflection: What security measures should be in place for user registration?
+
+8. **Login**<br>
+- Authenticating users and managing sessions/tokens.
+- Activity/Reflection: What authentication method did you choose and why?
+
+9. **New news**<br>
+- Creating an API to add news articles with authentication.
+- Activity/Reflection: What data validation checks are necessary for posting news?
+
+10. **List news**<br>
+- Implementing an API to fetch and display news articles.
+- Activity/Reflection: How does pagination improve user experience?
+
+11. **Edit news**<br>
+- Allowing authorized users to update existing news articles.
+- Activity/Reflection: How do you handle permissions for editing content?
+
+12. **Delete news**<br>
+- Implementing secure deletion of news articles.
+- Activity/Reflection: What precautions should be taken when deleting records?
+
+13. **Congratulations and Learning Tip**<br>
+- Learning tip: ?
+- Reflection: ?
+
+14. **Quiz**
 
 ---
 
