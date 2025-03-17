@@ -18,7 +18,7 @@ Table of contents:
 1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-news-backend-and-frontend)
 2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-news-backend-and-frontend)
 3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-versions-tracker)
-4. [🐍 Creating Python Backend](#-1-getting-started-with-news-backend-and-frontendm)
+4. [🐍 Creating Python Backend](#-4-creating-python-backend)
 5. [⚛️ Creating Next.js Frontend](#-1-getting-started-with-news-backend-and-frontendm)
 6. [🌐 Setting up Google Cloud Infrastructure for New backend and Frontend](#-1-getting-started-with-news-backend-and-frontendm)
 7. [🔗 Connecting to database](#-2-registrer)
@@ -162,81 +162,60 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 📦🐍 2 Python Utils and Functions
+## ⚛️ 5 Creating Next.js Frontend
 
 
 ---
 
-## 📦🌐 3 Next.js Utils and Functions
-
-
-
----
-
-## 🖥️ 4 Running the Finished News Backend and Frontend Locally
-
-**1. Clone the repository**
-
-### 4.1 Backend
-
-**1. Open the directory `news-backend` in PyCharm**
-
-
-**2. Install requirements**
-
-PyCharm > Terminal:
-
-`pip install -r requirements.txt`
-
-**3. Start the application**<br>
-In PyCharm go to main.py and click `Run`
-
-
-### 4.2 Frontend
-
-
----
-
-## ☁️ 5 Running the Finished News Backend and Frontend on Google Cloud Run
-
-### 5.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
-
-IAM > Service accounts > + Create Service Account
-
-* Name: **Cloud Scheduler Service Account for Cloud Run and Functions**
-* Description: **This is used for Google Cloud Scheduler. It can read secrets and invoke functions**
-
-Permissions/Assign Roles:
-* Cloud Scheduler Service Agent
-* Service Account Admin
-
-
-### 5.2. Database
-
-**Create Bucket:**
-
-Buckets > [Create]
-
-Get started:
-* Name: **versions-tracker-bucket**
-* Labels: owner: YOUR_NAME
-
-Location type:
-* Region - europe-north1
-
-[Create]
-
-
-### 5.3. Deploy News Backend on Google Cloud Run
-
-### 5.4. Deploy News Frontend on Google Cloud Run
-
+## 🌐 6 Setting up Google Cloud Infrastructure for New backend and Frontend
 
 
 
 ---
 
-## 📜 6 License
+## 🔗 7 Connecting to database
+
+---
+
+## 🛢️ 8 Python DBAdapter
+
+---
+
+## 📝 9 Register
+
+
+---
+
+## 🔑 10 Login
+
+---
+
+## 📰 11 Create news
+
+---
+
+## 📃 12 List news
+
+---
+
+## ✏️ 13 Edit news
+
+---
+
+## 🗑️ 14 Delete news
+
+---
+
+## 🖥️ 15 Running the Finished News Backend and Frontend Locally
+
+
+---
+
+## ☁️ 16 Running the Finished News Backend and Frontend on Google Cloud Run
+
+---
+
+## 📜 17 License
 
 
 This project is licensed under the
