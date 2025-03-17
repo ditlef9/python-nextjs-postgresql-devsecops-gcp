@@ -346,11 +346,185 @@ In PyCharm go to main.py and click `Run`
 ## ⚛️ 5 Creating Next.js Frontend
 
 
+
+**1. Create new repository in Github**
+
+*Name: **news-frontend-nextjs**
+
+**2. Create new application**
+
+Open CMD/Terminal and write:
+
+```
+mkdir next
+cd next
+npx create-next-app@latest
+```
+
+* What is your project name: **news**
+* Would you like to use TypeScript: **Yes**
+* Would you like to use ESLint: **Yes**
+* Would you like to use Tailwind CSS: **No**
+* Would you like yor code inside a `src/` directory: **No**
+* Would you like to use App Router? (recommended): **Yes**
+* Would you like to use Turbopack for `next dev`?: **No**
+* Would you like to customize the import alias (`@/*` by default)?: **No**
+
+**3. Initialize files to Github**
+
+File > Terminal:
+
+```
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPOSITORY_NAME.git
+git push -u origin main
+```
+
+
+**4. Add Dockerfile**
+
+Add `Dockerfile` in the project with the following contents:
+
+```
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
+
+
+**5. Start the application**
+
+```
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
 ---
 
 ## 🌐 6 Setting up Google Cloud Infrastructure for New backend and Frontend
 
+### 6.1 Create PostgresSQL database
 
+https://console.cloud.google.com > SQL > [Create Instance]<br>
+
+* Choose your database engine: **PosgtreSQL**
+* Choose a Cloud SQL edition: Enterprise
+* Edition preset: Sandbox
+
+**Instance info**<br>
+* Database version: Latest
+* Instance ID: news-postgres-prod
+* Password: random password (https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
+
+
+**Choose region and zonal availability**<br>
+* Region: europe-north1 (Finland)
+* Zonal Availability: Single zone
+
+**Machine configuration**<br>
+* Machine shapes: Shared core
+* 1 vCPI, 0.614 GB
+
+**Storage**<br>
+* Storage type: HDD
+* Storage capacity: 10 GB
+
+**Data protection**<br>
+* Automated daily backups: Uncheck
+
+**Labels**<br>
+* owner = YOUR_NAME
+
+
+### 6.3 Create secret
+
+https://console.cloud.google.com > Secret Manager > + Create Secret
+
+* Name: news-services
+* Secret value:
+```commandline
+{
+    "DB_CONNECTION_TYPE": "unix_socket",
+    "DB_HOST": "127.0.0.1",
+    "DB_USER": "news-postgres-prod",
+    "DB_PASS": "YOUR_SQL_PASSWORD",
+    "DB_NAME": "postgres",
+    "DB_PORT": "5432",
+    "DB_INSTANCE_UNIX_SOCKET": "/cloudsql/GCP_PROJECT_ID:europe-north1:news-postgres-prod",
+}
+```
+
+* Replication policy Locations: **europe-north1**
+* Labels:
+  * owner = YOUR_NAME
+  * app = news
+
+
+### 6.4 Deploy backend
+Cloud Run > Deploy Container > Service
+
+Configure:
+* Service name: news-backend
+* Region: europe-north1 (Finland)
+* Authentication: Allow unauthenticated invocations
+* Billing: Request based
+
+Service Scaling
+* Auto-scaling: Checked
+* Minimum number of instances: 0
+
+Containers > Resources:
+* Memory: 128 MB
+
+Containers > Revision scaling:
+* Minimum number of instances: 0
+* Maximum number of instances: 1
+
+Containers > Security:
+* Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
+* 
+
+### 6.5 Deploy frontend
+
+Cloud Run > Deploy Container > Service
+
+Configure:
+* Service name: news-frontend
+* Region: europe-north1 (Finland)
+* Authentication: Allow unauthenticated invocations
+* Billing: Request based
+
+Service Scaling
+* Auto-scaling: Checked
+* Minimum number of instances: 0
+
+Containers > Resources:
+* Memory: 128 MB
+
+Containers > Revision scaling:
+* Minimum number of instances: 0
+* Maximum number of instances: 1
+
+Containers > Security:
+* Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 
 ---
 
