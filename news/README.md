@@ -25,7 +25,7 @@ Table of contents:
 8. [🛢️ Python DBAdapter](#%EF%B8%8F-8-python-dbadapter)
 9. [📝 Register](#-9-register)
 10. [🔑 Login](#-10-login)
-11. [📰 New news](#-11-create-news)
+11. [📰 Create news](#-11-create-news)
 12. [📃 List news](#-12-list-news)
 13. [✏️ Edit news](#%EF%B8%8F-13-edit-news)
 14. [🗑️ Delete news](#%EF%B8%8F-14-delete-news)
