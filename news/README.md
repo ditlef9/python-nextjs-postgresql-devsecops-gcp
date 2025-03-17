@@ -29,9 +29,10 @@ Table of contents:
 12. [📃 List news](#-12-list-news)
 13. [✏️ Edit news](#%EF%B8%8F-13-edit-news)
 14. [🗑️ Delete news](#%EF%B8%8F-14-delete-news)
-15. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-15-running-the-finished-news-backend-and-frontend-locally)
-16. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-16-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-17. [📜 License](#-17-license)
+15. [🔒 Add CORS](#%EF%B8%8F-14-delete-news)
+16. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-15-running-the-finished-news-backend-and-frontend-locally)
+17. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-16-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+18. [📜 License](#-17-license)
 
 ---
 
@@ -98,7 +99,11 @@ Table of contents:
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-13. **Congratulations and Learning Tip**<br>
+13. **Add CORS**<br>
+Make the backend only available from frontend
+- Reflection: ?
+
+14. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
@@ -155,36 +160,8 @@ cd src/certificates
 openssl req -x509 -newkey rsa:4096 -keyout localhost_key.pem -out localhost_cert.pem -sha256 -days 365 -nodes -subj "/C=NO/ST=Oslo/L=Oslo/O=My Company/CN=example.com/emailAddress=admin@example.com"
 ```
 
-**4. Add Dockerfile**<br>
 
-```
-# Specify Python
-FROM python:latest
-
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# Open port
-EXPOSE 8080
-
-# Add Python script
-RUN mkdir /app
-WORKDIR /app
-COPY . .
-
-
-# Install dependencies
-RUN pip install -r requirements.txt
-
-# Set Pythons path
-ENV PYTHONPATH /app
-
-# Run script
-CMD [ "python", "./src/main.py" ]
-
-```
-
-**5. Create a index.html file**<br>
+**4. Create a index.html file**<br>
 
 `src/static/index.html`
 
@@ -253,13 +230,13 @@ CMD [ "python", "./src/main.py" ]
 </html>
 ```
 
-**6. Create a favicon.ico file**<br>
+**5. Create a favicon.ico file**<br>
 
 Download favicon and add it to the `static` directory:
 
 [favicon.ico](_docs/favicon.ico)
 
-**7. Add requirements.txt**
+**6. Add requirements.txt**
 
 ```
 flask                     # Added by YOUR_NAME. Added by YOUR_NAME.A lightweight WSGI web application framework.
@@ -270,22 +247,16 @@ sqlalchemy                # Added by YOUR_NAME. SQLAlchemy ORM and database tool
 
 ```
 
-**8. Create src/main.py**
+**7. Create src/main.py**
 
 ```python
 import os
 
 from flask import Flask, send_from_directory
-from flask_cors import CORS
 from pathlib import Path
 
 # - Flask App -------------------------------------------------------------------
 app = Flask(__name__)
-
-# - Set up CORS to allow only the frontend domain in production -----------------
-frontend_url = "https://my-frontend-service.a.run.app"
-cors = CORS(app, resources={r"/*": {"origins": frontend_url}})
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 # - General ----------------------------------------------------------------
@@ -334,7 +305,8 @@ PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-
+**10. Add Procfile**<br>
+`web: gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app`
 
 **10. Run application**<br>
 In PyCharm go to main.py and click `Run`
@@ -498,6 +470,9 @@ Containers > Revision scaling:
 * Minimum number of instances: 0
 * Maximum number of instances: 1
 
+Cloud SQL connections:
+* Cloud SQL instance 1: applications-dev:europe-north1:news-postgres-prod
+
 Containers > Security:
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 
@@ -530,9 +505,143 @@ Containers > Security:
 
 ## 🔗 7 Connecting to Database with pgAdmin
 
+## 7.1 Create local database
+
+pgAdmin > Servers > PostgreSQL X > Databases > [Right click] > Create: Database
+
+* Database: news-dev
+
+## 7.2 Connect to production database
+
+**Download Certificates:**<br>
+
+Google Cloud Console > SQL > news-prod > Connections > Security
+
+* Scroll down and click `Create client certificate`
+* Name: YOUR_NAME
+* Download the 3 generated files (client-key.pem, client-cert.pem and server-ca.pem)
+* Save files to the pgadmin folder
+  * Folder in unix systems: $HOME/.pgadmin 
+    * `chmod 600 $HOME/.pgadmin/*.pem`
+  * Folder in Windows: C:\Program Files\PostgreSQL\X\pgAdmin 4
+
+
+**Connect:**<br>
+
+* pgAdmin > Servers > [Right click] > Registrer: Server
+* Name: Retrieve from Google Cloud Console
+* Port: 5432
+* Username: news-prod
+* PARAMETERS
+  * Add 3 new parameters and link them to the respective files:
+    - Client certificate key > client-key.pem
+    - Client certificate > client-cert.pem 
+    - Root certificate > server-ca.pem
+
+
 ---
 
 ## 🛢️ 8 Python DBAdapter
+
+
+### Setup
+* Download `src/dao/DBAdapter.py`.
+* Download `src/dao/config.py`.
+* Edit config.
+
+### Create Migrations
+* Create directory `src/migrations/users`
+* Create `src/migrations/users/users_index_001.sql`:
+```sql
+-- Users Index ------------------------------------------------
+DROP TABLE IF EXISTS n_users_index;
+CREATE TABLE IF NOT EXISTS public.c_users_index (
+  user_id SERIAL PRIMARY KEY,
+  user_email VARCHAR(255) NOT NULL,
+  user_first_name VARCHAR(200),
+  user_middle_name VARCHAR(200),
+  user_last_name VARCHAR(200),
+  user_display_name VARCHAR(200),
+  user_rank VARCHAR(255),
+  user_department VARCHAR(255) NOT NULL,
+  user_created_timestamp TIMESTAMP NOT NULL,
+  user_created_by_user_email VARCHAR(255) NOT NULL,
+  user_updated_timestamp TIMESTAMP,
+  user_updated_by_user_email VARCHAR(255),
+  user_login_tries_count INT,
+  user_login_tries_timestamp TIMESTAMP,
+  user_last_online_timestamp TIMESTAMP,
+  user_last_ip VARCHAR(255),
+  user_last_user_agent VARCHAR(255),
+  user_type VARCHAR(50)
+);
+```
+
+* Create `src/migrations/news/news_index_001.sql`:
+```sql
+-- News Index ------------------------------------------------
+DROP TABLE IF EXISTS n_news_index;
+CREATE TABLE IF NOT EXISTS public.n_news_index (
+  news_id SERIAL PRIMARY KEY,
+  news_title VARCHAR(255) NOT NULL,
+  news_title_slug VARCHAR(255) NOT NULL,
+  news_text TEXT,
+  news_created_timestamp TIMESTAMP NOT NULL,
+  news_created_by_user_id INT,
+  news_created_by_display_name VARCHAR(255),
+  news_updated_timestamp TIMESTAMP,
+  news_updated_by_user_id INT,
+  news_updated_by_display_name VARCHAR(255)
+);
+
+-- Example News Entry 1
+INSERT INTO public.n_news_index (
+  news_title, 
+  news_title_slug, 
+  news_text, 
+  news_created_timestamp, 
+  news_created_by_user_id, 
+  news_created_by_display_name, 
+  news_updated_timestamp, 
+  news_updated_by_user_id, 
+  news_updated_by_display_name
+) 
+VALUES (
+  'Breaking News: Major Event Happens', 
+  'breaking-news-major-event-happens', 
+  'This is a detailed news article about a major event that has just happened. More information is coming soon.',
+  '2025-03-17 09:00:00',
+  1,
+  'John Doe',
+  '2025-03-17 10:00:00',
+  2,
+  'Jane Smith'
+);
+
+-- Example News Entry 2
+INSERT INTO public.n_news_index (
+  news_title, 
+  news_title_slug, 
+  news_text, 
+  news_created_timestamp, 
+  news_created_by_user_id, 
+  news_created_by_display_name, 
+  news_updated_timestamp, 
+  news_updated_by_user_id, 
+  news_updated_by_display_name
+) 
+VALUES (
+  'Technology Advancements in 2025', 
+  'technology-advancements-in-2025', 
+  'The year 2025 has seen remarkable advancements in technology, with new gadgets, innovations, and breakthroughs.',
+  '2025-03-16 14:30:00',
+  3,
+  'Alice Green',
+  NULL, -- No updates yet
+  NULL, -- No updates yet
+  NULL
+);
+```
 
 ---
 
@@ -561,16 +670,20 @@ Containers > Security:
 
 ---
 
-## 🖥️ 15 Running the Finished News Backend and Frontend Locally
+## 🔒 15 Add CORS
+
+---
+
+## 🖥️ 16 Running the Finished News Backend and Frontend Locally
 
 
 ---
 
-## ☁️ 16 Running the Finished News Backend and Frontend on Google Cloud Run
+## ☁️ 17 Running the Finished News Backend and Frontend on Google Cloud Run
 
 ---
 
-## 📜 17 License
+## 📜 18 License
 
 
 This project is licensed under the
