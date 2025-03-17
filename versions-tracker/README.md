@@ -17,7 +17,7 @@ Fetches API data and posts updates to Slack.
 Table of contents:
 1. [📖 Learning Objectives for Versions Tracker](#-1-learning-objectives-for-versions-tracker)
 2. [✨ Lessons Overview for Versions Tracker](#-2-lessons-overview-for-versions-tracker)
-3. [📸 Diagram and Screenshots from Versions Tracker](#-3-diagram-and-screenshots-from-versions-tracker)
+3. [📸 Diagram and Screenshots from Versions Tracker](#-3-diagram-and-screenshots-from-version-tracker)
 4. [🚀 Create Python Application for Versions Tracker](#-4-create-python-application-for-versions-tracker)
 5. [☁️ Configure Google Cloud Infrastructure](#%EF%B8%8F-5-configure-google-cloud-infrastructure)
 6. [⚡ Configure CI/CD with GitHub Actions](#-6-configure-cicd-with-github-actions)

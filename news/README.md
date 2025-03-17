@@ -13,7 +13,6 @@ Backend API with user authentication and Next.js frontend.
 | GCP Services | PostgreSQL              |
 
 
-# ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 Table of contents:
 1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-news-backend-and-frontend)
@@ -51,21 +50,21 @@ Table of contents:
 
 1. **Introduction**
 
-2. *Creating Python Backend**<br>
+2. **Creating Python Backend**<br>
 - Setting up a Flask-based backend and structuring the project.
 - Activity/Reflection: What challenges did you face while setting up the backend?
 
 
-3. *Creating Next.js Frontend**<br>
+3. **Creating Next.js Frontend**<br>
 - Setting up a Next.js project and creating the UI components.
 - Activity/Reflection: How does the frontend connect with the backend?
 
 
-4. *Setting up Google Cloud Infrastructure for New backend and Frontend**<br>
+4. **Setting up Google Cloud Infrastructure for New backend and Frontend**<br>
 - Configuring Cloud Run, PostgreSQL, and Secret Manager.
 - Activity/Reflection: What are the key advantages of deploying on Google Cloud?
 
-5. *Connecting to database**<br>
+5. **Connecting to database**<br>
 - Establishing a secure connection between your computer and and PostgreSQL.
 - Activity/Reflection: Why is database security important in production?
 
@@ -83,7 +82,7 @@ Table of contents:
 - Authenticating users and managing sessions/tokens.
 - Activity/Reflection: What authentication method did you choose and why?
 
-9. **New news**<br>
+9. **Create news**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
@@ -107,14 +106,22 @@ Table of contents:
 
 ---
 
-## 🚀 1 Getting Started with News Backend and Frontend
+## 📸 3 Diagram and Screenshots from News backend and Frontend
+
+**News Backend and Frontend Diagram**<br>
+This diagram shows the structure and flow of the Version Tracker, outlining its components and how user data is processed.<br>
+![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 
+---
 
-### 1.1 Backend
+## 🐍 4 Creating Python Backend
 
 
 **1. Create new application in Github**
+
+* Name: news-backend-python
+
 
 **2. Open application in PyCharm**
 
