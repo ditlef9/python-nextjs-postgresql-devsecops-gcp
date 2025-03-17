@@ -349,7 +349,7 @@ In PyCharm go to main.py and click `Run`
 
 **1. Create new repository in Github**
 
-*Name: **news-frontend-nextjs**
+* Name: **news-frontend-nextjs**
 
 **2. Create new application**
 
@@ -500,7 +500,7 @@ Containers > Revision scaling:
 
 Containers > Security:
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
-* 
+
 
 ### 6.5 Deploy frontend
 
