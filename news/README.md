@@ -19,9 +19,9 @@ Table of contents:
 2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-news-backend-and-frontend)
 3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-versions-tracker)
 4. [🐍 Creating Python Backend](#-4-creating-python-backend)
-5. [⚛️ Creating Next.js Frontend](#-1-getting-started-with-news-backend-and-frontendm)
-6. [🌐 Setting up Google Cloud Infrastructure for New backend and Frontend](#-1-getting-started-with-news-backend-and-frontendm)
-7. [🔗 Connecting to database](#-2-registrer)
+5. [⚛️ Creating Next.js Frontend](#%EF%B8%8F-5-creating-nextjs-frontend)
+6. [🌐 Setting up Google Cloud Infrastructure for New backend and Frontend](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
+7. [🔗 Connecting to Database with pgAdmin](#-2-registrer)
 8. [🛢️ Python DBAdapter](#-2-registrer)
 9. [📝 Register](#-2-registrer)
 10. [🔑 Login](#-2-registrer)
@@ -314,7 +314,8 @@ if __name__ == "__main__":
         print("main()·Flask API running in Developing Mode")
 
         # Start app
-        app.run(debug=True, host="0.0.0.0",
+        app.run(debug=True, 
+                host="0.0.0.0",
                 port=8080,
                 ssl_context=('src/certificates/localhost_cert.pem',
                              'src/certificates/localhost_key.pem'))
@@ -353,7 +354,7 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 🔗 7 Connecting to database
+## 🔗 7 Connecting to Database with pgAdmin
 
 ---
 
