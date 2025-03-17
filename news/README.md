@@ -16,12 +16,41 @@ Backend API with user authentication and Next.js frontend.
 # ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with News Backend and Frontend](#-1-getting-started-with-news-backend-and-frontendm)
-2. [📦 Python Utils and Functions](#-2-python-utils-and-functions)
-3. [📦 Next.js Utils and Functions](#-3-nextjs-utils-and-functions)
-4. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-4-running-the-finished-news-backend-and-frontend-locally)
-5. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-5-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-6. [📜 License](#-6-license)
+1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-versions-tracker)
+2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-versions-tracker)
+3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-versions-tracker)
+4. [🐍 Creating Python Backend](#-1-getting-started-with-news-backend-and-frontendm)
+5. [⚛️ Creating Next.js Frontend](#-1-getting-started-with-news-backend-and-frontendm)
+6. [🌐 Setting up Google Cloud Infrastructure for New backend and Frontend](#-1-getting-started-with-news-backend-and-frontendm)
+7. [🔗 Connecting to database](#-2-registrer)
+8. [🛢️ Python DBAdapter](#-2-registrer)
+9. [📝 Register](#-2-registrer)
+10. [🔑 Login](#-2-registrer)
+11. [📰 New news](#-2-registrer))
+12. [📃 List news](#-2-registrer))
+13. [✏️ Edit news](#-2-registrer))
+14. [🗑️ Delete news](#-2-registrer)
+15. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-4-running-the-finished-news-backend-and-frontend-locally)
+16. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-5-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+17. [📜 License](#-6-license)
+
+---
+
+## 📖 1 Learning Objectives for News backend and Frontend
+
+* Build a **Flask-based backend**  with user authentication and a PostgreSQL database.
+* Develop a **Next.js frontend** to interact with the backend API.
+* Deploy the application on Google Cloud using **Cloud Run** and **PostgreSQL**.
+* **Secure APIs** and authentication with best practices.
+
+
+---
+
+## ✨ 2 Lessons Overview for News backend and Frontend
+
+
+1. **Introduction**
+
 
 ---
 
