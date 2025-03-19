@@ -426,7 +426,7 @@ https://console.cloud.google.com > SQL > [Create Instance]<br>
 * owner = YOUR_NAME
 
 
-### 6.3 Create secret
+### 6.2 Create secret
 
 https://console.cloud.google.com > Secret Manager > + Create Secret
 
@@ -450,7 +450,7 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
   * app = news
 
 
-### 6.4 Deploy backend
+### 6.3 Deploy backend
 Cloud Run > Deploy Container > Service
 
 Build Configuration:
@@ -480,8 +480,9 @@ Cloud SQL connections:
 Containers > Security:
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 
+Copy the URL to the backend, we are going to use it in the front end deployment.
 
-### 6.5 Deploy frontend
+### 6.4 Deploy frontend
 
 Cloud Run > Deploy Container > Service
 
@@ -507,6 +508,10 @@ Containers > Revision scaling:
 
 Containers > Security:
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
+
+Environment Variables:
+* NEXT_PUBLIC_BACKEND_API_URL = https://news-backend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)
+
 
 ---
 
@@ -703,7 +708,7 @@ VALUES (
 
 * Create api `app\api\auth\[...nextauth]\route.ts`
 * Create page `app/(public)/login/page.tsx`
-* Create api `app/(public)/login/api-login/route.tsx`
+
 
 
 
