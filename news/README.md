@@ -25,14 +25,17 @@ Table of contents:
 8. [🛢️ Python DBAdapter](#%EF%B8%8F-8-python-dbadapter)
 9. [📝 Register](#-9-register)
 10. [🔑 Login](#-10-login)
-11. [📰 Create news](#-11-create-news)
-12. [📃 List news](#-12-list-news)
-13. [✏️ Edit news](#%EF%B8%8F-13-edit-news)
-14. [🗑️ Delete news](#%EF%B8%8F-14-delete-news)
-15. [🔒 Add CORS](#%EF%B8%8F-14-delete-news)
-16. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-15-running-the-finished-news-backend-and-frontend-locally)
-17. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-16-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-18. [📜 License](#-17-license)
+11. [📋 List users](#-10-login)
+12. [🖊️ Edit user](#-10-login)
+13. [❌ Delete user](#-10-login)
+14. [📰 Create news](#-14-create-news)
+15. [📃 List news](#-15-list-news)
+16. [✏️ Edit news](#%EF%B8%8F-16-edit-news)
+17. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
+18. [🔒 Add CORS](#%EF%B8%8F-18-delete-news)
+19. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-19-running-the-finished-news-backend-and-frontend-locally)
+20. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-20-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+21. [📜 License](#-21-license)
 
 ---
 
@@ -561,22 +564,29 @@ Manage client certificates
 
 
 ### Setup
-* Download `src/dao/DBAdapter.py`.
-* Download `src/dao/config.py`.
-* Edit config.
+* Download `config.py` and edit fields.
+* Download `src/dao/db_adapter.py`.
+* Download `src/utils/google_secret_manager_access_secret_version.py`.
+* Add `db = DBAdapter(migrations=False, debug=True)` and `db.migrations()`
 
 ### Create Migrations
 * Create `src/migrations/users/users_index_001.sql`:
 ```sql
 -- Users Index ------------------------------------------------
 DROP TABLE IF EXISTS n_users_index;
-CREATE TABLE IF NOT EXISTS public.c_users_index (
+CREATE TABLE IF NOT EXISTS public.n_users_index (
   user_id SERIAL PRIMARY KEY,
   user_email VARCHAR(255) NOT NULL,
   user_first_name VARCHAR(200),
   user_middle_name VARCHAR(200),
   user_last_name VARCHAR(200),
   user_display_name VARCHAR(200),
+  user_password VARCHAR(255),
+  user_mfa_type VARCHAR(255),
+  user_mfa_code VARCHAR(255),
+  user_login_code_value VARCHAR(255),
+  user_login_code_valid_to_timestamp TIMESTAMP,
+  user_is_approved BOOLEAN,
   user_rank VARCHAR(255),
   user_department VARCHAR(255) NOT NULL,
   user_created_timestamp TIMESTAMP NOT NULL,
@@ -658,14 +668,44 @@ VALUES (
 );
 ```
 
+
+
 ---
 
 ## 📝 9 Register
+
+### 9.1 Register Python Backend
+
+* Implement src/api/users/register.py
+* Add route to main.py
+
+### 9.2 Register Next.js Frontend
+
+* Copy `app/globals.css` (the same as we used in our user feedback form)
+* Clean `app/layout.tsx`
+* Clean `app/page.tsx`, add link to Register and Login
+* Install NextAuth: `npm install next-auth`
+* Create page `app/(public)/register/page.tsx`
+* Create api `app/(public)/register/api-register/route.tsx`
 
 
 ---
 
 ## 🔑 10 Login
+
+
+### 9.1 Login Python Backend
+
+* Implement src/api/users/login.py
+* Add route to main.py
+
+### 9.2 Login Next.js Frontend
+
+* Create api `app\api\auth\[...nextauth]\route.ts`
+* Create page `app/(public)/login/page.tsx`
+* Create api `app/(public)/login/api-login/route.tsx`
+
+
 
 ---
 
