@@ -691,7 +691,6 @@ VALUES (
 * Clean `app/page.tsx`, add link to Register and Login
 * Install NextAuth: `npm install next-auth`
 * Create page `app/(public)/register/page.tsx`
-* Create api `app/(public)/register/api-register/route.tsx`
 
 
 ---
@@ -699,18 +698,27 @@ VALUES (
 ## 🔑 10 Login
 
 
-### 9.1 Login Python Backend
+### 10.1 Login Python Backend
 
 * Implement src/api/users/login.py
 * Add route to main.py
 
-### 9.2 Login Next.js Frontend
+### 10.2 Login Next.js Frontend
 
 * Create api `app\api\auth\[...nextauth]\route.ts`
 * Create page `app/(public)/login/page.tsx`
 
 
+---
 
+## 📋 11 List users
+
+---
+## 🖊️ 12 Edit user
+
+---
+
+## ❌ 13 Delete user
 
 ---
 
