@@ -722,36 +722,36 @@ VALUES (
 
 ---
 
-## 📰 11 Create news
+## 📰 14 Create news
 
 ---
 
-## 📃 12 List news
+## 📃 15 List news
 
 ---
 
-## ✏️ 13 Edit news
+## ✏️ 16 Edit news
 
 ---
 
-## 🗑️ 14 Delete news
+## 🗑️ 17 Delete news
 
 ---
 
-## 🔒 15 Add CORS
+## 🔒 18 Add CORS
 
 ---
 
-## 🖥️ 16 Running the Finished News Backend and Frontend Locally
+## 🖥️ 19 Running the Finished News Backend and Frontend Locally
 
 
 ---
 
-## ☁️ 17 Running the Finished News Backend and Frontend on Google Cloud Run
+## ☁️ 20 Running the Finished News Backend and Frontend on Google Cloud Run
 
 ---
 
-## 📜 18 License
+## 📜 21 License
 
 
 This project is licensed under the
