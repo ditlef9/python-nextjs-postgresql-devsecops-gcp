@@ -848,6 +848,23 @@ Assignment/Reflection: Can you implement a change password function?
 
 ## 🔒 19 Add CORS
 
+main.py:<br>
+
+Change<br>
+
+```
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+```
+
+with:<br>
+
+```
+app = Flask(__name__)
+CORS(app, origins=["http://localhost:3000", "https://news-frontend-644994207224.europe-north1.run.app"])
+```
+
+
 ---
 
 ## 🖥️ 20 Running the Finished News Backend and Frontend Locally
