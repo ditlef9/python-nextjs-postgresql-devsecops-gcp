@@ -25,17 +25,19 @@ Table of contents:
 8. [🛢️ Python DBAdapter](#%EF%B8%8F-8-python-dbadapter)
 9. [📝 Register](#-9-register)
 10. [🔑 Login](#-10-login)
-11. [📋 List users](#-10-login)
-12. [🖊️ Edit user](#-10-login)
-13. [❌ Delete user](#-10-login)
-14. [📰 Create news](#-14-create-news)
-15. [📃 List news](#-15-list-news)
-16. [✏️ Edit news](#%EF%B8%8F-16-edit-news)
-17. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
-18. [🔒 Add CORS](#%EF%B8%8F-18-delete-news)
-19. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-19-running-the-finished-news-backend-and-frontend-locally)
-20. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-20-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-21. [📜 License](#-21-license)
+11. [🏙️️ Admin](#-11-admin)
+12. [📋 List users](#-10-login)
+13. [🖊️ Edit user](#-10-login)
+14. [❌ Delete user](#-10-login)
+15. [📰 Create news](#-14-create-news)
+16. [📃 List news](#-15-list-news)
+17. [📋 List news on admin on front end](📃 17 List news on admin on front end)
+18. [✏️ Edit news](#%EF%B8%8F-16-edit-news)
+19. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
+20. [🔒 Add CORS](#%EF%B8%8F-18-delete-news)
+21. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-19-running-the-finished-news-backend-and-frontend-locally)
+22. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-20-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+23. [📜 License](#-21-license)
 
 ---
 
@@ -434,6 +436,7 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
 * Secret value:
 ```commandline
 {
+    "jwt_secret_key": "2mN7zOEq9CQonvqWxnhTkZbwAroYGdjl_8UyqK7iXKw=",
     "DB_CONNECTION_TYPE": "unix_socket",
     "DB_HOST": "127.0.0.1",
     "DB_USER": "postgres",
@@ -511,8 +514,8 @@ Containers > Security:
 
 Environment Variables:
 * NEXT_PUBLIC_BACKEND_API_URL = https://news-backend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)
-
-
+* NEXTAUTH_SECRET = your_super_secret_key
+* NEXTAUTH_URL = https://news-frontend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)
 ---
 
 ## 🔗 7 Connecting to Database with pgAdmin
@@ -592,18 +595,19 @@ CREATE TABLE IF NOT EXISTS public.n_users_index (
   user_login_code_value VARCHAR(255),
   user_login_code_valid_to_timestamp TIMESTAMP,
   user_is_approved BOOLEAN,
-  user_rank VARCHAR(255),
-  user_department VARCHAR(255) NOT NULL,
+  user_rank VARCHAR(255), -- user, admin
+  user_department VARCHAR(255),
   user_created_timestamp TIMESTAMP NOT NULL,
-  user_created_by_user_email VARCHAR(255) NOT NULL,
+  user_created_by_user_id INT,
   user_updated_timestamp TIMESTAMP,
-  user_updated_by_user_email VARCHAR(255),
+  user_updated_by_user_id INT,
   user_login_tries_count INT,
   user_login_tries_timestamp TIMESTAMP,
+  user_login_timestamp TIMESTAMP,
   user_last_online_timestamp TIMESTAMP,
   user_last_ip VARCHAR(255),
   user_last_user_agent VARCHAR(255),
-  user_type VARCHAR(50)
+  user_type VARCHAR(50) -- user, service
 );
 ```
 
@@ -674,6 +678,7 @@ VALUES (
 ```
 
 
+* Run migrations on Google Cloud Run
 
 ---
 
@@ -689,7 +694,7 @@ VALUES (
 * Copy `app/globals.css` (the same as we used in our user feedback form)
 * Clean `app/layout.tsx`
 * Clean `app/page.tsx`, add link to Register and Login
-* Install NextAuth: `npm install next-auth`
+* Clean `app/(public)/layout.tsx`
 * Create page `app/(public)/register/page.tsx`
 
 
@@ -705,53 +710,142 @@ VALUES (
 
 ### 10.2 Login Next.js Frontend
 
+* Install NextAuth: `npm install next-auth`
+* Install jsonwebtoken: `npm install jsonwebtoken` and `npm i --save-dev @types/jsonwebtoken`
+* Install swr: `npm install swr`
 * Create api `app\api\auth\[...nextauth]\route.ts`
+* Create lib `app/lib/auth.ts`
+* Create lib `app/lib/loginIsRequiredServer.ts`
+* Create lib `app/lib/useLoginRequiredClient.ts`
 * Create page `app/(public)/login/page.tsx`
 
 
 ---
 
-## 📋 11 List users
+🏙️️ 11 Admin
 
----
-## 🖊️ 12 Edit user
-
----
-
-## ❌ 13 Delete user
+* Create `api/(private)/layout.tsx`
+* Create `api/(private)/admin/page.tsx`
 
 ---
 
-## 📰 14 Create news
+## 📋 12 List users
+
+### List users backend
+
+* Implement `src/utils/validate_token.py` - Reflection: What will happen if I steal the token and use it from a machine in another country?
+* Implement `src/api/users/get_users.py`
+
+### List users frontend
+
+* Implement `app/(public)/users/page.tsx`
+
+---
+## 🖊️ 13 Edit user
+
+### Edit user backend
+
+* Implement `src/api/users/get_user.py`
+* Implement `src/api/users/edit_user.py`
+
+### Edit user frontend
+
+* Implement `app/(public)/users/[userId]/edit/page.tsx`
+
+
+Assignment/Reflection: Can you implement a change password function?
+* Backend: `src/api/users/edit_user_password.py`
+* Frontend: `app/(public)/users/[userId]/edit-password/page.tsx`
 
 ---
 
-## 📃 15 List news
+## ❌ 14 Delete user
+
+### Delete user backend
+
+* Implement `src/api/users/delete_user.py`
+
+### Edit user frontend
+
+* Implement `app/(public)/users/[userId]/delete/page.tsx`
 
 ---
 
-## ✏️ 16 Edit news
+## 📰 15 Create news
+
+### Create news backend
+
+* Implement `src/api/news/create_news.py`
+
+### Create news frontend
+
+* Implement `app/(private)/admin/news/create-news/page.tsx`
 
 ---
 
-## 🗑️ 17 Delete news
+## 📃 16 List news on homepage
+
+
+### Create news backend
+
+* Implement `src/api/news/get_all_news.py`
+
+### Create news frontend
+
+* Update `app/page.tsx`
 
 ---
 
-## 🔒 18 Add CORS
+## 📋 17 List news on admin on front end
+
+
+* Implement `app/(private)/admin/news/page.tsx`
 
 ---
 
-## 🖥️ 19 Running the Finished News Backend and Frontend Locally
+## ✏️ 17 Edit news
+
+
+### Edit news backend
+
+* Implement `src/api/news/get_single_news.py`
+* Implement `src/api/news/edit_news.py`
+
+### Create news frontend
+
+* Implement `app/(private)/admin/news/[newsId]/edit-news/page.tsx`
 
 
 ---
 
-## ☁️ 20 Running the Finished News Backend and Frontend on Google Cloud Run
+## 🗑️ 18 Delete news
+
+
+### Edit news backend
+
+* Implement `src/api/news/delete_news.py`
+
+### Create news frontend
+
+* Implement `app/(private)/admin/news/[newsId]/delete-news/page.tsx`
+
 
 ---
 
-## 📜 21 License
+## 🔒 19 Add CORS
+
+---
+
+## 🖥️ 20 Running the Finished News Backend and Frontend Locally
+
+
+---
+
+## ☁️ 21 Running the Finished News Backend and Frontend on Google Cloud Run
+
+---
+
+## 📜 22 License
 
 
 This project is licensed under the
