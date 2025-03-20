@@ -503,7 +503,7 @@ Service Scaling
 * Minimum number of instances: 0
 
 Containers > Resources:
-* Memory: 128 MB
+* Memory: 256 MB
 
 Containers > Revision scaling:
 * Minimum number of instances: 0
