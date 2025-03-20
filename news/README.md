@@ -374,6 +374,10 @@ RUN npm install
 
 COPY . .
 
+# Build the application (CHANGE-ME: NEXT_PUBLIC_BACKEND_API_URL)
+ENV NODE_ENV=production
+ENV NEXT_PUBLIC_BACKEND_API_URL=https://news-backend-sindre-test-644994207224.europe-north1.run.app
+
 RUN npm run build
 
 EXPOSE 3000
@@ -520,9 +524,12 @@ Containers > Security:
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 
 Environment Variables:
-* NEXT_PUBLIC_BACKEND_API_URL = https://news-backend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)
-* NEXTAUTH_SECRET = your_super_secret_key
+* NEXT_PUBLIC_BACKEND_API_URL = https://news-backend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)<br>
+  (The NEXT_PUBLIC_BACKEND_API_URL is also referred to in the Dockerfile.)
+* NEXTAUTH_SECRET = your_super_secret_key (https://auth-secret-gen.vercel.app)
 * NEXTAUTH_URL = https://news-frontend-sindre-test-644994207224.europe-north1.run.app (Change to your URL)
+
+
 ---
 
 ## 🔗 7 Connecting to Database with pgAdmin
