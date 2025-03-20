@@ -453,12 +453,19 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
   * app = news
 
 
-### 6.3 Deploy backend
+### 6.3 Give permissions to 
+
+IAM > + Grant access 
+
+* New principals: cloud-run-cloud-run-functions@applications-dev-453706.iam.gserviceaccount.com
+* Role: Secret Manager Secret Accessor
+* Role: Cloud SQL Client
+
+### 6.4 Deploy backend
 Cloud Run > Deploy Container > Service
 
 Build Configuration:
 * Build type: Python via Google Cloud's build packs
-
 
 Configure:
 * Service name: news-backend
@@ -485,7 +492,7 @@ Containers > Security:
 
 Copy the URL to the backend, we are going to use it in the front end deployment.
 
-### 6.4 Deploy frontend
+### 6.5 Deploy frontend
 
 Cloud Run > Deploy Container > Service
 
