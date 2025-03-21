@@ -263,13 +263,13 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 ---
 
 
-## ☁️ 9 Uploading PDF to Buckets
+## ☁️ 10 Uploading PDF to Buckets
 
 * Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
 
 ---
 
-## 📧 10 Sending PDF as email
+## 📧 11 Sending PDF as email
 
 * Implement `src/utils/google_secret_manager_access_secret_version.py`
 * Implement `src/utils/send_gmail_app_pass.py`
@@ -286,7 +286,7 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 
 
 
-## 🖥️ 11 Running the Report PDF-generation Locally
+## 🖥️ 12 Running the Report PDF-generation Locally
 
 **1. Clone the repository**
 
@@ -308,13 +308,13 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 12 Running the Report PDF-generation on Google Cloud Run Functions
+## ☁️ 13 Running the Report PDF-generation on Google Cloud Run Functions
 
 Please see `🌐 Setting up Google Cloud Infrastructure for Report PDF-generation`.
 
 ---
 
-## 📜 13 License
+## 📜 14 License
 
 
 This project is licensed under the
