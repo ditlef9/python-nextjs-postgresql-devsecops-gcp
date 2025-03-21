@@ -112,12 +112,14 @@ Pycharm > Get from VCS<br><br>
 **3. Add requirements.txt**
 
 ```
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
 flask                       # Added by YOUR_NAME. Micro web framework for building web applications.
 flask-cors                  # Added by YOUR_NAME. Enables Cross-Origin Resource Sharing (CORS) in Flask apps.
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
 matplotlib                  # Added by YOUR_NAME. Plotting and data visualization library.
 numpy                       # Added by YOUR_NAME. Library for numerical computation.
-reportlab                  # Added by YOUR_NAME. Generation of PDF.
+reportlab                   # Added by YOUR_NAME. To generate PDF.
 
 ```
 
