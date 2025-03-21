@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/news/news-backend-python" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/news/news-frontend-nextjs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/news/news-backend-python-gcp" vcs="Git" />
   </component>
 </project>
