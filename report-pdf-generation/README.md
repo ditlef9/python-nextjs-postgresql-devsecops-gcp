@@ -18,16 +18,17 @@ Table of contents:
 1. [📖 Learning Objectives for Report PDF-generation](#-1-learning-objectives-for-news-backend-and-frontend)
 2. [✨ Lessons Overview for Report PDF-generation](#-2-lessons-overview-for-news-backend-and-frontend)
 3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-versions-tracker)
-4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-backend)
-5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
-6. [🧪 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)](#)
-7. [📄 Creating PDF with Vulnerabilities](#)
-8. [📊 Adding a barchart](#)
-9. [☁️ Uploading PDF to Buckets](#)
-10. [📧 Sending PDF as email](#)
-11. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
-12. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
-13. [📜 License](#-5-license)
+4. [🖨️ Install Weasyprint](#-4-creating-python-backend)
+5. [🐍 Creating Python Report PDF-generation](#-4-creating-python-backend)
+6. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
+7. [🧪 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)](#)
+8. [📄 Creating PDF with Vulnerabilities](#)
+9. [📊 Adding a barchart](#)
+10. [☁️ Uploading PDF to Buckets](#)
+11. [📧 Sending PDF as email](#)
+12. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
+13. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
+14. [📜 License](#-5-license)
 
 ---
 
@@ -48,7 +49,7 @@ Table of contents:
 - 
 - Activity/Reflection
 
---
+---
 
 ## 📸 3 Diagram and Screenshots from Report PDF-generation
 
@@ -57,12 +58,13 @@ Table of contents:
 This diagram shows the structure and flow, outlining its components and how user data is processed.<br>
 ![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
 
---
+
+---
 
 ## 🐍 4 Creating Python Report PDF-generation
 
 
-**1. Create new application in Github**
+**1. Create new repository in Github**
 
 **2. Open application in PyCharm**
 
@@ -74,8 +76,13 @@ Pycharm > Get from VCS<br><br>
 **3. Add requirements.txt**
 
 ```
-functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
+flask                       # Added by YOUR_NAME. Micro web framework for building web applications.
+flask-cors                  # Added by YOUR_NAME. Enables Cross-Origin Resource Sharing (CORS) in Flask apps.
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+matplotlib                  # Added by YOUR_NAME. Plotting and data visualization library.
+numpy                       # Added by YOUR_NAME. Library for numerical computation.
+reportlab                  # Added by YOUR_NAME. 
+
 ```
 
 **4. Create main.py**
@@ -107,14 +114,39 @@ PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**6. Run application**<br>
-In PyCharm go to main.py and click `Run`
+**6. Set environment variable and Run application**<br>
+
+PyCharm > Edit Configurations > Python
+
+* Name: main
+* Script: main.py
+* Environment variables: PYTHONUNBUFFERED=1;GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706
+
+
+In PyCharm click `Run`
 
 
 
 ---
 
 ## 🌐 5 Setting up Google Cloud Infrastructure for Report PDF-generation
+
+### Create Bucket
+
+Google Cloud > Buckets > New
+
+* Name: report-pdf-bucket
+* Labels: owner: YOUR_NAME
+* Location type: Region
+
+### Publish Application
+
+```commandline
+gcloud auth login
+gcloud functions deploy report-pdf --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev-453706 --memory=128Mi
+```
+
+### Add Scheduler
 
 ---
 
