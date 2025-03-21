@@ -43,14 +43,14 @@ Select your operating system:
 ---
 
 ## 🎯 4 Projects Included
-| App                                                   | Language                | Runs on             | GCP Services                              | Description                                                |
-|-------------------------------------------------------|-------------------------|---------------------|-------------------------------------------|------------------------------------------------------------|
-| 📝 [User Feedback Form](user-feedback-form)           | Next.js                 | Cloud Run           | Buckets                                   | Collects and stores user feedback securely.                |
-| 🔄 [Versions Tracker](versions-tracker)               | Python                  | Cloud Run Functions | Buckets, Secrets, Scheduler and Email     | Fetches API data and posts updates to Slack.               |
-| 📝 [News Backend and Frontend](news)                  | Python (Flask), Next.js | Cloud Run           | PostgreSQL and Secrets                    | Backend API with user authentication and Next.js frontend. |
-| 📄 [Report PDF-generation](report-pdf-generation)     | Python                  | Cloud Run           | Buckets                                   | Generates PDF reports from a flat database of JSON files.  |
-| 📊 [Report Excel-generation](report-excel-generation) | Python                  | Cloud Run           | Secrets, Buckets                          | Generates Excel reports from an API.                       |
-| 🗒️ [Uptime App](uptime-app)                          | Next.js                 | Cloud Run           | PostgreSQL, Email, Secrets and  Scheduler | Tracks and manages other applications uptime.              |
+| App                                                   | Language                | Runs on             | GCP Services                               | Description                                                |
+|-------------------------------------------------------|-------------------------|---------------------|--------------------------------------------|------------------------------------------------------------|
+| 📝 [User Feedback Form](user-feedback-form)           | Next.js                 | Cloud Run           | Buckets                                    | Collects and stores user feedback securely.                |
+| 🔄 [Versions Tracker](versions-tracker)               | Python                  | Cloud Run Functions | Buckets, Secrets, Scheduler and Email      | Fetches API data and posts updates to Email.               |
+| 📝 [News Backend and Frontend](news)                  | Python (Flask), Next.js | Cloud Run           | PostgresSQL and Secrets                    | Backend API with user authentication and Next.js frontend. |
+| 📄 [Report PDF-generation](report-pdf-generation)     | Python                  | Cloud Run Functions | Buckets, Scheduler, Secrets, Email         | Generates PDF reports from a flat database of JSON files.  |
+| 📊 [Report Excel-generation](report-excel-generation) | Python                  | Cloud Run           | Secrets, Buckets                           | Generates Excel reports from an API.                       |
+| 🗒️ [Uptime App](uptime-app)                          | Next.js                 | Cloud Run           | PostgresSQL, Email, Secrets and  Scheduler | Tracks and manages other applications uptime.              |
 
 
 --- 

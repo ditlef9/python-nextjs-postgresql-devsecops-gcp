@@ -6,30 +6,29 @@
 
 Generates PDF reports from stored data.
 
-| Category     | Details          |          
-|--------------|------------------|
-| Tech         | Python (Flask)   |
-| Runs on      | Cloud Run        |
-| GCP Services | Secrets, Buckets |
+| Category     | Details                            |          
+|--------------|------------------------------------|
+| Tech         | Python                             |
+| Runs on      | Cloud Run Functions                |
+| GCP Services | Buckets, Scheduler, Secrets, Email |
 
 
 
 Table of contents:
-1. [📖 Learning Objectives for Report PDF-generation](#-1-learning-objectives-for-news-backend-and-frontend)
-2. [✨ Lessons Overview for Report PDF-generation](#-2-lessons-overview-for-news-backend-and-frontend)
-3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-versions-tracker)
-4. [🖨️ Install Weasyprint](#-4-creating-python-backend)
-5. [🐍 Creating Python Report PDF-generation](#-4-creating-python-backend)
-6. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
-7. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#)
-8. [📄 Creating PDF](#)
-9. [📄 Creating PDF with Vulnerabilities](#)
-10. [📊 Adding a barchart](#)
-11. [☁️ Uploading PDF to Buckets](#)
-12. [📧 Sending PDF as email](#)
-13. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
-14. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
-15. [📜 License](#-5-license)
+1. [📖 Learning Objectives for Report PDF-generation](#-1-learning-objectives-for-report-pdf-generation)
+2. [✨ Lessons Overview for Report PDF-generation](#-2-lessons-overview-for-report-pdf-generation)
+3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
+4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-report-pdf-generation)
+5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
+6. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
+7. [📄 Creating PDF](#-7-creating-pdf)
+8. [📄 Creating PDF with Vulnerabilities](#-8-creating-pdf-with-vulnerabilities)
+9. [📊 Adding a barchart](#-9-adding-a-barchart)
+10. [☁️ Uploading PDF to Buckets](#%EF%B8%8F-9-uploading-pdf-to-buckets)
+11. [📧 Sending PDF as email](#-10-sending-pdf-as-email)
+12. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-11-running-the-report-pdf-generation-locally)
+13. [☁️ Running the Report PDF-generation on Google Cloud Run Functions](#%EF%B8%8F-12-running-the-report-pdf-generation-on-google-cloud-run)
+14. [📜 License](#-14-license)
 
 ---
 
@@ -255,9 +254,9 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 12 Running the Report PDF-generation on Google Cloud Run
+## ☁️ 12 Running the Report PDF-generation on Google Cloud Run Functions
 
-
+Please see `🌐 Setting up Google Cloud Infrastructure for Report PDF-generation`.
 
 ---
 
