@@ -43,3 +43,6 @@ yarn-error.log*
 # Next.js typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Pycharm
+.idea
