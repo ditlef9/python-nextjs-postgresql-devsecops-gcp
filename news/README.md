@@ -32,12 +32,12 @@ Table of contents:
 15. [📰 Create news](#-15-create-news)
 16. [📃 List news](#-16-list-news-on-homepage)
 17. [📋 List news on admin on front end](#-17-list-news-on-admin-on-front-end)
-18. [✏️ Edit news](#%EF%B8%8F-16-edit-news)
+18. [✏️ Edit news](#%EF%B8%8F-18-edit-news)
 19. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
-20. [🔒 Add CORS](#%EF%B8%8F-18-delete-news)
-21. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-19-running-the-finished-news-backend-and-frontend-locally)
-22. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-20-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-23. [📜 License](#-21-license)
+20. [🔒 Add CORS](#-20-add-cors)
+21. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-21-running-the-finished-news-backend-and-frontend-locally)
+22. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-22-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+23. [📜 License](#-23-license)
 
 ---
 
