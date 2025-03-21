@@ -21,14 +21,15 @@ Table of contents:
 4. [🖨️ Install Weasyprint](#-4-creating-python-backend)
 5. [🐍 Creating Python Report PDF-generation](#-4-creating-python-backend)
 6. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
-7. [🧪 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)](#)
-8. [📄 Creating PDF with Vulnerabilities](#)
-9. [📊 Adding a barchart](#)
-10. [☁️ Uploading PDF to Buckets](#)
-11. [📧 Sending PDF as email](#)
-12. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
-13. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
-14. [📜 License](#-5-license)
+7. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#)
+8. [📄 Creating PDF](#)
+9. [📄 Creating PDF with Vulnerabilities](#)
+10. [📊 Adding a barchart](#)
+11. [☁️ Uploading PDF to Buckets](#)
+12. [📧 Sending PDF as email](#)
+13. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
+14. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
+15. [📜 License](#-5-license)
 
 ---
 
@@ -81,7 +82,7 @@ flask-cors                  # Added by YOUR_NAME. Enables Cross-Origin Resource 
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
 matplotlib                  # Added by YOUR_NAME. Plotting and data visualization library.
 numpy                       # Added by YOUR_NAME. Library for numerical computation.
-reportlab                  # Added by YOUR_NAME. 
+reportlab                  # Added by YOUR_NAME. Generation of PDF.
 
 ```
 
@@ -101,7 +102,7 @@ def main(request: flask.wrappers.Request):
 
 
 if __name__ == '__main__':
-    print("versions-tracker local run")
+    print("report-pdf local run")
 
     app = flask.Flask(__name__)  # Create a Flask app instance
     request = flask.request
@@ -118,9 +119,9 @@ PyCharm > Terminal:
 
 PyCharm > Edit Configurations > Python
 
-* Name: main
-* Script: main.py
-* Environment variables: PYTHONUNBUFFERED=1;GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706
+* Name: **main**
+* Script: **main.py**
+* Environment variables: PYTHONUNBUFFERED=1;**GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706**
 
 
 In PyCharm click `Run`
@@ -139,32 +140,79 @@ Google Cloud > Buckets > New
 * Labels: owner: YOUR_NAME
 * Location type: Region
 
+Add rule:
+* Auto delete after 7 days.
+
+
 ### Publish Application
 
 ```commandline
 gcloud auth login
-gcloud functions deploy report-pdf --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev-453706 --memory=128Mi
+gcloud functions deploy report-pdf --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --verbosity=info --project=applications-dev-453706 --memory=256Mi
 ```
 
 ### Add Scheduler
 
+Google Cloud > Scheduler > Create Job
+
+Define the schedule:
+
+* Name: **report-pdf-monthly-report**
+* Region: **europe-west1 (Belgium)**
+* Description: **Generates a report**
+* Frequency: **0 0 1 * *** (At 00:00 on day-of-month 1.)
+* Time zone: Central European Standard Time (CET)
+
+Configure the execution:
+
+* Target type: **HTTP**
+* URL: **https://news-frontend-644994207224.europe-north1.run.app** (Change with your url)
+* Auth header: **Add OIDC token**
+* Service account: **Cloud Run Functions and Scheduler Service Account**
+* Scope: **https://news-frontend-644994207224.europe-north1.run.app** (Change with your url)
+
+[Create]
+
 ---
 
-## 🧪 6 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)
+## 🧪 6 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)
+
+** Implement `src/test_data/generate_test_data.py`
+
 
 ---
 
-## 📄 7 Creating PDF with Vulnerabilities
+## 📄 7 Creating PDF
+
+** Implement `src/application/a_delete_old/a_delete_old.py`
+** Implement `src/application/b_create_tmp/b_create_tmp.py`
+** Implement `src/application/c_generate_pdf/c_generate_pdf.py`
+** Implement `src/application/x_save_pdf/x_save_pdf.py`
 
 ---
 
-## 📊 8 Adding a barchart
+## 📄 8 Creating PDF with Vulnerabilities
+
+** Add ```
+    # Load bucket
+    bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-bucket")```
+** Implement `src/application/e_assets/e_assets.py`
+** Implement `src/application/e_assets/helpers/load_assets.py`
+
+---
+
+## 📊 9 Adding a barchart
+
+** Implement `src/utils/d_graph_severity/d_graph_severity.py`
+** Implement `src/utils/d_assets.py/helpers/graphs/draw_bar_chart.py`
+
 
 ---
 
 
 ## ☁️ 9 Uploading PDF to Buckets
 
+** Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
 
 ---
 
