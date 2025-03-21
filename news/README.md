@@ -145,6 +145,23 @@ Make the backend only available from frontend
 This diagram shows the structure and flow of the Version Tracker, outlining its components and how user data is processed.<br>
 ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
+**News Frontend**<br>
+![News Frontend](_docs/frontend-news.png) 
+
+**News Admin View**<br>
+![News Admin View](_docs/news-admin.png) 
+
+**News Create View**<br>
+![News Create View](_docs/news-create.png) 
+
+**Registration form**<br>
+![Registration form](_docs/frontend-registration.png) 
+
+**News Admin Users View**<br>
+![News Admin Users View](_docs/news-users.png) 
+
+**News Admin Users Edit**<br>
+![News Edit user](_docs/news-users-edit.png) 
 
 ---
 
