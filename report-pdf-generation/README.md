@@ -218,6 +218,17 @@ Configure the execution:
 
 ## 📧 10 Sending PDF as email
 
+* Implement `src/utils/google_secret_manager_access_secret_version.py`
+* Implement `src/utils/send_gmail_app_pass.py`
+* Implement `src/z_send_email/z_send_email.py`
+* Create secret `report-pdf-services` (you can copy `what-version-services`)<br>
+```json
+{
+"gmail_sender_email": "YOU@gmail.com",
+"gmail_app_password": "CHANGE ME",
+"recipient_email_addresses":   "YOU@gmail.com"
+}
+```
 ---
 
 
@@ -245,37 +256,6 @@ In PyCharm go to main.py and click `Run`
 ---
 
 ## ☁️ 12 Running the Report PDF-generation on Google Cloud Run
-
-### 12.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
-
-IAM > Service accounts > + Create Service Account
-
-* Name: **Cloud Scheduler Service Account for Cloud Run and Functions**
-* Description: **This is used for Google Cloud Scheduler. It can read secrets and invoke functions**
-
-Permissions/Assign Roles:
-* Cloud Scheduler Service Agent
-* Service Account Admin
-
-
-### 12.2. Bucket
-
-**Create Bucket:**
-
-Buckets > [Create]
-
-Get started:
-* Name: **what-version-bucket**
-* Labels: owner: YOUR_NAME
-
-Location type:
-* Region - europe-north1
-
-[Create]
-
-
-### 13.3. Deploy on Google Cloud Run
-
 
 
 
