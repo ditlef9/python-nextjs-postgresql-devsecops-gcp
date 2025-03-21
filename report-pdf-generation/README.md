@@ -4,7 +4,7 @@
 &nbsp; &nbsp;
 [⬅ 🎯 Projects Included](../#-4-projects-included)
 
-Generates Excel reports from stored data.
+Generates PDF reports from stored data.
 
 | Category     | Details          |          
 |--------------|------------------|
@@ -13,20 +13,53 @@ Generates Excel reports from stored data.
 | GCP Services | Secrets, Buckets |
 
 
-# ![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with Report PDF-generation](#-1-getting-started-with-report-pdf-generation)
-2. [📦 Python Utils and Functions](#-2-python-utils-and-functions)
-3. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
-4. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
-5. [📜 License](#-5-license)
+1. [📖 Learning Objectives for Report PDF-generation](#-1-learning-objectives-for-news-backend-and-frontend)
+2. [✨ Lessons Overview for Report PDF-generation](#-2-lessons-overview-for-news-backend-and-frontend)
+3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-versions-tracker)
+4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-backend)
+5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
+6. [🧪 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)](#)
+7. [📄 Creating PDF with Vulnerabilities](#)
+8. [📊 Adding a barchart](#)
+9. [☁️ Uploading PDF to Buckets](#)
+10. [📧 Sending PDF as email](#)
+11. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-3-running-the-finished-report-pdf-generation-locally)
+12. [☁️ Running the Report PDF-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-pdf-generation-on-google-cloud-run)
+13. [📜 License](#-5-license)
 
 ---
 
-## 🚀 1 Getting Started with Report PDF-generation
+## 📖 1 Learning Objectives for Report PDF-generation
+
+* ..
+* ..
+* ..
+* ..
+
+---
+
+## ✨ 2 Lessons Overview for Report PDF-generation
+
+1. **Introduction**
+
+2. **Creating Python Backend**<br>
+- 
+- Activity/Reflection
+
+--
+
+## 📸 3 Diagram and Screenshots from Report PDF-generation
 
 
+**Report PDF-generation Diagram**<br>
+This diagram shows the structure and flow, outlining its components and how user data is processed.<br>
+![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
+
+--
+
+## 🐍 4 Creating Python Report PDF-generation
 
 
 **1. Create new application in Github**
@@ -81,14 +114,35 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 📦 2 Python Utils and Functions
+## 🌐 5 Setting up Google Cloud Infrastructure for Report PDF-generation
+
+---
+
+## 🧪 6 Generating test data: Repositories and their vulnerabilities (critical, high, medium, low)
+
+---
+
+## 📄 7 Creating PDF with Vulnerabilities
+
+---
+
+## 📊 8 Adding a barchart
+
+---
 
 
+## ☁️ 9 Uploading PDF to Buckets
 
 
 ---
 
-## 🖥️ 3 Running the Finished Report PDF-generation Locally
+## 📧 10 Sending PDF as email
+
+---
+
+
+
+## 🖥️ 11 Running the Report PDF-generation Locally
 
 **1. Clone the repository**
 
@@ -110,9 +164,9 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 4 Running the Finished Report PDF-generation on Google Cloud Run
+## ☁️ 12 Running the Report PDF-generation on Google Cloud Run
 
-### 4.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
+### 12.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
 
 IAM > Service accounts > + Create Service Account
 
@@ -124,7 +178,7 @@ Permissions/Assign Roles:
 * Service Account Admin
 
 
-### 4.2. Bucket
+### 12.2. Bucket
 
 **Create Bucket:**
 
@@ -140,14 +194,14 @@ Location type:
 [Create]
 
 
-### 4.3. Deploy on Google Cloud Run
+### 13.3. Deploy on Google Cloud Run
 
 
 
 
 ---
 
-## 📜 5 License
+## 📜 13 License
 
 
 This project is licensed under the

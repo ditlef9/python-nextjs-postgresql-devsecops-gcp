@@ -142,7 +142,7 @@ Make the backend only available from frontend
 ## 📸 3 Diagram and Screenshots from News backend and Frontend
 
 **News Backend and Frontend Diagram**<br>
-This diagram shows the structure and flow of the Version Tracker, outlining its components and how user data is processed.<br>
+This diagram shows the structure and flow, outlining its components and how user data is processed.<br>
 ![News Backend and Frontend Diagram](_docs/news-diagram.drawio.png) 
 
 **News Frontend**<br>
