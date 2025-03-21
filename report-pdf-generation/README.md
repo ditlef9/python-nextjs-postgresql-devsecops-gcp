@@ -34,10 +34,11 @@ Table of contents:
 
 ## 📖 1 Learning Objectives for Report PDF-generation
 
-* ..
-* ..
-* ..
-* ..
+By the end of this module, you will learn how to:
+
+* Generate security reports in PDF format. 
+* Deploy a Python app to Google Cloud Run Functions.
+* Automate email notifications with attachments.
 
 ---
 
@@ -46,8 +47,43 @@ Table of contents:
 1. **Introduction**
 
 2. **Creating Python Backend**<br>
-- 
+- Implementing core functionality for Python applicaiton
 - Activity/Reflection
+
+
+3. **Setting up Google Cloud Infrastructure for Report PDF-generation**<br>
+- Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
+- Activity/Reflection
+
+4. **Generating test data: Assets and their vulnerabilities (critical, high, medium, low)**<br>
+- Structuring mock asset and vulnerability data.
+- Activity/Reflection
+
+5. **Creating PDF**<br>
+- Using ReportLab to generate PDF reports.
+- Activity/Reflection
+
+6. **Creating PDF with Vulnerabilities**<br>
+- Integrating test data into the PDF report
+- Activity/Reflection
+
+7. **Adding a barchart**<br>
+- Embedding a chart in the PDF report.
+- Activity/Reflection
+
+8️. **Uploading PDF to Buckets**<br>
+- Storing generated PDFs in Google Cloud Storage.
+- Activity/Reflection
+
+9. **Sending PDF as email**<br>
+- Attaching the generated PDF and sending automated emails.
+- Activity/Reflection
+
+10. **Congratulations and Learning Tip**<br>
+- Learning tip: When learning new technologies, break down complex tasks into smaller, manageable steps. 
+- Reflection: What are some other use cases where automated reporting and cloud storage can be beneficial?
+
+11. **Quiz**
 
 ---
 
