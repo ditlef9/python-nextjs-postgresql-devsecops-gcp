@@ -25,13 +25,13 @@ Table of contents:
 8. [🛢️ Python DBAdapter](#%EF%B8%8F-8-python-dbadapter)
 9. [📝 Register](#-9-register)
 10. [🔑 Login](#-10-login)
-11. [🏙️️ Admin](#-11-admin)
-12. [📋 List users](#-10-login)
-13. [🖊️ Edit user](#-10-login)
-14. [❌ Delete user](#-10-login)
-15. [📰 Create news](#-14-create-news)
-16. [📃 List news](#-15-list-news)
-17. [📋 List news on admin on front end](📃 17 List news on admin on front end)
+11. [🏙️️ Admin](#%EF%B8%8F%EF%B8%8F-11-admin)
+12. [📋 List users](#-12-list-users)
+13. [🖊️ Edit user](#%EF%B8%8F-13-edit-user)
+14. [❌ Delete user](#-14-delete-user)
+15. [📰 Create news](#-15-create-news)
+16. [📃 List news](#-16-list-news-on-homepage)
+17. [📋 List news on admin on front end](#-17-list-news-on-admin-on-front-end)
 18. [✏️ Edit news](#%EF%B8%8F-16-edit-news)
 19. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
 20. [🔒 Add CORS](#%EF%B8%8F-18-delete-news)
@@ -817,7 +817,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## ✏️ 17 Edit news
+## ✏️ 18 Edit news
 
 
 ### Edit news backend
@@ -832,7 +832,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 🗑️ 18 Delete news
+## 🗑️ 19 Delete news
 
 
 ### Edit news backend
@@ -846,7 +846,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 🔒 19 Add CORS
+## 🔒 20 Add CORS
 
 main.py:<br>
 
@@ -867,16 +867,16 @@ CORS(app, origins=["http://localhost:3000", "https://news-frontend-644994207224.
 
 ---
 
-## 🖥️ 20 Running the Finished News Backend and Frontend Locally
+## 🖥️ 21 Running the Finished News Backend and Frontend Locally
 
 
 ---
 
-## ☁️ 21 Running the Finished News Backend and Frontend on Google Cloud Run
+## ☁️ 22 Running the Finished News Backend and Frontend on Google Cloud Run
 
 ---
 
-## 📜 22 License
+## 📜 23 License
 
 
 This project is licensed under the
