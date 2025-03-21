@@ -242,9 +242,13 @@ Configure the execution:
 
 ## 📄 8 Creating PDF with Vulnerabilities
 
-* Add ```
-    # Load bucket
-    bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-bucket")```
+* Load bucket:
+
+```
+# Load bucket
+bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-bucket")
+```
+
 * Implement `src/application/e_assets/e_assets.py`
 * Implement `src/application/e_assets/helpers/load_assets.py`
 
