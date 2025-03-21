@@ -198,8 +198,8 @@ Define the schedule:
 * Name: **report-pdf-monthly-report**
 * Region: **europe-west1 (Belgium)**
 * Description: **Generates a report**
-* Frequency: **0 0 1 * *** (At 00:00 on day-of-month 1.)
-* Time zone: Central European Standard Time (CET)
+* Frequency: `0 0 1 * *` (At 00:00 on day-of-month 1.)
+* Time zone: **Central European Standard Time (CET)**
 
 Configure the execution:
 
