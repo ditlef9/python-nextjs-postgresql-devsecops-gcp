@@ -114,7 +114,6 @@ Pycharm > Get from VCS<br><br>
 ```
 functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
 flask                       # Added by YOUR_NAME. Micro web framework for building web applications.
-flask-cors                  # Added by YOUR_NAME. Enables Cross-Origin Resource Sharing (CORS) in Flask apps.
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
 google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
 matplotlib                  # Added by YOUR_NAME. Plotting and data visualization library.
@@ -210,38 +209,49 @@ Configure the execution:
 
 [Create]
 
+### Create secret
+
+* Create secret `report-pdf-services` (you can copy `what-version-services`)<br>
+```json
+{
+"gmail_sender_email": "YOU@gmail.com",
+"gmail_app_password": "CHANGE ME",
+"recipient_email_addresses":   "YOU@gmail.com"
+}
+```
+
 ---
 
 ## 🧪 6 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)
 
-** Implement `src/test_data/generate_test_data.py`
+* Implement `src/test_data/generate_test_data.py`
 
 
 ---
 
 ## 📄 7 Creating PDF
 
-** Implement `src/application/a_delete_old/a_delete_old.py`
-** Implement `src/application/b_create_tmp/b_create_tmp.py`
-** Implement `src/application/c_generate_pdf/c_generate_pdf.py`
-** Implement `src/application/x_save_pdf/x_save_pdf.py`
+* Implement `src/application/a_delete_old/a_delete_old.py`
+* Implement `src/application/b_create_tmp/b_create_tmp.py`
+* Implement `src/application/c_generate_pdf/c_generate_pdf.py`
+* Implement `src/application/x_save_pdf/x_save_pdf.py`
 
 ---
 
 ## 📄 8 Creating PDF with Vulnerabilities
 
-** Add ```
+* Add ```
     # Load bucket
     bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-bucket")```
-** Implement `src/application/e_assets/e_assets.py`
-** Implement `src/application/e_assets/helpers/load_assets.py`
+* Implement `src/application/e_assets/e_assets.py`
+* Implement `src/application/e_assets/helpers/load_assets.py`
 
 ---
 
 ## 📊 9 Adding a barchart
 
-** Implement `src/utils/d_graph_severity/d_graph_severity.py`
-** Implement `src/utils/d_assets.py/helpers/graphs/draw_bar_chart.py`
+* Implement `src/utils/d_graph_severity/d_graph_severity.py`
+* Implement `src/utils/d_assets.py/helpers/graphs/draw_bar_chart.py`
 
 
 ---
@@ -249,7 +259,7 @@ Configure the execution:
 
 ## ☁️ 9 Uploading PDF to Buckets
 
-** Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
+* Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
 
 ---
 
