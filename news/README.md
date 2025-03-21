@@ -88,31 +88,54 @@ Table of contents:
 - Authenticating users and managing sessions/tokens.
 - Activity/Reflection: What authentication method did you choose and why?
 
-9. **Create news**<br>
+
+9. **Admin**<br>
+- Creating the admin dashboard
+- Activity/Reflection: Can you style the ul and li ?
+
+10. **List users**<br>
+- List all users on the admin dashboard
+- Activity/Reflection: 
+
+
+11. **Edit user**<br>
+- Edit a user on control panel
+- Activity/Reflection: Can you add Change password function?
+ 
+12. **Delete user**<br>
+- Delete a user on control panel
+- Activity/Reflection: 
+
+
+13. **Create news**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-10. **List news**<br>
+14. **List news**<br>
 - Implementing an API to fetch and display news articles.
-- Activity/Reflection: How does pagination improve user experience?
+- Activity/Reflection: Can you format the date time?
 
-11. **Edit news**<br>
+15. **List news on admin on front end**<br>
+- Implement admin view with edit and delete function
+- Activity/Reflection: 
+
+16. **Edit news**<br>
 - Allowing authorized users to update existing news articles.
 - Activity/Reflection: How do you handle permissions for editing content?
 
-12. **Delete news**<br>
+17. **Delete news**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-13. **Add CORS**<br>
+18. **Add CORS**<br>
 Make the backend only available from frontend
 - Reflection: ?
 
-14. **Congratulations and Learning Tip**<br>
+19. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-14. **Quiz**
+20. **Quiz**
 
 ---
 
@@ -869,10 +892,28 @@ CORS(app, origins=["http://localhost:3000", "https://news-frontend-644994207224.
 
 ## 🖥️ 21 Running the Finished News Backend and Frontend Locally
 
+## Python backend locally
+
+1. Clone the repository
+2. Create pgAdmin database: `news-dev`
+3. Edit `config_project.py`: `GOOGLE_CLOUD_PROJECT_ID`
+4. Run main.py
+
+## Next.js frontend locally
+
+1. Clone the repository
+2. Copy `env.example to` `.env.development`
+3. Edit `.env.development`: `NEXTAUTH_SECRET`
+4. Edit `Dockerfile`: `ENV NEXT_PUBLIC_BACKEND_API_URL`
+5. Run `npm install` and `npm run dev`
 
 ---
 
 ## ☁️ 22 Running the Finished News Backend and Frontend on Google Cloud Run
+
+Please see 
+🌐 6 Setting up Google Cloud Infrastructure for New backend and Frontend
+
 
 ---
 
