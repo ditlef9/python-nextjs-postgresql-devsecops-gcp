@@ -22,7 +22,7 @@ Table of contents:
 5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
 6. [🧪 Getting a LimaCharlie organization](#-6-getting-a-limacharlie-organizationw)
 7. [🔗 Connecting to LimaCharlie REST API using Postman](#-7-connecting-to-limacharlie-rest-api-using-postman)
-8. [🔒 Authenticate](#-8-getting-sensors)
+8. [🔒 Authenticate](#-8-authenticate)
 9. [📄 Getting sensors](#-9-getting-sensors)
 10. [📊 Creating Excel with sensors](#-10-creating-excel-with-sensors)
 11. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-11-uploading-excel-to-buckets)
@@ -68,8 +68,12 @@ Pycharm > Get from VCS<br><br>
 **3. Add requirements.txt**
 
 ```
-functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
+flask                       # Added by YOUR_NAME. Micro web framework for building web applications.
 google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
+pandas                      # Added by YOUR_NAME. Library used for , data manipulation and analysis.
+openpyxl                    # Added by YOUR_NAME. Required by pandas to save Excel files.
 ```
 
 **4. Create main.py**
@@ -219,29 +223,40 @@ Configure the execution:
 
 ## 🔒 8 Authenticate
 
+* Copy src/utils/google_secret_manager_access_secret_version.py
+* Implement src/limacharlie/auth_limacharlie.py
 
 ---
 
 ## 📄 9 Getting sensors
 
+* Implement src/limacharlie/sensors_list.py
 
 
 ---
 
-## 📊 9 Creating Excel with sensors
+## 📊 10 Creating Excel with sensors
+
+* Copy src/utils/get_datetime.py
+* Implement src/spreadsheet/spreadsheet.py
 
 ---
 
-## ☁️ 10 Uploading Excel to Buckets
+## ☁️ 11 Uploading Excel to Buckets
 
+* Copy src/utils/google_bucket_storage_client_and_get_bucket.py
+* Copy src/utils/google_bucket_write_from_filename.py
+* Implement upload in main.py
 
 ---
 
-## 📧 11 Sending Excel as email
+## 📧 12 Sending Excel as email
 
+* Copy src/utils/send_gmail_app_pass.py
+* Implement src/email/send_email.py
 ---
 
-## 🖥️ 12 Running the Report Excel-generation Locally
+## 🖥️ 13 Running the Report Excel-generation Locally
 
 **1. Clone the repository**
 
@@ -261,14 +276,14 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 13 Running the Report Excel-generation on Google Cloud Run Functions
+## ☁️ 14 Running the Report Excel-generation on Google Cloud Run Functions
 
 
 
 
 ---
 
-## 📜 14 License
+## 📜 15 License
 
 
 This project is licensed under the

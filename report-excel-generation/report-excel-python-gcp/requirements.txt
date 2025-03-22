@@ -1,0 +1,6 @@
+functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally
+flask                       # Added by YOUR_NAME. Micro web framework for building web applications.
+google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+google-cloud-secret-manager # Added by YOUR_NAME. Read and write secrets to Google Cloud
+pandas                      # Added by YOUR_NAME. Library used for , data manipulation and analysis.
+openpyxl                    # Added by YOUR_NAME. Required by pandas to save Excel files.
