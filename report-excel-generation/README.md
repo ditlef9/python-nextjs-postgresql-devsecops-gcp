@@ -15,19 +15,19 @@ Generates Excel reports from stored data.
 
 
 Table of contents:
-1. [📖 Learning Objectives for Report Excel-generation](#-1-learning-objectives-for-report-pdf-generation)
-2. [✨ Lessons Overview for Report Excel-generation](#-2-lessons-overview-for-report-pdf-generation)
-3. [📸 Diagram and Screenshots from Report Excel-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
-4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-pdf-generation)
-5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
-6. [🧪 Getting a LimaCharlie organization](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
-7. [🔗 Connecting to LimaCharlie REST API using Postman](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
-8. [📄 Getting sensors](#-7-creating-pdf)
-9. [📊 Creating Excel with sensors](#-8-creating-pdf-with-vulnerabilities)
-10. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-9-uploading-pdf-to-buckets)
-11. [📧 Sending Excel as email](#-10-sending-pdf-as-email)
-12. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-11-running-the-report-pdf-generation-locally)
-13. [☁️ Running the Report Excel-generation on Google Cloud Run Functions](#%EF%B8%8F-12-running-the-report-pdf-generation-on-google-cloud-run)
+1. [📖 Learning Objectives for Report Excel-generation](#-1-learning-objectives-for-report-excel-generation)
+2. [✨ Lessons Overview for Report Excel-generation](#-2-lessons-overview-for-report-excel-generation)
+3. [📸 Diagram and Screenshots from Report Excel-generation](#-3-diagram-and-screenshots-from-report-excel-generation)
+4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-excel-generation)
+5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
+6. [🧪 Getting a LimaCharlie organization](#-6-getting-a-limacharlie-organizationw)
+7. [🔗 Connecting to LimaCharlie REST API using Postman](#-7-connecting-to-limacharlie-rest-api-using-postman)
+8. [📄 Getting sensors](#-8-getting-sensors)
+9. [📊 Creating Excel with sensors](#-9-creating-excel-with-sensors)
+10. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-10-uploading-excel-to-buckets)
+11. [📧 Sending Excel as email](#-11-sending-excel-as-email)
+12. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-12-running-the-report-excel-generation-locally)
+13. [☁️ Running the Report Excel-generation on Google Cloud Run Functions](#%EF%B8%8F-13-running-the-report-excel-generation-on-google-cloud-run-functions)
 14. [📜 License](#-14-license)
 
 ---
