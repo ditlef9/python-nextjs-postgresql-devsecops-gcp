@@ -94,6 +94,19 @@ By the end of this module, you will learn how to:
 This diagram shows the structure and flow, outlining its components and how user data is processed.<br>
 ![Report PDF-generation Diagram](_docs/report-pdf-generation-diagram.drawio.png) 
 
+**Report PDF email**<br>
+The report is sent to the user by email.<br>
+![Report PDF email](_docs/report-pdf-email.png) 
+
+**Report PDF page 1,2 and 3**<br>
+The report has a first page, bar chart and listing of servers and their vulnerabilities<br>
+![Report PDF 1](_docs/report-pdf-1.png) 
+![Report PDF 2](_docs/report-pdf-2.png) 
+![Report PDF 3](_docs/report-pdf-3.png) 
+
+**Report is stored in Google Cloud Bucket**<br>
+The report is stored in Google Cloud Bucket, and the data is also stored there.<br>
+![Report PDF Bucket](_docs/report-pdf-bucket.png) 
 
 ---
 

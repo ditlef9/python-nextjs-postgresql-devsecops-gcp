@@ -6,21 +6,38 @@
 
 Generates Excel reports from stored data.
 
-| Category     | Details        |          
-|--------------|----------------|
-| Tech         | Python (Flask) |
-| Runs on      | Cloud Run      |
-| GCP Services | Buckets        |
+| Category     | Details                            |          
+|--------------|------------------------------------|
+| Tech         | Python, Rest API                   |
+| Runs on      | Cloud Run Functions                |
+| GCP Services | Buckets, Scheduler, Secrets, Email |
 
 
 # ![Report Excel-generation Diagram](_docs/report-excel-generation-diagram.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with Report Excel-generation](#-1-getting-started-with-report-excel-generation)
-2. [📦 Python Utils and Functions](#-2-python-utils-and-functions)
-3. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-3-running-the-finished-report-excel-generation-locally)
-4. [☁️ Running the Report Excel-generation on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-report-excel-generation-on-google-cloud-run)
-5. [📜 License](#-5-license)
+1. [📖 Learning Objectives for Report Excel-generation](#-1-learning-objectives-for-report-pdf-generation)
+2. [✨ Lessons Overview for Report Excel-generation](#-2-lessons-overview-for-report-pdf-generation)
+3. [📸 Diagram and Screenshots from Report Excel-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
+4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-pdf-generation)
+5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
+6. [🧪 Getting a LimaCharlie organization](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
+7. [🧪 Connecting to LimaCharlie REST API using Postman](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
+8. [📄 Getting sensors](#-7-creating-pdf)
+9. [📄 Creating Excel with sensors](#-8-creating-pdf-with-vulnerabilities)
+10. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-9-uploading-pdf-to-buckets)
+11. [📧 Sending Excel as email](#-10-sending-pdf-as-email)
+12. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-11-running-the-report-pdf-generation-locally)
+13. [☁️ Running the Report Excel-generation on Google Cloud Run Functions](#%EF%B8%8F-12-running-the-report-pdf-generation-on-google-cloud-run)
+14. [📜 License](#-14-license)
+
+---
+
+## 📖 1 Learning Objectives for Report Excel-generation
+
+By the end of this module, you will learn how to:
+
+
 
 ---
 
