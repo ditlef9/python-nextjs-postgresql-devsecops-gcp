@@ -37,9 +37,59 @@ Table of contents:
 
 By the end of this module, you will learn how to:
 
+* Connect to a REST API with Python
+* Authenticate to a REST API and using Bearer token (JWT token)
+* Create a spreadsheet with Python
+
 ---
 
 ## ✨ 2 Lessons Overview for Report Excel-generation
+
+
+1. **Introduction**
+
+2. **Creating Python Backend**<br>
+- Implementing core functionality for Python application
+- Activity/Reflection
+
+
+3. **Setting up Google Cloud Infrastructure for Report PDF-generation**<br>
+- Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
+- Activity/Reflection
+
+4. **Getting a LimaCharlie organization**<br>
+- Signing up at LimaCharlie and adding two sensors.
+- Activity/Reflection
+
+5. **Connecting to LimaCharlie REST API using Postman**<br>
+- How to get a Bearer token
+- Activity/Reflection
+
+6. **Authenticate**<br>
+- Authenticate with Python
+- Activity/Reflection
+
+7. **Getting sensors**<br>
+- Listing sensors with Rest API
+- Activity/Reflection
+
+8️. **Creating Excel with sensors**<br>
+- Createing a spreadsheet using Python
+- Activity/Reflection
+
+9. **Uploading Excel to Buckets**<br>
+- Uploading the spreadsheet to buckets
+- Activity/Reflection
+
+10. **Sending Excel as email**<br>
+- Sending spreadsheet as email to receivers using Gmail
+- Activity/Reflection
+
+11. **Congratulations and Learning Tip**<br>
+- Learning tip: Apply what you learn to real-world scenarios or personal projects. Hands-on experience reinforces concepts better than passive learning.
+- Reflection: How can you integrate automation into your daily workflow to improve efficiency?
+
+12. **Quiz**
 
 
 ---
