@@ -13,7 +13,6 @@ Generates Excel reports from stored data.
 | GCP Services | Buckets, Scheduler, Secrets, Email |
 
 
-# ![Report Excel-generation Diagram](_docs/report-excel-generation-diagram.drawio.png) 
 
 Table of contents:
 1. [📖 Learning Objectives for Report Excel-generation](#-1-learning-objectives-for-report-pdf-generation)
@@ -22,9 +21,9 @@ Table of contents:
 4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-pdf-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
 6. [🧪 Getting a LimaCharlie organization](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
-7. [🧪 Connecting to LimaCharlie REST API using Postman](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
+7. [🔗 Connecting to LimaCharlie REST API using Postman](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
 8. [📄 Getting sensors](#-7-creating-pdf)
-9. [📄 Creating Excel with sensors](#-8-creating-pdf-with-vulnerabilities)
+9. [📊 Creating Excel with sensors](#-8-creating-pdf-with-vulnerabilities)
 10. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-9-uploading-pdf-to-buckets)
 11. [📧 Sending Excel as email](#-10-sending-pdf-as-email)
 12. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-11-running-the-report-pdf-generation-locally)
@@ -37,12 +36,23 @@ Table of contents:
 
 By the end of this module, you will learn how to:
 
+---
+
+## ✨ 2 Lessons Overview for Report Excel-generation
 
 
 ---
 
-## 🚀 1 Getting Started with Report Excel-generation
+# 📸 3 Diagram and Screenshots from Report Excel-generation
 
+**Report Excel Diagram**<br>
+A scheduler wil start the function every month. This starts a function that will get a list of sensors, and
+put it into a spreadsheet.<br>
+![Report Excel-generation Diagram](_docs/report-excel-generation-diagram.drawio.png) 
+
+---
+
+## 🐍 4 Creating Python Report Excel-generation
 
 
 
@@ -98,9 +108,11 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 📦 2 Python Utils and Functions
+## 🌐 6 Setting up Google Cloud Infrastructure for Report Excel-generation
 
+---
 
+## 🧪 Getting a LimaCharlie organization
 
 
 ---
