@@ -51,6 +51,22 @@ A scheduler wil start the function every month. This starts a function that will
 put it into a spreadsheet.<br>
 ![Report Excel-generation Diagram](_docs/report-excel-generation-diagram.drawio.png) 
 
+**Email with Excel report**<br>
+The report is sent to receivers email address with the spreadsheet as attachment.<br>
+![Email with Excel report](_docs/excel-gmail.png) 
+
+**Buckets**<br>
+The spreadsheet is uploaded to Google Cloud Buckets.<br>
+![Report Buckets](_docs/buckets-excel.png) 
+
+**Limacharlie**<br>
+The spreadsheet contains a list of sensors.<br>
+![Limacharlie](_docs/limacharlie.png) 
+
+**Spreadsheet**<br>
+Image of spreadsheet.<br>
+![Spreadsheet](_docs/spreadsheet-python.png) 
+
 ---
 
 ## 🐍 4 Creating Python Report Excel-generation
