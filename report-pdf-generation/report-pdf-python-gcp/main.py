@@ -58,10 +58,10 @@ def main(request: flask.wrappers.Request):
 
 # - Main start ----------------------------------------------------------------
 if __name__ == "__main__":
-    # Dev only: run "python main.py" and open http://localhost:8080
+    # Dev only: run "python main.py"
     # Start app
-    print("main()·Flask API running in Developing Mode")
-    print("main()·Login with: gcloud auth application-default login")
+    print("main() · Flask API running in Developing Mode")
+    print("main() · Login with: gcloud auth application-default login")
     app = flask.Flask(__name__)  # Create a Flask app instance
     request = flask.request
     main(request)

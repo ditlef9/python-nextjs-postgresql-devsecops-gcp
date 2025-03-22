@@ -1,3 +1,4 @@
+# Version 2
 from datetime import datetime
 
 def get_datetime():
@@ -6,11 +7,13 @@ def get_datetime():
 
     Usage:
       dt_info = get_datetime()
-      print("ISO Format:", dt_info["iso"])
-      print("Timestamp:", dt_info["timestamp"])
-      print("Readable Format:", dt_info["readable"])
-      print("Date Only:", dt_info["date"])
-      print("Time Only:", dt_info["time"])
+
+      One day forward??
+      One month forward??
+      First day of month??
+
+      print("Date time:", dt_info["ymdhms"]) # 2025-03-18 12:34:56
+      print("Timestamp:", dt_info["timestamp"]) # 1710765296.789012
 
     :return: Dictionary with different datetime formats.
     """

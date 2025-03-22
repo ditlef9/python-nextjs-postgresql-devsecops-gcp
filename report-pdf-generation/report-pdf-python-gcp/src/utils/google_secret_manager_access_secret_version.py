@@ -1,5 +1,6 @@
+# Version 2
+
 from google.cloud import secretmanager
-import hashlib
 
 
 def google_secret_manager_access_secret_version(project_id: str, secret_id: str, version_id: str = "latest"):
@@ -25,7 +26,3 @@ def google_secret_manager_access_secret_version(project_id: str, secret_id: str,
     # Return the decoded payload.
     return response.payload.data.decode('UTF-8')
 
-
-def secret_hash(secret_value):
-    # return the sha224 hash of the secret value
-    return hashlib.sha224(bytes(secret_value, "utf-8")).hexdigest()
