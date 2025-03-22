@@ -55,8 +55,7 @@ put it into a spreadsheet.<br>
 ## 🐍 4 Creating Python Report Excel-generation
 
 
-
-**1. Create new application in Github**
+**1. Create new repository in Github**
 
 **2. Open application in PyCharm**
 
@@ -88,7 +87,7 @@ def main(request: flask.wrappers.Request):
 
 
 if __name__ == '__main__':
-    print("versions-tracker local run")
+    print("report-excel-generation local run")
 
     app = flask.Flask(__name__)  # Create a Flask app instance
     request = flask.request
@@ -108,16 +107,36 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## 🌐 6 Setting up Google Cloud Infrastructure for Report Excel-generation
+## 🌐 5 Setting up Google Cloud Infrastructure for Report Excel-generation
 
 ---
 
-## 🧪 Getting a LimaCharlie organization
+## 🧪 6 Getting a LimaCharlie organization
+
+---
+
+## 🔗 7 Connecting to LimaCharlie REST API using Postman
+
+---
+
+## 📄 8 Getting sensors
+
+---
+
+## 📊 9 Creating Excel with sensors
+
+---
+
+## ☁️ 10 Uploading Excel to Buckets
 
 
 ---
 
-## 🖥️ 3 Running the Finished Report Excel-generation Locally
+## 📧 11 Sending Excel as email
+
+---
+
+## 🖥️ 12 Running the Report Excel-generation Locally
 
 **1. Clone the repository**
 
@@ -135,48 +154,16 @@ PyCharm > Terminal:
 In PyCharm go to main.py and click `Run`
 
 
-
-
 ---
 
-## ☁️ 4 Running the Finished Report Excel-generation on Google Cloud Run
-
-### 4.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
-
-IAM > Service accounts > + Create Service Account
-
-* Name: **Cloud Scheduler Service Account for Cloud Run and Functions**
-* Description: **This is used for Google Cloud Scheduler. It can read secrets and invoke functions**
-
-Permissions/Assign Roles:
-* Cloud Scheduler Service Agent
-* Service Account Admin
-
-
-### 4.2. Bucket
-
-**Create Bucket:**
-
-Buckets > [Create]
-
-Get started:
-* Name: **what-version-bucket**
-* Labels: owner: YOUR_NAME
-
-Location type:
-* Region - europe-north1
-
-[Create]
-
-
-### 4.3. Deploy on Google Cloud Run
+## ☁️ 13 Running the Report Excel-generation on Google Cloud Run Functions
 
 
 
 
 ---
 
-## 📜 5 License
+## 📜 14 License
 
 
 This project is licensed under the
