@@ -24,23 +24,22 @@ Table of contents:
 6. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-6-setting-up-google-cloud-infrastructure-for-uptime-app)
 7. [🐘 Connecting to PostgresSQL with pgAdmin](#-7-connecting-to-postgressql-with-pgadmin)
 8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
-9. [🧹 9 Webdesign](#c)
+9. [🧹 Webdesign](#-9-webdesign)
 10. [📦 Migrations](#-9-migrations)
-11. [📝 Sign up](#-10-sign-up)
-12. [🔑 Log in](#-11-log-in)
-13. [📊 Dashboard](#-12-dashboard)
-14. [➕ Add HTTP](#-13-add-http)
-15. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
-16. [❌ Delete HTTP](#-15-delete-http)
-17. [📡 Endpoint to receive scheduler for HTTP](#-16-endpoint-to-receive-scheduler-for-http)
-18. [📈 Statistics on Dashboard](#-17-statistics-on-dashboard)
-19. [👥 List Users](#-18-list-users)
-20. [➕ Add Users](#-19-add-users)
-21. [✏️ Edit Users](#%EF%B8%8F-20-edit-users)
-22. [❌ Delete Users](#-21-delete-users)
-23. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-22-running-the-uptime-app-locally)
-24. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-23-running-the-uptime-app-on-google-cloud-run)
-25. [📜 License](#-24-license)
+11. [🔑 Next Auth](#-11-log-in)
+12. [📊 Dashboard](#-12-dashboard)
+13. [➕ Add HTTP](#-13-add-http)
+14. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
+15. [❌ Delete HTTP](#-15-delete-http)
+16. [📡 Endpoint to receive scheduler for HTTP](#-16-endpoint-to-receive-scheduler-for-http)
+17. [📈 Statistics on Dashboard](#-17-statistics-on-dashboard)
+18. [👥 List Users](#-18-list-users)
+19. [➕ Add Users](#-19-add-users)
+20. [✏️ Edit Users](#%EF%B8%8F-20-edit-users)
+21. [❌ Delete Users](#-21-delete-users)
+22. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-22-running-the-uptime-app-locally)
+23. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-23-running-the-uptime-app-on-google-cloud-run)
+24. [📜 License](#-24-license)
 
 ---
 
@@ -90,59 +89,55 @@ After this module you will be able to:
 - Learn how to handle database migrations for schema evolution using tools like Prisma or Sequelize.
 - Activity/Reflection:
 
-9. **Sign up**<br>
-- Implement user registration with authentication and validation.
+9. **Next Auth**<br>
+- Implement user login with authentication and validation.
 - Activity/Reflection:
 
-10. **Log in**<br>
-- Implement authentication and session management for user login.
-- Activity/Reflection:
-
-11. **Dashboard**<br>
+10. **Dashboard**<br>
 - Design and develop a user-friendly dashboard for monitoring uptime data.
 - Activity/Reflection:
 
-12. **Add HTTP**<br>
+11. **Add HTTP**<br>
 - Implement functionality to add HTTP endpoints for monitoring.
 - Activity/Reflection:
 
-13. **Edit HTTP**<br>
+12. **Edit HTTP**<br>
 - Enable users to modify existing HTTP monitoring settings.
 - Activity/Reflection:
 
-14. **Delete HTTP**<br>
+13. **Delete HTTP**<br>
 - Implement the ability to remove HTTP endpoints from monitoring.
 - Activity/Reflection:
 
-15. **Endpoint to receive scheduler for HTTP**<br>
+14. **Endpoint to receive scheduler for HTTP**<br>
 - Set up an API endpoint to handle scheduled monitoring tasks.
 - Activity/Reflection:
 
-16. **Statistics on Dashboard**<br>
+15. **Statistics on Dashboard**<br>
 - Display analytics and insights related to monitored uptime data.
 - Activity/Reflection:
 
-17. **List Users**<br>
+16. **List Users**<br>
 - Develop an interface to display all registered users.
 - Activity/Reflection:
 
-18. **Add User**<br>
+17. **Add User**<br>
 - Implement a feature to add new users to the system.
 - Activity/Reflection:
 
-19. **Edit User**<br>
+18. **Edit User**<br>
 - Allow modification of user details and permissions.
 - Activity/Reflection:
 
-20. *Delete User**<br>
+19. *Delete User**<br>
 - Implement functionality to remove users from the system.
 - Activity/Reflection:
 
-21. **Congratulations and Learning Tip**<br>
+20. **Congratulations and Learning Tip**<br>
 - Learning tip: Set small, consistent learning goals rather than overwhelming yourself with too much at once. Progress builds over time.
 - Reflection: What is one small habit you can develop to enhance your skills every day?
 
-22. **Quiz**
+21. **Quiz**
 
 
 ---
@@ -414,19 +409,14 @@ Sign In
 * Add `app/(public)/sign-in/components/AuthButton.tsx`
 
 users_index_001.sql:
-* Users that wants to sign in should be added to users_index_001.sql.
-
----
-
-
-## 🔑 11 Log in
+* The admin (first user) that wants to sign in should be added to users_index_001.sql.
 
 
 ---
 
 
 
-## 📊 12 Dashboard
+## 📊 11 Dashboard
 
 ---
 
