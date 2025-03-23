@@ -764,7 +764,6 @@ VALUES (
 
 * Install NextAuth: `npm install next-auth`
 * Install jsonwebtoken: `npm install jsonwebtoken` and `npm i --save-dev @types/jsonwebtoken`
-* Install swr: `npm install swr`
 * Create api `app\api\auth\[...nextauth]\route.ts`
 * Create lib `app/lib/auth.ts`
 * Create lib `app/lib/loginIsRequiredServer.ts`

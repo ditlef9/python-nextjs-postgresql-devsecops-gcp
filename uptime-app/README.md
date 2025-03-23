@@ -340,7 +340,13 @@ Manage client certificates
 
 ### Connect from local machine
 
-Copy the file `env.example` to `.env.development`.
+* Install PostgresSQL for Node.js:
+`npm install pg` and
+`npm install --save-dev @types/pg`
+
+* Copy the file `env.example` to `.env.development`.
+* Create file `lib/db.ts`
+
 
 ### Connect from Cloud Run
 
@@ -352,7 +358,7 @@ Set the environment variables:
  * DB_HOST=/cloudsql/GOOGLE_CLOUD_PROJECT_NAME:europe-north1:cloud-postgres-prod
  * DB_USER=postgres
  * DB_PASS=YOUR_PASSWORD
- * DB_NAME=cloud-postgres-prod
+ * DB_NAME=postgres
  * DB_PORT=5432
 
 * Next.auth:
@@ -376,12 +382,39 @@ Remove all unnecessary:
 
 ## 📦 9 Migrations
 
-
-
+* Copy migrations/monitors/monitors_index_001.sql
+* Copy migrations/users/users_index_001.sql
+* Create file app/lib/db.ts
+* Create file app/(public)/public-migrations/api-run-migrations/route.ts
+* Create file app/(public)/public-migrations/page.tsx
+* Visit http://localhost:3000/public-migrations
 
 ---
 
-## 📝 10 Sign up
+## 📝 10 Next Auth
+
+OAuth
+* Sign up for two Oauth on https://github.com/settings/developers - one for development and one for production 
+
+Installations
+* Install next-auth: `npm install next-auth`
+
+API
+* Create api `app\api\auth\[...nextauth]\route.ts`
+
+Lib
+* Create lib `app/lib/auth.ts`
+* Create lib `app/lib/useLoginRequiredClient.ts`
+
+Types
+* Create lib `app/types/next-auth.d.ts`
+
+Sign In
+* Create page `app/(public)/sign-in/page.tsx`
+* Add `app/(public)/sign-in/components/AuthButton.tsx`
+
+users_index_001.sql:
+* Users that wants to sign in should be added to users_index_001.sql.
 
 ---
 
