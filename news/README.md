@@ -588,11 +588,9 @@ Google Cloud Console > SQL > Connections > Networking > Authorised networks > [A
 * Name: YOUR_NAME, YOUR_ADDRESS, YOUR_ISP (Example John Doe, 4567 Oak Avenue, Los Angeles, CA 90012, Spectrum Internet)
 * Value: IP from https://whatismyipaddress.com/
 
-
-
 **Download Certificates:**<br>
 
-Google Cloud Console > SQL > news-prod > Connections > Security<br>
+Google Cloud Console > SQL > cloud-prod > Connections > Security<br>
 
 SSL Mode<br>
 * Allow only SSL connections<br>

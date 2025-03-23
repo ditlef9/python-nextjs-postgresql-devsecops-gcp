@@ -20,26 +20,27 @@ Table of contents:
 2. [✨ Lessons Overview for Uptime App](#-2-lessons-overview-for-uptime-app)
 3. [📸 Diagram and Screenshots from Uptime App](#-3-diagram-and-screenshots-from-uptime-app)
 4. [⚛️ Creating Uptime App in Next.js](#%EF%B8%8F-4-creating-uptime-app-in-nextjs)
-5. [🛡️ 5 Implementing DevSecOps: Snyk and ZAP Scan](#%EF%B8%8F-5-implementing-devsecops-snyk-and-zap-scan)
+5. [🛡️ Implementing DevSecOps: Snyk and ZAP Scan](#%EF%B8%8F-5-implementing-devsecops-snyk-and-zap-scan)
 6. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-6-setting-up-google-cloud-infrastructure-for-uptime-app)
 7. [🐘 Connecting to PostgresSQL with pgAdmin](#-7-connecting-to-postgressql-with-pgadmin)
 8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
-9. [📦 Migrations](#-9-migrations)
-10. [📝 Sign up](#-10-sign-up)
-11. [🔑 Log in](#-11-log-in)
-12. [📊 Dashboard](#-12-dashboard)
-13. [➕ Add HTTP](#-13-add-http)
-14. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
-15. [❌ Delete HTTP](#-15-delete-http)
-16. [📡 Endpoint to receive scheduler for HTTP](#-16-endpoint-to-receive-scheduler-for-http)
-17. [📈 Statistics on Dashboard](#-17-statistics-on-dashboard)
-18. [👥 List Users](#-18-list-users)
-19. [➕ Add Users](#-19-add-users)
-20. [✏️ Edit Users](#%EF%B8%8F-20-edit-users)
-21. [❌ Delete Users](#-21-delete-users)
-22. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-22-running-the-uptime-app-locally)
-23. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-23-running-the-uptime-app-on-google-cloud-run)
-24. [📜 License](#-24-license)
+9. [🧹 9 Webdesign](#c)
+10. [📦 Migrations](#-9-migrations)
+11. [📝 Sign up](#-10-sign-up)
+12. [🔑 Log in](#-11-log-in)
+13. [📊 Dashboard](#-12-dashboard)
+14. [➕ Add HTTP](#-13-add-http)
+15. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
+16. [❌ Delete HTTP](#-15-delete-http)
+17. [📡 Endpoint to receive scheduler for HTTP](#-16-endpoint-to-receive-scheduler-for-http)
+18. [📈 Statistics on Dashboard](#-17-statistics-on-dashboard)
+19. [👥 List Users](#-18-list-users)
+20. [➕ Add Users](#-19-add-users)
+21. [✏️ Edit Users](#%EF%B8%8F-20-edit-users)
+22. [❌ Delete Users](#-21-delete-users)
+23. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-22-running-the-uptime-app-locally)
+24. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-23-running-the-uptime-app-on-google-cloud-run)
+25. [📜 License](#-24-license)
 
 ---
 
@@ -83,63 +84,65 @@ After this module you will be able to:
 - Implement a PostgreSQL connection within a Next.js application.
 - Activity/Reflection:
 
-7. **Migrations**<br>
+7. Webdesign
+
+8. **Migrations**<br>
 - Learn how to handle database migrations for schema evolution using tools like Prisma or Sequelize.
 - Activity/Reflection:
 
-8. **Sign up**<br>
+9. **Sign up**<br>
 - Implement user registration with authentication and validation.
 - Activity/Reflection:
 
-9. **Log in**<br>
+10. **Log in**<br>
 - Implement authentication and session management for user login.
 - Activity/Reflection:
 
-10. **Dashboard**<br>
+11. **Dashboard**<br>
 - Design and develop a user-friendly dashboard for monitoring uptime data.
 - Activity/Reflection:
 
-11. **Add HTTP**<br>
+12. **Add HTTP**<br>
 - Implement functionality to add HTTP endpoints for monitoring.
 - Activity/Reflection:
 
-12. **Edit HTTP**<br>
+13. **Edit HTTP**<br>
 - Enable users to modify existing HTTP monitoring settings.
 - Activity/Reflection:
 
-13. **Delete HTTP**<br>
+14. **Delete HTTP**<br>
 - Implement the ability to remove HTTP endpoints from monitoring.
 - Activity/Reflection:
 
-14. **Endpoint to receive scheduler for HTTP**<br>
+15. **Endpoint to receive scheduler for HTTP**<br>
 - Set up an API endpoint to handle scheduled monitoring tasks.
 - Activity/Reflection:
 
-15. **Statistics on Dashboard**<br>
+16. **Statistics on Dashboard**<br>
 - Display analytics and insights related to monitored uptime data.
 - Activity/Reflection:
 
-16. **List Users**<br>
+17. **List Users**<br>
 - Develop an interface to display all registered users.
 - Activity/Reflection:
 
-17. **Add User**<br>
+18. **Add User**<br>
 - Implement a feature to add new users to the system.
 - Activity/Reflection:
 
-18. **Edit User**<br>
+19. **Edit User**<br>
 - Allow modification of user details and permissions.
 - Activity/Reflection:
 
-19. **Delete User**<br>
+20. *Delete User**<br>
 - Implement functionality to remove users from the system.
 - Activity/Reflection:
 
-20. **Congratulations and Learning Tip**<br>
+21. **Congratulations and Learning Tip**<br>
 - Learning tip: Set small, consistent learning goals rather than overwhelming yourself with too much at once. Progress builds over time.
 - Reflection: What is one small habit you can develop to enhance your skills every day?
 
-21. **Quiz**
+22. **Quiz**
 
 
 ---
@@ -198,38 +201,7 @@ git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPOSI
 git push -u origin main
 ```
 
-
-**4. Add Dockerfile**
-
-* Documentation: https://cloud.google.com/docs/buildpacks
-* Node example: https://github.com/GoogleCloudPlatform/buildpack-samples/tree/master/sample-node
-
-
-Add `Dockerfile` in the project with the following contents:
-
-```
-FROM node:alpine
-
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-
-RUN npm install
-
-COPY . .
-
-# Build the application
-ENV NODE_ENV=production
-
-RUN npm run build
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
-```
-
-
-**5. Start the application**
+**4. Start the application**
 
 ```
 npm install
@@ -237,7 +209,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
-
 
 
 ## 🛡️ 5 Implementing DevSecOps: Snyk and ZAP Scan
@@ -267,23 +238,146 @@ jobs:
 
 ---
 
----
-
 
 ## 🌐 6 Setting up Google Cloud Infrastructure for Uptime App
 
+### Create PostgresSQL database
+
+https://console.cloud.google.com > SQL > [Create Instance]<br>
+
+* Choose your database engine: **PosgtreSQL**
+* Choose a Cloud SQL edition: Enterprise
+* Edition preset: Sandbox
+
+**Instance info**<br>
+* Database version: Latest
+* Instance ID: cloud-postgres-prod
+* Password: random password (https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
+
+
+**Choose region and zonal availability**<br>
+* Region: europe-north1 (Finland)
+* Zonal Availability: Single zone
+
+**Machine configuration**<br>
+* Machine shapes: Shared core
+* 1 vCPI, 0.614 GB
+
+**Storage**<br>
+* Storage type: HDD
+* Storage capacity: 10 GB
+
+**Data protection**<br>
+* Automated daily backups: Uncheck
+
+**Labels**<br>
+* owner = YOUR_NAME
+
+
+### Deploy application on Google Cloud Run
+
+GCP > Cloud Run > Deploy Container > Service  > Github > Set up Cloud Build
+
+* Repository: uptime-next-gcp
+* Build configuration: ^main$
+* Build type: Go, Node.js, Python, Java, .NET Core, Ruby or PHP via Google Cloud's buildpacks 
+
+Set RAM 
+
+Cloud SQL connections: Set connection to PostgreSQL
 
 ---
 
 ## 🐘 7 Connecting to PostgresSQL with pgAdmin
 
+## 7.1 Create local database
+
+pgAdmin > Servers > PostgreSQL X > Databases > [Right click] > Create: Database
+
+* Database: cloud-dev
+
+## 7.2 Connect to production database
+
+**Add your network**<br>
+Google Cloud Console > SQL > Connections > Networking > Authorised networks > [Add a network]
+
+* Name: YOUR_NAME, YOUR_ADDRESS, YOUR_ISP (Example John Doe, 4567 Oak Avenue, Los Angeles, CA 90012, Spectrum Internet)
+* Value: IP from https://whatismyipaddress.com/
+
+**Download Certificates:**<br>
+
+Google Cloud Console > SQL > cloud-prod > Connections > Security<br>
+
+SSL Mode<br>
+* Allow only SSL connections<br>
+
+Manage client certificates
+* Create Client Certificate
+  * Client Certificate Name: YOUR_NAME - YOUR_COMPUTER_NAME (Example John Doe, Lenovo Ideapad Slim 3)
+* Download the 3 generated files (client-key.pem, client-cert.pem and server-ca.pem)
+* Save files to the pgadmin folder
+  * Folder in unix systems: $HOME/.pgadmin/DB_NAME
+    * `chmod 600 $HOME/.pgadmin/DB_NAME/*.pem`
+  * Folder in Windows: C:\Program Files\PostgreSQL\DB_NAME
+
+
+**Connect:**<br>
+
+* pgAdmin > Servers > [Right click] > Register: Server
+* Name: Retrieve from Google Cloud Console
+* Port: 5432
+* Username: postgres
+* PARAMETERS
+  * Add 3 new parameters and link them to the respective files:
+    - Client certificate key > client-key.pem
+    - Client certificate > client-cert.pem 
+    - Root certificate > server-ca.pem
+
+
 ---
 
 ## 🔗 8 Connecting to PostgresSQL with Next
 
+### Connect from local machine
+
+Copy the file `env.example` to `.env.development`.
+
+### Connect from Cloud Run
+
+Open Cloud Run > Edit.
+
+Set the environment variables:
+
+* Database
+ * DB_HOST=/cloudsql/GOOGLE_CLOUD_PROJECT_NAME:europe-north1:cloud-postgres-prod
+ * DB_USER=postgres
+ * DB_PASS=YOUR_PASSWORD
+ * DB_NAME=cloud-postgres-prod
+ * DB_PORT=5432
+
+* Next.auth:
+ * NEXTAUTH_SECRET=RandomStringThatIsVeryLong2022 from https://auth-secret-gen.vercel.app/
+ * NEXTAUTH_URL=https://uptime-644994207224.europe-north1.run.app (Change to your URL)
+
+
+---
+
+## 🧹 9 Webdesign
+
+
+Remove all unnecessary:
+* Copy in CSS: app/globals.css
+* Copy in Layout: app/layout.tsx
+* Use latest in package.json
+
+
+
 ---
 
 ## 📦 9 Migrations
+
+
+
 
 ---
 
