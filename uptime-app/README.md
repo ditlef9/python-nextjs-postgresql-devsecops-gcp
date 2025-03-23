@@ -20,13 +20,47 @@ Tracks and manages other applications uptime.
 # ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
 Table of contents:
-1. [🚀 Getting Started with Uptime App-generation](#-1-getting-started-with-uptime-app)
-2. [📦 Next.js Utils and Functions](#-2-nextjs-utils-and-functions)
-3. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-3-running-the-finished-uptime-app-locally)
-4. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-uptime-app-on-google-cloud-run)
-5. [📜 License](#-5-license)
+1. [📖 Learning Objectives for Uptime App](#-1-learning-objectives-for-report-excel-generation)
+2. [✨ Lessons Overview for Uptime App](#-2-lessons-overview-for-report-excel-generation)
+3. [📸 Diagram and Screenshots from Uptime App](#-3-diagram-and-screenshots-from-report-excel-generation)
+4. [⚛️ Creating Uptime App in Next.js](#-4-creating-python-report-excel-generation)
+5. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
+6. [🐘 Connecting to PostgresSQL with pgAdmin](#-6-getting-a-limacharlie-organizationw)
+7. [🔗 Connecting to PostgresSQL with Next](#-6-getting-a-limacharlie-organizationw)
+8. [📦 Migrations](#-6-getting-a-limacharlie-organizationw)
+9. [📝 Sign up](#-6-getting-a-limacharlie-organizationw)
+10. [🔑 Log in](#-7-connecting-to-limacharlie-rest-api-using-postman)
+11. [📊 Dashboard](#-8-authenticate)
+12. [➕ Add HTTP](#-9-getting-sensors)
+13. [✏️ Edit HTTP](#-9-getting-sensors)
+14. [❌ Delete HTTP](#-9-getting-sensors)
+15. [📡 Endpoint to receive scheduler for HTTP](#-9-getting-sensors)
+16. [📈 Statistics on Dashboard](#-9-getting-sensors)
+17. [👥 List Users](#-9-getting-sensors)
+18. [➕ Add Users](#-9-getting-sensors)
+19. [✏️ Edit Users](#-9-getting-sensors)
+20. [❌ Delete Users](#-9-getting-sensors)
+21. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-3-running-the-finished-uptime-app-locally)
+22. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-4-running-the-finished-uptime-app-on-google-cloud-run)
+23. [📜 License](#-5-license)
 
 ---
+
+## 📖 1 Learning Objectives for Uptime App
+
+After this module you will be able to:
+
+* Build a Full-Stack App with Next.js – Develop a complete uptime monitoring application with a responsive dashboard.
+
+* Work with PostgreSQL & API Integration – Connect to databases, manage migrations, and integrate external APIs.
+
+* Implement User Authentication & Role Management – Secure user access with sign-up, login, and role-based controls.
+
+* Deploy & Scale on Google Cloud – Deploy the app using Google Cloud Run for scalability and reliability.
+
+
+---
+
 
 ## 🚀 1 Getting Started with Uptime App
 
