@@ -201,6 +201,10 @@ git push -u origin main
 
 **4. Add Dockerfile**
 
+* Documentation: https://cloud.google.com/docs/buildpacks
+* Node example: https://github.com/GoogleCloudPlatform/buildpack-samples/tree/master/sample-node
+
+
 Add `Dockerfile` in the project with the following contents:
 
 ```
