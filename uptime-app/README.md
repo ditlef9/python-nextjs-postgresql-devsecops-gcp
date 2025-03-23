@@ -20,7 +20,8 @@ Table of contents:
 2. [✨ Lessons Overview for Uptime App](#-2-lessons-overview-for-report-excel-generation)
 3. [📸 Diagram and Screenshots from Uptime App](#-3-diagram-and-screenshots-from-report-excel-generation)
 4. [⚛️ Creating Uptime App in Next.js](#-4-creating-python-report-excel-generation)
-5. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
+5. [🛡️ 5 Implementing DevSecOps: Snyk and ZAP Scan](# 5 Implementing DevSecOps: Snyk and ZAP Scan)
+6. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
 6. [🐘 Connecting to PostgresSQL with pgAdmin](#-6-getting-a-limacharlie-organizationw)
 7. [🔗 Connecting to PostgresSQL with Next](#-6-getting-a-limacharlie-organizationw)
 8. [📦 Migrations](#-6-getting-a-limacharlie-organizationw)
@@ -153,101 +154,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 
----
 
-
-## 🌐 5 Setting up Google Cloud Infrastructure for Uptime App
-
-
----
-
-## 🐘 6 Connecting to PostgresSQL with pgAdmin
-
----
-
-## 🔗 7 Connecting to PostgresSQL with Next
-
----
-
-## 📦 8 Migrations
-
----
-
-## 📝 9 Sign up
-
----
-
-
-## 🔑 10 Log in
-
-
----
-
-
-
-## 📊 11 Dashboard
-
----
-
-
----
-
-
-
-## ➕ 12 Add HTTP
-
----
-
-
-
-## ✏️ 13 Edit HTTP
-
----
-
-
-
-## ❌ 14 Delete HTTP
-
----
-
-
-
-## 📡 15 Endpoint to receive scheduler for HTTP
-
-
----
-
-
-
-## 📈 16 Statistics on Dashboard
-
----
-
-
-
-## 👥 17 List Users
-
----
-
-
-
-## ➕ 18 Add Users
-
----
-
-
-
-## ✏️ 19 Edit Users
-
----
-
-
-
-## ❌ 20 Delete Users
----
-
-
-## 🖥️ 21 Implementing DevSecOps: Snyk and ZAP Scan
+## 🛡️ 5 Implementing DevSecOps: Snyk and ZAP Scan
 
 ### Snyk
 
@@ -273,6 +181,100 @@ jobs:
 ```
 
 ---
+
+---
+
+
+## 🌐 6 Setting up Google Cloud Infrastructure for Uptime App
+
+
+---
+
+## 🐘 7 Connecting to PostgresSQL with pgAdmin
+
+---
+
+## 🔗 8 Connecting to PostgresSQL with Next
+
+---
+
+## 📦 9 Migrations
+
+---
+
+## 📝 10 Sign up
+
+---
+
+
+## 🔑 11 Log in
+
+
+---
+
+
+
+## 📊 12 Dashboard
+
+---
+
+
+---
+
+
+
+## ➕ 13 Add HTTP
+
+---
+
+
+
+## ✏️ 14 Edit HTTP
+
+---
+
+
+
+## ❌ 15 Delete HTTP
+
+---
+
+
+
+## 📡 16 Endpoint to receive scheduler for HTTP
+
+
+---
+
+
+
+## 📈 17 Statistics on Dashboard
+
+---
+
+
+
+## 👥 18 List Users
+
+---
+
+
+
+## ➕ 19 Add Users
+
+---
+
+
+
+## ✏️ 20 Edit Users
+
+---
+
+
+
+## ❌ 21 Delete Users
+---
+
 
 ## 🖥️ 22 Running the Uptime App Locally
 
