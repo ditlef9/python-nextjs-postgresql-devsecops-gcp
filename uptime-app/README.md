@@ -375,7 +375,7 @@ Remove all unnecessary:
 
 ---
 
-## 📦 9 Migrations
+## 📦 10 Migrations
 
 * Copy migrations/monitors/monitors_index_001.sql
 * Copy migrations/users/users_index_001.sql
@@ -386,7 +386,7 @@ Remove all unnecessary:
 
 ---
 
-## 📝 10 Next Auth
+## 📝 11 Next Auth
 
 OAuth
 * Sign up for two Oauth on https://github.com/settings/developers - one for development and one for production 
@@ -416,12 +416,10 @@ users_index_001.sql:
 
 
 
-## 📊 11 Dashboard
+## 📊 12 Dashboard
 
 ---
 
-
----
 
 
 
