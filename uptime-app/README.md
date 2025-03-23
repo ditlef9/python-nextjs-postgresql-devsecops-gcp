@@ -26,7 +26,7 @@ Table of contents:
 8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
 9. [🧹 Webdesign](#-9-webdesign)
 10. [📦 Migrations](#-10-migrations)
-11. [🔑 Next Auth](#-11-log-in)
+11. [🔑 Next Auth](#-11-next-auth)
 12. [📊 Dashboard](#-12-dashboard)
 13. [➕ Add HTTP](#-13-add-http)
 14. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
