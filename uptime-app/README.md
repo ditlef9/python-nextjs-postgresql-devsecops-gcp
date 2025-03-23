@@ -25,7 +25,7 @@ Table of contents:
 7. [🐘 Connecting to PostgresSQL with pgAdmin](#-7-connecting-to-postgressql-with-pgadmin)
 8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
 9. [🧹 Webdesign](#-9-webdesign)
-10. [📦 Migrations](#-9-migrations)
+10. [📦 Migrations](#-10-migrations)
 11. [🔑 Next Auth](#-11-log-in)
 12. [📊 Dashboard](#-12-dashboard)
 13. [➕ Add HTTP](#-13-add-http)
@@ -386,7 +386,7 @@ Remove all unnecessary:
 
 ---
 
-## 📝 11 Next Auth
+## 🔑 11 Next Auth
 
 OAuth
 * Sign up for two Oauth on https://github.com/settings/developers - one for development and one for production 
