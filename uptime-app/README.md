@@ -14,10 +14,6 @@ Tracks and manages other applications uptime.
 
 
 
-# ![Uptime App - Manage Service Diagram](_docs/uptime-diagram-manage-service.drawio.png) 
-
-
-# ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
 Table of contents:
 1. [📖 Learning Objectives for Uptime App](#-1-learning-objectives-for-report-excel-generation)
@@ -61,131 +57,234 @@ After this module you will be able to:
 
 ---
 
-
-## 🚀 1 Getting Started with Uptime App
-
+## ✨ 2 Lessons Overview for Uptime App
 
 
-
-**1. Create new application in Github**
-
-**2. Open application in PyCharm**
-
-Pycharm > File > Close Project<br><br>
-
-Pycharm > Get from VCS<br><br>
+---
 
 
-**3. Add requirements.txt**
+## 📸 3 Diagram and Screenshots from Uptime App
+
+**Manage Service Diagram**
+A user can add, edit and delete watchers<br>
+![Uptime App - Manage Service Diagram](_docs/uptime-diagram-manage-service.drawio.png) 
+
+
+**Check if services are online diagram**
+A scheduler will start the application to check if services are up<br>
+![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
+
+---
+
+## ⚛️ 4 Creating Uptime App in Next.js
+
+
+**1. Create new repository in Github**
+
+* Name: **uptime-nextjs**
+
+**2. Create new application**
+
+Open CMD/Terminal and write:
 
 ```
-functions-framework         # Added by YOUR_NAME. Framework for running Google Cloud Functions locally.
-google-cloud-storage        # Added by YOUR_NAME. Interact with Google Cloud Storage for file operations.
+mkdir next
+cd next
+npx create-next-app@latest
 ```
 
-**4. Create main.py**
+* What is your project name: **uptime**
+* Would you like to use TypeScript: **Yes**
+* Would you like to use ESLint: **Yes**
+* Would you like to use Tailwind CSS: **No**
+* Would you like yor code inside a `src/` directory: **No**
+* Would you like to use App Router? (recommended): **Yes**
+* Would you like to use Turbopack for `next dev`?: **No**
+* Would you like to customize the import alias (`@/*` by default)?: **No**
 
-```python
+**3. Initialize files to Github**
 
+File > Terminal:
 
-import flask
-import functions_framework
-
-@functions_framework.http
-def main(request: flask.wrappers.Request):
-    """HTTP Cloud Function"""
-    log_headline: str = f"main()"
-    print(f"{log_headline} · Init")
-
-
-if __name__ == '__main__':
-    print("versions-tracker local run")
-
-    app = flask.Flask(__name__)  # Create a Flask app instance
-    request = flask.request
-    main(request)
+```
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_REPOSITORY_NAME.git
+git push -u origin main
 ```
 
-**5. Install requirements**
 
-PyCharm > Terminal:
+**4. Add Dockerfile**
 
-`pip install -r requirements.txt`
+Add `Dockerfile` in the project with the following contents:
 
-**6. Run application**<br>
-In PyCharm go to main.py and click `Run`
+```
+FROM node:alpine
 
+WORKDIR /app
 
+COPY package.json package-lock.json ./
 
----
+RUN npm install
 
-## 📦 2 Python Utils and Functions
+COPY . .
 
+# Build the application
+ENV NODE_ENV=production
 
+RUN npm run build
 
+EXPOSE 3000
 
----
-
-## 🖥️ 3 Running the Finished Uptime App Locally
-
-**1. Clone the repository**
-
-
-**2. Open the directory `news-backend` in PyCharm**
-
-
-**3. Install requirements**
-
-PyCharm > Terminal:
-
-`pip install -r requirements.txt`
-
-**4. Start the application**<br>
-In PyCharm go to main.py and click `Run`
+CMD ["npm", "start"]
+```
 
 
+**5. Start the application**
+
+```
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 
 ---
 
-## ☁️ 4 Running the Finished Uptime App on Google Cloud Run
 
-### 4.1. Create service account `Cloud Scheduler Service Account for Cloud Run and Functions` (one time setup)
-
-IAM > Service accounts > + Create Service Account
-
-* Name: **Cloud Scheduler Service Account for Cloud Run and Functions**
-* Description: **This is used for Google Cloud Scheduler. It can read secrets and invoke functions**
-
-Permissions/Assign Roles:
-* Cloud Scheduler Service Agent
-* Service Account Admin
-
-
-### 4.2. Bucket
-
-**Create Bucket:**
-
-Buckets > [Create]
-
-Get started:
-* Name: **what-version-bucket**
-* Labels: owner: YOUR_NAME
-
-Location type:
-* Region - europe-north1
-
-[Create]
-
-
-### 4.3. Deploy on Google Cloud Run
-
-
+## 🌐 5 Setting up Google Cloud Infrastructure for Uptime App
 
 
 ---
 
-## 📜 5 License
+## 🐘 6 Connecting to PostgresSQL with pgAdmin
+
+---
+
+## 🔗 7 Connecting to PostgresSQL with Next
+
+---
+
+## 📦 8 Migrations
+
+---
+
+## 📝 9 Sign up
+
+---
+
+
+## 🔑 10 Log in
+
+
+---
+
+
+
+## 📊 11 Dashboard
+
+---
+
+
+---
+
+
+
+## ➕ 12 Add HTTP
+
+---
+
+
+
+## ✏️ 13 Edit HTTP
+
+---
+
+
+
+## ❌ 14 Delete HTTP
+
+---
+
+
+
+## 📡 15 Endpoint to receive scheduler for HTTP
+
+
+---
+
+
+
+## 📈 16 Statistics on Dashboard
+
+---
+
+
+
+## 👥 17 List Users
+
+---
+
+
+
+## ➕ 18 Add Users
+
+---
+
+
+
+## ✏️ 19 Edit Users
+
+---
+
+
+
+## ❌ 20 Delete Users
+---
+
+
+## 🖥️ 21 Implementing DevSecOps: Snyk and ZAP Scan
+
+### Snyk
+
+https://snyk.io
+
+### ZAP Scan
+
+.github/workflows/sec-node.yml<br>
+```
+name: Security for Next.js - DAST for web with OASP ZAP
+
+on: [push]
+
+jobs:
+  dast_scan:
+    runs-on: ubuntu-latest
+    name: DAST (Dynamic Application Security Testing) with OASP ZAP
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
+```
+
+---
+
+## 🖥️ 22 Running the Uptime App Locally
+
+---
+
+
+
+## ☁️ 23 Running the Uptime App on Google Cloud Run
+
+
+
+## 📜 24 License
 
 
 This project is licensed under the

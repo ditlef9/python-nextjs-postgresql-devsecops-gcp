@@ -26,7 +26,7 @@ def config_project():
         "DB_HOST": "127.0.0.1",
         "DB_USER": "postgres",
         "DB_PASS": "root",
-        "DB_NAME": "news-dev",
+        "DB_NAME": "cloud-dev",
         "DB_PORT": "5432",
         "DB_INSTANCE_UNIX_SOCKET": "",
     }

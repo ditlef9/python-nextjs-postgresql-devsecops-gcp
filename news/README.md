@@ -449,7 +449,7 @@ https://console.cloud.google.com > SQL > [Create Instance]<br>
 
 **Instance info**<br>
 * Database version: Latest
-* Instance ID: news-postgres-prod
+* Instance ID: cloud-postgres-prod
 * Password: random password (https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
 
 
@@ -487,7 +487,7 @@ https://console.cloud.google.com > Secret Manager > + Create Secret
     "DB_PASS": "YOUR_SQL_PASSWORD",
     "DB_NAME": "postgres",
     "DB_PORT": "5432",
-    "DB_INSTANCE_UNIX_SOCKET": "/cloudsql/GCP_PROJECT_ID:europe-north1:news-postgres-prod",
+    "DB_INSTANCE_UNIX_SOCKET": "/cloudsql/GCP_PROJECT_ID:europe-north1:cloud-postgres-prod",
 }
 ```
 
@@ -578,7 +578,7 @@ Environment Variables:
 
 pgAdmin > Servers > PostgreSQL X > Databases > [Right click] > Create: Database
 
-* Database: news-dev
+* Database: cloud-dev
 
 ## 7.2 Connect to production database
 
