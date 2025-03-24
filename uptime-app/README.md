@@ -27,19 +27,20 @@ Table of contents:
 9. [🧹 Webdesign](#-9-webdesign)
 10. [📦 Migrations](#-10-migrations)
 11. [🔑 Next Auth](#-11-next-auth)
-12. [📊 Dashboard](#-12-dashboard)
-13. [➕ Add HTTP](#-13-add-http)
-14. [✏️ Edit HTTP](#%EF%B8%8F-14-edit-http)
-15. [❌ Delete HTTP](#-15-delete-http)
-16. [📡 Endpoint to receive scheduler for HTTP](#-16-endpoint-to-receive-scheduler-for-http)
-17. [📈 Statistics on Dashboard](#-17-statistics-on-dashboard)
-18. [👥 List Users](#-18-list-users)
-19. [➕ Add Users](#-19-add-users)
-20. [✏️ Edit Users](#%EF%B8%8F-20-edit-users)
-21. [❌ Delete Users](#-21-delete-users)
-22. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-22-running-the-uptime-app-locally)
-23. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-23-running-the-uptime-app-on-google-cloud-run)
-24. [📜 License](#-24-license)
+12. [‍🎨 Private webdesign](#)
+13. [📊 Dashboard](#-13-dashboard)
+14. [➕ Add HTTP](#-14-add-http)
+15. [✏️ Edit HTTP](#%EF%B8%8F-15-edit-http)
+16. [❌ Delete HTTP](#-16-delete-http)
+17. [📡 Endpoint to receive scheduler for HTTP](#-17-endpoint-to-receive-scheduler-for-http)
+18. [📈 Statistics on Dashboard](#-18-statistics-on-dashboard)
+19. [👥 List Users](#-19-list-users)
+20. [➕ Add Users](#-20-add-users)
+21. [✏️ Edit Users](#%EF%B8%8F-21-edit-users)
+22. [❌ Delete Users](#-22-delete-users)
+23. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-23-running-the-uptime-app-locally)
+24. [☁️ Running the Uptime App on Google Cloud Run](#%EF%B8%8F-24-running-the-uptime-app-on-google-cloud-run)
+25. [📜 License](#-25-license)
 
 ---
 
@@ -93,51 +94,55 @@ After this module you will be able to:
 - Implement user login with authentication and validation.
 - Activity/Reflection:
 
-10. **Dashboard**<br>
+10. **Private webdesign**
+- Add header, footer, layout
+- Activity/Reflection: 
+
+11. **Dashboard**<br>
 - Design and develop a user-friendly dashboard for monitoring uptime data.
 - Activity/Reflection:
 
-11. **Add HTTP**<br>
+12. **Add HTTP**<br>
 - Implement functionality to add HTTP endpoints for monitoring.
 - Activity/Reflection:
 
-12. **Edit HTTP**<br>
+13. **Edit HTTP**<br>
 - Enable users to modify existing HTTP monitoring settings.
 - Activity/Reflection:
 
-13. **Delete HTTP**<br>
+14. **Delete HTTP**<br>
 - Implement the ability to remove HTTP endpoints from monitoring.
 - Activity/Reflection:
 
-14. **Endpoint to receive scheduler for HTTP**<br>
+15. **Endpoint to receive scheduler for HTTP**<br>
 - Set up an API endpoint to handle scheduled monitoring tasks.
 - Activity/Reflection:
 
-15. **Statistics on Dashboard**<br>
+16. **Statistics on Dashboard**<br>
 - Display analytics and insights related to monitored uptime data.
 - Activity/Reflection:
 
-16. **List Users**<br>
+17. **List Users**<br>
 - Develop an interface to display all registered users.
 - Activity/Reflection:
 
-17. **Add User**<br>
+18. **Add User**<br>
 - Implement a feature to add new users to the system.
 - Activity/Reflection:
 
-18. **Edit User**<br>
+19. **Edit User**<br>
 - Allow modification of user details and permissions.
 - Activity/Reflection:
 
-19. *Delete User**<br>
+20. *Delete User**<br>
 - Implement functionality to remove users from the system.
 - Activity/Reflection:
 
-20. **Congratulations and Learning Tip**<br>
+21. **Congratulations and Learning Tip**<br>
 - Learning tip: Set small, consistent learning goals rather than overwhelming yourself with too much at once. Progress builds over time.
 - Reflection: What is one small habit you can develop to enhance your skills every day?
 
-21. **Quiz**
+22. **Quiz**
 
 
 ---
@@ -405,7 +410,7 @@ Types
 * Create lib `app/types/next-auth.d.ts`
 
 Sign In
-* Create page `app/(public)/sign-in/page.tsx`
+* Sign in on `app/page.tsx`
 * Add `app/(public)/sign-in/components/AuthButton.tsx`
 
 users_index_001.sql:
@@ -416,32 +421,57 @@ users_index_001.sql:
 
 
 
+## 🧑‍🎨 12 Private webdesign
+
+
+* Implement `app/(private)/dashboard/page.tsx`
+* Implement `app/(private)/footer.tsx`
+* Implement `app/(private)/layout.tsx`
+* Implement `app/(private)/layout.tsx`
+
+
+---
+
+
 ## 📊 12 Dashboard
 
----
+* Implement app/types/monitorsI.ts
+* Implement app/(private)/dashboard/api-dashboard/api-get-monitors/route.ts
+* Update app/(private)/dashboard/page.tsx
 
-
-
-
-## ➕ 13 Add HTTP
-
----
-
-
-
-## ✏️ 14 Edit HTTP
 
 ---
 
 
+## ➕ 13 Add Monitor
 
-## ❌ 15 Delete HTTP
+* Implement app/(private)/monitors/add-monitor/page.tsx
+* Implement app/(private)/monitors/add-monitor/api-add-monitor/route.ts
+
 
 ---
 
 
 
-## 📡 16 Endpoint to receive scheduler for HTTP
+## ✏️ 14 Edit Monitor
+
+* Implement app/(private)/monitors/[monitorId]/api-get-monitor/route.ts
+* Implement app/(private)/monitors/[monitorId]/edit-monitor/api-edit-monitor/route.ts
+* Implement app/(private)/monitors/[monitorId]/edit-monitor/page.tsx
+
+
+
+---
+
+
+
+## ❌ 15 Delete Monitor
+
+---
+
+
+
+## 📡 16 Endpoint to receive scheduler for Monitor
 
 
 ---
