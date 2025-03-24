@@ -467,12 +467,16 @@ users_index_001.sql:
 
 ## ❌ 15 Delete Monitor
 
+* Implement app/(private)/monitors/[monitorId]/delete-monitor/api-delete-monitor/route.ts
+* Implement app/(private)/monitors/[monitorId]/delete-monitor/page.tsx
+
 ---
 
 
 
 ## 📡 16 Endpoint to receive scheduler for Monitor
 
+* Implement app/(private)/api/api-check-monitor/route.ts
 
 ---
 
