@@ -514,15 +514,28 @@ users_index_001.sql:
 
 ## ✏️ 20 Edit Users
 
+* Implement app/(private)/users/api-get-user/route.ts
+* Implement app/(private)/users/edit-user/page.tsx
+* Implement app/(private)/users/edit-user/api-edit-user/route.ts
 ---
 
 
 
 ## ❌ 21 Delete Users
+
+* Implement app/(private)/users/delete-user/page.tsx
+* Implement app/(private)/users/delete-user/api-delete-user/route.ts
 ---
 
 
+
 ## 🖥️ 22 Running the Uptime App Locally
+
+1. Clone the repository
+2. Create PostgresSQL database `cloud-dev`
+3. Copy env.example to .env.development, setup the variables
+4. `npm install`
+5. `npm run dev`
 
 ---
 
@@ -530,6 +543,7 @@ users_index_001.sql:
 
 ## ☁️ 23 Running the Uptime App on Google Cloud Run
 
+Please see 🌐 6 Setting up Google Cloud Infrastructure for Uptime App
 
 
 ## 📜 24 License
