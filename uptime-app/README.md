@@ -84,10 +84,12 @@ After this module you will be able to:
 - Implement a PostgreSQL connection within a Next.js application.
 - Activity/Reflection:
 
-7. Webdesign
+7. **Webdesign**<br>
+- Lets create the webdesign.
+- Activity/Reflection: Can you make it look better?
 
 8. **Migrations**<br>
-- Learn how to handle database migrations for schema evolution using tools like Prisma or Sequelize.
+- Learn how to handle database migrations for schema evolution.
 - Activity/Reflection:
 
 9. **Next Auth**<br>
@@ -98,19 +100,19 @@ After this module you will be able to:
 - Add header, footer, layout
 - Activity/Reflection: 
 
-11. **Dashboard**<br>
+11. **Monitors**<br>
 - Design and develop a user-friendly dashboard for monitoring uptime data.
 - Activity/Reflection:
 
-12. **Add HTTP**<br>
+12. **Add Monitor**<br>
 - Implement functionality to add HTTP endpoints for monitoring.
 - Activity/Reflection:
 
-13. **Edit HTTP**<br>
+13. **Edit Monitor**<br>
 - Enable users to modify existing HTTP monitoring settings.
 - Activity/Reflection:
 
-14. **Delete HTTP**<br>
+14. **Delete Monitor**<br>
 - Implement the ability to remove HTTP endpoints from monitoring.
 - Activity/Reflection:
 
@@ -118,8 +120,8 @@ After this module you will be able to:
 - Set up an API endpoint to handle scheduled monitoring tasks.
 - Activity/Reflection:
 
-16. **Statistics on Dashboard**<br>
-- Display analytics and insights related to monitored uptime data.
+16. **Escalation Email**<br>
+- If the monitor is offline then send email.
 - Activity/Reflection:
 
 17. **List Users**<br>
