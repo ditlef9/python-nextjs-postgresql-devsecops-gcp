@@ -182,6 +182,7 @@ https://console.cloud.google.com/ > https://console.cloud.google.com/projectcrea
 
 ### 5.2 Create service account to lunch applications (one time setup)
 
+
 IAM > Service accounts > + Create Service Account
 
 * Name: **Cloud Run, Cloud Run Functions and Scheduler Service Account**
@@ -189,6 +190,7 @@ IAM > Service accounts > + Create Service Account
 
 Permissions/Assign Roles:
 * Cloud Scheduler Service Agent
+* Cloud Run Builder
 * Service Account Admin
 * Secret Manager Secret Accessor
 

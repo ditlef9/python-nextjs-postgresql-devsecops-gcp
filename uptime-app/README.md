@@ -495,12 +495,19 @@ users_index_001.sql:
 
 ## 👥 18 List Users
 
+* Implement app/types/usersI.ts
+* Implement app/(private)/users/page.tsx
+* Implement app/(private)/users/api-get-users/route.ts
 ---
 
 
 
-## ➕ 19 Add Users
+## ➕ 19 Add User
 
+
+* Implement app/(private)/users/add-user/page.tsx
+* Implement app/(private)/users/add-user/api-add-user/route.ts
+* 
 ---
 
 
