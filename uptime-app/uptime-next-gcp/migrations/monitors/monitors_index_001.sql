@@ -15,8 +15,16 @@ CREATE TABLE IF NOT EXISTS public.u_monitors_index (
 );
 
 -- Insert
-INSERT INTO public.u_monitors_index VALUES (1, 'Uptime', 'URL becomes unavailable', 'https://uptime-644994207224.europe-north1.run.app', 
-False, 'you@gmail.com', NOW(), False, NULL, False, NULL);
+INSERT INTO public.u_monitors_index
+VALUES
+(1, 'Uptime', 'URL becomes unavailable', 'https://uptime-644994207224.europe-north1.run.app',
+False, 'admin@example.com', NOW(), False, NULL, False, NULL),
+(2, 'API Health Check', 'URL becomes unavailable', 'https://api.example.com/health',
+False, 'admin@example.com', NOW(), False, NULL, False, NULL),
+(3, 'Company Website', 'URL becomes unavailable', 'https://www.company.com',
+False, 'webmaster@company.com', NOW(), False, NULL, False, NULL),
+(4, 'Database Status', 'URL becomes unavailable', 'https://db-monitor.example.com',
+False, 'dba@example.com', NOW(), False, NULL, False, NULL);
 
 -- Sequence
 SELECT setval(pg_get_serial_sequence('u_monitors_index', 'monitor_id'), coalesce(max(monitor_id)+1, 1), false) FROM u_monitors_index;

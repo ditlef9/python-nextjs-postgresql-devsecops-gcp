@@ -25,7 +25,7 @@ INSERT INTO public.u_users_index (
   user_last_user_agent
 ) 
 VALUES (
-  'siditlef@gmail.com',                  -- user_email
+  'YOUR-GMAIL-USER@gmail.com',                  -- user_email
   'John',                                -- user_display_name
   NOW(),                                 -- user_created_timestamp (current timestamp)
   1,                                     -- user_created_by_user_id (replace with actual user ID)
@@ -36,29 +36,6 @@ VALUES (
   'Mozilla/5.0'                          -- user_last_user_agent (replace with actual user agent)
 );
 
--- Insert admin 2
-INSERT INTO public.u_users_index (
-  user_email,
-  user_display_name,
-  user_created_timestamp,
-  user_created_by_user_id,
-  user_updated_timestamp,
-  user_updated_by_id,
-  user_last_online_timestamp,
-  user_last_ip,
-  user_last_user_agent
-) 
-VALUES (
-  'sindre@cdcadvania.com',               -- user_email
-  'John Doe',                            -- user_display_name (actual display name)
-  NOW(),                                 -- user_created_timestamp (current timestamp)
-  1,                                     -- user_created_by_user_id (replace with actual user ID)
-  NULL,                                  -- user_updated_timestamp (if not updated yet)
-  1,                                     -- user_updated_by_id (replace with actual user ID, if applicable)
-  NOW(),                                 -- user_last_online_timestamp (current timestamp)
-  '192.168.1.1',                        -- user_last_ip (replace with actual IP)
-  'Mozilla/5.0'                          -- user_last_user_agent (replace with actual user agent)
-);
 
 -- Sequence
 SELECT setval(pg_get_serial_sequence('u_users_index', 'user_id'), coalesce(max(user_id)+1, 1), false) FROM u_users_index;

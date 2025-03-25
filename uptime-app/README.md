@@ -159,6 +159,27 @@ A user can add, edit and delete watchers<br>
 A scheduler will start the application to check if services are up<br>
 ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
+**Monitor Offline**
+If a monitor goes offline an email is sent<br>
+![Monitor offline](_docs/monitor-offline.png) 
+
+
+**Monitors**
+List of monitors<br>
+![Monitors](_docs/monitors.png) 
+
+**Edit Monitor**
+Edit a monitor<br>
+![Edit Monitor](_docs/monitor-edit.png) 
+
+**Users**
+List of monitors<br>
+![Users](_docs/users.png) 
+
+**Edit User**
+Edit a user<br>
+![Edit user](_docs/user-edit.png) 
+
 ---
 
 ## ⚛️ 4 Creating Uptime App in Next.js
