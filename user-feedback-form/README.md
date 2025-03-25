@@ -190,6 +190,7 @@ IAM > Service accounts > + Create Service Account
 Permissions/Assign Roles:
 * Cloud Scheduler Service Agent
 * Service Account Admin
+* Secret Manager Secret Accessor
 
 
 ### 5.3 Create bucket

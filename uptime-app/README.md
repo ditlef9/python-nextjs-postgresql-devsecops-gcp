@@ -28,12 +28,12 @@ Table of contents:
 10. [📦 Migrations](#-10-migrations)
 11. [🔑 Next Auth](#-11-next-auth)
 12. [‍🎨 Private webdesign](#)
-13. [📊 Dashboard](#-13-dashboard)
-14. [➕ Add HTTP](#-14-add-http)
-15. [✏️ Edit HTTP](#%EF%B8%8F-15-edit-http)
-16. [❌ Delete HTTP](#-16-delete-http)
+13. [📊 Monitors](#-13-monitors)
+14. [➕ Add Monitor](#-14-add-monitor)
+15. [✏️ Edit Monitor](#%EF%B8%8F-15-edit-monitor)
+16. [❌ Delete Monitor](#-16-delete-monitor)
 17. [📡 Endpoint to receive scheduler for HTTP](#-17-endpoint-to-receive-scheduler-for-http)
-18. [📈 Statistics on Dashboard](#-18-statistics-on-dashboard)
+18. [📧 Escalation Email](#-18-escalation-Email)
 19. [👥 List Users](#-19-list-users)
 20. [➕ Add Users](#-20-add-users)
 21. [✏️ Edit Users](#%EF%B8%8F-21-edit-users)
@@ -433,11 +433,11 @@ users_index_001.sql:
 ---
 
 
-## 📊 12 Dashboard
+## 📊 12 Monitors
 
 * Implement app/types/monitorsI.ts
-* Implement app/(private)/dashboard/api-dashboard/api-get-monitors/route.ts
-* Update app/(private)/dashboard/page.tsx
+* Implement app/(private)/monitors/api-get-monitors/route.ts
+* Update app/(private)/monitors/page.tsx
 
 
 ---
@@ -482,7 +482,12 @@ users_index_001.sql:
 
 
 
-## 📈 17 Statistics on Dashboard
+## 📧 17 Escalation Email
+
+* Install Nodemailer: `npm install nodemailer` and `npm install --save-dev @types/nodemailer`
+* Copy `app/lib/sendEmail.ts`
+* Update `app/(public)/api/api-check-monitors/route.ts`
+
 
 ---
 
