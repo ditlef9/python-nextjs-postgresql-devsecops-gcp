@@ -20,12 +20,15 @@ Table of contents:
 4. [🚀 Getting Started with User Feedback Form](#-4-getting-started-with-user-feedback-form)
 5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-5-running-user-feedback-form-on-google-cloud-run)
 6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
-7. [🪣  Implementing Bucket](#-7-implementing-bucket)
-8. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
-9. [🔐 Security Command Center](#-9-security-command-center)
-10. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
-11. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
-12. [📜 License](#-12-license)
+7. [🖊️ Creating the Form Frontend](#-7-implementing-bucket)
+8. [✏️ Creating the Form API](#-7-implementing-bucket)
+9. [🎨 Styling the form](#-7-implementing-bucket)
+10. [🪣  Implementing Bucket](#-7-implementing-bucket)
+11. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
+12. [🔐 Security Command Center](#-9-security-command-center)
+13. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
+14. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
+15. [📜 License](#-12-license)
 
 ---
 
@@ -64,26 +67,30 @@ By the end of this module, you will:<br>
 - First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
 - Activity: Implement Company (optional) field. 
 
-6. **Styling the form**<br>
+6. **Creating the Form API**
+- Implement API backend.<br>
+- Activity: Implement Company (optional) field. 
+
+7. **Styling the form**<br>
 - Add CSS to the form.<br>
 - Activity: Add icons to feedback boxes and reflect on how they improve user experience.
 
-7. **Bucket Integration**<br>
+8. **Bucket Integration**<br>
 - Build the API that handles form submission with bucket integration.<br>
 - Reflection: What are some security risks when integrating with cloud storage, and how can they be mitigated?
 
-8. **Email Integration**<br>
+9. **Email Integration**<br>
 - Add email notification when someone submits the form.<br>
 - Activity: Implement email notifications and consider how to prevent spam abuse.
 
-9. **Security Command Center**<br>
+10. **Security Command Center**<br>
 - Demo securing our Google Cloud Environment.<br>
 - Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
 
-10. **Congratulations and Learning Tip**<br>
+11. **Congratulations and Learning Tip**<br>
 -  Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
 
-11. **Quiz**
+12. **Quiz**
 
 ---
 
@@ -276,9 +283,28 @@ Containers > Security:
 Go to [Snyk](https://snyk.io) and import the Githu repo.
 
 ---
+## 🖊️ 7 Creating the Form Frontend
+
+* Update app/page.tsx
+
+---
+
+## ✏️ 8 Creating the Form API
+
+* Implement app/api/api-submit-form/route.ts
 
 
-## 🪣 7 Implementing Bucket
+---
+
+
+## 🎨 9 Styling the form
+
+* Update app/globals.css
+
+
+---
+
+## 🪣 10 Implementing Bucket
 
 1. Create an API endpoint (/app/api/api-submit-form/route.ts): This will be the main entry point that processes the form submission.
 
@@ -310,7 +336,7 @@ npm install @google-cloud/storage
 
 ---
 
-## ✉️ 8 Implementing Email
+## ✉️ 11 Implementing Email
 
 1. Install Depedencies
 
@@ -349,7 +375,7 @@ Copy the file contents of `.env.example` and change all variables.<br>
 
 ---
 
-## 🔐 9 Security Command Center
+## 🔐 12 Security Command Center
 
 Google Cloud's **Security Command Center** (SCC) helps detect threats and vulnerabilities in your cloud setup.
 
@@ -365,7 +391,7 @@ Setup:
 
 ---
 
-## 📦 10 Next.js Utils and Functions
+## 📦 13 Next.js Utils and Functions
 
 
 [sendEmail](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/sendEmail.ts)
@@ -376,7 +402,7 @@ Uploads feedback to Google Cloud Storage, ensuring secure data handling.
 
 ---
 
-## 🖥️ 11 Running the Finished User Feedback Form Locally
+## 🖥️ 14 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -396,7 +422,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
-## 📜 12 License
+## 📜 15 License
 
 
 This project is licensed under the
