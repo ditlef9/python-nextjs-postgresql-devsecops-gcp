@@ -20,13 +20,13 @@ Table of contents:
 4. [🚀 Getting Started with User Feedback Form](#-4-getting-started-with-user-feedback-form)
 5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-5-running-user-feedback-form-on-google-cloud-run)
 6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
-7. [🖊️ Creating the Form Frontend](#-7-implementing-bucket)
-8. [⚖️ Creating the Form Consts](#-7-implementing-bucket)
-9. [✏️ Creating the Form API](#-7-implementing-bucket)
-10. [🎨 Styling the form](#-7-implementing-bucket)
-11. [🪣  Implementing Bucket](#-7-implementing-bucket)
-12. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
-13. [🔐 Security Command Center](#-9-security-command-center)
+7. [🖊️ Creating the Form Frontend](#%EF%B8%8F-7-creating-the-form-frontend)
+8. [⚖️ Creating the Form Consts](#%EF%B8%8F-8-creating-the-form-consts)
+9. [✏️ Creating the Form API](#%EF%B8%8F-9-creating-the-form-api)
+10. [🎨 Styling the form](#-10-styling-the-form)
+11. [🪣  Implementing Bucket](#-11-implementing-bucket)
+12. [✉️ Implementing Email](#%EF%B8%8F-12-implementing-email)
+13. [🔐 Security Command Center](#-13-security-command-center)
 14. [⭐ Stars](#-9-security-command-center)
 15. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
 16. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
@@ -406,7 +406,11 @@ Setup:
 
 ---
 
-## 📦 14 Next.js Utils and Functions
+## ⭐ 14 Stars
+
+---
+
+## 📦 15 Next.js Utils and Functions
 
 
 [sendEmail](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/sendEmail.ts)
@@ -417,7 +421,7 @@ Uploads feedback to Google Cloud Storage, ensuring secure data handling.
 
 ---
 
-## 🖥️ 15 Running the Finished User Feedback Form Locally
+## 🖥️ 16 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -437,7 +441,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
-## 📜 16 License
+## 📜 17 License
 
 
 This project is licensed under the
