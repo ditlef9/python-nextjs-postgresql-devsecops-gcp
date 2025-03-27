@@ -26,9 +26,10 @@ Table of contents:
 10. [🪣  Implementing Bucket](#-7-implementing-bucket)
 11. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
 12. [🔐 Security Command Center](#-9-security-command-center)
-13. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
-14. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
-15. [📜 License](#-12-license)
+13. [⭐ Stars](#-9-security-command-center)
+14. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
+15. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
+16. [📜 License](#-12-license)
 
 ---
 
@@ -83,11 +84,15 @@ By the end of this module, you will:<br>
 - Add email notification when someone submits the form.<br>
 - Activity: Implement email notifications and consider how to prevent spam abuse.
 
-10. **Security Command Center**<br>
+10. **Stars**<br>
+- We add stars instead of drop down box.<br>
+- Activity: 
+
+11. **Security Command Center**<br>
 - Demo securing our Google Cloud Environment.<br>
 - Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
 
-11. **Congratulations and Learning Tip**<br>
+12. **Congratulations and Learning Tip**<br>
 -  Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
 
 12. **Quiz**
