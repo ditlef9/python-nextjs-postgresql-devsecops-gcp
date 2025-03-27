@@ -21,15 +21,16 @@ Table of contents:
 5. [☁️ Running User Feedback Form on Google Cloud Run](#%EF%B8%8F-5-running-user-feedback-form-on-google-cloud-run)
 6. [🛡️ Add Application to Snyk](#%EF%B8%8F-6-add-application-to-snyk)
 7. [🖊️ Creating the Form Frontend](#-7-implementing-bucket)
-8. [✏️ Creating the Form API](#-7-implementing-bucket)
-9. [🎨 Styling the form](#-7-implementing-bucket)
-10. [🪣  Implementing Bucket](#-7-implementing-bucket)
-11. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
-12. [🔐 Security Command Center](#-9-security-command-center)
-13. [⭐ Stars](#-9-security-command-center)
-14. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
-15. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
-16. [📜 License](#-12-license)
+8. [⚖️ Creating the Form Consts](#-7-implementing-bucket)
+9. [✏️ Creating the Form API](#-7-implementing-bucket)
+10. [🎨 Styling the form](#-7-implementing-bucket)
+11. [🪣  Implementing Bucket](#-7-implementing-bucket)
+12. [✉️ Implementing Email](#%EF%B8%8F-8-implementing-email)
+13. [🔐 Security Command Center](#-9-security-command-center)
+14. [⭐ Stars](#-9-security-command-center)
+15. [📦 Next.js Utils and Functions](#-10-nextjs-utils-and-functions)
+16. [🖥️ Running the User Feedback Form Locally](#%EF%B8%8F-11-running-user-feedback-form-locally)
+17. [📜 License](#-12-license)
 
 ---
 
@@ -65,37 +66,41 @@ By the end of this module, you will:<br>
 - Reflection: What are the benefits and drawbacks of using 'latest' in dependencies?
 
 5. **Creating the Form**<br>
-- First, create the form, then add constants for the form, feedback, handle input changes, and submit.<br>
+- First, create the form<br>
 - Activity: Implement Company (optional) field. 
 
-6. **Creating the Form API**
+6. **Creating the Form Consts**<br>
+- Add constants for the form, feedback, handle input changes, and submit.<br>
+- Activity: Implement Company (optional) field. 
+
+7. **Creating the Form API**
 - Implement API backend.<br>
 - Activity: Implement Company (optional) field. 
 
-7. **Styling the form**<br>
+8. **Styling the form**<br>
 - Add CSS to the form.<br>
 - Activity: Add icons to feedback boxes and reflect on how they improve user experience.
 
-8. **Bucket Integration**<br>
+9. **Bucket Integration**<br>
 - Build the API that handles form submission with bucket integration.<br>
 - Reflection: What are some security risks when integrating with cloud storage, and how can they be mitigated?
 
-9. **Email Integration**<br>
+10. **Email Integration**<br>
 - Add email notification when someone submits the form.<br>
 - Activity: Implement email notifications and consider how to prevent spam abuse.
 
-10. **Stars**<br>
+11. **Stars**<br>
 - We add stars instead of drop down box.<br>
 - Activity: 
 
-11. **Security Command Center**<br>
+12. **Security Command Center**<br>
 - Demo securing our Google Cloud Environment.<br>
 - Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
 
-12. **Congratulations and Learning Tip**<br>
+13. **Congratulations and Learning Tip**<br>
 -  Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
 
-12. **Quiz**
+14. **Quiz**
 
 ---
 
@@ -294,22 +299,27 @@ Go to [Snyk](https://snyk.io) and import the Githu repo.
 
 ---
 
-## ✏️ 8 Creating the Form API
+## ⚖️ 8 Creating the Form Consts
+
+* Update app/page.tsx
+
+---
+
+## ✏️ 9 Creating the Form API
 
 * Implement app/api/api-submit-form/route.ts
-
 
 ---
 
 
-## 🎨 9 Styling the form
+## 🎨 10 Styling the form
 
 * Update app/globals.css
 
 
 ---
 
-## 🪣 10 Implementing Bucket
+## 🪣 11 Implementing Bucket
 
 1. Create an API endpoint (/app/api/api-submit-form/route.ts): This will be the main entry point that processes the form submission.
 
@@ -341,7 +351,7 @@ npm install @google-cloud/storage
 
 ---
 
-## ✉️ 11 Implementing Email
+## ✉️ 12 Implementing Email
 
 1. Install Depedencies
 
@@ -380,7 +390,7 @@ Copy the file contents of `.env.example` and change all variables.<br>
 
 ---
 
-## 🔐 12 Security Command Center
+## 🔐 13 Security Command Center
 
 Google Cloud's **Security Command Center** (SCC) helps detect threats and vulnerabilities in your cloud setup.
 
@@ -396,7 +406,7 @@ Setup:
 
 ---
 
-## 📦 13 Next.js Utils and Functions
+## 📦 14 Next.js Utils and Functions
 
 
 [sendEmail](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/user-feedback-form/utils/sendEmail.ts)
@@ -407,7 +417,7 @@ Uploads feedback to Google Cloud Storage, ensuring secure data handling.
 
 ---
 
-## 🖥️ 14 Running the Finished User Feedback Form Locally
+## 🖥️ 15 Running the Finished User Feedback Form Locally
 
 **1. Clone the repository**
 
@@ -427,7 +437,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ---
 
-## 📜 15 License
+## 📜 16 License
 
 
 This project is licensed under the
