@@ -206,10 +206,20 @@ IAM > Service accounts > + Create Service Account
 * Description: **This is used for Cloud Run, Cloud Run Functions and Scheduler Service. It can read secrets and invoke Run and Functions**
 
 Permissions/Assign Roles:
-* Cloud Scheduler Service Agent
+* Service Account User
+* Logs Bucket Writer
+* Cloud Run Admin
 * Cloud Run Builder
-* Service Account Admin
 * Secret Manager Secret Accessor
+* Storage Bucket Viewer
+* Storage Object Admin
+
+For scheduler, we also need /Assign Roles:
+* Cloud Run Service Invoker
+* Cloud Functions Invoker
+
+For SQL, we also need the Permissions/Assign Roles:
+* Cloud SQL Client
 
 
 ### 5.3 Create bucket
