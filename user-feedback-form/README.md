@@ -89,13 +89,13 @@ By the end of this module, you will:<br>
 - Add email notification when someone submits the form.<br>
 - Activity: Implement email notifications and consider how to prevent spam abuse.
 
-11. **Stars**<br>
-- We add stars instead of drop down box.<br>
-- Activity: 
-
-12. **Security Command Center**<br>
+11. **Security Command Center**<br>
 - Demo securing our Google Cloud Environment.<br>
 - Activity: Identify one security risk in your GCP setup using Security Command Center and find a way to mitigate it.
+
+12. **Stars**<br>
+- We add stars instead of drop down box.<br>
+- Activity: 
 
 13. **Congratulations and Learning Tip**<br>
 -  Reflection: How do spam bots exploit web forms, and what steps can be taken to prevent them?
