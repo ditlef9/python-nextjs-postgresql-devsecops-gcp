@@ -1,5 +1,6 @@
-# Special Characters
+# How do I say?
 
+## Special Characters
 | Character | Name |
 |-----------|----------------|
 | `"`       | Quotation mark |
@@ -13,3 +14,9 @@
 | `>`       | Greater-than |
 | `&`       | Ampersand |
 | `-`       | Hyphens |
+
+## 
+
+| X | Name | Example |
+|-----------|----------------|--|
+| `=>`       | Arrow function | .map |
