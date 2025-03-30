@@ -108,7 +108,7 @@ export default function Home() {
           <p style={{paddingBottom: 0, marginBottom: 0}}>
           <label>Satisfaction</label><br />
           </p>
-          <div className="star-rating">
+          <div>
             {[1, 2, 3, 4, 5].map((num) => (
               <span
                 key={num}
