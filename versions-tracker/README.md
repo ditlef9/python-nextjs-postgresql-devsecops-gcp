@@ -137,13 +137,22 @@ if __name__ == '__main__':
     main(request)
 ```
 
-**5. Install requirements**
+
+**5. Setup venv**
+
+
+```commandline
+python -m venv env
+venv\Scripts\activate 
+```
+
+**6. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**6. Run application**<br>
+**7. Run application**<br>
 In PyCharm go to main.py and click `Run`
 
 
