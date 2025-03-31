@@ -140,11 +140,18 @@ if __name__ == '__main__':
 
 **5. Setup venv**
 
-
+Windows:
 ```commandline
 python -m venv env
 env\Scripts\activate 
 ```
+
+Linux/Mac:
+```commandline
+python -m venv env
+env/Scripts/activate 
+```
+
 
 **6. Install requirements**
 
