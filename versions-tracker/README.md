@@ -210,7 +210,14 @@ Permissions/Assign Roles:
 * Storage Admin (`roles/storage.admin`) (if your function uses Cloud Storage)
 * Cloud Build Editor (`roles/cloudbuild.builds.editor`) (for deploying Cloud Functions)
 
-**3. Create .github workflow**
+**3. Create a key**
+
+Service account > Keys > New
+
+Copy the value and put it in Github > Repo > Settings > Secrets and variables > Actions > Repository secrets as 
+`GCP_CREDENTIALS`.
+
+**4. Create .github workflow**
 
 Create a new file:<br>
 `.github/workflows/google_functions_deployment.yaml`
@@ -269,32 +276,6 @@ jobs:
 
 
 ```
-
-**3. Make connection between your repo and Google Cloud Functions**
-
-3.1 Open Powershell and write in the following:
-
-```
-$GITHUB_REPO="GITHUB_USER:NAME/GITHUB_REPO_NAME"
-$PROJECT_ID="GOOGLE_CLOUD_PROJECT_ID"
-$SERVICE_ACCOUNT="github-actions-auth"
-$WORKLOAD_IDENTITY_POOL="gh-pool"
-$WORKLOAD_IDENTITY_PROVIDER="gh-provider"
-```
-
-3.2 Set project ID<br>
-```gcloud config set project $PROJECT_ID```
-
-3.3 Get ID:<br>
-```gcloud iam workload-identity-pools describe $WORKLOAD_IDENTITY_POOL --location="global" --format="value(name)"```
-
---> projects/XXXX/locations/global/workloadIdentityPools/gh-pool
-
-```$WORKLOAD_IDENTITY_POOL_ID="projects/XXXX/locations/global/workloadIdentityPools/gh-pool"```
-
-3.4 Connect repository:<br>
-```gcloud iam service-accounts add-iam-policy-binding $SERVICE_ACCOUNT@$PROJECT_ID.iam.gserviceaccount.com --role="roles/iam.workloadIdentityUser" --member="principalSet://iam.googleapis.com/${WORKLOAD_IDENTITY_POOL_ID}/attribute.repository/${GITHUB_REPO}"```
-
 
 
 ---
