@@ -197,7 +197,7 @@ gcloud functions deploy versions-tracker --project=YOUR_PROJECT --gen2 --runtime
 IAM > Service accounts > + Create Service Account
 
 * Name: **GitHub Actions Auth**
-* Description: **Logs into GCP from Google Cloud**
+* Description: **Logs into GCP from Github**
 
 Permissions/Assign Roles:
 * Service Account User
