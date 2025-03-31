@@ -192,7 +192,7 @@ gcloud auth login
 gcloud functions deploy versions-tracker --project=YOUR_PROJECT --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --max-instances=1 --verbosity=info --memory=512MB
 ```
 
-**1. Enable Enable Cloud Resource Manager API**
+**1. Enable Cloud Resource Manager API**
 
 API and Services > Cloud Resource Manager API
 https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com
