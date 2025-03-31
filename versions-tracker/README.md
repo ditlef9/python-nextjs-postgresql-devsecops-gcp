@@ -192,7 +192,7 @@ gcloud auth login
 gcloud functions deploy versions-tracker --project=YOUR_PROJECT --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --max-instances=1 --verbosity=info --memory=512MB
 ```
 
-1. Create IAM Service account for Github Actions Auth
+**1. Create IAM Service account for Github Actions Auth**
 
 IAM > Service accounts > + Create Service Account
 
@@ -202,7 +202,7 @@ IAM > Service accounts > + Create Service Account
 Permissions/Assign Roles:
 * Service Account User
 
-2. Create .github workflow
+**2. Create .github workflow**
 
 Create a new file:<br>
 `.github/workflows/google_functions_deployment.yaml`
@@ -263,7 +263,7 @@ jobs:
           max_instances: 1
 ```
 
-3. Make connection between your repo and Google Cloud Functions
+**3. Make connection between your repo and Google Cloud Functions**
 
 3.1 Open Powershell and write in the following:
 
