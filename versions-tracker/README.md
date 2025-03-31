@@ -50,12 +50,12 @@ Table of contents:
 - Activity: Import the project into Snyk. Are there any vulnerabilities?
 
 3. **Configure Google Cloud Infrastructure** <br>
-- Setup a GCP project, service account, bucket and the Cloud Run Functions application.<br>
-- Activity/Reflection: What is the difference between Cloud Run and Cloud Run Functions?
+- Create a bucket
+- Activity/Reflection: 
 
 4. **Configure CI/CD with Github Actions**<br>
 - Create a service account, a Pool and Github Actions file
-- Activity/Reflection: How does CI/CD benefit your project? 
+- Activity/Reflection: What is the difference between Cloud Run and Cloud Run Functions?
 
 5. **Setup a scheduler**<br>
 - Create a new Google Cloud Scheduler that checks for new versions every month
