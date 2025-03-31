@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
 ```commandline
 python -m venv env
-venv\Scripts\activate 
+env\Scripts\activate 
 ```
 
 **6. Install requirements**
