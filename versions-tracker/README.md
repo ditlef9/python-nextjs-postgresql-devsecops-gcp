@@ -4,7 +4,8 @@
 &nbsp; &nbsp;
 [⬅ 🎯 Projects Included](../#-4-projects-included)
 
-Fetches API data and posts updates to Slack.
+Based on a list of software this app checks if there are any new version available. 
+If there is a new version then there will be sent an email to the receivers.
 
 | Category     | Details                               |          
 |--------------|---------------------------------------|
@@ -92,6 +93,9 @@ If there are any new versions they will be emailed to the recipients<br>
 ## 🚀 4 Create Python Application for Version Tracker
 
 **1. Create new application in Github**
+
+* Name: version-tracker-python-gcp
+* Description: Based on a list of software this app checks if there are any new version available. 
 
 **2. Open application in PyCharm**
 
