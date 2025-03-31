@@ -192,17 +192,25 @@ gcloud auth login
 gcloud functions deploy versions-tracker --project=YOUR_PROJECT --gen2 --runtime=python312 --region=europe-north1 --source=. --entry-point=main --trigger-http --timeout=540 --max-instances=1 --verbosity=info --memory=512MB
 ```
 
-**1. Create IAM Service account for Github Actions Auth**
+**1. Enable Enable Cloud Resource Manager API**
+
+API and Services > Cloud Resource Manager API
+https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com
+
+**2. Create IAM Service account for Github Actions Auth**
 
 IAM > Service accounts > + Create Service Account
 
 * Name: **GitHub Actions Auth**
-* Description: **Logs into GCP from Github**
+* Description: **Logs into GCP from Github in order to create new Google Cloud Run Functions**
 
 Permissions/Assign Roles:
-* Service Account User
+* Cloud Functions Admin (`roles/cloudfunctions.admin`)
+* Service Account User (`roles/iam.serviceAccountUser`)
+* Storage Admin (`roles/storage.admin`) (if your function uses Cloud Storage)
+* Cloud Build Editor (`roles/cloudbuild.builds.editor`) (for deploying Cloud Functions)
 
-**2. Create .github workflow**
+**3. Create .github workflow**
 
 Create a new file:<br>
 `.github/workflows/google_functions_deployment.yaml`
@@ -211,56 +219,55 @@ Create a new file:<br>
 # Service accounts are located here:
 # https://console.cloud.google.com/iam-admin/serviceaccounts
 #
-# There are two service accounts:
+# This deployment uses the following service account:
 # - Name: Github Actions Auth
 #   ID: github-actions-auth@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com
-#   Description: Logs into GCP from Google Cloud
-#   Permissions: Service Account User
 #
-# - Name: Cloud Scheduler Service Agent
-#   ID: cloud-run-cloud-run-functions@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com
-#   Description: Cloud Run, Cloud Run Functions and Scheduler Service Account
-#   Permissions: This is used for Cloud Run, Cloud Run Functions and Scheduler Service. It can read secrets and invoke Run and Functions.
+# The secret is stored under 
+# Github > Repo > Settings > Secrets and variables > Actions > Repository secrets as 
+# `GCP_CREDENTIALS`.
 
 
-name: CD
+name: build-and-deployment
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
+    branches:
+      - main
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy:
+  deploy-production:
     runs-on: ubuntu-latest
-    permissions:
-      contents: "read"
-      id-token: "write"
+    if: github.ref == 'refs/heads/main'
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v3
-      - id: "auth"
-        name: "Authenticate to Google Cloud"
-        uses: "google-github-actions/auth@v1"
-        with:
-          workload_identity_provider: "projects/GOOGLE_CLOUD_PROJECT_ID/locations/global/workloadIdentityPools/gh-pool/providers/gh-provider"
-          service_account: "github-actions-auth@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com"
-      - id: "deploy"
-        uses: "google-github-actions/deploy-cloud-functions@v1"
-        with:
-          name: "limacharlie-surveillance"
-          runtime: "python312"
-          region: "europe-north1"
-          entry_point: "main"
-          timeout: 540
-          service_account_email: cloud-run-cloud-run-functions@appspot.gserviceaccount.com
-          ingress_settings: ALLOW_ALL
-          max_instances: 1
+    - uses: 'actions/checkout@v3'
+    - run: ls
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - name: Debug GCP credentials
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+      run: |
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" > credentials.json
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v1'
+      with:
+        version: '>= 363.0.0'
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info' 
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: 'Deploy a gen 2 cloud function'
+      run: 'gcloud functions deploy version-tracker --project=YOUR_PROJECT --gen2 --runtime=python312 --region=europe-north1 --trigger-http --source=. --entry-point=main --max-instances=1 --memory=256MB --timeout=60s'
+
+
+
 ```
 
 **3. Make connection between your repo and Google Cloud Functions**
