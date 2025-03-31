@@ -41,7 +41,7 @@ Table of contents:
 
 ---
 
-## ✨ 2 Lessons Overview for Version Trackern
+## ✨ 2 Lessons Overview for Version Tracker
 
 1. **Introduction**
 
