@@ -54,7 +54,7 @@ Table of contents:
 - Activity/Reflection: 
 
 4. **Configure CI/CD with Github Actions**<br>
-- Create a service account, a Pool and Github Actions file
+- Create a service account and Github Actions file
 - Activity/Reflection: What is the difference between Cloud Run and Cloud Run Functions?
 
 5. **Setup a scheduler**<br>
