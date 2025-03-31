@@ -47,7 +47,7 @@ Table of contents:
 
 2. **Create Python application**<br>
 - Create a new application locally and push it to Github.<br>
-- Activity: Import the project into Snyk. Are there any errors?
+- Activity: Import the project into Snyk. Are there any vulnerabilities?
 
 3. **Configure Google Cloud Infrastructure** <br>
 - Setup a GCP project, service account, bucket and the Cloud Run Functions application.<br>
