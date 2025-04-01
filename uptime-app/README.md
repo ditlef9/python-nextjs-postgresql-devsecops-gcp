@@ -136,7 +136,7 @@ After this module you will be able to:
 - Allow modification of user details and permissions.
 - Activity/Reflection:
 
-20. *Delete User**<br>
+20. **Delete User**<br>
 - Implement functionality to remove users from the system.
 - Activity/Reflection:
 

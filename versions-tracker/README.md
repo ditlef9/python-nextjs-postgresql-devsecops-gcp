@@ -58,7 +58,7 @@ Table of contents:
 - Activity/Reflection: What is the difference between Cloud Run and Cloud Run Functions?
 
 5. **Setup a scheduler**<br>
-- Create a new Google Cloud Scheduler that checks for new versions every month
+- Create a new Google Cloud Scheduler that checks for new versions
 - Reflection: How often should the scheduler run?
 
 6. **Implementing Check for New Versions**<br>
@@ -299,7 +299,7 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 * Target Type: HTTP
 * URL: URL_TO_FUNCTION
 * HTTP method: GET
-* Auth header: Add OAuth Token
+* Auth header: Add OIDC Token
 * Service account: Cloud Run, Cloud Run Functions and Scheduler Service Account
 * Scope: URL_TO_FUNCTION
 
