@@ -330,11 +330,13 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 Google Cloud > Secret manager > New
 
 * Name: **versions-tracker-services**
-* Secret value: ```{
+* Secret value: 
+```{
 "gmail_sender_email": "YOU@gmail.com",
 "gmail_app_password": "APP_PASSWORD",
 "recipient_email_addresses":   "YOU@gmail.com"
-}```
+}
+```
 * Location(s): **europe-north1**
 * Labels: 
   * owner: YOUR_NAME
