@@ -73,15 +73,19 @@ Table of contents:
 - In main read applications_list.json and loop over it
 - Activity/Reflection: 
 
-9. **Implementing Email Message if There Are New Version**<br>
+9. **Implement Bucket check**<br>
+- In main read data from bucket, and store latest versions there
+- Activity/Reflection: 
+
+10. **Implementing Email Message if There Are New Version**<br>
 - If there are any new versions we want an email
 - Activity/Reflection: Is there a better way than email?
 
-10. **Congratulations and Learning Tip**<br>
+11. **Congratulations and Learning Tip**<br>
 - Learning tip: As you work through each step, don’t wait until the end to test your application. 
 - Reflection: What Did You Learn?
 
-11. **Quiz**
+12. **Quiz**
 
 ---
 
@@ -327,6 +331,8 @@ https://console.cloud.google.com > Cloud Scheduler > [Create Job]<br>
 3. Implement get_version_github.py 
 
 4. Implement loop in main
+
+5. Add Bucket to main
 
 
 ---

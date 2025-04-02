@@ -2,44 +2,56 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-
-def get_version_github(url: str):
+def get_version_from_filename(version_url: str):
     """
-    Fetches the latest version of a software from the given URL.
-
-    :param url: The URL from which to fetch the version
-    :return: The latest version (in string format)
+    Fetch the latest version from a filename pattern like 'Git-2.48.1-64-bit.exe'.
     """
-    log_headline: str = "get_version_github()"
-    print(f"{log_headline} - Fetching data from {url}")
+    log_headline: str = "get_version_from_filename()"
+    print(f"{log_headline} · {version_url}")
 
     try:
-        response = requests.get(url)
+        response = requests.get(version_url)
         response.raise_for_status()
 
+        # Parse the HTML response using BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
-        version_tags = soup.find_all('a', href=True)
 
-        version_pattern = re.compile(r'v?(\d+\.\d+\.\d+)')
-        versions = [match.group(1) for tag in version_tags if (match := version_pattern.search(tag.text))]
+        # Find all links containing potential versioned filenames
+        links = soup.find_all('a', href=True)
+
+        # Regex to match filenames like '*-2.48.1-64-*.exe'
+        version_pattern = re.compile(r'.*-(\d+\.\d+\.\d+)-64-.*\.exe')
+
+        versions = [match.group(1) for link in links if (match := version_pattern.search(link.text))]
 
         if not versions:
-            print(f"No valid versions found at {url}")
+            print(f"{log_headline} · No valid version found for {version_url}")
             return None
 
+        # Sort versions in descending order
         versions.sort(key=lambda v: list(map(int, v.split('.'))), reverse=True)
-        return versions[0]
+        latest_version = versions[0]
+
+        return latest_version
 
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data from URL: {e}")
+        print(f"{log_headline} · Error fetching data from {version_url}: {e}")
         return None
 
-if __name__ == '__main__':
-    print("get_latest_version local run")
-    git_url = "https://github.com/git-for-windows/git/releases"
-    latest_git_version = get_version_github(git_url)
 
-    if latest_git_version:
-        print(f"Git latest version: {latest_git_version}")
-    else:
-        print("Failed to fetch the latest Git version.")
+if __name__ == '__main__':
+    print("get_version_from_filename() · Running locally")
+
+    applications_list = [
+        {
+            "name": "Git",
+            "website_url": "https://git-scm.com",
+            "version_url": "https://github.com/git-for-windows/git/releases",
+            "version_check_function": "get_version_from_filename"
+        }
+    ]
+
+    for application_dict in applications_list:
+        version_url = application_dict['version_url']
+        latest_version = get_version_from_filename(version_url=version_url)
+        print(f"get_version_from_filename() · latest_version={latest_version}")
