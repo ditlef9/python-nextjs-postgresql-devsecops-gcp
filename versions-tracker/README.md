@@ -61,19 +61,27 @@ Table of contents:
 - Create a new Google Cloud Scheduler that checks for new versions
 - Reflection: How often should the scheduler run?
 
-6. **Implementing Check for New Versions**<br>
+6. **Implementing Check for New Versions: applications_list.json and get_version_list.py**<br>
 - Program the check for new versions
 - Activity/Reflection: What other services do you use?
 
-7. **Implementing Email Message if There Are New Version**<br>
+7. **Implementing Check for New Versions: get_version_github.py **<br>
+- Program the check for new versions
+- Activity/Reflection:
+
+8. **Implementing Check for New Versions: Implement loop in main **<br>
+- In main read applications_list.json and loop over it
+- Activity/Reflection: 
+
+9. **Implementing Email Message if There Are New Version**<br>
 - If there are any new versions we want an email
 - Activity/Reflection: Is there a better way than email?
 
-8. **Congratulations and Learning Tip**<br>
+10. **Congratulations and Learning Tip**<br>
 - Learning tip: As you work through each step, don’t wait until the end to test your application. 
 - Reflection: What Did You Learn?
 
-9. **Quiz**
+11. **Quiz**
 
 ---
 
