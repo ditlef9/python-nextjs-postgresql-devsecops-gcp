@@ -10,7 +10,7 @@ def get_version_github(url: str):
     :param url: The URL from which to fetch the version
     :return: The latest version (in string format)
     """
-    log_headline: str = "get_version_needle()"
+    log_headline: str = "get_version_github()"
     print(f"{log_headline} - Fetching data from {url}")
 
     try:
