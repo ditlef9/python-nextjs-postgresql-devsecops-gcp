@@ -69,7 +69,7 @@ Table of contents:
 - Program the check for new versions
 - Activity/Reflection:
 
-8. **Implement loop in main **<br>
+8. **Implement loop in main**<br>
 - In main read applications_list.json and loop over it
 - Activity/Reflection: 
 
