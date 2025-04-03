@@ -344,13 +344,28 @@ if __name__ == "__main__":
         app.run(debug=False, host="0.0.0.0", port=8080)
 ```
 
-**9. Install requirements**
+
+**9. Setup venv**
+
+Windows:
+```commandline
+python -m venv .venv
+.venv\Scripts\activate 
+```
+
+Linux/Mac:
+```commandline
+python -m venv .venv
+.venv/Scripts/activate 
+```
+
+**10. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**10. Run application**<br>
+**11. Run application**<br>
 In PyCharm go to main.py and click `Run`
 
 
