@@ -345,7 +345,8 @@ Google Cloud > Secret manager > New
 
 * Name: **versions-tracker-services**
 * Secret value: 
-```{
+```json
+{
 "gmail_sender_email": "YOU@gmail.com",
 "gmail_app_password": "APP_PASSWORD",
 "recipient_email_addresses":   "YOU@gmail.com"
