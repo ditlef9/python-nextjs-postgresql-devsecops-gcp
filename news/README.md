@@ -292,7 +292,7 @@ sqlalchemy                # Added by YOUR_NAME. SQLAlchemy ORM and database tool
 
 ```
 
-**7. Create src/main.py**
+**7. Create main.py**
 
 ```python
 import os
