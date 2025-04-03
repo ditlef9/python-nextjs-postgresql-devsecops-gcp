@@ -307,12 +307,13 @@ app = Flask(__name__)
 # - General ----------------------------------------------------------------
 @app.route('/', methods=['GET'])
 def __index():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'index.html', mimetype='text/html')
+    print("__index() · Init")
+    return send_from_directory(os.path.join(app.root_path, 'src/static'), 'index.html', mimetype='text/html')
 
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon') # noqa
+    return send_from_directory(os.path.join(app.root_path, 'src/static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon') # noqa
 
 
 
@@ -322,7 +323,7 @@ if __name__ == "__main__":
     # Developing or production?
     home = str(Path.home())
     home_array = home.split("\\")
-    if home_array[0] in ["C:" "/Users/YOUR_MAC_OR_UBUNTU_USERNAME"]:
+    if home_array[0] in ["C:", "/Users/YOUR_MAC_OR_UBUNTU_USERNAME"]:
         # Run Database Migrations
         # db.run_migrations()
 
@@ -330,11 +331,7 @@ if __name__ == "__main__":
         print("main()·Flask API running in Developing Mode")
 
         # Start app
-        app.run(debug=True, 
-                host="0.0.0.0",
-                port=8080,
-                ssl_context=('src/certificates/localhost_cert.pem',
-                             'src/certificates/localhost_key.pem'))
+        app.run(debug=False, host="0.0.0.0", port=8080, ssl_context=('src/certificates/localhost_cert.pem', 'src/certificates/localhost_key.pem')) # noqa
 
     else:
         # Production mode
