@@ -284,12 +284,15 @@ Download favicon and add it to the `static` directory:
 **6. Add requirements.txt**
 
 ```
-flask                     # Added by YOUR_NAME. Added by YOUR_NAME.A lightweight WSGI web application framework.
-flask-cors                # Added by YOUR_NAME. CORS (Cross-Origin Resource Sharing) support for Flask.
-pg8000                    # Added by YOUR_NAME. A Pure Python database driver for PostgreSQL.
+bcrypt                      # Added by YOUR_NAME. Widely used hashing library for passwords in Python.
+flask                       # Added by YOUR_NAME. Added by YOUR_NAME.A lightweight WSGI web application framework.
+flask-cors                  # Added by YOUR_NAME. CORS (Cross-Origin Resource Sharing) support for Flask.
+pg8000                      # Added by YOUR_NAME. A Pure Python database driver for PostgreSQL.
 google-cloud-secret-manager # Added by YOUR_NAME. Google Cloud Secret Manager client library for Python.
-sqlalchemy                # Added by YOUR_NAME. SQLAlchemy ORM and database toolkit for Python.
-
+cloud-sql-python-connector  # Added by YOUR_NAME. Connect to PostgresSQL from Google Cloud Run.
+sqlalchemy                  # Added by YOUR_NAME. SQLAlchemy ORM and database toolkit for Python.
+gunicorn                    # Added by YOUR_NAME. Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
+pyjwt                       # Added by YOUR_NAME. Create JWT from Python.
 ```
 
 **7. Create main.py**

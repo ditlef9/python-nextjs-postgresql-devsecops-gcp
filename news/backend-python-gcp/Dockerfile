@@ -20,4 +20,4 @@ RUN pip install -r requirements.txt
 ENV PYTHONPATH /app
 
 # Run script
-CMD [ "python", "./src/main.py" ]
+CMD [ "python", "main.py" ]
