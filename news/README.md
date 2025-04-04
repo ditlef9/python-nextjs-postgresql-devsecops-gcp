@@ -128,7 +128,7 @@ Table of contents:
 - Activity/Reflection: What precautions should be taken when deleting records?
 
 18. **Add CORS**<br>
-Make the backend only available from frontend
+- Make the backend only available from frontend
 - Reflection: ?
 
 19. **Congratulations and Learning Tip**<br>
