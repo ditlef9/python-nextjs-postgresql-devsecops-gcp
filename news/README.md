@@ -537,8 +537,14 @@ Service Scaling
 * Minimum number of instances: 0
 
 Containers > Resources:
-* Memory: 128 MB
-* CPU: 167m
+
+| Memory         | CPU  | 
+|----------------|------|
+| 128 MB (128Mi) | 83m  |
+| 256 MB (256Mi) | 167m |
+| 512 MB (512Mi) | 333m |
+| 1 GB (1GiB)    | 583m |
+
 
 Containers > Revision scaling:
 * Minimum number of instances: 0
