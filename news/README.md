@@ -538,6 +538,10 @@ Service Scaling
 
 Containers > Resources:
 
+* 128 MB (128Mi). 1vCPU
+
+If we do not use cold starts, then this table would help us use minimum resources:
+
 | Memory         | CPU  | 
 |----------------|------|
 | 128 MB (128Mi) | 83m  |
