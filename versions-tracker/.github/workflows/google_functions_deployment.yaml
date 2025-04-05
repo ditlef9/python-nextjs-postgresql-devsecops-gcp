@@ -1,0 +1,49 @@
+# Service accounts are located here:
+# https://console.cloud.google.com/iam-admin/serviceaccounts
+#
+# This deployment uses the following service account:
+# - Name: Github Actions Auth
+#   ID: github-actions-auth@GOOGLE_CLOUD_PROJECT_ID.iam.gserviceaccount.com
+#
+# The secret is stored under
+# Github > Repo > Settings > Secrets and variables > Actions > Repository secrets as
+# `GCP_CREDENTIALS`.
+
+
+name: build-and-deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: 'actions/checkout@v3'
+    - run: ls
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - name: Debug GCP credentials
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+      run: |
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" > credentials.json
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v1'
+      with:
+        version: '>= 363.0.0'
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info'
+    - name: Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: 'Deploy a gen 2 cloud function'
+      run: 'gcloud functions deploy version-tracker --project=YOUR_PROJECT --gen2 --runtime=python312 --region=europe-north1 --trigger-http --source=. --entry-point=main --max-instances=1 --memory=256MB --timeout=60s'
