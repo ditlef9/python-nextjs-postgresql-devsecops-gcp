@@ -221,7 +221,7 @@ Permissions/Assign Roles:
 * Service Account User (`roles/iam.serviceAccountUser`)
 * Storage Admin (`roles/storage.admin`) (if your function uses Cloud Storage)
 * Cloud Build Editor (`roles/cloudbuild.builds.editor`) (for deploying Cloud Functions)
-* Viewer (roles/viewer) (For cloudfunctions.functions.get permission)
+* Viewer (`cloudfunctions.functions.get` permission)
 
 **3. Create a key**
 
