@@ -1,5 +1,4 @@
 import datetime
-import json
 import os
 import ssl
 from pathlib import Path
@@ -16,7 +15,7 @@ from config_project import config_project
 class DBAdapter:
     """
     Handles database calls to PostgresSQL.
-    The database connection string is located in db_config.py
+    The database connection string is located in config_project.py
     Works with SQLAlchemy version 2 and newer
     """
     # Pool
@@ -432,7 +431,7 @@ class DBAdapter:
                 datetime_ymdhms = now.strftime("%Y-%m-%d %H:%M:%S")
 
                 # Mark it as run in liquid-base
-                query: str = f"INSERT INTO {self.__prefix}_migrations (base_module, base_name, base_run_timestamp) VALUES (:base_module, :base_name, :base_run_timestamp)"  # noqa
+                query: str = f"INSERT INTO n_migrations (base_module, base_name, base_run_timestamp) VALUES (:base_module, :base_name, :base_run_timestamp)"  # noqa
                 parameters: dict = {"base_module": module, "base_name": name, "base_run_timestamp": datetime_ymdhms}
                 self.insert(query=query, parameters=parameters)
 
