@@ -774,10 +774,29 @@ VALUES (
 * Copy `app/globals.css` (the same as we used in our user feedback form)
 * Clean `app/layout.tsx`
 * Clean `app/page.tsx`, add link to Register and Login
-* Clean `app/(public)/layout.tsx`
+* Create layout `app/(public)/layout.tsx`
 * Create page `app/(public)/register/page.tsx`
 
+* Create .env.dev:
+```
+NEXT_PUBLIC_BACKEND_API_URL=https://127.0.0.1:8080
+```
+* Install dependencies:
+```
+npm install dotenv
+```
 
+* In the backend enable CORS by adding `CORS(app)`:
+```
+from flask import Flask, send_from_directory
+from flask_cors import CORS
+
+
+# - Flask App ----------------------------------------------------------------
+app = Flask(__name__)
+CORS(app) # Enables cors for routes
+
+```
 ---
 
 ## 🔑 10 Login
