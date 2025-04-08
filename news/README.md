@@ -88,56 +88,59 @@ Table of contents:
 - Implementing user registration with validation and password hashing.
 - Activity/Reflection: 
 
-9. **Login**<br>
+9. **Login Backend**<br>
 - Authenticating users and managing sessions/tokens.
 - Activity/Reflection: What authentication method did you choose and why?
 
-10. **Admin**<br>
+10. **Login frontend**<br>
+- Authenticating users and managing sessions/tokens.
+- Activity/Reflection: 
+
+11. **Admin**<br>
 - Creating the admin dashboard
 - Activity/Reflection: Can you style the ul and li ?
 
-11. **List users**<br>
+12. **List users**<br>
 - List all users on the admin dashboard
 - Activity/Reflection: 
 
-12. **Edit user**<br>
+13. **Edit user**<br>
 - Edit a user on control panel
 - Activity/Reflection: Can you add Change password function?
  
-13. **Delete user**<br>
+14. **Delete user**<br>
 - Delete a user on control panel
 - Activity/Reflection: 
 
-
-14. **Create news**<br>
+15. **Create news**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-15. **List news**<br>
+16. **List news**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-16. **List news on admin on front end**<br>
+17. **List news on admin on front end**<br>
 - Implement admin view with edit and delete function
 - Activity/Reflection: 
 
-17. **Edit news**<br>
+18. **Edit news**<br>
 - Allowing authorized users to update existing news articles.
 - Activity/Reflection: How do you handle permissions for editing content?
 
-18. **Delete news**<br>
+19. **Delete news**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-19. **Add CORS**<br>
+20. **Add CORS**<br>
 - Make the backend only available from frontend
 - Reflection: ?
 
-20. **Congratulations and Learning Tip**<br>
+21. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-21. **Quiz**
+22. **Quiz**
 
 ---
 
