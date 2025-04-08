@@ -1,6 +1,4 @@
 from google.cloud import secretmanager
-import hashlib
-
 
 def google_secret_manager_access_secret_version(project_id: str, secret_id: str, version_id: str = "latest"):
     """
