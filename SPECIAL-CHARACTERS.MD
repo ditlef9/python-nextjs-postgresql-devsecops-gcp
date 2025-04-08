@@ -15,6 +15,7 @@
 | `&`       | Ampersand       |
 | `-`       | Hyphens         |
 | `^`       | Caret           |
+| `:`       | Colon           |
 
 ## 
 
