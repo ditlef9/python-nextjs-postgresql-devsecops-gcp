@@ -104,47 +104,47 @@ Table of contents:
 - Handle validate token and get all users in backend
 - Activity/Reflection: 
 
-12. **List Users Frontend**<br>
+13. **List Users Frontend**<br>
 - List all users on the admin dashboard
 - Activity/Reflection: 
 
-13. **Edit user**<br>
+14. **Edit user**<br>
 - Edit a user on control panel
 - Activity/Reflection: Can you add Change password function?
  
-14. **Delete user**<br>
+15. **Delete user**<br>
 - Delete a user on control panel
 - Activity/Reflection: 
 
-15. **Create news**<br>
+16. **Create news**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-16. **List news**<br>
+17. **List news**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-17. **List news on admin on front end**<br>
+18. **List news on admin on front end**<br>
 - Implement admin view with edit and delete function
 - Activity/Reflection: 
 
-18. **Edit news**<br>
+19. **Edit news**<br>
 - Allowing authorized users to update existing news articles.
 - Activity/Reflection: How do you handle permissions for editing content?
 
-19. **Delete news**<br>
+20. **Delete news**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-20. **Add CORS**<br>
+21. **Add CORS**<br>
 - Make the backend only available from frontend
 - Reflection: ?
 
-21. **Congratulations and Learning Tip**<br>
+22. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-22. **Quiz**
+23. **Quiz**
 
 ---
 
