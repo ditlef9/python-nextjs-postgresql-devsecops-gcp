@@ -100,7 +100,11 @@ Table of contents:
 - Creating the admin dashboard
 - Activity/Reflection: Can you style the ul and li ?
 
-12. **List users**<br>
+12. **List Users Backend**<br>
+- Handle validate token and get all users in backend
+- Activity/Reflection: 
+
+12. **List Users Frontend**<br>
 - List all users on the admin dashboard
 - Activity/Reflection: 
 
@@ -818,7 +822,15 @@ CORS(app) # Enables cors for routes
 * Create lib `app/lib/auth.ts`
 * Create lib `app/lib/loginIsRequiredServer.ts`
 * Create lib `app/lib/useLoginRequiredClient.ts`
+* Create types `app/types/next-auth.d.ts`
 * Create page `app/(public)/login/page.tsx`
+
+Edit .env.development and add:
+```
+NEXT_PUBLIC_BACKEND_API_URL=https://127.0.0.1:8080
+NODE_TLS_REJECT_UNAUTHORIZED=0
+NEXT_AUTH_SECRET=F7Bb0yRDIKLp3Op6jos0iJhhJiKBgDPJQPazYJSXscc= # openssl rand -base64 32
+```
 
 
 ---
