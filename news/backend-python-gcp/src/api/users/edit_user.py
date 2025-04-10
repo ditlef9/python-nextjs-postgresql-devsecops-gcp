@@ -31,7 +31,6 @@ def edit_user(db: DBAdapter, jwt_secret_key: str, get_user_id: int):
     if my_user_rank != "admin" and my_user_rank != "owner":
         return {"message": f"Only admin and owner can get edit users", "data": None, "error": "Forbidden"}, 403
 
-    # Get User
 
     # Get user
     query: str = """SELECT user_id, user_email, user_first_name, user_middle_name, user_last_name, user_display_name, user_is_approved, user_rank, user_type FROM n_users_index WHERE user_id=:user_id"""
