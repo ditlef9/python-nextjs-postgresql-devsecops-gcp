@@ -108,43 +108,67 @@ Table of contents:
 - List all users on the admin dashboard
 - Activity/Reflection: 
 
-14. **Edit user**<br>
+14. **Edit User backend**<br>
+- Edit a user with API request
+- Activity/Reflection: 
+ 
+15. **Edit User Frontend**<br>
 - Edit a user on control panel
 - Activity/Reflection: Can you add Change password function?
  
-15. **Delete user**<br>
+16. **Delete User Backend**<br>
+- Delete a user with API request
+- Activity/Reflection: 
+
+17. **Delete User Frontend**<br>
 - Delete a user on control panel
 - Activity/Reflection: 
 
-16. **Create news**<br>
+18. **Create News Backend**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-17. **List news**<br>
+19. **Create News Frontend**<br>
+- Creating news on frontend
+- Activity/Reflection: 
+
+20. **List News Backend**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-18. **List news on admin on front end**<br>
+21. **List News Frontend**<br>
+- Implementing an API to fetch and display news articles.
+- Activity/Reflection: Can you format the date time?
+
+22. **List news on admin on front end**<br>
 - Implement admin view with edit and delete function
 - Activity/Reflection: 
 
-19. **Edit news**<br>
-- Allowing authorized users to update existing news articles.
-- Activity/Reflection: How do you handle permissions for editing content?
+23. **Edit news backend**<br>
+- Allowing authorized users to update existing news articles with API request.
+- Activity/Reflection: 
 
-20. **Delete news**<br>
+24. **Edit news frontend**<br>
+- Allowing authorized users to update existing news on frontend.
+- Activity/Reflection: 
+
+25. **Delete news backend**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-21. **Add CORS**<br>
+26. **Delete news frontend**<br>
+- Allowing deletion of news on frontend
+- Activity/Reflection: 
+
+27. **Add CORS**<br>
 - Make the backend only available from frontend
 - Reflection: ?
 
-22. **Congratulations and Learning Tip**<br>
+28. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-23. **Quiz**
+29. **Quiz**
 
 ---
 
