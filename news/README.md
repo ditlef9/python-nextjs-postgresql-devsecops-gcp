@@ -885,6 +885,15 @@ NEXT_AUTH_SECRET=F7Bb0yRDIKLp3Op6jos0iJhhJiKBgDPJQPazYJSXscc= # openssl rand -ba
 * Implement `src/api/users/get_user.py`
 * Implement `src/api/users/edit_user.py`
 
+
+If you need to change `user_is_approved` then this is the query that you can run in pgAdmin:
+
+```sql
+UPDATE n_users_index
+SET user_is_approved=true
+WHERE user_id=1
+```
+
 ### Edit user frontend
 
 * Implement `app/(public)/users/[userId]/edit/page.tsx`

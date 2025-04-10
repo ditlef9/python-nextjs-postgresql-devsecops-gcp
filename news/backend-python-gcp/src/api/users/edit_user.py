@@ -122,10 +122,14 @@ def edit_user(db: DBAdapter, jwt_secret_key: str, get_user_id: int):
     # user_is_approved
     post_is_approved = json_data.get('user_is_approved')
     post_is_approved_bool: bool = False
-    if post_is_approved == "":
-        return {"message": f"Is approved is blank", "data": None, "error": "Payment Required"}, 402
-    if post_is_approved == "true":
-        post_is_approved_bool = True
+    if type(post_is_approved) is None:
+        return {"message": "Is approved is blank", "data": None, "error": "Payment required"}, 402
+    elif type(post_is_approved) is bool:
+        post_is_approved_bool = post_is_approved
+    else:
+        if post_is_approved.lower() == "true":
+            post_is_approved_bool = True
+
 
     # user_type
     post_type = json_data.get('user_type')
