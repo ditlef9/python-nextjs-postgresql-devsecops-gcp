@@ -29,15 +29,16 @@ Table of contents:
 12. [📋 List users](#-12-list-users)
 13. [🖊️ Edit user](#%EF%B8%8F-13-edit-user)
 14. [❌ Delete user](#-14-delete-user)
-15. [📰 Create news](#-15-create-news)
-16. [📃 List news](#-16-list-news-on-homepage)
-17. [📋 List news on admin on front end](#-17-list-news-on-admin-on-front-end)
-18. [✏️ Edit news](#%EF%B8%8F-18-edit-news)
-19. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
-20. [🔒 Add CORS](#-20-add-cors)
-21. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-21-running-the-finished-news-backend-and-frontend-locally)
-22. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-22-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
-23. [📜 License](#-23-license)
+15. [🧑 Create user](#-15-create-user)
+16. [📰 Create news](#-15-create-news)
+17. [📃 List news](#-16-list-news-on-homepage)
+18. [📋 List news on admin on front end](#-17-list-news-on-admin-on-front-end)
+19. [✏️ Edit news](#%EF%B8%8F-18-edit-news)
+20. [🗑️ Delete news](#%EF%B8%8F-17-delete-news)
+21. [🔒 Add CORS](#-20-add-cors)
+22. [🖥️ Running the Finished News Backend and Frontend Locally](#%EF%B8%8F-21-running-the-finished-news-backend-and-frontend-locally)
+23. [☁️ Running the Finished News Backend and Frontend on Google Cloud Run](#%EF%B8%8F-22-running-the-finished-news-backend-and-frontend-on-google-cloud-run)
+24. [📜 License](#-23-license)
 
 ---
 
@@ -124,51 +125,59 @@ Table of contents:
 - Delete a user on control panel
 - Activity/Reflection: 
 
-18. **Create News Backend**<br>
+19. **Create User backend**<br>
+- Add a user with API request
+- Activity/Reflection: 
+ 
+20. **Create User Frontend**<br>
+- Add a user on control panel
+- Activity/Reflection: Can you add Change password function?
+ 
+21. **Create News Backend**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-19. **Create News Frontend**<br>
+22. **Create News Frontend**<br>
 - Creating news on frontend
 - Activity/Reflection: 
 
-20. **List News Backend**<br>
+23. **List News Backend**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-21. **List News Frontend**<br>
+24. **List News Frontend**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-22. **List news on admin on front end**<br>
+25. **List news on admin on front end**<br>
 - Implement admin view with edit and delete function
 - Activity/Reflection: 
 
-23. **Edit news backend**<br>
+26. **Edit news backend**<br>
 - Allowing authorized users to update existing news articles with API request.
 - Activity/Reflection: 
 
-24. **Edit news frontend**<br>
+27. **Edit news frontend**<br>
 - Allowing authorized users to update existing news on frontend.
 - Activity/Reflection: 
 
-25. **Delete news backend**<br>
+28. **Delete news backend**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-26. **Delete news frontend**<br>
+29. **Delete news frontend**<br>
 - Allowing deletion of news on frontend
 - Activity/Reflection: 
 
-27. **Add CORS**<br>
+30. **Add CORS**<br>
 - Make the backend only available from frontend
 - Reflection: ?
 
-28. **Congratulations and Learning Tip**<br>
+31. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-29. **Quiz**
+32. **Quiz**
 
 ---
 
@@ -917,7 +926,21 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 📰 15 Create news
+## 🧑 15 Create user
+
+
+### Create user backend
+
+* Implement `src/api/users/create_user.py`
+
+### Create user frontend
+
+* Implement `app/(public)/users/create-user/page.tsx`
+
+
+---
+
+## 📰 16 Create news
 
 ### Create news backend
 
@@ -929,7 +952,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 📃 16 List news on homepage
+## 📃 17 List news on homepage
 
 
 ### Create news backend
@@ -942,14 +965,14 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 📋 17 List news on admin on front end
+## 📋 18 List news on admin on front end
 
 
 * Implement `app/(private)/admin/news/page.tsx`
 
 ---
 
-## ✏️ 18 Edit news
+## ✏️ 19 Edit news
 
 
 ### Edit news backend
@@ -964,7 +987,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 🗑️ 19 Delete news
+## 🗑️ 20 Delete news
 
 
 ### Edit news backend
@@ -978,7 +1001,7 @@ Assignment/Reflection: Can you implement a change password function?
 
 ---
 
-## 🔒 20 Add CORS
+## 🔒 21 Add CORS
 
 main.py:<br>
 
@@ -999,7 +1022,7 @@ CORS(app, origins=["http://localhost:3000", "https://news-frontend-644994207224.
 
 ---
 
-## 🖥️ 21 Running the Finished News Backend and Frontend Locally
+## 🖥️ 22 Running the Finished News Backend and Frontend Locally
 
 ## Python backend locally
 
@@ -1018,7 +1041,7 @@ CORS(app, origins=["http://localhost:3000", "https://news-frontend-644994207224.
 
 ---
 
-## ☁️ 22 Running the Finished News Backend and Frontend on Google Cloud Run
+## ☁️ 23 Running the Finished News Backend and Frontend on Google Cloud Run
 
 Please see 
 🌐 6 Setting up Google Cloud Infrastructure for New backend and Frontend
@@ -1026,7 +1049,7 @@ Please see
 
 ---
 
-## 📜 23 License
+## 📜 24 License
 
 
 This project is licensed under the
