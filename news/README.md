@@ -143,7 +143,7 @@ Table of contents:
 
 23. **List News Backend**<br>
 - Implementing an API to fetch and display news articles.
-- Activity/Reflection: Can you format the date time?
+- Activity/Reflection: 
 
 24. **List News Frontend**<br>
 - Implementing an API to fetch and display news articles.
