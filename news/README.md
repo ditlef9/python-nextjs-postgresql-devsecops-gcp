@@ -931,11 +931,18 @@ Assignment/Reflection: Can you implement a change password function?
 
 ### Create user backend
 
-* Implement `src/api/users/create_user.py`
+
+We have already created this in `register.py`.
+
+If we want to create a user on the control panel, then the
+only difference is that we need to check the token, and that the  
+field `user_is_approved` should be set to `True`.
+
+* Implement `src/api/users/create_user_as_admin.py`
 
 ### Create user frontend
 
-* Implement `app/(public)/users/create-user/page.tsx`
+* Implement `app/(public)/admin/users/create-user/page.tsx`
 
 
 ---
