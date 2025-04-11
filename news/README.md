@@ -142,7 +142,7 @@ Table of contents:
 - Activity/Reflection: 
 
 23. **List News Backend**<br>
-- Implementing an API to fetch and display news articles.
+- Implementing an API route that gives all news articles.
 - Activity/Reflection: 
 
 24. **List News Frontend**<br>
