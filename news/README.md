@@ -171,7 +171,19 @@ Table of contents:
 
 29. **Add CORS**<br>
 - Make the backend only available from frontend
-- Reflection: ?
+
+- This is just one layer of defense:
+
+    - You should also only allow traffic to backend from certain IP addresses (e.g., your frontend host, admin IPs).
+
+    - You should log all access and errors — both for security auditing and debugging.
+
+    - You should implement rate limiting and throttling to mitigate DDoS attacks or abuse.
+
+    - You should monitor backend for anomalies (spikes, unusual patterns, etc.).
+
+    - You might want to add a Web Application Firewall (WAF) as an extra protection layer.
+
 
 30. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
