@@ -125,59 +125,59 @@ Table of contents:
 - Delete a user on control panel
 - Activity/Reflection: 
 
-19. **Create User backend**<br>
+18. **Create User backend**<br>
 - Add a user with API request
 - Activity/Reflection: 
  
-20. **Create User Frontend**<br>
+19. **Create User Frontend**<br>
 - Add a user on control panel
 - Activity/Reflection: Can you add Change password function?
  
-21. **Create News Backend**<br>
+20. **Create News Backend**<br>
 - Creating an API to add news articles with authentication.
 - Activity/Reflection: What data validation checks are necessary for posting news?
 
-22. **Create News Frontend**<br>
+21. **Create News Frontend**<br>
 - Creating news on frontend
 - Activity/Reflection: 
 
-23. **List News Backend**<br>
+22. **List News Backend**<br>
 - Implementing an API route that gives all news articles.
 - Activity/Reflection: 
 
-24. **List News Frontend**<br>
+23. **List News Frontend**<br>
 - Implementing an API to fetch and display news articles.
 - Activity/Reflection: Can you format the date time?
 
-25. **List news on admin on front end**<br>
+24. **List news on admin on front end**<br>
 - Implement admin view with edit and delete function
 - Activity/Reflection: 
 
-26. **Edit news backend**<br>
+25. **Edit news backend**<br>
 - Allowing authorized users to update existing news articles with API request.
 - Activity/Reflection: 
 
-27. **Edit news frontend**<br>
+26. **Edit news frontend**<br>
 - Allowing authorized users to update existing news on frontend.
 - Activity/Reflection: 
 
-28. **Delete news backend**<br>
+27. **Delete news backend**<br>
 - Implementing secure deletion of news articles.
 - Activity/Reflection: What precautions should be taken when deleting records?
 
-29. **Delete news frontend**<br>
+28. **Delete news frontend**<br>
 - Allowing deletion of news on frontend
 - Activity/Reflection: 
 
-30. **Add CORS**<br>
+29. **Add CORS**<br>
 - Make the backend only available from frontend
 - Reflection: ?
 
-31. **Congratulations and Learning Tip**<br>
+30. **Congratulations and Learning Tip**<br>
 - Learning tip: ?
 - Reflection: ?
 
-32. **Quiz**
+31. **Quiz**
 
 ---
 
