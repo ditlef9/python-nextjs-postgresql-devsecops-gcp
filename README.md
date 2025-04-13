@@ -8,7 +8,9 @@ Table of contents:
 2. [🛠️ Setup Development Environment (Software installation guide)](#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
 3. [📌 Technologies Covered](#-3-technologies-covered)
 4. [🎯 Projects Included](#-4-projects-included)
-5. [📜 License](#-5-license)
+5. [🛡️ DevSecOps](#-4-projects-included)
+6. [🔗 Links](#-4-projects-included)
+7. [📜 License](#-7-license)
 
 ---
 
@@ -55,7 +57,38 @@ Select your operating system:
 
 --- 
 
-## 📜 5 License
+## 🛡️ 5 DevSecOps
+
+DevSecOps is a software development approach that integrates security practices into every stage of the DevOps pipeline, ensuring faster, more secure application delivery.
+
+
+### Java GitHub Actions Files
+
+* [java-security-checks.yaml](java/.github/workflows/java-security-checks.yaml)
+
+
+### Next.js GitHub Actions Files
+
+* [next-security-checks.yaml](next/.github/workflows/next-security-checks.yaml)
+* [next-snyk-and-zaproxy.yml](next/.github/workflows/next-snyk-and-zaproxy.yml)
+
+
+### Python GitHub Actions Files
+
+* [python-security-checks.yaml](java/.github/workflows/python-security-checks.yaml)
+* [python-snyk-and-zaproxy.yml](next/.github/workflows/python-snyk-and-zaproxy.yml)
+
+
+---
+
+## 🔗 6 Links
+
+
+
+
+---
+
+## 📜 7 License
 
 
 This project is licensed under the
