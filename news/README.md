@@ -186,8 +186,13 @@ Table of contents:
 
 
 30. **Congratulations and Learning Tip**<br>
-- Learning tip: ?
-- Reflection: ?
+- Learning tip: Explaining a concept to someone else—whether it's a friend, a pet, or even just out loud to yourself—forces your brain to organize the information clearly. If you can't explain it simply, you probably don't fully understand it yet. This method is often called the Feynman Technique, and it's super effective.
+- Reflection: When I take the time to teach what I’ve learned, I realize how much I actually understand—and where the gaps are.<br>
+It pushes me to think more clearly and deeply. <br>
+It’s not just about memorizing; it’s about truly grasping the concept. <br>
+By putting things into my own words, I build confidence and retain the knowledge longer. <br>
+Sometimes, I even discover new insights just by trying to explain something simply. <br>
+This makes learning more active and meaningful for me.
 
 31. **Quiz**
 
