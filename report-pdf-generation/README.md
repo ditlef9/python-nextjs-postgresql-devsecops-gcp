@@ -158,13 +158,29 @@ if __name__ == '__main__':
     main(request)
 ```
 
-**5. Install requirements**
+
+
+**5. Setup venv**
+
+Windows:
+```commandline
+python -m venv .venv
+.venv\Scripts\activate 
+```
+
+Linux/Mac:
+```commandline
+python -m venv .venv
+.venv/Scripts/activate 
+```
+
+**6. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**6. Set virtual environment and Run application**<br>
+**7. Run application**<br>
 
 PyCharm > Edit Configurations > Python
 
@@ -175,7 +191,7 @@ PyCharm > Edit Configurations > Python
 In PyCharm click `Run`
 
 
-**7. Add DevSecOps GitHub Action File**<br>
+**8. Add DevSecOps GitHub Action File**<br>
 
 * [python-security-checks.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-security-checks.yaml)
 
