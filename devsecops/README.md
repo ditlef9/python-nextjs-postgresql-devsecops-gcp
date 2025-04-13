@@ -6,8 +6,8 @@
 
 
 Table of contents:
-1. [🚀 Github Actions Files](#-1-learning-objectives-for-versions-tracker)
-2. [📜 License](#-12-license)
+1. [🚀 Github Actions Files](#-1-github-actions-files)
+2. [📜 License](#-2-license)
 
 ---
 

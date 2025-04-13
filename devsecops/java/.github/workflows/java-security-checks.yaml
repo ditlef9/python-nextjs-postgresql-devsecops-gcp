@@ -54,9 +54,30 @@ jobs:
             exit 1
           fi
 
-      # 8. Deploy to Cloud (only if no security issues)
+      # 8. Create an issue if any step fails
+      - name: Create an issue if security checks fail
+        if: failure()  # Trigger if any previous step failed
+        uses: peter-evans/create-issue-from-file@v3
+        with:
+          title: "Security Issue: CI/CD Checks Failed"
+          body: |
+            **Description:**  
+            The CI/CD security checks failed in the pipeline for the repository. Please address the vulnerabilities or issues detected in the latest build.
+            
+            **Check Summary:**
+            - Checkstyle: Linting failed.
+            - SpotBugs: Static analysis failed.
+            - OWASP Dependency Check: High vulnerabilities found.
+            - Secret Detection: Secrets detected.
+            
+            **Action Required:**
+            - Review the security issues in the build logs and fix them as soon as possible.
+          labels: "security, bug"
+          assignees: ${{ github.actor }}  # Replace with the appropriate GitHub username or team
+
+      # 9. Deploy to Cloud (only if no security issues)
       - name: Deploy to Cloud (if secure)
-        if: success()
+        if: success()  # Deploy only if all checks pass
         run: |
           gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
           gcloud app deploy

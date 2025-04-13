@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.9'
 
       # 2. Install dependencies
       - name: Install dependencies
@@ -27,22 +27,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 3. Lint code with Flake8 (Python static analysis)
+      # 3. Lint code with Flake8
       - name: Run Flake8 for linting
         run: |
-          pip install flake8
-          flake8 --max-line-length=120
+          flake8 .
 
-      # 4. Run Type checking with mypy
-      - name: Run mypy for type checking
+      # 4. Run Bandit for security issues
+      - name: Run Bandit for security issues
         run: |
-          pip install mypy
-          mypy .
+          bandit -r .
 
-      # 5. Audit dependencies for known vulnerabilities with Safety
-      - name: Run Safety for dependency audit
+      # 5. Run Safety for known vulnerabilities
+      - name: Run Safety to check for vulnerabilities
         run: |
-          pip install safety
           safety check --full-report
 
       # 6. Check for secret leaks in the code
@@ -54,17 +51,36 @@ jobs:
       # 7. Fail if high vulnerabilities are found
       - name: Fail if high vulnerabilities are found
         run: |
-          pip freeze > requirements.txt
-          safety check --full-report --ignore 003 --ignore 004
-          HIGH_VULN_COUNT=$(safety check --full-report | grep -c 'High')
+          HIGH_VULN_COUNT=$(safety check --json | jq '[.[] | select(.vuln_level=="High")] | length')
           if [ "$HIGH_VULN_COUNT" -gt 0 ]; then
             echo "High severity vulnerabilities found!"
             exit 1
           fi
 
-      # 8. Deploy to cloud (optional, only if no security issues)
+      # 8. Create an issue if any step fails
+      - name: Create an issue if security checks fail
+        if: failure()  # Trigger if any previous step failed
+        uses: peter-evans/create-issue-from-file@v3
+        with:
+          title: "Security Issue: CI/CD Checks Failed"
+          body: |
+            **Description:**  
+            The CI/CD security checks failed in the pipeline for the repository. Please address the vulnerabilities or issues detected in the latest build.
+            
+            **Check Summary:**
+            - Flake8: Linting failed.
+            - Bandit: Security issues detected.
+            - Safety: Vulnerabilities found.
+            - Secret Detection: Secrets detected.
+            
+            **Action Required:**
+            - Review the security issues in the build logs and fix them as soon as possible.
+          labels: "security, bug"
+          assignees: ${{ github.actor }}  # Dynamically assigns to the committer
+
+      # 9. Deploy to Cloud (only if no security issues)
       - name: Deploy to Cloud (if secure)
-        if: success()
+        if: success()  # Deploy only if all checks pass
         run: |
           gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
           gcloud app deploy

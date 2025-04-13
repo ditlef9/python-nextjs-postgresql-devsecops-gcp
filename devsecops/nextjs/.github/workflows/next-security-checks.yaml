@@ -70,7 +70,7 @@ jobs:
             **Action Required:**
             - Review the security issues in the build logs and fix them as soon as possible.
           labels: "security, bug"
-          assignees: "your-github-username"  # Replace with your username or team
+          assignees: ${{ github.actor }}  # Replace with your username or team
 
       # 9. Deploy to Google Cloud if no issues
       - name: Deploy to Google Cloud (if secure)
