@@ -47,7 +47,7 @@ By the end of this module, you will learn how to:
 1. **Introduction**
 
 2. **Creating Python Backend**<br>
-- Implementing core functionality for Python applicaiton
+- Implementing core functionality for Python application
 - Activity/Reflection
 
 
