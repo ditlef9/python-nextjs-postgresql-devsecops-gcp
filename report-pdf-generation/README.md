@@ -164,7 +164,7 @@ PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**6. Set environment environment and Run application**<br>
+**6. Set virtual environment and Run application**<br>
 
 PyCharm > Edit Configurations > Python
 
