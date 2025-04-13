@@ -8,8 +8,8 @@ Table of contents:
 2. [🛠️ Setup Development Environment (Software installation guide)](#%EF%B8%8F-2-setup-development-environment-software-installation-guide)
 3. [📌 Technologies Covered](#-3-technologies-covered)
 4. [🎯 Projects Included](#-4-projects-included)
-5. [🛡️ DevSecOps](#-4-projects-included)
-6. [🔗 Links](#-4-projects-included)
+5. [🛡️ DevSecOps](#%EF%B8%8F-5-devsecops)
+6. [🔗 Links](#-6-links)
 7. [📜 License](#-7-license)
 
 ---
