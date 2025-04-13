@@ -172,9 +172,12 @@ PyCharm > Edit Configurations > Python
 * Script: **main.py**
 * Environment variables: PYTHONUNBUFFERED=1;**GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706**
 
-
 In PyCharm click `Run`
 
+
+**7. Add DevSecOps GitHub Action File**<br>
+
+* [python-security-checks.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-security-checks.yaml)
 
 
 ---
