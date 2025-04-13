@@ -21,10 +21,14 @@ Table of contents:
 ### Next.js
 
 * [next-security-checks.yaml](next/.github/workflows/next-security-checks.yaml)
+* [next-snyk-and-zaproxy.yml](next/.github/workflows/next-snyk-and-zaproxy.yml)
+
+
 
 ### Python
 
 * [python-security-checks.yaml](java/.github/workflows/python-security-checks.yaml)
+* [python-snyk-and-zaproxy.yml](next/.github/workflows/python-snyk-and-zaproxy.yml)
 
 ---
 

@@ -1,0 +1,22 @@
+name: Snyk and ZapProxy for Pyhton (SCA for Pyhton with Snyk and DAST for web with OASP ZAP)
+
+on: [push]
+
+jobs:
+  sca_scan:
+    runs-on: ubuntu-latest
+    name: SCA (Software Composition Analysis) with Snyk
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  dast_scan:
+    runs-on: ubuntu-latest
+    name: DAST (Dynamic Application Security Testing) with OASP ZAP
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'https://your-url.com/'
