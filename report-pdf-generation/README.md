@@ -119,8 +119,7 @@ The report is stored in Google Cloud Bucket, and the data is also stored there.<
 
 Pycharm > File > Close Project<br><br>
 
-Pycharm > Get from VCS<br><br>
-
+Pycharm > Clone Repository<br><br>
 
 **3. Add requirements.txt**
 
