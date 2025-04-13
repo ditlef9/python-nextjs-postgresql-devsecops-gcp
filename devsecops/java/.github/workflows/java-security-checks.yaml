@@ -1,0 +1,62 @@
+name: CI/CD Security Checks for Java
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # 1. Set up Java environment
+      - name: Set up Java JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      # 2. Install dependencies using Maven
+      - name: Install dependencies with Maven
+        run: mvn install -DskipTests
+
+      # 3. Lint code with Checkstyle
+      - name: Run Checkstyle for linting
+        run: |
+          mvn checkstyle:check
+
+      # 4. Run SpotBugs for static analysis
+      - name: Run SpotBugs for static code analysis
+        run: |
+          mvn spotbugs:check
+
+      # 5. Run OWASP Dependency Check for vulnerabilities
+      - name: Run OWASP Dependency Check
+        run: mvn org.owasp:dependency-check-maven:check
+
+      # 6. Check for secret leaks in the code
+      - name: Check for secrets in code
+        uses: paulirish/secretlint-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 7. Fail if high vulnerabilities are found
+      - name: Fail if high vulnerabilities are found
+        run: |
+          HIGH_VULN_COUNT=$(mvn org.owasp:dependency-check-maven:check | grep -c 'HIGH')
+          if [ "$HIGH_VULN_COUNT" -gt 0 ]; then
+            echo "High severity vulnerabilities found!"
+            exit 1
+          fi
+
+      # 8. Deploy to Cloud (only if no security issues)
+      - name: Deploy to Cloud (if secure)
+        if: success()
+        run: |
+          gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
+          gcloud app deploy

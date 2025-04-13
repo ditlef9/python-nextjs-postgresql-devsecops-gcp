@@ -1,0 +1,70 @@
+name: CI/CD Security Checks for Python
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # 1. Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      # 2. Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 3. Lint code with Flake8 (Python static analysis)
+      - name: Run Flake8 for linting
+        run: |
+          pip install flake8
+          flake8 --max-line-length=120
+
+      # 4. Run Type checking with mypy
+      - name: Run mypy for type checking
+        run: |
+          pip install mypy
+          mypy .
+
+      # 5. Audit dependencies for known vulnerabilities with Safety
+      - name: Run Safety for dependency audit
+        run: |
+          pip install safety
+          safety check --full-report
+
+      # 6. Check for secret leaks in the code
+      - name: Check for secrets in code
+        uses: paulirish/secretlint-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 7. Fail if high vulnerabilities are found
+      - name: Fail if high vulnerabilities are found
+        run: |
+          pip freeze > requirements.txt
+          safety check --full-report --ignore 003 --ignore 004
+          HIGH_VULN_COUNT=$(safety check --full-report | grep -c 'High')
+          if [ "$HIGH_VULN_COUNT" -gt 0 ]; then
+            echo "High severity vulnerabilities found!"
+            exit 1
+          fi
+
+      # 8. Deploy to cloud (optional, only if no security issues)
+      - name: Deploy to Cloud (if secure)
+        if: success()
+        run: |
+          gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
+          gcloud app deploy

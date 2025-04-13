@@ -1,0 +1,80 @@
+name: CI/CD Security Checks for Next.js
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # 1. Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 2. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 3. Lint code with ESLint and security plugins
+      - name: Run ESLint with security rules
+        run: |
+          npx eslint . --ext .ts,.tsx --max-warnings 0
+
+      # 4. Run TypeScript type-checking
+      - name: Run TypeScript type-checking
+        run: npm run type-check
+
+      # 5. Run npm audit to check for vulnerabilities
+      - name: Run npm audit
+        run: npm audit --audit-level=high
+
+      # 6. Check for secret leaks in the code
+      - name: Check for secrets in code
+        uses: paulirish/secretlint-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 7. Fail fast on high vulnerabilities
+      - name: Fail if high vulnerabilities are found
+        run: |
+          npm audit --json > audit-report.json
+          HIGH_VULN_COUNT=$(jq '[.advisories[] | select(.severity=="high")] | length' audit-report.json)
+          if [ "$HIGH_VULN_COUNT" -gt 0 ]; then
+            echo "High severity vulnerabilities found!"
+            exit 1
+          fi
+
+      # 8. Create an issue if security checks fail
+      - name: Create an issue if security checks fail
+        if: failure()  # Trigger if the previous steps failed
+        uses: peter-evans/create-issue-from-file@v3
+        with:
+          title: "Security Issue: CI/CD Checks Failed"
+          body: |
+            **Description:**  
+            The CI/CD security checks failed in the pipeline for the repository. Please address the vulnerabilities or issues detected in the latest build.
+            
+            **Check Summary:**
+            - ESLint, TypeScript, npm audit, or secret check failed.
+            
+            **Action Required:**
+            - Review the security issues in the build logs and fix them as soon as possible.
+          labels: "security, bug"
+          assignees: "your-github-username"  # Replace with your username or team
+
+      # 9. Deploy to Google Cloud if no issues
+      - name: Deploy to Google Cloud (if secure)
+        if: success()  # Deploy only if all checks pass
+        run: |
+          gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
+          gcloud app deploy
