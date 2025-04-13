@@ -17,7 +17,7 @@ Backend API with user authentication and Next.js frontend.
 Table of contents:
 1. [📖 Learning Objectives for News backend and Frontend](#-1-learning-objectives-for-news-backend-and-frontend)
 2. [✨ Lessons Overview for News backend and Frontend](#-2-lessons-overview-for-news-backend-and-frontend)
-3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-versions-tracker)
+3. [📸 Diagram and Screenshots from News backend and Frontend](#-3-diagram-and-screenshots-from-news-backend-and-frontend)
 4. [🐍 Creating Python Backend](#-4-creating-python-backend)
 5. [⚛️ Creating Next.js Frontend](#%EF%B8%8F-5-creating-nextjs-frontend)
 6. [🌐 Setting up Google Cloud Infrastructure for New backend and Frontend](#-6-setting-up-google-cloud-infrastructure-for-new-backend-and-frontend)
