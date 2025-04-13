@@ -116,6 +116,8 @@ The report is stored in Google Cloud Bucket, and the data is also stored there.<
 **1. Create new repository in Github**
 
 * https://github.com/new
+* Name: report-pdf-python-gcp 
+* Description: Generate PDF report from JSON files stored in Google Cloud Bucket.
 
 **2. Open application in PyCharm**
 
