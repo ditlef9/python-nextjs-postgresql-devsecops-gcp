@@ -20,15 +20,16 @@ Table of contents:
 3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
 4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-report-pdf-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
-6. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#-6-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
-7. [📄 Creating PDF](#-7-creating-pdf)
-8. [📄 Creating PDF with Vulnerabilities](#-8-creating-pdf-with-vulnerabilities)
-9. [📊 Adding a barchart](#-9-adding-a-barchart)
-10. [☁️ Uploading PDF to Buckets](#%EF%B8%8F-9-uploading-pdf-to-buckets)
-11. [📧 Sending PDF as email](#-10-sending-pdf-as-email)
-12. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-11-running-the-report-pdf-generation-locally)
-13. [☁️ Running the Report PDF-generation on Google Cloud Run Functions](#%EF%B8%8F-12-running-the-report-pdf-generation-on-google-cloud-run)
-14. [📜 License](#-14-license)
+6. [🏃‍♂️ 6 Deploy application to Google Cloud Functions using a GitHub Action File](#6)
+7. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#-7-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
+8. [📄 Creating PDF](#-8-creating-pdf)
+9. [📄 Creating PDF with Vulnerabilities](#-9-creating-pdf-with-vulnerabilities)
+10. [📊 Adding a barchart](#-10-adding-a-barchart)
+11. [☁️ Uploading PDF to Buckets](#%EF%B8%8F-11-uploading-pdf-to-buckets)
+12. [📧 Sending PDF as email](#-12-sending-pdf-as-email)
+13. [🖥️ Running the Report PDF-generation Locally](#%EF%B8%8F-13-running-the-report-pdf-generation-locally)
+14. [☁️ Running the Report PDF-generation on Google Cloud Run Functions](#%EF%B8%8F-14-running-the-report-pdf-generation-on-google-cloud-run)
+15. [📜 License](#-15-license)
 
 ---
 
@@ -50,40 +51,43 @@ By the end of this module, you will learn how to:
 - Implementing core functionality for Python application
 - Activity/Reflection
 
-
 3. **Setting up Google Cloud Infrastructure for Report PDF-generation**<br>
 - Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
 - Activity/Reflection
 
-4. **Generating test data: Assets and their vulnerabilities (critical, high, medium, low)**<br>
+4. *Deploy application to Google Cloud Functions using a GitHub Action File*<br>
+- We will create a GitHub Actions file that deploys the application
+- Activity/Reflection
+
+5. **Generating test data: Assets and their vulnerabilities (critical, high, medium, low)**<br>
 - Structuring mock asset and vulnerability data.
 - Activity/Reflection
 
-5. **Creating PDF**<br>
+6. **Creating PDF**<br>
 - Using ReportLab to generate PDF reports.
 - Activity/Reflection
 
-6. **Creating PDF with Vulnerabilities**<br>
+7. **Creating PDF with Vulnerabilities**<br>
 - Integrating test data into the PDF report
 - Activity/Reflection
 
-7. **Adding a barchart**<br>
+8. **Adding a barchart**<br>
 - Embedding a chart in the PDF report.
 - Activity/Reflection
 
-8️. **Uploading PDF to Buckets**<br>
+9. **Uploading PDF to Buckets**<br>
 - Storing generated PDFs in Google Cloud Storage.
 - Activity/Reflection
 
-9. **Sending PDF as email**<br>
+10. **Sending PDF as email**<br>
 - Attaching the generated PDF and sending automated emails.
 - Activity/Reflection
 
-10. **Congratulations and Learning Tip**<br>
+11. **Congratulations and Learning Tip**<br>
 - Learning tip: When learning new technologies, break down complex tasks into smaller, manageable steps. 
 - Reflection: What are some other use cases where automated reporting and cloud storage can be beneficial?
 
-11. **Quiz**
+12. **Quiz**
 
 ---
 
@@ -194,11 +198,6 @@ PyCharm > Edit Configurations > Python
 In PyCharm click `Run`
 
 
-**8. Add DevSecOps GitHub Action File**<br>
-
-* [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
-
-
 ---
 
 ## 🌐 5 Setting up Google Cloud Infrastructure for Report PDF-generation
@@ -259,14 +258,23 @@ Configure the execution:
 
 ---
 
-## 🧪 6 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)
+
+## 🏃‍♂️ 6 Deploy application to Google Cloud Functions using a GitHub Action File
+
+* [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
+
+
+
+---
+
+## 🧪 7 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)
 
 * Implement `src/test_data/generate_test_data.py`
 
 
 ---
 
-## 📄 7 Creating PDF
+## 📄 8 Creating PDF
 
 * Implement `src/application/a_delete_old/a_delete_old.py`
 * Implement `src/application/b_create_tmp/b_create_tmp.py`
@@ -275,7 +283,7 @@ Configure the execution:
 
 ---
 
-## 📄 8 Creating PDF with Vulnerabilities
+## 📄 9 Creating PDF with Vulnerabilities
 
 * Load bucket:
 
@@ -289,7 +297,7 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 
 ---
 
-## 📊 9 Adding a barchart
+## 📊 10 Adding a barchart
 
 * Implement `src/utils/d_graph_severity/d_graph_severity.py`
 * Implement `src/utils/d_assets.py/helpers/graphs/draw_bar_chart.py`
@@ -298,13 +306,13 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 ---
 
 
-## ☁️ 10 Uploading PDF to Buckets
+## ☁️ 11 Uploading PDF to Buckets
 
 * Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
 
 ---
 
-## 📧 11 Sending PDF as email
+## 📧 12 Sending PDF as email
 
 * Implement `src/utils/google_secret_manager_access_secret_version.py`
 * Implement `src/utils/send_gmail_app_pass.py`
@@ -321,7 +329,7 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 
 
 
-## 🖥️ 12 Running the Report PDF-generation Locally
+## 🖥️ 13 Running the Report PDF-generation Locally
 
 **1. Clone the repository**
 
@@ -343,13 +351,13 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 13 Running the Report PDF-generation on Google Cloud Run Functions
+## ☁️ 14 Running the Report PDF-generation on Google Cloud Run Functions
 
 Please see `🌐 Setting up Google Cloud Infrastructure for Report PDF-generation`.
 
 ---
 
-## 📜 14 License
+## 📜 15 License
 
 
 This project is licensed under the
