@@ -3,7 +3,7 @@ name: Snyk and ZapProxy for Pyhton (SCA for Pyhton with Snyk and DAST for web wi
 on: [push]
 
 jobs:
-  sca_scan:
+  sca-scan-job:
     runs-on: ubuntu-latest
     name: SCA (Software Composition Analysis) with Snyk
     steps:
@@ -12,7 +12,7 @@ jobs:
         uses: snyk/actions/python@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-  dast_scan:
+  dast-scan-job:
     runs-on: ubuntu-latest
     name: DAST (Dynamic Application Security Testing) with OASP ZAP
     steps:

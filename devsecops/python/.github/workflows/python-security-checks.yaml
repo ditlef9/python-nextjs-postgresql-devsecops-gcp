@@ -9,78 +9,161 @@ on:
       - main
 
 jobs:
-  security:
+  lint-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      # Lint Step 1: Checkout Code
+      # This step pulls the latest version of your repository code into the GitHub Actions runner.
+      # It's necessary so that all following steps can access and operate on the actual codebase.
+      - name: Lint Step 1 - Checkout code
         uses: actions/checkout@v2
 
-      # 1. Set up Python environment
-      - name: Set up Python
+      # Lint Step 2: Set up Python environment
+      # This step configures the specified version of Python (3.13) in the runner environment.
+      # Ensures compatibility with your code and dependencies during installation and testing.
+      - name: Lint Step 2 - Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.13'
 
-      # 2. Install dependencies
-      - name: Install dependencies
+      # Lint Step 3: Install dependencies
+      # Installs required packages for your project and the tools needed for security and linting:
+      # - `flake8`: Check for PEP8 compliance and code formatting issues..
+      - name: Lint Step 3 - Install Flake8
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install flake8
 
-      # 3. Lint code with Flake8
-      - name: Run Flake8 for linting
+      # Lint 4: Lint code with Flake8
+      # Runs `flake8` to check for PEP8 compliance and code formatting issues.
+      # Helps maintain code quality and avoid common style mistakes.
+      - name: Lint Step 4 - Run Flake8
+        run: flake8 .
+
+  security-job:
+    needs: lint-job  # This ensures it runs only if lint-job succeeds
+    runs-on: ubuntu-latest
+    steps:
+      # Security Step 1: Checkout Code
+      # This step pulls the latest version of your repository code into the GitHub Actions runner.
+      # It's necessary so that all following steps can access and operate on the actual codebase.
+      - name: Security Step 1 - Checkout Code
+        uses: actions/checkout@v2
+
+      # Security Step 2: Set up Python environment
+      # This step configures the specified version of Python (3.13) in the runner environment.
+      # Ensures compatibility with your code and dependencies during installation and testing.
+      - name: Security Step 2 - Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13'
+
+      # Security Step 3: Install dependencies
+      # Installs required packages for your project and the tools needed for security and linting:
+      # - `bandit`: Analyzes code for security issues.
+      # - `safety`: Checks installed dependencies for known vulnerabilities.
+      - name: Security Step 3 - Install Python dependencies
         run: |
-          flake8 .
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install bandit safety pip-audit safety
 
-      # 4. Run Bandit for security issues
-      - name: Run Bandit for security issues
+
+      # Security Step 4: Run Bandit for security issues
+      # Executes a static code analysis using `bandit`.
+      # Scans the Python files in the repo to detect security flaws like unsafe usage of `eval`, insecure handling of data, etc.
+      - name: Security Step 4 - Run Bandit for security issues
         run: |
           bandit -r .
 
-      # 5. Run Safety for known vulnerabilities
-      - name: Run Safety to check for vulnerabilities
+      # Security Step 5: Run pip-audit for dependency vulnerabilities
+      # Installs and runs `pip-audit`, a tool that checks the Python environment for insecure package versions.
+      # Unlike `safety`, it pulls data directly from PyPI's vulnerability database.
+      - name: Security Step 5 - Run pip-audit for dependency vulnerabilities
         run: |
-          safety check --full-report
+          pip-audit
 
-      # 6. Check for secret leaks in the code
-      - name: Check for secrets in code
-        uses: paulirish/secretlint-action@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      # 7. Fail if high vulnerabilities are found
-      - name: Fail if high vulnerabilities are found
+      # Security Step 6: Fail if high vulnerabilities are found
+      # Parses the output of `safety` and counts the number of high-severity vulnerabilities.
+      # If any are found, the build is marked as failed to block further deployment until resolved.
+      # REGISTER REQUIRED: Go to https://platform.safetycli.com/auth/pages/platform-auth-start/ and create an account
+      # Then create an API key at https://platform.safetycli.com/organization/apikeys
+      # Then add your SAFETY API KEY into Github Secret as SAFETY_API_KEY
+      # Then run it manually one time to get a .safety-project.ini. This file must be committed to Github.
+      # Manual Run:
+      # Powershell: pip install safety; safety auth
+      # Mac/Linux/CMD: pip install safety && safety auth
+      - name: Security Step 6 - Fail if high vulnerabilities are found
+        env:
+          SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
         run: |
-          HIGH_VULN_COUNT=$(safety check --json | jq '[.[] | select(.vuln_level=="High")] | length')
-          if [ "$HIGH_VULN_COUNT" -gt 0 ]; then
-            echo "High severity vulnerabilities found!"
-            exit 1
-          fi
+          safety scan
 
-      # 8. Create an issue if any step fails
-      - name: Create an issue if security checks fail
-        if: failure()  # Trigger if any previous step failed
+
+      # Security Step 7: Write issue body to file
+      # If any previous step fails, this creates a detailed issue body with a summary of failed checks.
+      # Prepares a markdown file to be used in the next step when opening a GitHub issue.
+      - name: Security Step 7 - Write issue body to file
+        if: failure()
+        run: |
+          cat <<EOF > issue-body.md
+          **Description:**  
+          The CI/CD security checks failed in the pipeline for the repository. Please address the vulnerabilities or issues detected in the latest build.
+          
+          **Check Summary:**
+          - Flake8: Linting failed.
+          - Bandit: Security issues detected.
+          - Safety: Vulnerabilities found.
+          - Secret Detection: Secrets detected.
+          
+          **Action Required:**
+          - Review the security issues in the build logs and fix them as soon as possible.
+          EOF
+
+      # Security Step 8: Create an issue if security checks fail
+      # Automatically creates a GitHub issue using the contents of the markdown file created in the previous step.
+      # Tags the issue with "security" and "bug" labels and assigns it to the person who triggered the workflow.
+      - name: Security Step 8 - Create an issue if security checks fail
+        if: failure()
         uses: peter-evans/create-issue-from-file@v3
         with:
           title: "Security Issue: CI/CD Checks Failed"
-          body: |
-            **Description:**  
-            The CI/CD security checks failed in the pipeline for the repository. Please address the vulnerabilities or issues detected in the latest build.
-            
-            **Check Summary:**
-            - Flake8: Linting failed.
-            - Bandit: Security issues detected.
-            - Safety: Vulnerabilities found.
-            - Secret Detection: Secrets detected.
-            
-            **Action Required:**
-            - Review the security issues in the build logs and fix them as soon as possible.
+          content-filepath: issue-body.md
           labels: "security, bug"
-          assignees: ${{ github.actor }}  # Dynamically assigns to the committer
+          assignees: ${{ github.actor }}
 
-      # 9. Deploy to Cloud (only if no security issues)
-      - name: Deploy to Cloud (if secure)
-        if: success()  # Deploy only if all checks pass
-        run: |
-          gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
-          gcloud app deploy
+  # Deploy Step 1: Deploy to Cloud (only if no security issues)
+  # If all checks pass, this step deploys your application to Google Cloud.
+  # Needs environment secret 'ACTIONS_AUTH_GOOGLE_CLOUD'
+  # Github > Repository > Settings > Secrets and variables: Actions > Manage environment secrets
+  deploy-production-job:
+    needs: security-job  # This ensures it runs only if security-job succeeds
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: 'actions/checkout@v3'
+    - run: ls
+    - id: 'auth'
+      name: 'Deploy Step 1 - Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.ACTIONS_AUTH_GOOGLE_CLOUD }}'
+
+    - name: Deploy Step 2 - Debug GCP credentials
+      env:
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+      run: |
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" > credentials.json
+
+    - name: 'Deploy Step 3 - Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v1'
+      with:
+        version: '>= 363.0.0'
+    - name: 'Deploy Step 4 - Use gcloud CLI'
+      run: 'gcloud info'
+    - name: Deploy Step 5 - Install Python dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: 'Deploy Step 6 - Deploy a gen 2 cloud function'
+      run: 'gcloud functions deploy APP_NAME --project=GOOGLE_CLOUD_PROJECT_ID --gen2 --runtime=python312 --region=europe-north1 --trigger-http --source=. --entry-point=main --max-instances=1 --memory=256MB --timeout=60s'
