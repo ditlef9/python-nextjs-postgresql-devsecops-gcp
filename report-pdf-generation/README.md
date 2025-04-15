@@ -261,9 +261,19 @@ Configure the execution:
 
 ## 🏃‍♂️ 6 Deploy application to Google Cloud Functions using a GitHub Action File
 
+**Safety**<br>
+* Go to https://platform.safetycli.com/auth/pages/platform-auth-start/ and create an account
+* Create an API key at https://platform.safetycli.com/organization/apikeys
+* Then add your SAFETY API KEY into Github Secret as `SAFETY_API_KEY`
+* Run it manually one time to get a `.safety-project.ini`. This file must be committed to Github.
+    - Powershell: `pip install safety; safety auth`
+    - Mac/Linux/CMD: `pip install safety && safety auth`
+
+**Github Actions File**<br>
 * [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
-
-
+* Change `APP_NAME`
+* Change `GOOGLE_CLOUD_PROJECT_ID`
+* Make sure your Google Cloud Deploy Service account exists under Github Secret `ACTIONS_AUTH_GOOGLE_CLOUD`
 
 ---
 
