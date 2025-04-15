@@ -1,4 +1,4 @@
-name: CI/CD Security Checks for Python
+name: CI/CD Linting and Security Checks for Python with Deploy
 
 on:
   push:
