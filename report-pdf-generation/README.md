@@ -196,7 +196,7 @@ In PyCharm click `Run`
 
 **8. Add DevSecOps GitHub Action File**<br>
 
-* [python-security-checks.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-security-checks.yaml)
+* [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
 
 
 ---
