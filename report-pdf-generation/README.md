@@ -270,7 +270,7 @@ or generate a new app password at https://myaccount.google.com/apppasswords.
 * Run it manually one time to get a `.safety-project.ini`. This file must be committed to Github.
 ```
 pip install safety 
-safety auth7
+safety auth
 safety scan
 ```
 
