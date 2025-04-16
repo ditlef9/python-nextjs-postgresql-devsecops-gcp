@@ -238,16 +238,18 @@ Define the schedule:
 Configure the execution:
 
 * Target type: **HTTP**
-* URL: **https://news-frontend-644994207224.europe-north1.run.app** (Change with your url)
+* URL: **https://APPNAME.europe-north1.run.app** (Change with your url)
 * Auth header: **Add OIDC token**
 * Service account: **Cloud Run Functions and Scheduler Service Account**
-* Scope: **https://news-frontend-644994207224.europe-north1.run.app** (Change with your url)
+* Scope: **https://APPNAME.europe-north1.run.app** (Change with your url)
 
 [Create]
 
 ### Create secret
 
-* Create secret `report-pdf-services` (you can copy `what-version-services`)<br>
+* Create secret `report-pdf-services` (you can copy `what-version-services`)
+or generate a new app password at https://myaccount.google.com/apppasswords.
+
 ```json
 {
 "gmail_sender_email": "YOU@gmail.com",
