@@ -20,7 +20,7 @@ Table of contents:
 3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
 4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-report-pdf-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
-6. [🏃‍♂️ 6 Deploy application to Google Cloud Functions using a GitHub Action File](#6)
+6. [🏃‍♂️ Deploy application to Google Cloud Functions using a GitHub Action File](#6)
 7. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#-7-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
 8. [📄 Creating PDF](#-8-creating-pdf)
 9. [📄 Creating PDF with Vulnerabilities](#-9-creating-pdf-with-vulnerabilities)
