@@ -20,7 +20,7 @@ Table of contents:
 3. [📸 Diagram and Screenshots from Report PDF-generation](#-3-diagram-and-screenshots-from-report-pdf-generation)
 4. [🐍 Creating Python Report PDF-generation](#-4-creating-python-report-pdf-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report PDF-generation](#-5-setting-up-google-cloud-infrastructure-for-report-pdf-generation)
-6. [🏃‍♂️ Deploy application to Google Cloud Functions using a GitHub Action File](#6)
+6. [🏃‍♂️ Deploy application to Google Cloud Functions using a GitHub Action File](#%EF%B8%8F-6-deploy-application-to-google-cloud-functions-using-a-github-action-file)
 7. [🧪 Generating test data: Assets and their vulnerabilities (critical, high, medium, low)](#-7-generating-test-data-assets-and-their-vulnerabilities-critical-high-medium-low)
 8. [📄 Creating PDF](#-8-creating-pdf)
 9. [📄 Creating PDF with Vulnerabilities](#-9-creating-pdf-with-vulnerabilities)
@@ -268,7 +268,7 @@ or generate a new app password at https://myaccount.google.com/apppasswords.
 * Create an API key at https://platform.safetycli.com/organization/apikeys
 * Then add your SAFETY API KEY into Github Secret as `SAFETY_API_KEY`
 * Run it manually one time to get a `.safety-project.ini`. This file must be committed to Github.
-  ```
+```
 pip install safety 
 safety auth7
 safety scan
