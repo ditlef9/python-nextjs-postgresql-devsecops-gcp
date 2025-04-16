@@ -268,8 +268,11 @@ or generate a new app password at https://myaccount.google.com/apppasswords.
 * Create an API key at https://platform.safetycli.com/organization/apikeys
 * Then add your SAFETY API KEY into Github Secret as `SAFETY_API_KEY`
 * Run it manually one time to get a `.safety-project.ini`. This file must be committed to Github.
-    - Powershell: `pip install safety; safety auth`
-    - Mac/Linux/CMD: `pip install safety && safety auth`
+  ```
+pip install safety 
+safety auth7
+safety scan
+```
 
 **Github Actions File**<br>
 * [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
