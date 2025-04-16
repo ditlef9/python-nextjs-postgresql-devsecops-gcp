@@ -55,7 +55,7 @@ By the end of this module, you will learn how to:
 - Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
 - Activity/Reflection
 
-4. *Deploy application to Google Cloud Functions using a GitHub Action File*<br>
+4. **Deploy application to Google Cloud Functions using a GitHub Action File**<br>
 - We will create a GitHub Actions file that deploys the application
 - Activity/Reflection
 
