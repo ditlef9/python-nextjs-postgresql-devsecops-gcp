@@ -314,8 +314,8 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 
 ## 📊 10 Adding a barchart
 
-* Implement `src/utils/d_graph_severity/d_graph_severity.py`
-* Implement `src/utils/d_assets.py/helpers/graphs/draw_bar_chart.py`
+* Implement `src/application/d_graph_severity/d_graph_severity.py`
+* Copy `src/utils/draw_bar_chart.py`
 
 
 ---
@@ -324,6 +324,7 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 ## ☁️ 11 Uploading PDF to Buckets
 
 * Implement `src/application/y_upload_to_bucket/y_upload_to_bucket.py`
+* Copy `src/utils/google_bucket_write_from_filename.py`
 
 ---
 
