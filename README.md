@@ -62,9 +62,9 @@ Select your operating system:
 DevSecOps is a software development approach that integrates security practices into every stage of the DevOps pipeline, 
 ensuring faster, more secure application delivery.
 
-* [Java GitHub Actions Files](devsecops/java/.github/workflows)
-* [Next.js GitHub Actions Files](devsecops/next/.github/workflows)
-* [Python GitHub Actions Files](devsecops/python/.github/workflows)
+* [Java GitHub Actions Files](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/tree/main/devsecops/java/.github/workflows)
+* [Next.js GitHub Actions Files](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/tree/main/devsecops/nextjs/.github/workflows)
+* [Python GitHub Actions Files](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/tree/main/devsecops/python/.github/workflows)
 
 
 ---
