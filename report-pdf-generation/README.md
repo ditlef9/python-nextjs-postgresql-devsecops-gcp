@@ -352,17 +352,36 @@ or generate a new app password at https://myaccount.google.com/apppasswords.
 **1. Clone the repository**
 
 
-**2. Open the directory `news-backend` in PyCharm**
+**2. Open the directory `report-pdf-generation` in PyCharm**
 
+**3. Setup venv**
 
-**3. Install requirements**
+Windows:
+```
+python -m venv .venv
+.venv\Scripts\activate 
+```
+Linux/Mac:
+```
+python -m venv .venv
+.venv/Scripts/activate 
+```
+
+**4. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**4. Start the application**<br>
-In PyCharm go to main.py and click `Run`
+**5. Start the application**<br>
+
+PyCharm > Edit Configurations > Python
+
+* Name: **main** 
+* Script: **main.py** 
+* Environment variables: **PYTHONUNBUFFERED=1;GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706** (Change GOOGLE_CLOUD_PROJECT_ID to your GCP Project ID)
+
+In PyCharm click `Run`
 
 
 
