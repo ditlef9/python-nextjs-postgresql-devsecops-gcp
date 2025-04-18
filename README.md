@@ -59,24 +59,12 @@ Select your operating system:
 
 ## 🛡️ 5 DevSecOps
 
-DevSecOps is a software development approach that integrates security practices into every stage of the DevOps pipeline, ensuring faster, more secure application delivery.
+DevSecOps is a software development approach that integrates security practices into every stage of the DevOps pipeline, 
+ensuring faster, more secure application delivery.
 
-
-### Java GitHub Actions Files
-
-* [java-security-checks.yaml](java/.github/workflows/java-security-checks.yaml)
-
-
-### Next.js GitHub Actions Files
-
-* [next-security-checks.yaml](next/.github/workflows/next-security-checks.yaml)
-* [next-snyk-and-zaproxy.yml](next/.github/workflows/next-snyk-and-zaproxy.yml)
-
-
-### Python GitHub Actions Files
-
-* [python-security-checks.yaml](java/.github/workflows/python-security-checks.yaml)
-* [python-snyk-and-zaproxy.yml](next/.github/workflows/python-snyk-and-zaproxy.yml)
+* [Java GitHub Actions Files](java/.github/workflows)
+* [Next.js GitHub Actions Files](next/.github/workflows)
+* [Python GitHub Actions Files](java/.github/workflows)
 
 
 ---
