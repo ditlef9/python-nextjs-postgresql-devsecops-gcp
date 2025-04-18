@@ -20,16 +20,17 @@ Table of contents:
 3. [📸 Diagram and Screenshots from Report Excel-generation](#-3-diagram-and-screenshots-from-report-excel-generation)
 4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-excel-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
-6. [🧪 Getting a LimaCharlie organization](#-6-getting-a-limacharlie-organizationw)
-7. [🔗 Connecting to LimaCharlie REST API using Postman](#-7-connecting-to-limacharlie-rest-api-using-postman)
-8. [🔒 Authenticate](#-8-authenticate)
-9. [📄 Getting sensors](#-9-getting-sensors)
-10. [📊 Creating Excel with sensors](#-10-creating-excel-with-sensors)
-11. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-11-uploading-excel-to-buckets)
-12. [📧 Sending Excel as email](#-12-sending-excel-as-email)
-13. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-13-running-the-report-excel-generation-locally)
-14. [☁️ Running the Report Excel-generation on Google Cloud Run Functions](#%EF%B8%8F-14-running-the-report-excel-generation-on-google-cloud-run-functions)
-15. [📜 License](#-15-license)
+6. [🏃‍♂️ Deploy application to Google Cloud Functions using a GitHub Action File](#%EF%B8%8F-6-deploy-application-to-google-cloud-functions-using-a-github-action-file)
+7. [🧪 Getting a LimaCharlie organization](#-7-getting-a-limacharlie-organizationw)
+8. [🔗 Connecting to LimaCharlie REST API using Postman](#-8-connecting-to-limacharlie-rest-api-using-postman)
+9. [🔒 Authenticate](#-9-authenticate)
+10. [📄 Getting sensors](#-10-getting-sensors)
+11. [📊 Creating Excel with sensors](#-11-creating-excel-with-sensors)
+12. [☁️ Uploading Excel to Buckets](#%EF%B8%8F-12-uploading-excel-to-buckets)
+13. [📧 Sending Excel as email](#-13-sending-excel-as-email)
+14. [🖥️ Running the Report Excel-generation Locally](#%EF%B8%8F-14-running-the-report-excel-generation-locally)
+15. [☁️ Running the Report Excel-generation on Google Cloud Run Functions](#%EF%B8%8F-15-running-the-report-excel-generation-on-google-cloud-run-functions)
+16. [📜 License](#-16-license)
 
 ---
 
@@ -57,39 +58,43 @@ By the end of this module, you will learn how to:
 - Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
 - Activity/Reflection
 
-4. **Getting a LimaCharlie organization**<br>
+4. **Deploy application to Google Cloud Functions using a GitHub Action File**<br>
+- We will create a GitHub Actions file that deploys the application
+- Activity/Reflection
+
+5. **Getting a LimaCharlie organization**<br>
 - Signing up at LimaCharlie and adding two sensors.
 - Activity/Reflection
 
-5. **Connecting to LimaCharlie REST API using Postman**<br>
+6. **Connecting to LimaCharlie REST API using Postman**<br>
 - How to get a Bearer token
 - Activity/Reflection
 
-6. **Authenticate**<br>
+7. **Authenticate**<br>
 - Authenticate with Python
 - Activity/Reflection
 
-7. **Getting sensors**<br>
+8. **Getting sensors**<br>
 - Listing sensors with Rest API
 - Activity/Reflection
 
-8️. **Creating Excel with sensors**<br>
+9. **Creating Excel with sensors**<br>
 - Createing a spreadsheet using Python
 - Activity/Reflection
 
-9. **Uploading Excel to Buckets**<br>
+10. **Uploading Excel to Buckets**<br>
 - Uploading the spreadsheet to buckets
 - Activity/Reflection
 
-10. **Sending Excel as email**<br>
+11. **Sending Excel as email**<br>
 - Sending spreadsheet as email to receivers using Gmail
 - Activity/Reflection
 
-11. **Congratulations and Learning Tip**<br>
+12. **Congratulations and Learning Tip**<br>
 - Learning tip: Apply what you learn to real-world scenarios or personal projects. Hands-on experience reinforces concepts better than passive learning.
 - Reflection: How can you integrate automation into your daily workflow to improve efficiency?
 
-12. **Quiz**
+13. **Quiz**
 
 
 ---
@@ -124,11 +129,15 @@ Image of spreadsheet.<br>
 
 **1. Create new repository in Github**
 
+* https://github.com/new
+* Name: report-excel-python-gcp 
+* Description: Generate Excel report from a REST API.
+
 **2. Open application in PyCharm**
 
 Pycharm > File > Close Project<br><br>
 
-Pycharm > Get from VCS<br><br>
+Pycharm > Clone Repository<br><br>
 
 
 **3. Add requirements.txt**
@@ -165,14 +174,37 @@ if __name__ == '__main__':
     main(request)
 ```
 
-**5. Install requirements**
+
+**5. Setup venv**
+
+Windows:
+```commandline
+python -m venv .venv
+.venv\Scripts\activate 
+```
+
+Linux/Mac:
+```commandline
+python -m venv .venv
+.venv/Scripts/activate 
+```
+
+
+**6. Install requirements**
 
 PyCharm > Terminal:
 
 `pip install -r requirements.txt`
 
-**6. Run application**<br>
-In PyCharm go to main.py and click `Run`
+**7. Run application**<br>
+
+PyCharm > Edit Configurations > Python
+
+* Name: **main**
+* Script: **main.py**
+* Environment variables: PYTHONUNBUFFERED=1;**GOOGLE_CLOUD_PROJECT_ID=applications-dev-453706**
+
+In PyCharm click `Run`
 
 
 
@@ -238,9 +270,31 @@ Configure the execution:
 ```
 
 
+## 🏃‍♂️ 6 Deploy application to Google Cloud Functions using a GitHub Action File
+
+**Safety**<br>
+* Go to https://platform.safetycli.com/auth/pages/platform-auth-start/ and create an account
+* Create an API key at https://platform.safetycli.com/organization/apikeys
+* Then add your SAFETY API KEY into Github Secret as `SAFETY_API_KEY`
+* Run it manually one time to get a `.safety-project.ini`. This file must be committed to Github.
+```
+pip install safety 
+safety auth
+safety scan
+```
+
+**Github Actions File**<br>
+* [.github/workflows/python-linting-security-gcp-deploy.yaml](https://github.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/blob/main/devsecops/python/.github/workflows/python-linting-security-gcp-deploy.yaml)
+* Change `APP_NAME`
+* Change `GOOGLE_CLOUD_PROJECT_ID`
+* Make sure your Google Cloud Deploy Service account exists under Github Secret `ACTIONS_AUTH_GOOGLE_CLOUD`
+
 ---
 
-## 🧪 6 Getting a LimaCharlie organization
+
+---
+
+## 🧪 7 Getting a LimaCharlie organization
 
 1. https://app.limacharlie.io
 2. Create an organization
@@ -265,7 +319,7 @@ Configure the execution:
 
 ---
 
-## 🔗 7 Connecting to LimaCharlie REST API using Postman
+## 🔗 8 Connecting to LimaCharlie REST API using Postman
 
 * Download and install Postman
 * Open documentation: https://api.limacharlie.io/static/swagger/
@@ -287,28 +341,28 @@ Configure the execution:
 
 ---
 
-## 🔒 8 Authenticate
+## 🔒 9 Authenticate
 
 * Copy src/utils/google_secret_manager_access_secret_version.py
 * Implement src/limacharlie/auth_limacharlie.py
 
 ---
 
-## 📄 9 Getting sensors
+## 📄 10 Getting sensors
 
 * Implement src/limacharlie/sensors_list.py
 
 
 ---
 
-## 📊 10 Creating Excel with sensors
+## 📊 11 Creating Excel with sensors
 
 * Copy src/utils/get_datetime.py
 * Implement src/spreadsheet/spreadsheet.py
 
 ---
 
-## ☁️ 11 Uploading Excel to Buckets
+## ☁️ 12 Uploading Excel to Buckets
 
 * Copy src/utils/google_bucket_storage_client_and_get_bucket.py
 * Copy src/utils/google_bucket_write_from_filename.py
@@ -316,18 +370,18 @@ Configure the execution:
 
 ---
 
-## 📧 12 Sending Excel as email
+## 📧 13 Sending Excel as email
 
 * Copy src/utils/send_gmail_app_pass.py
 * Implement src/email/send_email.py
 ---
 
-## 🖥️ 13 Running the Report Excel-generation Locally
+## 🖥️ 14 Running the Report Excel-generation Locally
 
 **1. Clone the repository**
 
 
-**2. Open the directory `news-backend` in PyCharm**
+**2. Open the directory `report-excel-python-gcp` in PyCharm**
 
 
 **3. Install requirements**
@@ -342,14 +396,14 @@ In PyCharm go to main.py and click `Run`
 
 ---
 
-## ☁️ 14 Running the Report Excel-generation on Google Cloud Run Functions
+## ☁️ 15 Running the Report Excel-generation on Google Cloud Run Functions
 
 
-
+Please see `Setting up Google Cloud Infrastructure for Report Excel-generation`.
 
 ---
 
-## 📜 15 License
+## 📜 16 License
 
 
 This project is licensed under the
