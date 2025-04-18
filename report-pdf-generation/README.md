@@ -334,6 +334,8 @@ bucket = google_bucket_storage_client_and_get_bucket(bucket_name="report-pdf-buc
 * Implement `src/utils/send_gmail_app_pass.py`
 * Implement `src/z_send_email/z_send_email.py`
 * Create secret `report-pdf-services` (you can copy `what-version-services`)<br>
+or generate a new app password at https://myaccount.google.com/apppasswords.
+
 ```json
 {
 "gmail_sender_email": "YOU@gmail.com",
