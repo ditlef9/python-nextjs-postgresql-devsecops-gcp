@@ -54,7 +54,7 @@ By the end of this module, you will learn how to:
 - Activity/Reflection
 
 
-3. **Setting up Google Cloud Infrastructure for Report PDF-generation**<br>
+3. **Setting up Google Cloud Infrastructure for Report Excel Generation**<br>
 - Creating and configuring Google Cloud resources (Cloud Functions, Buckets, Scheduler, and Secret Manager).
 - Activity/Reflection
 
