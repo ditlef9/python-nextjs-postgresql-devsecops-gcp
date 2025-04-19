@@ -299,7 +299,7 @@ safety scan
 **Create LimaCharlie organization**<br>
 1. https://app.limacharlie.io
 2. Create an organization
-3. Copy organization from URL https://app.limacharlie.io/orgs/**b65162e2-3493-5d2f-a236-03f690dd9180** to secret `report-excel-services`
+3. Copy organization from URL https://app.limacharlie.io/orgs/ **b65162e2-3493-5d2f-a236-03f690dd9180** to secret `report-excel-services`
 
 
 **Generate REST API Key**<br>
