@@ -21,7 +21,7 @@ Table of contents:
 4. [🐍 Creating Python Report Excel-generation](#-4-creating-python-report-excel-generation)
 5. [🌐 Setting up Google Cloud Infrastructure for Report Excel-generation](#-5-setting-up-google-cloud-infrastructure-for-report-excel-generation)
 6. [🏃‍♂️ Deploy application to Google Cloud Functions using a GitHub Action File](#%EF%B8%8F-6-deploy-application-to-google-cloud-functions-using-a-github-action-file)
-7. [🧪 Getting a LimaCharlie organization](#-7-getting-a-limacharlie-organizationw)
+7. [🧪 Getting a LimaCharlie organization](#-7-getting-a-limacharlie-organization)
 8. [🔗 Connecting to LimaCharlie REST API using Postman](#-8-connecting-to-limacharlie-rest-api-using-postman)
 9. [🔒 Authenticate](#-9-authenticate)
 10. [📄 Getting sensors](#-10-getting-sensors)
