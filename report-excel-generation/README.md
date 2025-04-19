@@ -63,7 +63,11 @@ By the end of this module, you will learn how to:
 - Activity/Reflection
 
 5. **Getting a LimaCharlie organization**<br>
+- LimaCharlie is a SecOps platform that gives teams tools to build, automate, and scale detection & response.
+- It offers real-time endpoint monitoring, custom detections, and **REST API access**.
 - Signing up at LimaCharlie and adding two sensors.
+- We are going to use the REST Api to list the two sensor names and add them to our spreadsheet using REST API.
+- This requires authorization with Bearer token, then listing.
 - Activity/Reflection
 
 6. **Connecting to LimaCharlie REST API using Postman**<br>
