@@ -335,7 +335,7 @@ safety scan
 * Open documentation: https://api.limacharlie.io/static/swagger/
 
 **1 Authenticate**
-  * https://app.limacharlie.io/jwt
+  * POST https://app.limacharlie.io/jwt
   * headers:
     * Content-Type: application/json
   * body:
@@ -343,14 +343,14 @@ safety scan
     * secret: LIMACHARLIE_API_KEY
 
 **2 List sensors**
-  * https://api.limacharlie.io/v1/sensors/LIMACHARLIE_ORGANIZATION_ID
+  * GET https://api.limacharlie.io/v1/sensors/LIMACHARLIE_ORGANIZATION_ID
   * headers:
     * Content-Type: application/json
     * Authorization: Bearer ey....
 
 
 **3 Post content**
-  * https://b76093c3662d5b4f.hook.limacharlie.io/LIMACHARLIE_ORGANIZATION_ID/ADAPTER_NAME
+  * POST https://b76093c3662d5b4f.hook.limacharlie.io/LIMACHARLIE_ORGANIZATION_ID/ADAPTER_NAME
   * headers:
     * Content-Type: application/json
     * lc-secret: SECRET
