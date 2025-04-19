@@ -350,11 +350,21 @@ safety scan
 
 
 **3 Post content**
-  * https://b76093c3662d5b4f.ingest.limacharlie.io/LIMACHARLIE_ORGANIZATION_ID/ADAPTER_NAME
+  * https://b76093c3662d5b4f.hook.limacharlie.io/LIMACHARLIE_ORGANIZATION_ID/ADAPTER_NAME
   * headers:
     * Content-Type: application/json
     * lc-secret: SECRET
-
+  * body (raw):
+```json
+{
+    "ip": "217.1.1.2",
+    "action": "logged in to the application",
+    "name": "john",
+    "email": "john@hotmail.com",
+    "....": "...",
+    "bla": "blabla"
+}
+```
 
 ---
 
