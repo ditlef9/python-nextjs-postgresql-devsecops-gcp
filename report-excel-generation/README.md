@@ -307,13 +307,13 @@ safety scan
 
 5. Sensors > Sensors List > Add Sensor
 * JSON Logs > (Create an Installation key) 
-* Key Name: Ingest
+* Key Name: Apps
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Finance application
 * Secret: Random Secret
 
 6. Sensors > Sensors List > Add Sensor
-* JSON Logs > Key: Ingest
+* JSON Logs > Key: Apps
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Uptime app
 * Secret: Random Secret
