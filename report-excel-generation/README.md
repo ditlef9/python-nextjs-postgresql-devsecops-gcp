@@ -309,7 +309,7 @@ safety scan
 * JSON Logs > (Create an Installation key) 
 * Key Name: Apps
 * Ingest Method: Events received through LimaCharlie webhooks
-* Adapter Name: Finance application
+* Adapter Name: Report Excel Generation Application
 * Secret: Random Secret
 
 6. Sensors > Sensors List > Add Sensor
