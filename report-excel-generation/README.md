@@ -296,23 +296,28 @@ safety scan
 
 ## 🧪 7 Getting a LimaCharlie organization
 
+**Create LimaCharlie organization**<br>
 1. https://app.limacharlie.io
 2. Create an organization
-2. Copy organization from URL https://app.limacharlie.io/orgs/**b65162e2-3493-5d2f-a236-03f690dd9180** to secret `report-excel-services`
-3. Access management > REST API > Create API Key
+3. Copy organization from URL https://app.limacharlie.io/orgs/**b65162e2-3493-5d2f-a236-03f690dd9180** to secret `report-excel-services`
+
+
+**Generate REST API Key**<br>
+1. Access management > REST API > Create API Key
 * Permissions: sensor.get and sensor.list
 * Name: report-excel
 
-4. Copy the API key into `limacharlie_api_key` to secret `report-excel-services`.
+2. Copy the API key into `limacharlie_api_key` to secret `report-excel-services`.
 
-5. Sensors > Sensors List > Add Sensor
+**Create two adapters**<br>
+1. Sensors > Sensors List > Add Sensor
 * JSON Logs > (Create an Installation key) 
 * Key Name: Apps
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Report Excel Generation Application
 * Secret: Random Secret
 
-6. Sensors > Sensors List > Add Sensor
+2. Sensors > Sensors List > Add Sensor
 * JSON Logs > Key: Apps
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Uptime app
