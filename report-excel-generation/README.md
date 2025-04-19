@@ -314,7 +314,7 @@ safety scan
 6. Sensors > Sensors List > Add Sensor
 * JSON Logs > (Create a Installation key) 
 * Ingest Method: Events received through LimaCharlie webhooks
-* Adapter Name: Firewall Alerts
+* Adapter Name: Uptime app
 * Secret: Random Secret
 
 ---
