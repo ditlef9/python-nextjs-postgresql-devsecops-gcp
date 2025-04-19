@@ -306,13 +306,14 @@ safety scan
 4. Copy the API key into `limacharlie_api_key` to secret `report-excel-services`.
 
 5. Sensors > Sensors List > Add Sensor
-* JSON Logs > (Create a Installation key) 
+* JSON Logs > (Create an Installation key) 
+* Key Name: Ingest
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Finance application
 * Secret: Random Secret
 
 6. Sensors > Sensors List > Add Sensor
-* JSON Logs > (Create a Installation key) 
+* JSON Logs > Key: Ingest
 * Ingest Method: Events received through LimaCharlie webhooks
 * Adapter Name: Uptime app
 * Secret: Random Secret
