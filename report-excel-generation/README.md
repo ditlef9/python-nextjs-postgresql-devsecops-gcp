@@ -334,7 +334,7 @@ safety scan
 * Download and install Postman
 * Open documentation: https://api.limacharlie.io/static/swagger/
 
-1 Authenticate
+**1 Authenticate**
   * https://app.limacharlie.io/jwt
   * headers:
     * Content-Type: application/json
@@ -342,11 +342,18 @@ safety scan
     * oid: LIMACHARLIE_ORGANIZATION_ID
     * secret: LIMACHARLIE_API_KEY
 
-2 List sensors
+**2 List sensors**
   * https://api.limacharlie.io/v1/sensors/LIMACHARLIE_ORGANIZATION_ID
   * headers:
     * Content-Type: application/json
     * Authorization: Bearer ey....
+
+
+**3 Post content**
+  * https://b76093c3662d5b4f.ingest.limacharlie.io/LIMACHARLIE_ORGANIZATION_ID/ADAPTER_NAME
+  * headers:
+    * Content-Type: application/json
+    * lc-secret: SECRET
 
 
 ---
