@@ -187,7 +187,10 @@ Edit a user<br>
 
 **1. Create new repository in Github**
 
+
+* https://github.com/new
 * Name: **uptime-nextjs**
+* Description: Tracks and manages other applications uptime.
 
 **2. Create new application**
 
