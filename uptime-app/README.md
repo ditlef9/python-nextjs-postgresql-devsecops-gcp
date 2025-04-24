@@ -248,7 +248,7 @@ RUN npm install
 
 COPY . .
 
-# Build the application (CHANGE-ME: NEXT_PUBLIC_BACKEND_API_URL)
+# Build the application
 ENV NODE_ENV=production
 
 RUN npm run build
