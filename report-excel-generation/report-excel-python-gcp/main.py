@@ -28,14 +28,14 @@ def main(request: flask.wrappers.Request):
         google_cloud_project_id = os.getenv('GOOGLE_CLOUD_PROJECT_ID')
         secret_str = google_secret_manager_access_secret_version(project_id=google_cloud_project_id, secret_id="report-excel-services")
     except Exception as e:
-        print(f"{log_headline} Could not access google secret e={e}")
-        raise Exception(f"main()·send_email() Could not access google secret e={e}")
-    secret_list: list = json.loads(secret_str)
-    gmail_sender_email: str = secret_list['gmail_sender_email']
-    gmail_app_password: str = secret_list['gmail_app_password']
-    recipient_email_addresses: str = secret_list['recipient_email_addresses']
-    limacharlie_organization_id: str = secret_list['limacharlie_organization_id']
-    limacharlie_api_key: str = secret_list['limacharlie_api_key']
+        print(f"{log_headline}· Could not access google secret e={e}")
+        raise Exception(f"{log_headline}· Could not access google secret e={e}")
+    secret_dict: dict = json.loads(secret_str)
+    gmail_sender_email: str = secret_dict['gmail_sender_email']
+    gmail_app_password: str = secret_dict['gmail_app_password']
+    recipient_email_addresses: str = secret_dict['recipient_email_addresses']
+    limacharlie_organization_id: str = secret_dict['limacharlie_organization_id']
+    limacharlie_api_key: str = secret_dict['limacharlie_api_key']
 
     # Authenticate
     limacharlie_token = auth_limacharlie(limacharlie_organization_id=limacharlie_organization_id, limacharlie_api_key=limacharlie_api_key)
