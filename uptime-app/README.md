@@ -235,6 +235,30 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 
+**5. Add Dockerfile**
+
+```
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+# Build the application (CHANGE-ME: NEXT_PUBLIC_BACKEND_API_URL)
+ENV NODE_ENV=production
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
+
+
 ---
 
 
