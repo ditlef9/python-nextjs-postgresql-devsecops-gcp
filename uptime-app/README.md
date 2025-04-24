@@ -152,33 +152,31 @@ After this module you will be able to:
 
 ## 📸 3 Diagram and Screenshots from Uptime App
 
-**Manage Service Diagram**
+**Manage Service Diagram**<br>
 A user can add, edit and delete watchers<br>
 ![Uptime App - Manage Service Diagram](_docs/uptime-diagram-manage-service.drawio.png) 
 
-
-**Check if services are online diagram**
+**Check if services are online diagram**<br>
 A scheduler will start the application to check if services are up<br>
 ![Uptime App - Check if Service is Online Diagram](_docs/uptime-diagram-check-if-service-is-online.drawio.png) 
 
-**Monitor Offline**
+**Monitor Offline**<br>
 If a monitor goes offline an email is sent<br>
 ![Monitor offline](_docs/monitor-offline.png) 
 
-
-**Monitors**
+**Monitors**<br>
 List of monitors<br>
 ![Monitors](_docs/monitors.png) 
 
-**Edit Monitor**
+**Edit Monitor**<br>
 Edit a monitor<br>
 ![Edit Monitor](_docs/monitor-edit.png) 
 
-**Users**
+**Users**<br>
 List of monitors<br>
 ![Users](_docs/users.png) 
 
-**Edit User**
+**Edit User**<br>
 Edit a user<br>
 ![Edit user](_docs/user-edit.png) 
 
