@@ -62,41 +62,41 @@ After this module you will be able to:
 ## ✨ 2 Lessons Overview for Uptime App
 
 
-1. **Introduction**
+1. **Introduction to Uptime App**
 
-2. **Creating Next.js application**<br>
+2. **Creating Next.js Application for Uptime**<br>
 - Implementing core functionality for Next.js application
 - Activity/Reflection
 
-3. **Implementing DevSecOps: Snyk and ZAP Scan**<br>
-- Learn how to integrate security tools like Snyk for dependency scanning and ZAP for vulnerability testing.
-- Activity/Reflection:
-
-4. **Setting up Google Cloud Infrastructure for Uptime App**<br>
+3. **Setting up Google Cloud Infrastructure for Uptime App**<br>
 - Configure Google Cloud resources needed for deployment, including Cloud Run and database.
 - Activity/Reflection:
 
-5. **Connecting to PostgresSQL with pgAdmin**<br>
+4. **Implementing DevSecOps: Snyk and ZAP Scan for Uptime App**<br>
+- Learn how to integrate security tools like Snyk for dependency scanning and ZAP for vulnerability testing.
+- Activity/Reflection:
+
+5. **Connecting to PostgresSQL with pgAdmin for Uptime App**<br>
 - Install and configure pgAdmin to manage PostgreSQL databases efficiently.
 - Activity/Reflection:
 
-6. **Connecting to PostgresSQL with Next**<br>
+6. **Connecting to PostgresSQL with Next for Uptime App**<br>
 - Implement a PostgreSQL connection within a Next.js application.
 - Activity/Reflection:
 
-7. **Webdesign**<br>
+7. **Webdesign for Uptime App**<br>
 - Lets create the webdesign.
 - Activity/Reflection: Can you make it look better?
 
-8. **Migrations**<br>
+8. **Migrations for Uptime App**<br>
 - Learn how to handle database migrations for schema evolution.
 - Activity/Reflection:
 
-9. **Next Auth**<br>
+9. **Next Auth for Uptime App**<br>
 - Implement user login with authentication and validation.
 - Activity/Reflection:
 
-10. **Private webdesign**
+10. **Private Webdesign for Uptime App**
 - Add header, footer, layout
 - Activity/Reflection: 
 
@@ -124,19 +124,19 @@ After this module you will be able to:
 - If the monitor is offline then send email.
 - Activity/Reflection:
 
-17. **List Users**<br>
+17. **List Users for Uptime App**<br>
 - Develop an interface to display all registered users.
 - Activity/Reflection:
 
-18. **Add User**<br>
+18. **Add User for Uptime App**<br>
 - Implement a feature to add new users to the system.
 - Activity/Reflection:
 
-19. **Edit User**<br>
+19. **Edit User for Uptime App**<br>
 - Allow modification of user details and permissions.
 - Activity/Reflection:
 
-20. **Delete User**<br>
+20. **Delete User for Uptime App**<br>
 - Implement functionality to remove users from the system.
 - Activity/Reflection:
 
