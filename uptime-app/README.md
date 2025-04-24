@@ -20,8 +20,8 @@ Table of contents:
 2. [✨ Lessons Overview for Uptime App](#-2-lessons-overview-for-uptime-app)
 3. [📸 Diagram and Screenshots from Uptime App](#-3-diagram-and-screenshots-from-uptime-app)
 4. [⚛️ Creating Uptime App in Next.js](#%EF%B8%8F-4-creating-uptime-app-in-nextjs)
-5. [🛡️ Implementing DevSecOps: Snyk and ZAP Scan](#%EF%B8%8F-5-implementing-devsecops-snyk-and-zap-scan)
-6. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-6-setting-up-google-cloud-infrastructure-for-uptime-app)
+5. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-5-setting-up-google-cloud-infrastructure-for-uptime-app)
+6. [🛡️ Implementing DevSecOps: Snyk and ZAP Scan](#%EF%B8%8F-6-implementing-devsecops-snyk-and-zap-scan)
 7. [🐘 Connecting to PostgresSQL with pgAdmin](#-7-connecting-to-postgressql-with-pgadmin)
 8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
 9. [🧹 Webdesign](#-9-webdesign)
@@ -235,35 +235,10 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 
-## 🛡️ 5 Implementing DevSecOps: Snyk and ZAP Scan
-
-### Snyk
-
-https://snyk.io
-
-### ZAP Scan
-
-.github/workflows/sec-node.yml<br>
-```
-name: Security for Next.js - DAST for web with OASP ZAP
-
-on: [push]
-
-jobs:
-  dast_scan:
-    runs-on: ubuntu-latest
-    name: DAST (Dynamic Application Security Testing) with OASP ZAP
-    steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.10.0
-        with:
-          target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
-```
-
 ---
 
 
-## 🌐 6 Setting up Google Cloud Infrastructure for Uptime App
+## 🌐 5 Setting up Google Cloud Infrastructure for Uptime App
 
 ### Create PostgresSQL database
 
@@ -311,6 +286,33 @@ Set RAM
 Cloud SQL connections: Set connection to PostgreSQL
 
 ---
+
+## 🛡️ 6 Implementing DevSecOps: Snyk and ZAP Scan
+
+### Snyk
+
+https://snyk.io
+
+### ZAP Scan
+
+.github/workflows/sec-node.yml<br>
+```
+name: Security for Next.js - DAST for web with OASP ZAP
+
+on: [push]
+
+jobs:
+  dast_scan:
+    runs-on: ubuntu-latest
+    name: DAST (Dynamic Application Security Testing) with OASP ZAP
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
+```
+---
+
 
 ## 🐘 7 Connecting to PostgresSQL with pgAdmin
 
