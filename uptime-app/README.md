@@ -319,7 +319,7 @@ https://snyk.io
 
 ### ZAP Scan
 
-.github/workflows/sec-node.yml<br>
+.github/workflows/dast-oasp-zap.yml<br>
 ```
 name: Security for Next.js - DAST for web with OASP ZAP
 
@@ -334,6 +334,7 @@ jobs:
         uses: zaproxy/action-full-scan@v0.10.0
         with:
           target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
+          artifact-name: 'zap_scan_report'
 ```
 ---
 
