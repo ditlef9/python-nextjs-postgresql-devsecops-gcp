@@ -264,7 +264,7 @@ CMD ["npm", "start"]
 
 ## 🌐 5 Setting up Google Cloud Infrastructure for Uptime App
 
-### Create PostgresSQL database
+### Create PostgreSQL database
 
 https://console.cloud.google.com > SQL > [Create Instance]<br>
 
