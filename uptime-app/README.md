@@ -334,7 +334,7 @@ jobs:
         uses: zaproxy/action-full-scan@v0.10.0
         with:
           target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
-          artifact-name: 'zap_scan_report'
+          artifact_name: 'zap_scan_report'
 ```
 ---
 
