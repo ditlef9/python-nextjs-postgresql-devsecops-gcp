@@ -1,0 +1,13 @@
+name: DAST (Dynamic Application Security Testing) with OASP ZAP
+
+on: [push]
+
+jobs:
+  dast_scan:
+    runs-on: ubuntu-latest
+    name: DAST (Dynamic Application Security Testing) with OASP ZAP
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.12.0
+        with:
+          target: 'https://uptime-644994207224.europe-north1.run.app'
