@@ -321,7 +321,7 @@ https://snyk.io
 
 .github/workflows/dast-oasp-zap.yml<br>
 ```
-name: Security for Next.js - DAST for web with OASP ZAP
+name: DAST for web with OASP ZAP
 
 on: [push]
 
@@ -331,10 +331,9 @@ jobs:
     name: DAST (Dynamic Application Security Testing) with OASP ZAP
     steps:
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.10.0
+        uses: zaproxy/action-full-scan@v0.12.0
         with:
-          target: 'https://your-project-name-t6qfqcqcha-lz.a.run.app/'
-          artifact_name: 'zap-scan-report'
+          target: 'https://uptime-644994207224.europe-north1.run.app'
 ```
 ---
 
