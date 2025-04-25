@@ -22,8 +22,8 @@ Table of contents:
 4. [⚛️ Creating Uptime App in Next.js](#%EF%B8%8F-4-creating-uptime-app-in-nextjs)
 5. [🌐 Setting up Google Cloud Infrastructure for Uptime App](#-5-setting-up-google-cloud-infrastructure-for-uptime-app)
 6. [🛡️ Implementing DevSecOps: Snyk and ZAP Scan](#%EF%B8%8F-6-implementing-devsecops-snyk-and-zap-scan)
-7. [🐘 Connecting to PostgresSQL with pgAdmin](#-7-connecting-to-postgressql-with-pgadmin)
-8. [🔗 Connecting to PostgresSQL with Next](#-8-connecting-to-postgressql-with-next)
+7. [🐘 Connecting to PostgreSQL with pgAdmin](#-7-connecting-to-postgresql-with-pgadmin)
+8. [🔗 Connecting to PostgreSQL with Next](#-8-connecting-to-postgresql-with-next)
 9. [🧹 Webdesign](#-9-webdesign)
 10. [📦 Migrations](#-10-migrations)
 11. [🔑 Next Auth](#-11-next-auth)
@@ -80,7 +80,7 @@ After this module you will be able to:
 - Install and configure pgAdmin to manage PostgreSQL databases efficiently.
 - Activity/Reflection:
 
-6. **Connecting to PostgresSQL with Next for Uptime App**<br>
+6. **Connecting to PostgreSQL with Next for Uptime App**<br>
 - Implement a PostgreSQL connection within a Next.js application.
 - Activity/Reflection:
 
@@ -338,10 +338,9 @@ jobs:
 ---
 
 
-## 🐘 7 Connecting to PostgresSQL with pgAdmin
+## 🐘 7 Connecting to PostgreSQL with pgAdmin
 
 ## 7.1 Create local database
-
 pgAdmin > Servers > PostgreSQL X > Databases > [Right click] > Create: Database
 
 * Database: cloud-dev
@@ -386,11 +385,11 @@ Manage client certificates
 
 ---
 
-## 🔗 8 Connecting to PostgresSQL with Next
+## 🔗 8 Connecting to PostgreSQL with Next
 
 ### Connect from local machine
 
-* Install PostgresSQL for Node.js:
+* Install PostgreSQL for Node.js:
 `npm install pg` and
 `npm install --save-dev @types/pg`
 
@@ -582,7 +581,7 @@ users_index_001.sql:
 ## 🖥️ 22 Running the Uptime App Locally
 
 1. Clone the repository
-2. Create PostgresSQL database `cloud-dev`
+2. Create PostgreSQL database `cloud-dev`
 3. Copy env.example to .env.development, setup the variables
 4. `npm install`
 5. `npm run dev`
