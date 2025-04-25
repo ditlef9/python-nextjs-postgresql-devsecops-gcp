@@ -76,7 +76,7 @@ After this module you will be able to:
 - Learn how to integrate security tools like Snyk for dependency scanning and ZAP for vulnerability testing.
 - Activity/Reflection:
 
-5. **Connecting to PostgresSQL with pgAdmin for Uptime App**<br>
+5. **Connecting to PostgreSQL with pgAdmin for Uptime App**<br>
 - Install and configure pgAdmin to manage PostgreSQL databases efficiently.
 - Activity/Reflection:
 
