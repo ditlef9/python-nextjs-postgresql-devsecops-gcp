@@ -420,6 +420,10 @@ Set the environment variables:
 ## 🧹 9 Webdesign
 
 
+
+* Install next-auth: `npm install next-auth` (because layout.tsx will import it)
+
+
 Remove all unnecessary:
 * Copy in CSS: app/globals.css
 * Copy in Layout: app/layout.tsx
