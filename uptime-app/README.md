@@ -422,9 +422,9 @@ Set the environment variables:
 
 
 * Remove unnecessary from `app/layout.tsx`
-* Copy file: app/(public)/globals.css
-* Copy in Layout: app/(public)/layout.tsx
-* Use latest in package.json
+* Copy file: `app/(public)/globals.css`
+* Copy in Layout: `app/(public)/layout.tsx`
+* Use latest in `package.json`
 
 
 
@@ -432,11 +432,11 @@ Set the environment variables:
 
 ## 📦 10 Migrations
 
-* Copy migrations/monitors/monitors_index_001.sql
-* Copy migrations/users/users_index_001.sql
-* Create file app/lib/db.ts
-* Create file app/(public)/public-migrations/api-run-migrations/route.ts
-* Create file app/(public)/public-migrations/page.tsx
+* Copy `migrations/monitors/monitors_index_001.sql`
+* Copy `migrations/users/users_index_001.sql`
+* Create file `app/lib/db.ts`
+* Create file `app/(public)/public-migrations/api-run-migrations/route.ts`
+* Create file `app/(public)/public-migrations/page.tsx`
 * Visit http://localhost:3000/public-migrations
 
 ---
