@@ -425,6 +425,7 @@ Global files:
 * Remove unnecessary from `app/layout.tsx`
 
 Public files:
+* Install next-auth: `npm install next-auth`
 * Copy file: `app/(public)/public.css`
 * Copy in Layout: `app/(public)/layout.tsx`
 
