@@ -421,9 +421,7 @@ Set the environment variables:
 
 
 
-Remove all unnecessary:
-* Install next-auth: `npm install next-auth` (because we are going to use it in public layout)
-* Truncate: app/globals.css
+Remove all unnecessary: b
 * Remove unnecessary from `app/layout.tsx`
 * Copy file: app/(public)/globals.css
 * Copy in Layout: app/(public)/layout.tsx
