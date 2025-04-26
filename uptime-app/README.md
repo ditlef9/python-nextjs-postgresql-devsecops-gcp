@@ -420,10 +420,15 @@ Set the environment variables:
 ## 🧹 9 Webdesign
 
 
-
+Global files:
+* Truncate `app/globals.css`
 * Remove unnecessary from `app/layout.tsx`
-* Copy file: `app/(public)/globals.css`
+
+Public files:
+* Copy file: `app/(public)/public.css`
 * Copy in Layout: `app/(public)/layout.tsx`
+
+Package:
 * Use latest in `package.json`
 
 
