@@ -421,12 +421,11 @@ Set the environment variables:
 
 
 
-* Install next-auth: `npm install next-auth` (because layout.tsx will import it)
-
-
 Remove all unnecessary:
-* Copy in CSS: app/globals.css
-* Copy in Layout: app/layout.tsx
+* Install next-auth: `npm install next-auth` (because we are going to use it in public layout)
+* Clear the contents of: app/globals.css
+* Copy file: app/(public)/globals.css
+* Copy in Layout: app/(public)/layout.tsx
 * Use latest in package.json
 
 

@@ -4,6 +4,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function AuthButton() {
   const { data: session, status } = useSession();
@@ -30,6 +31,11 @@ export default function AuthButton() {
   }
 
   return (
-    <button onClick={() => signIn("github", { callbackUrl: "/dashboard" })}>Sign In with GitHub</button>
+    <div className="button-wrapper">
+      <button onClick={() => signIn("github", { callbackUrl: "/dashboard" })} className="github-button">
+        <Image src="/icons/20x20/github-icon-20x20.svg" alt="GitHub Logo" width={20} height={20} />
+        Sign In with GitHub
+      </button>
+    </div>
   );
 }
