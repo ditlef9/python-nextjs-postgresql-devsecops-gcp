@@ -423,7 +423,8 @@ Set the environment variables:
 
 Remove all unnecessary:
 * Install next-auth: `npm install next-auth` (because we are going to use it in public layout)
-* Clear the contents of: app/globals.css
+* Truncate: app/globals.css
+* Remove unnecessary from `app/layout.tsx`
 * Copy file: app/(public)/globals.css
 * Copy in Layout: app/(public)/layout.tsx
 * Use latest in package.json
@@ -461,7 +462,11 @@ Lib
 Types
 * Create lib `app/types/next-auth.d.ts`
 
+Global layout
+* Create `app/page.tsx` to make redirect work
+
 Sign In
+* Copy `public/icons/20x20/github-icon-20x20.svg`
 * Sign in on `app/page.tsx`
 * Add `app/(public)/sign-in/components/AuthButton.tsx`
 
