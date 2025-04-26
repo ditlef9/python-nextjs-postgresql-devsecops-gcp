@@ -421,7 +421,6 @@ Set the environment variables:
 
 
 
-Remove all unnecessary: b
 * Remove unnecessary from `app/layout.tsx`
 * Copy file: app/(public)/globals.css
 * Copy in Layout: app/(public)/layout.tsx
