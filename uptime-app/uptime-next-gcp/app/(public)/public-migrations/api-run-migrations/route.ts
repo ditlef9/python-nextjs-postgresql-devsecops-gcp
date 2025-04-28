@@ -1,13 +1,14 @@
-// app/(public)/public-migrations/api-run-migrations/route.ts
+// app\(public)\public-migrations\api-run-migrations\route.ts
 
 import { sql } from "@/app/lib/db";
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
 
-export async function GET(request: Request) {
+export async function GET() {
 
   // Check if the environment is 'development' and the directory ends with '.development'
+  // If the environment is not 'development', skip the migration files that end with '.development'
   const env = process.env.NODE_ENV;
 
   // 1. Create the migrations table if it does not exist
@@ -23,11 +24,10 @@ export async function GET(request: Request) {
     SELECT setval(pg_get_serial_sequence('u_migrations', 'migration_id'), coalesce(max(migration_id)+1, 1), false) FROM u_migrations;
   `);
 
-  
+
   // Initialize counters
   let migrationsRun = 0;
-  let migrationsSkipped = 0;
-  let migrationErrors: { file: string; error: string }[] = [];
+  const migrationErrors: { file: string; error: string }[] = [];
 
   // 2. Loop through all directories in "@/migrations" and save them to a variable
   const migrationsPath = path.join(process.cwd(), "migrations");
@@ -40,7 +40,7 @@ export async function GET(request: Request) {
       const migrationFiles = await fs.readdir(modulePath);
 
       for (const file of migrationFiles) {
-        // Check if the file exists in the database table 
+        // Check if the file exists in the database table
         const res = await sql(
           "SELECT migration_id, migration_module, migration_name, migration_run_timestamp FROM u_migrations WHERE migration_module=$1 AND migration_name=$2",
           [directory.name, file]
@@ -86,12 +86,10 @@ export async function GET(request: Request) {
             migrationErrors.push({ file, error: errorMessage });
           }
           console.log(`app/(public)/public-migrations/api-run-migrations/route.ts::=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-`);
-        } else {
-          migrationsSkipped++;
-        }
-      }
-    }
-  }
+        } // res.rows.length === 0 (check if migration is already run)
+      } // End of migrationFiles loop
+    } // End of directory check
+  } // End of migrationsDirectories loop
 
   // 6. Return the result
   return NextResponse.json({
