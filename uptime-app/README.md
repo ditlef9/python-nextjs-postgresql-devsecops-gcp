@@ -456,7 +456,7 @@ Installations
 * Install next-auth: `npm install next-auth`
 
 API
-* Create api `app\api\auth\[...nextauth]\route.ts`
+* Create api `app/api/auth/[...nextauth]/route.ts`
 
 Lib
 * Create lib `app/lib/auth.ts`
@@ -470,7 +470,7 @@ Global layout
 
 Sign In
 * Copy `public/icons/20x20/github-icon-20x20.svg`
-* Sign in on `app/page.tsx`
+* Sign in on `app/(public/sign-in/page.tsx`
 * Add `app/(public)/sign-in/components/AuthButton.tsx`
 
 users_index_001.sql:
