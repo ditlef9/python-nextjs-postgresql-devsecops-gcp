@@ -461,6 +461,7 @@ API
 Lib
 * Create lib `app/lib/auth.ts`
 * Create lib `app/lib/useLoginRequiredClient.ts`
+* Create lib `app/lib/getAuthSession.ts`
 
 Types
 * Create lib `app/types/next-auth.d.ts`
