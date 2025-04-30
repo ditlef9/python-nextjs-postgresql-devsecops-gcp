@@ -485,10 +485,11 @@ users_index_001.sql:
 ## 🧑‍🎨 12 Private webdesign
 
 
-* Implement `app/(private)/dashboard/page.tsx`
+* Implement `app/(private)/monitors/page.tsx`
 * Implement `app/(private)/footer.tsx`
+* Implement `app/(private)/header.tsx`
 * Implement `app/(private)/layout.tsx`
-* Implement `app/(private)/layout.tsx`
+* Implement `app/(private)/private.css`
 
 
 ---
