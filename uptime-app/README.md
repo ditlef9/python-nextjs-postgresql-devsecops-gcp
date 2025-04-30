@@ -27,7 +27,7 @@ Table of contents:
 9. [🧹 Webdesign](#-9-webdesign)
 10. [📦 Migrations](#-10-migrations)
 11. [🔑 Next Auth](#-11-next-auth)
-12. [‍🎨 Private webdesign](#)
+12. [‍🎨 Private webdesign](#-12-private-webdesign)
 13. [📊 Monitors](#-13-monitors)
 14. [➕ Add Monitor](#-14-add-monitor)
 15. [✏️ Edit Monitor](#%EF%B8%8F-15-edit-monitor)
