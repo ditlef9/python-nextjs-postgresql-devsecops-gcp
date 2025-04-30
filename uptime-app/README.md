@@ -495,7 +495,7 @@ users_index_001.sql:
 ---
 
 
-## 📊 12 Monitors
+## 📊 13 Monitors
 
 * Implement app/types/monitorsI.ts
 * Implement app/(private)/monitors/api-get-monitors/route.ts
@@ -505,7 +505,7 @@ users_index_001.sql:
 ---
 
 
-## ➕ 13 Add Monitor
+## ➕ 14 Add Monitor
 
 * Implement app/(private)/monitors/add-monitor/page.tsx
 * Implement app/(private)/monitors/add-monitor/api-add-monitor/route.ts
@@ -515,7 +515,7 @@ users_index_001.sql:
 
 
 
-## ✏️ 14 Edit Monitor
+## ✏️ 15 Edit Monitor
 
 * Implement app/(private)/monitors/[monitorId]/api-get-monitor/route.ts
 * Implement app/(private)/monitors/[monitorId]/edit-monitor/api-edit-monitor/route.ts
@@ -527,7 +527,7 @@ users_index_001.sql:
 
 
 
-## ❌ 15 Delete Monitor
+## ❌ 16 Delete Monitor
 
 * Implement app/(private)/monitors/[monitorId]/delete-monitor/api-delete-monitor/route.ts
 * Implement app/(private)/monitors/[monitorId]/delete-monitor/page.tsx
@@ -536,7 +536,7 @@ users_index_001.sql:
 
 
 
-## 📡 16 Endpoint to receive scheduler for Monitor
+## 📡 17 Endpoint to receive scheduler for Monitor
 
 * Implement app/(private)/api/api-check-monitor/route.ts
 
@@ -544,7 +544,7 @@ users_index_001.sql:
 
 
 
-## 📧 17 Escalation Email
+## 📧 18 Escalation Email
 
 * Install Nodemailer: `npm install nodemailer` and `npm install --save-dev @types/nodemailer`
 * Copy `app/lib/sendEmail.ts`
@@ -555,7 +555,7 @@ users_index_001.sql:
 
 
 
-## 👥 18 List Users
+## 👥 19 List Users
 
 * Implement app/types/usersI.ts
 * Implement app/(private)/users/page.tsx
@@ -564,7 +564,7 @@ users_index_001.sql:
 
 
 
-## ➕ 19 Add User
+## ➕ 20 Add User
 
 
 * Implement app/(private)/users/add-user/page.tsx
@@ -574,7 +574,7 @@ users_index_001.sql:
 
 
 
-## ✏️ 20 Edit Users
+## ✏️ 21 Edit Users
 
 * Implement app/(private)/users/api-get-user/route.ts
 * Implement app/(private)/users/edit-user/page.tsx
@@ -583,7 +583,7 @@ users_index_001.sql:
 
 
 
-## ❌ 21 Delete Users
+## ❌ 22 Delete Users
 
 * Implement app/(private)/users/delete-user/page.tsx
 * Implement app/(private)/users/delete-user/api-delete-user/route.ts
@@ -591,7 +591,7 @@ users_index_001.sql:
 
 
 
-## 🖥️ 22 Running the Uptime App Locally
+## 🖥️ 23 Running the Uptime App Locally
 
 1. Clone the repository
 2. Create PostgreSQL database `cloud-dev`
@@ -603,12 +603,12 @@ users_index_001.sql:
 
 
 
-## ☁️ 23 Running the Uptime App on Google Cloud Run
+## ☁️ 24 Running the Uptime App on Google Cloud Run
 
 Please see 🌐 6 Setting up Google Cloud Infrastructure for Uptime App
 
 
-## 📜 24 License
+## 📜 25 License
 
 
 This project is licensed under the
