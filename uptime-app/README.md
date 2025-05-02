@@ -538,7 +538,7 @@ users_index_001.sql:
 
 ## 📡 17 Endpoint to receive scheduler for Monitor
 
-* Implement app/(private)/api/api-check-monitor/route.ts
+* Implement app/(public)/api/api-check-monitor/route.ts
 
 ---
 
