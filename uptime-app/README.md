@@ -32,7 +32,7 @@ Table of contents:
 14. [➕ Add Monitor](#-14-add-monitor)
 15. [✏️ Edit Monitor](#%EF%B8%8F-15-edit-monitor)
 16. [❌ Delete Monitor](#-16-delete-monitor)
-17. [📡 Endpoint to receive scheduler for HTTP](#-17-endpoint-to-receive-scheduler-for-http)
+17. [📡 Endpoint to receive scheduler for Monitor](#-17-endpoint-to-receive-scheduler-for-monitor)
 18. [📧 Escalation Email](#-18-escalation-Email)
 19. [👥 List Users](#-19-list-users)
 20. [➕ Add Users](#-20-add-users)
@@ -116,7 +116,7 @@ After this module you will be able to:
 - Implement the ability to remove HTTP endpoints from monitoring.
 - Activity/Reflection:
 
-15. **Endpoint to receive scheduler for HTTP**<br>
+15. **Endpoint to receive scheduler for Monitor**<br>
 - Set up an API endpoint to handle scheduled monitoring tasks.
 - Activity/Reflection:
 
