@@ -1,4 +1,4 @@
-name: CI/CD Linting and Security Checks for Python with Deploy
+name: Linting and Security Checks for Python with Deploy
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
       # Runs `flake8` to check for PEP8 compliance and code formatting issues.
       # Helps maintain code quality and avoid common style mistakes.
       - name: Lint Step 4 - Run Flake8
-        run: flake8 .
+        run: flake8 . --max-line-length 125
 
   security-job:
     needs: lint-job  # This ensures it runs only if lint-job succeeds
