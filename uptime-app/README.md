@@ -35,7 +35,7 @@ Table of contents:
 17. [📡 Endpoint to receive scheduler for Monitor](#-17-endpoint-to-receive-scheduler-for-monitor)
 18. [📧 Escalation Email](#-18-escalation-Email)
 19. [👥 List Users](#-19-list-users)
-20. [➕ Add Users](#-20-add-users)
+20. [➕ Add User](#-20-add-user)
 21. [✏️ Edit Users](#%EF%B8%8F-21-edit-users)
 22. [❌ Delete Users](#-22-delete-users)
 23. [🖥️ Running the Uptime App Locally](#%EF%B8%8F-23-running-the-uptime-app-locally)
