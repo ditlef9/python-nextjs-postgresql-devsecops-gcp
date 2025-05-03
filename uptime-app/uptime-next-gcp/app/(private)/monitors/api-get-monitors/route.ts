@@ -2,10 +2,12 @@
 
 import { authConfig } from "@/app/lib/auth";
 import { sql } from "@/app/lib/db";
+import { loginIsRequiredServer } from "@/app/lib/loginIsRequiredServer";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 
 export async function GET() {
+  await loginIsRequiredServer();
   const session = await getServerSession(authConfig);
 
   if (!session) {

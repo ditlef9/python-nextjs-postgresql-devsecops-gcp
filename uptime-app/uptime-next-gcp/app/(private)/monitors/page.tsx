@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useLoginRequiredClient } from "@/app/lib/useLoginRequiredClient";
 import { MonitorsI } from "@/app/types/monitorsI";
 
-export default function Monitors() {
+export default function Dashboard() {
   const { session, status } = useLoginRequiredClient();
   const [monitors, setMonitors] = useState<MonitorsI[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

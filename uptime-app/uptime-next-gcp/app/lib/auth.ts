@@ -19,7 +19,7 @@ export const authConfig: NextAuthOptions = {
         try {
           // SQL query to check if the email exists in the database
           const res = await sql(
-            "SELECT user_id, user_email, user_display_name FROM u_users_index WHERE user_email=$1",
+            "SELECT user_id, user_first_name, user_middle_name, user_last_name, user_display_name FROM u_users_index WHERE user_email=$1",
             [user.email]
           );
 

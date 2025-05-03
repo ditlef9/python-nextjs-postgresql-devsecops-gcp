@@ -20,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 function InnerLayout({ children }: { children: React.ReactNode }) {
 
   return (
-    <SessionProvider>
     <html lang="en">
     <body>
+      <SessionProvider>
         
         <div className="container">
             <Header />
@@ -33,8 +33,8 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
                 <Footer />
             </div>
         </div>
+      </SessionProvider>
     </body>
     </html>
-    </SessionProvider>
   );
 }

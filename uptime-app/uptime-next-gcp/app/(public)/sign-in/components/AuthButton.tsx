@@ -32,7 +32,7 @@ export default function AuthButton() {
 
   return (
     <div className="button-wrapper">
-      <button onClick={() => signIn("github", { callbackUrl: "/monitors" })} className="github-button">
+      <button onClick={() => signIn("github", { callbackUrl: "/dashboard" })} className="github-button">
         <Image src="/icons/20x20/github-icon-20x20.svg" alt="GitHub Logo" width={20} height={20} />
         Sign In with GitHub
       </button>
