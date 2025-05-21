@@ -71,7 +71,20 @@ ensuring faster, more secure application delivery.
 
 ## 🔗 6 Links
 
+[Google Cloud Platform Docs](https://cloud.google.com/docs) –  
+Official documentation for Google Cloud Platform. Learn how to deploy, secure, and manage applications using GCP services like Cloud Run, IAM, Cloud Functions, and more.
 
+[Python Official Docs](https://docs.python.org/3/) –  
+Comprehensive documentation for the Python programming language. Covers standard libraries, syntax, tutorials, and advanced programming techniques.
+
+[Next.js Documentation](https://nextjs.org/docs) –  
+The official guide for building web applications using Next.js. Includes tutorials, API routes, routing, deployment strategies, and performance optimization tips.
+
+[PostgreSQL Documentation](https://www.postgresql.org/docs/) –  
+Official reference for PostgreSQL, a powerful open-source relational database system. Learn about SQL syntax, configuration, security, and database management.
+
+[GitHub Actions Docs](https://docs.github.com/en/actions) –  
+Documentation for GitHub Actions, GitHub’s built-in CI/CD system. Learn how to automate workflows, set up pipelines, and integrate DevSecOps practices in your projects.
 
 
 ---
