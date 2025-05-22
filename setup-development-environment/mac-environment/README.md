@@ -1,4 +1,4 @@
-# ![Mac](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/main/_docs/icons/mac-32x23.png)  Section 1 · Lesson 8 · Setup Development Environment - Mac 
+# ![Mac](https://raw.githubusercontent.com/ditlef9/python-nextjs-postgresql-devsecops-gcp/refs/heads/main/_docs/icons/mac-32x32.png)  Section 1 · Lesson 8 · Setup Development Environment - Mac 
 
 [🏠 Home](../../)
 &nbsp; &nbsp;
@@ -13,7 +13,7 @@ This guide will show you how to download and install software needed for the cou
 Git is a version control system to manage your code and collaborate with others.
 
 
-## 1 Git on Ubuntu:**
+## 1 Git on Mac:
 
 ```bash
 brew install git
@@ -22,7 +22,7 @@ git --version  # Verify installation
 
 ---
 
-## 2 Python on Ubuntu
+## 2 Python on Mac
 
 Python is a popular programming language for backend development and automation.
 
