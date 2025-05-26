@@ -1,7 +1,9 @@
 ![Python, Next.js, PostgreSQL and DevSecOps on Google Cloud Platform with Projects from Real Industry Logo](_docs/python-nextjs-postgresql-devsecops-gcp-logo.png) 
 
 This repository contains projects and resources for mastering the 
-Udemy Course `Python, Next.js, PostgreSQL and DevSecOps on Google Cloud Platform with Projects from Real Industry`.
+Udemy Course 
+[Python, Next.js, PostgreSQL and DevSecOps on Google Cloud Platform with Projects from Real Industry](https://www.udemy.com/course/python-nextjs-postgresql-and-devsecops-on-google-cloud/?referralCode=FC37116C22B35FA1A907).
+
 
 Table of contents:
 1. [🏠 Getting Started](#-1-getting-started)
